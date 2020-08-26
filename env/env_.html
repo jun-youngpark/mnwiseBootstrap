@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>도메인 관리</title>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+  <style>
+
+
+    .tree{
+      color:#393939;
+    }
+    .tree, .tree ul{
+      list-style: none;
+      padding-left:17px;
+    }
+    .tree *:before{
+      width:17px;
+      height:17px;
+      display:inline-block;
+    }
+    .tree label{
+      cursor: pointer;
+    }
+    .tree label:before{
+      content:'\f256';
+      font-family: fontello;
+    }
+    .tree a{
+      text-decoration: none;
+      color:#393939;
+    }
+    .tree a:before{
+      content:'\e800';
+      font-family: fontello;
+    }
+    .tree input[type="checkbox"] {
+      display: none;
+    }
+    .tree input[type="checkbox"]:checked~ul {
+      display: none;
+    }
+    .tree input[type="checkbox"]:checked+label:before{
+      content:'\f255';
+      font-family: fontello;
+    }
+  </style>
+  <script>
+    $(function () {
+      $("#subNav").load("../subNav.html");
+      $("#js").load("../js.html");
+      $("#headerTop").load("../headerTop.html");
+    });
+  </script>
+</head>
+
+
+
+
+<body>
+  <!-- 메뉴 -->
+  <div id="subNav"></div>
+  <div id="js"></div>
+  <div id="headerTop"></div>
+  <!-- 메뉴 End-->
+
+  <!-- 내용 -->
+ <!-- 본문  -->
+ <div class="main-panel">
+  <!-- Page content -->
+  <div class="container-fluid mt-4 mb-2">
+    <div class="card mb-4">
+      <!-- Card header -->
+      <!-- 서버환경 정보 -->
+      <div class="card">
+        <!-- Card header -->
+        <div class="card-header">
+          <div class="row align-items-center">
+            <div class="col">
+              <h3 class="mb-0">메시지 발신자 정보</h3>
+            </div>
+            <div class="col text-right">
+              <a href="#" class="btn btn-sm btn-primary btn-round btn-icon" data-toggle="tooltip"
+                data-original-title="Edit product">
+                <span class="btn-inner--icon"><i class="fas fa-save"></i></span>
+                <span class="btn-inner--text">저장</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- card-body -->
+        <div class="card-body">
+          <ul class="Tree">
+            <li>
+              <span class="Arrow"></span>
+              <a>
+                 icons
+              </a>
+              <ul>
+                <li><span class="Arrow"></span>
+                  <a>
+                    Image
+                  </a>
+                  <ul>
+                    <li><span class="Arrow"></span>
+                      <a>
+                     jpg
+                      </a>
+                    </li>
+                    <li><span class="Arrow"></span>
+                      <a>
+                      bmp
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div> <!-- e.Card body -->
+      </div>
+    </div>
+    <!--e.container-fluid-->
+  </div> <!-- e.page content -->
+</div>
+  <!--내용-->
+
+
+
+</html>

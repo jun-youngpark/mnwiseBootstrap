@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>서버환경 정보</title>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#subNav").load("../subNav.html");
+            $("#js").load("../js.html");
+            $("#headerTop").load("../headerTop.html");
+        });
+    </script>
+</head>
+
+<body>
+    <!-- 메뉴 -->
+    <div id="subNav"></div>
+    <div id="js"></div>
+    <div id="headerTop"></div>
+    <!-- 메뉴 End-->
+
+    <!-- 내용 -->
+
+    <div class="main-panel">
+        <!-- Page content -->
+        <div class="container-fluid mt-4 mb-3">
+            <!-- 서버환경 정보 -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <h3 class="mb-0">서버환경 정보</h3>
+                        </div>
+                        <div class="col text-right">
+                            <button class="btn btn-sm btn-primary btn-round btn-icon" data-toggle="modal"
+                                data-target="#saveModal">
+                                <span class="btn-inner--icon"><i class="fas fa-save"></i></span>
+                                <span class="btn-inner--text">저장</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-4 mb-3">
+                                <div class="fomrgroup"> <label class="form-control-label"
+                                        for="openclickPath">수신확인경로</label>
+                                    <input class="form-control" type="text"
+                                        value="http://dev.mnwise.com:49000/servlet/ReceiveConfirmEM" id="openclickPath">
+                                </div>
+                            </div>
+                            <div class="col-4 mb-3">
+                                <div class="fomrgroup"> <label class="form-control-label"
+                                        for="openclickPath">수신확인경로</label>
+                                    <input class="form-control" type="text"
+                                        value="http://dev.mnwise.com:49000/servlet/ReceiveConfirmEM" id="openclickPath">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4 mb-5">
+                                <div class="fomrgroup"> <label class="form-control-label" for="rejectPath">수신거부
+                                        경로</label>
+                                    <input class="form-control" type="text"
+                                        value="http://dev.mnwise.com:49000/servlet/RejectEM" id="rejectPath">
+                                </div>
+                            </div>
+                            <div class="col-4 mb-5">
+                                <div class="fomrgroup"> <label class="form-control-label" for="retryCnt">SMTP발송 재시도
+                                        횟수</label>
+                                    <input class="form-control" type="number" maxlength="2" value="1" id="retryCnt">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4 mb-3">
+                                <div class="fomrgroup">
+                                    <label class="form-control-label" for="aseLinkMergeParam">ASE 링크추적 머지
+                                        파라미터</label>
+                                    <textarea class="form-control" id="aseLinkMergeParam"
+                                        rows="8">?SEND_MODE=context.get("_SEND_MODE")&CAMPAIGN_NO=context.get("_CAMPAIGN_NO")&RESULT_SEQ=context.get("_RESULT_SEQ")&START_DATE=context.get("_START_DATE")&END_DATE=context.get("_END_DATE")&LIST_SEQ=context.get("_LIST_SEQ")&RECORD_SEQ=context.get("_RECORD_SEQ")&CUSTOMER_ID=context.getEncryptedString("_CUSTOMER_ID")</textarea>
+                                </div>
+                            </div>
+                            <div class="col-4 mb-3">
+                                <div class="fomrgroup"> <label class="form-control-label" for="aseRejectMergeParam">ASE
+                                        수신거부 머지
+                                        파라미터</label>
+                                    <textarea class="form-control" id="aseRejectMergeParam"
+                                        rows="8">?SEND_MODE=context.get("_SEND_MODE")&CAMPAIGN_NO=context.get("_CAMPAIGN_NO")&RESULT_SEQ=context.get("_RESULT_SEQ")&START_DATE=context.get("_START_DATE")&END_DATE=context.get("_END_DATE")&LIST_SEQ=context.get("_LIST_SEQ")&RECORD_SEQ=context.get("_RECORD_SEQ")&CUSTOMER_ID=context.getEncryptedString("_CUSTOMER_ID")</textarea>
+                                </div>
+                            </div>
+                            <div class="col-4 mb-3">
+                                <div class="fomrgroup"> <label class="form-control-label" for="aseOpenScriptlet">ASE
+                                        수신 확인
+                                        파라미터</label>
+                                    <textarea class="form-control" id="aseOpenScriptlet"
+                                        rows="8">?SEND_MODE=context.get("_SEND_MODE")&CAMPAIGN_NO=context.get("_CAMPAIGN_NO")&RESULT_SEQ=context.get("_RESULT_SEQ")&START_DATE=context.get("_START_DATE")&END_DATE=context.get("_END_DATE")&LIST_SEQ=context.get("_LIST_SEQ")&RECORD_SEQ=context.get("_RECORD_SEQ")&CUSTOMER_ID=context.getEncryptedString("_CUSTOMER_ID")</textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4 mb-5">
+                                <div class="fomrgroup">
+                                    <label class="form-control-label" for="groovyLinkMergeParam">Groovy 링크추적
+                                        머지</label>
+                                    <textarea class="form-control" id="groovyLinkMergeParam"
+                                        rows="8">?SEND_MODE=context.get("_SEND_MODE")&CAMPAIGN_NO=context.get("_CAMPAIGN_NO")&RESULT_SEQ=context.get("_RESULT_SEQ")&START_DATE=context.get("_START_DATE")&END_DATE=context.get("_END_DATE")&LIST_SEQ=context.get("_LIST_SEQ")&RECORD_SEQ=context.get("_RECORD_SEQ")&CUSTOMER_ID=context.getEncryptedString("_CUSTOMER_ID")</textarea>
+                                </div>
+                            </div>
+                            <div class="col-4  mb-5">
+                                <div class="fomrgroup"> <label class="form-control-label"
+                                        for="groovyRejectMergeParam">Groovy 수신거부 머지
+                                        파라미터</label>
+                                    <textarea class="form-control" id="groovyRejectMergeParam"
+                                        rows="8">?SEND_MODE=context.get("_SEND_MODE")&CAMPAIGN_NO=context.get("_CAMPAIGN_NO")&RESULT_SEQ=context.get("_RESULT_SEQ")&START_DATE=context.get("_START_DATE")&END_DATE=context.get("_END_DATE")&LIST_SEQ=context.get("_LIST_SEQ")&RECORD_SEQ=context.get("_RECORD_SEQ")&CUSTOMER_ID=context.getEncryptedString("_CUSTOMER_ID")</textarea>
+                                </div>
+                            </div>
+                            <div class="col-4  mb-5">
+                                <div class="fomrgroup"> <label class="form-control-label"
+                                        for="groovyOpenScriptlet">Groovy 수신확인 머지
+                                        파라미터</label>
+                                    <textarea class="form-control" id="groovyOpenScriptlet"
+                                        rows="8">?SEND_MODE=context.get("_SEND_MODE")&CAMPAIGN_NO=context.get("_CAMPAIGN_NO")&RESULT_SEQ=context.get("_RESULT_SEQ")&START_DATE=context.get("_START_DATE")&END_DATE=context.get("_END_DATE")&LIST_SEQ=context.get("_LIST_SEQ")&RECORD_SEQ=context.get("_RECORD_SEQ")&CUSTOMER_ID=context.getEncryptedString("_CUSTOMER_ID")</textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3 mb-4">
+                                <div class="fomrgroup">
+                                    <label class="form-control-label" for="resendIncludeReturnmailYn">이케어 재발송시 리턴된
+                                        이메일 포함여부</label>
+                                    <input class="form-control " type="text" maxlength="1" value="Y"
+                                        id="resendIncludeReturnmailYn">
+                                </div>
+                            </div>
+                            <div class="col-3 mb-4">
+                                <div class="fomrgroup"> <label class="form-control-label" for="resendErrorCd">메일 재발송시
+                                        제외 대상 에러코드</label>
+                                    <input class="form-control" type="text" value="250,550,553,610,800"
+                                        id="resendErrorCd">
+                                </div>
+                            </div>
+                            <div class="col-3 mb-4">
+                                <div class="fomrgroup"> <label class="form-control-label" for="resendFaxErrorCd">팩스 재발송시
+                                        제외 대상
+                                        에러코드</label>
+                                    <input class="form-control" type="text" value="" id="resendFaxErrorCd">
+                                </div>
+                            </div>
+
+                            <div class="col-3 mb-4">
+                                <div class="fomrgroup"> <label class="form-control-label" for="resendSmsErrorCd">모바일
+                                        재발송시 제외 대상
+                                        에러코드</label>
+                                    <input class="form-control" type="text" value="0,00000" id="resendSmsErrorCd">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="fomrgroup">
+                                    <label class="form-control-label" for="resendAltalkErrorCd">알림톡 재발송시 제외 대상
+                                        에러코드</label>
+                                    <input class="form-control" type="text" value="0000" id="resendAltalkErrorCd">
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="fomrgroup">
+                                     <label class="form-control-label" for="resendPushErrorCd">PUSH 재발송시 제외 대상  에러코드</label>
+                                    <input class="form-control" type="text" value="000" id="resendPushErrorCd">
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="fomrgroup"> 
+                                    <label for="spoolPreservePeriod"  class="form-control-label">스풀 파일 보존  기간(일)</label>
+                                    <input class="form-control" type="number" maxlength="4" value="7"   id="spoolPreservePeriod">
+                                </div>
+                            </div>
+
+                            <div class="col-3">
+                                <div class="fomrgroup"> 
+                                    <label for="logPreservePeriod" class="form-control-label">로그 파일 보존 기간(일)</label>
+                                    <input class="form-control" type="number" maxlength="4" value="7" id="logPreservePeriod">
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </form>
+                </div> <!-- e.Card body -->
+            </div>
+            <!--e.card-->
+        </div>
+    </div> <!-- e.main-panel -->
+    <!--내용-->
+
+
+
+</html>

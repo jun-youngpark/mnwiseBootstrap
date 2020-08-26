@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>도메인 관리</title>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+
+  <script>
+    $(function () {
+      $("#subNav").load("../subNav.html");
+      $("#js").load("../js.html");
+      $("#headerTop").load("../headerTop.html");
+    });
+  </script>
+</head>
+
+
+
+
+<body>
+  <div class="wrapper">
+  <!-- 메뉴 -->
+  <div id="subNav"></div>
+  <div id="js"></div>
+  <div id="headerTop"></div>
+  <!-- 메뉴 End-->
+
+  <!-- 본문  -->
+  <div class="main-panel">
+    <!-- Page content -->
+    <div class="container-fluid mt-4 mb-2">
+      <div class="card">
+        <!-- Card header -->
+        <div class="card-header">
+          <div class="row align-items-center">
+            <div class="col">
+              <h3 class="mb-0">공휴일 관리</h3>
+            </div>
+          </div>
+        </div>
+        <!-- card-body -->
+        <div class="card-body">
+          <!--달력 넣는 div-->
+          <div class="container">
+            <div class="calendar"></div>
+          </div>
+        </div>
+        <!--e.container-fluid-->
+      </div>
+      <!--e.main-panel-->
+    </div>
+
+
+</html>

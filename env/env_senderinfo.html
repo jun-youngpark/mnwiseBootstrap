@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>도메인 관리</title>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $("#subNav").load("../subNav.html");
+      $("#js").load("../js.html");
+      $("#headerTop").load("../headerTop.html");
+    });
+  </script>
+</head>
+
+<body>
+    <div class="wapper">
+  <!-- 메뉴 -->
+  <div id="subNav"></div>
+  <div id="js"></div>
+  <div id="headerTop"></div>
+  <!-- 메뉴 End-->
+
+  <!-- 내용 -->
+ <!-- 본문  -->
+ <div class="main-panel">
+  <!-- Page content -->
+  <div class="container-fluid mt-4 mb-2">
+    <div class="card mb-4">
+      <!-- Card header -->
+      <!-- 서버환경 정보 -->
+      <div class="card">
+        <!-- Card header -->
+        <div class="card-header">
+          <div class="row align-items-center">
+            <div class="col">
+              <h3 class="mb-0">메시지 발신자 정보</h3>
+            </div>
+            <div class="col text-right">
+              <a href="#" class="btn btn-sm btn-primary btn-round btn-icon" data-toggle="tooltip"
+                data-original-title="Edit product">
+                <span class="btn-inner--icon"><i class="fas fa-save"></i></span>
+                <span class="btn-inner--text">저장</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- card-body -->
+        <div class="card-body">
+          <form>
+            <div class="row">
+              <div class="col-4">
+                <div class="form-group">
+                  <label for="senderNm" class=" col-form-label form-control-label ">발신자명</label>
+                  <div class="input-group input-group-merge">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="Your name" type="text" id="senderNm">
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="form-group">
+                  <label for="senderEmail" class="col-form-label form-control-label ">발신자 이메일</label>
+                  <div class="input-group input-group-merge">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                    </div>
+                    <input class="form-control " type="email" value="helpdesk@mnwise.com" id="senderEmail">
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="form-group">
+                  <label for="retmailReceiver" class="col-form-label form-control-label ">반송메일 경로 </label>
+                  <div class="input-group input-group-merge">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fas fa-reply-all"></i></span>
+                    </div>
+                    <input class="form-control " type="email" value="return@mnwise.com" id="retmailReceiver">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <div class="form-group">
+                  <label for="senderTel" class="col-form-label form-control-label ">발신자 전화번호</label>
+                  <div class="input-group input-group-merge">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                    </div>
+                    <input class="form-control " type="text" value="02-865-4210" id="senderTel">
+                  </div>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="form-group">
+                  <label for="senderFax" class="col-form-label form-control-label ">발신자 팩스번호</label>
+                    <div class="input-group input-group-merge">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-fax"></i></span>
+                      </div>
+                      <input class="form-control " type="text" value="02-865-4211" id="senderFax">
+                    </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div> <!-- e.Card body -->
+      </div>
+    </div>
+    <!--e.container-fluid-->
+  </div> <!-- e.page content -->
+</div>
+  <!--내용-->
+</div>
+
+
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <title>DB관리</title>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script> 
+      $(function(){
+        $("#subNav").load("../subNav.html");
+        $("#js").load("../js.html");
+        $("#headerTop").load("../headerTop.html");
+    });  
+    </script>    
+</head>
+
+<body>
+    <!-- 메뉴 -->
+    <div id="subNav"></div>
+    <div id="js"></div>
+    <div id="headerTop"></div>
+    <!-- 메뉴 End-->
+
+    <!-- 내용 -->
+    <div class="main-panel">      
+      <!-- Page content -->
+      <div class="container-fluid mt-4 mb-2">
+        <!-- Table DB 관리-->
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <!-- Card header -->
+              <div class="card-header">
+                <h3 class="mb-0">DB관리</h3>
+              </div>
+              <div class="table-responsive py-4">
+                <table class="table table-flush">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>서버명</th>
+                      <th>Driver Name</th>
+                      <th>Driver DNS</th>
+                      <th>DB종류</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>mice_mysql</td>
+                      <td>com.mysql.jdbc.Driver</td>
+                      <td>jdbc:mysql://112.175.158.157:11024/callback</td>
+                      <td>MYSQL</td>
+                    </tr>
+                    <tr>
+                      <td>Garrett Winters</td>
+                      <td>oracle.jdbc.driver.OracleDriver</td>
+                      <td>jdbc:oracle:thin:@dev.mnwise.com:1521:orcl</td>
+                      <td>ORACLE</td>
+                    </tr>
+                    <tr>
+                      <td>Ashton Cox</td>
+                      <td>oracle.jdbc.driver.OracleDriver</td>
+                      <td>jdbc:oracle:thin:@dev.mnwise.com:1521:orcl</td>
+                      <td>ORACLE</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div> <!--e. table card-->
+            <div class="card">
+              <!-- Card header -->
+              <div class="card-header">
+                <h3 class="mb-0">DB 정보</h3>
+                <div class="col text-right">
+                  <button class="btn btn-sm btn-primary btn-round btn-icon" data-toggle="modal"
+                    data-target="#saveModal">
+                    <span class="btn-inner--icon"><i class="fas fa-save"></i></span>
+                    <span class="btn-inner--text">저장</span>
+                  </button>
+                  <button class="btn btn-sm btn-danger btn-round btn-icon" data-toggle="modal" data-target="#delModal">
+                    <span class="btn-inner--icon"><i class="fas fa-trash"></i></span>
+                    <span class="btn-inner--text">삭제</span>
+                  </button>
+                  <button class="btn btn-sm btn-warning btn-round btn-icon" data-toggle="modal"
+                    data-target="#resetModal">
+                    <span class="btn-inner--icon"><i class="fas fa-eraser"></i></span>
+                    <span class="btn-inner--text">초기화</span>
+                  </button>
+                </div>
+              </div> 
+              <div class="card-body">
+                <form>
+                  <div class="form-row mb-2">
+                    <label for="sqlKind" class="form-control-label col-form-label col-12">* DB 종류</label>
+                    <select class="form-control col-3" id="sqlKind">
+                      <option>선택해주세요</option>
+                      <option>ORACLE</option>
+                      <option>MSSQL2000</option>
+                      <option>MSSQL2005</option>
+                      <option>INFORMIX</option>
+                      <option>SYBASE</option>
+                      <option>MYSQL</option>
+                    </select>
+                    <button class=" btn btn-primary text-center ml-2" type="button">조회</button>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="col-4">
+                      <label for="serverNm" class="col-form-label form-control-label">* 서버명</label>
+                      <input class="form-control " type="text" value="" id="serverNm">
+                    </div>
+                    <div class="col-4 mb-2">
+                      <label for="driverNm" class="col-form-label form-control-label">* Driver Name</label>
+                      <input class="form-control" type="text" id="driverNm">
+                    </div>
+                    <div class="col-4 mb-2">
+                      <label for="driverDSN" class="col-form-label form-control-label">* Driver DSN</label>
+                      <input class="form-control " type="text" id="driverDSN">
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="col-3 mb-2">
+                      <label class="form-control-label col-form-label" for="dbId">* User</label>
+                      <input type="text" class="form-control" id="dbId">
+                    </div>
+                    <div class="col-3 mb-2">
+                      <label class="form-control-label col-form-label" for="dbPass">* Password
+                      </label>
+                      <input type="text" class="form-control" id="dbPass" placeholder="One of three cols"></div>
+
+                    <div class="col-3 mb-2">
+                      <label class="form-control-label col-form-label" for="en">Encoding</label>
+                      <input type="text" class="form-control" id="en">
+                    </div>
+                    <div class="col-3 mb-2">
+                      <label class="form-control-label col-form-label" for="de">Decoding
+                      </label>
+                      <input type="text" class="form-control" id="de"></div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="col-4">
+                      <label for="testQuery" class="col-form-label form-control-label">* 테스트쿼리</label>
+                      <input class="form-control " type="text" id="testQuery">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <!-- e.Card body -->
+          </div>
+        </div> <!-- e. Table DB 관리-->
+      </div>
+    </div><!-- e.main-pane-->
+    <!--내용-->
+</html>
+
+ 
+
+
+ 

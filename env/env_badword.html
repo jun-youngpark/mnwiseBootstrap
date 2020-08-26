@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <title>금칙어 관리</title>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script> 
+      $(function(){
+        $("#headerDiv").load("../subNav.html");
+        $("#js").load("../js.html");
+    });  
+    </script>    
+</head>
+
+<body>
+    <!-- 메뉴 -->
+    <div id="headerDiv"></div>
+    <div id="js"></div>
+    <!-- 메뉴 End-->
+    
+    <!-- 내용 -->
+      <!-- s.main-panel -->
+        <div class="main-panel">
+            <!-- s.header -->
+            <div class="header bg-primary pb-2">
+                <div class="container-fluid">
+                    <div class="header-body">
+                        <div class="row align-items-center py-4">
+                            <div class="col-11">
+                                <h6 class="h2 text-white d-inline-block mb-0">금칙어 관리</h6>
+                                <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                                    <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                                        <li class="breadcrumb-item"><a href="../../pages/campaign/campaign.html"><i
+                                                    class="fas fa-home"></i></a></li>
+                                        <li class="breadcrumb-item"><a href="../../pages/env/env.html">환경설정</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">금칙어 관리</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                            <ul class="col-1 navbar-nav align-items-center  ml-auto ml-md-0 text-right">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <div class="media align-items-center">
+                                            <i class="ni ni-single-02 text-secondary "></i>
+                                            <div class="media-body  ml-2  d-none d-lg-block">
+                                                <span class="mb-0 text-sm text-white  font-weight-bold">admin</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-menu  dropdown-menu-right ">
+                                        <div class="dropdown-header noti-title">
+                                            <h6 class="text-overflow m-0">Welcome!</h6>
+                                        </div>
+                                        <a href="../../page/watch/watch.html" class="dropdown-item">
+                                            <i class="ni ni-single-02"></i>
+                                            <span>wiseWatch</span>
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="index.html" class="dropdown-item">
+                                            <i class="ni ni-user-run"></i>
+                                            <span>Logout</span>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- e.header -->
+            <!-- s.Page content -->
+            <div class="container-fluid">
+                <div class="card mt-4">
+                    <!-- 금칙어 관리-->
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="row align-items-center">
+                                <div class="col">                                   
+                                    <h3 class="mb-0">금칙어 관리</h3>                                    
+                                </div>
+                                <div class="col text-right">
+                                    <button class="btn btn-sm btn-primary btn-round btn-icon" data-toggle="modal"
+                                        data-target="#saveModal">
+                                        <span class="btn-inner--icon"><i class="fas fa-save"></i></span>
+                                        <span class="btn-inner--text">저장</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <span class="form-control-label pb-0" for="template">여러 단어를 구분할 때는 콤마(,)를 사용하세요.</span>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-row">
+                                    <div class="col-6 mb-2">
+                                        <span><i class="far fa-envelope"></i></span>
+                                        <label class="form-control-label" for="template">Email 금칙어</label>
+                                        <textarea class="form-control" id="template"
+                                            rows="8">jackpot,spam,대리운전,광고</textarea>
+                                    </div>
+                                    <div class="col-6 mb-2">
+                                        <span><i class="fas fa-mobile-alt"></i></span>
+                                        <label class="form-control-label" for="template">SMS, LMS/MMS, PUSH
+                                            금칙어</label>
+                                        <textarea class="form-control" id="template"
+                                            rows="8">jackpot,spam,대리운전,광고</textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div> <!-- e.Card  -->
+                </div>
+            </div> <!-- e.금칙어 관리 e.page content -->
+        </div><!-- e. e.main-panel -->
+
+    <!--내용-->
+
+
+
+</html>
+
+ 
+
+
+ 
