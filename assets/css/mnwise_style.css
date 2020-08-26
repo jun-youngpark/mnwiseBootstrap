@@ -19,7 +19,7 @@
 
  /*dataTablest CSS */
  /* 분리된 테두리 표: separate */
- table.dataTable {border-collapse: collapse !important;}
+ table.dataTable {border-collapse: separate !important;}
 
  /*플러그인에 있는 select box, script단에서 초기화 후 display: none*/
  div.dataTables_wrapper div.dataTables_length label { display: none;}
@@ -29,6 +29,11 @@ div.dataTables_wrapper div.dataTables_info {position:absolute;}
 div.dataTables_wrapper div.dataTables_paginate {float:none; text-align:center;}
 div.dataTables_wrapper div.dataTables_paginate ul.pagination {justify-content: center;}
 
+
+/*테이블 패딩 줄인 css*/
+.table-xs th, .table-xs td {padding: .3rem;}
+.table-xs :last-child{border-bottom:1px}
+.table-xs tbody tr:last-child td {border-bottom:1px solid #e9ecef;;  }
 
 
 .td-cursor td{cursor: pointer;}
