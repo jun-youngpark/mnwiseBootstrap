@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>공휴일관리-Full</title> 
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+
+  <script>
+    $(function () {
+      $("#subNav").load("../subNav.html");
+      $("#js").load("../js.html");
+      $("#headerTop").load("../headerTop.html");
+    });
+  </script>
+</head>
+
+
+<body>
+  <!-- 메뉴 -->
+  <div id="subNav"></div>
+  <div id="js"></div>
+  <div id="headerTop"></div>
+  <!-- 메뉴 End-->
+
+  <!-- 내용 -->
+ <!-- 본문  -->
+ <div class="main-panel">
+  <!-- Page content -->
+  <div class="container-fluid mt-4 mb-2">
+    <div class="card mb-4">
+      <!-- Card header -->
+      <!-- 서버환경 정보 -->
+      <div class="card">
+        <!-- Card header -->
+        <div class="card-header">
+          <div class="row align-items-center">
+            <div class="col">
+              <h3 class="mb-0">공휴일관리</h3>
+            </div>
+            <div class="col text-right">
+              <a href="#" class="btn btn-sm btn-primary btn-round btn-icon" data-toggle="tooltip"
+                data-original-title="Edit product">
+                <span class="btn-inner--icon"><i class="fas fa-save"></i></span>
+                <span class="btn-inner--text">저장</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- card-body -->
+        <div class="card-body">
+            <div class="calendar" data-toggle="calendar" id="calendar"></div>
+        </div> <!-- e.Card body -->
+         <!-- Modal - Add new event -->
+          <!--* Modal header *-->
+          <!--* Modal body *-->
+          <!--* Modal footer *-->
+          <!--* Modal init *-->
+          <div class="modal fade" id="new-event" tabindex="-1" role="dialog" aria-labelledby="new-event-label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-secondary" role="document">
+              <div class="modal-content">
+                <!-- Modal body -->
+                <div class="modal-body">
+                  <form class="new-event--form">
+                    <div class="form-group">
+                      <label class="form-control-label">일정</label>
+                      <input type="text" class="form-control form-control-alternative new-event--title" placeholder="Event Title">
+                    </div>
+                    <div class="form-group mb-0">
+                      <label class="form-control-label d-block mb-3">색상 지정</label>
+                      <div class="btn-group btn-group-toggle btn-group-colors event-tag" data-toggle="buttons">
+                        <label class="btn bg-info active"><input type="radio" name="event-tag" value="bg-info" autocomplete="off" checked></label>
+                        <label class="btn bg-warning"><input type="radio" name="event-tag" value="bg-warning" autocomplete="off"></label>
+                        <label class="btn bg-danger"><input type="radio" name="event-tag" value="bg-danger" autocomplete="off"></label>
+                        <label class="btn bg-success"><input type="radio" name="event-tag" value="bg-success" autocomplete="off"></label>
+                        <label class="btn bg-default"><input type="radio" name="event-tag" value="bg-default" autocomplete="off"></label>
+                        <label class="btn bg-primary"><input type="radio" name="event-tag" value="bg-primary" autocomplete="off"></label>
+                      </div>
+                    </div>
+                    <input type="hidden" class="new-event--start" />
+                    <input type="hidden" class="new-event--end" />
+                  </form>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary new-event--add">저장</button>
+                  <button type="button" class="btn btn-link ml-auto" data-dismiss="modal">취소</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Modal - Edit event -->
+          <!--* Modal body *-->
+          <!--* Modal footer *-->
+          <!--* Modal init *-->
+          <div class="modal fade" id="edit-event" tabindex="-1" role="dialog" aria-labelledby="edit-event-label" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-secondary" role="document">
+              <div class="modal-content">
+                <!-- Modal body -->
+                <div class="modal-body">
+                  <form class="edit-event--form">
+                    <div class="form-group">
+                      <label class="form-control-label">일정</label>
+                      <input type="text" class="form-control form-control-alternative edit-event--title" placeholder="Event Title">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-control-label d-block mb-3">색상 지정</label>
+                      <div class="btn-group btn-group-toggle btn-group-colors event-tag mb-0" data-toggle="buttons">
+                        <label class="btn bg-info active"><input type="radio" name="event-tag" value="bg-info" autocomplete="off" checked></label>
+                        <label class="btn bg-warning"><input type="radio" name="event-tag" value="bg-warning" autocomplete="off"></label>
+                        <label class="btn bg-danger"><input type="radio" name="event-tag" value="bg-danger" autocomplete="off"></label>
+                        <label class="btn bg-success"><input type="radio" name="event-tag" value="bg-success" autocomplete="off"></label>
+                        <label class="btn bg-default"><input type="radio" name="event-tag" value="bg-default" autocomplete="off"></label>
+                        <label class="btn bg-primary"><input type="radio" name="event-tag" value="bg-primary" autocomplete="off"></label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-control-label">내용</label>
+                      <textarea class="form-control form-control-alternative edit-event--description textarea-autosize" placeholder="Event Desctiption"></textarea>
+                      <i class="form-group--bar"></i>
+                    </div>
+                    <input type="hidden" class="edit-event--id">
+                  </form>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                  <button class="btn btn-primary" data-calendar="update">수정</button>
+                  <button class="btn btn-danger" data-calendar="delete">삭제</button>
+                  <button class="btn btn-link ml-auto" data-dismiss="modal">취소</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <!--e.container-fluid-->
+  </div> <!-- e.page content -->
+</div>
+  <!--내용-->
+
+
+
+</html>
