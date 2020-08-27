@@ -28,18 +28,21 @@
 div.dataTables_wrapper div.dataTables_info {position:absolute;}
 div.dataTables_wrapper div.dataTables_paginate {float:none; text-align:center;}
 div.dataTables_wrapper div.dataTables_paginate ul.pagination {justify-content: center;}
+.table-border-collapse th, td {
+  
+  border-collapse: collapse;
+}
 
-
-/*테이블 패딩 줄인 css*/
+/*테이블 패딩 줄인 css env_smtpocode.html,env_push_setting.html */
 .table-xs th, .table-xs td {padding: .3rem;}
 .table-xs :last-child{border-bottom:1px}
-.table-xs tbody tr:last-child td {border-bottom:1px solid #e9ecef;;  }
-
-
+.table-xs tbody tr:last-child td {border-bottom:1px solid #e9ecef;  }
+/*테이블 마지막 라인추가*/
+.table-bt{border-bottom:1px solid #e9ecef;  }
 .td-cursor td{cursor: pointer;}
 
- 
 
-
-
-
+/* 테이블 선 추가 적용 : env_push_setting.html*/
+.table-border-pd{border-collapse: collapse;  }
+.table-border-pd th, td{ border:1px solid #e9ecef;  } 
+.table-border-pd td{ padding: .5rem;}/*  border-right:1px solid #e9ecef; */
