@@ -8,10 +8,8 @@
  
 .sidebar .nav li {margin: 0 15px;}
 .sidebar .nav-link {padding: .675rem 1.5rem;}
-.sidebar .navbar-nav > .nav-item > .nav-link.active {background:#f6f9fc;}
-.sidebar .navbar-brand {width:100%; padding: 1.5rem; text-indent:-999em; background:url("../../assets/img/brand/wiseU_new.gif") no-repeat 1.5rem center;}
+.sidebar .navbar-brand {padding: 1.5rem;}
 .navbar-vertical .navbar-brand-img, .navbar-vertical .navbar-brand>img { max-width: 100%; max-height: 3rem;}
-.navbar-vertical .nav-link.active {font-weight:bold;}
 
 /*mainpanel*/
 .main-panel {position: relative; float: right; width: calc(100% - 250px); }
@@ -48,64 +46,17 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {justify-content: c
 
 /*form-control과 맞추기 위한 css - template_view.html*/
 .div-control-box{
-  font-size: .875rem; font-weight: 400; line-height: 1.5;  width: 100%;   height: calc(1.5em + 1.25rem + 3px); padding: .625rem .75rem; transition: all .15s cubic-bezier(.68, -.55, .265, 1.55); 
-  color: #8898aa;   border: 1px solid #dee2e6; border-radius: .25rem;  background-clip: padding-box;  box-shadow: 0 3px 2px rgba(233, 236, 239, .05);
+  font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 100%;
+    height: calc(1.5em + 1.25rem + 3px);
+    padding: .625rem .75rem;
+    transition: all .15s cubic-bezier(.68, -.55, .265, 1.55); 
+    color: #8898aa;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    background-color: #fff;
+    background-clip: padding-box;
+    box-shadow: 0 3px 2px rgba(233, 236, 239, .05);
 }
-
- 
-   
-   
-
-/***** button *****/
-
-
-
-
-/***** search *****/
-.searchWrap > * {padding-left:0;}
-.searchbox {margin-bottom:0; padding-left:0; text-align:right;};
-.searchbox > *, .searchbox .form-control {display:inline-block; width:auto; font-size:.8125rem;}
-.searchbox select:not(:first-child), .searchbox input:not(:first-child) {margin-left:5px;}
-.search_input .txt {display:inline-block; font-size:.8125rem;}
-.search_input input {width:150px; margin:0 5px;}
-
-.table_option {-webkit-box-align:center; align-items:center; -webkit-justify-content:space-between; -moz-justify-content:space-between; -ms-justify-content:space-between; justify-content:space-between;}
-.table_option .searchWrap {text-align:right;}
-.table_option .btn:not(:last-child) {margin-right:5px;}
-
-
-
-
-/***** table *****/
-.card .table td, .card .table th {padding-left:20px; padding-right:20px; text-align:center;}
-.table thead th {font-size:.8125rem;}
-.table th .custom-control {padding-left:16px;}
-.table th .custom-control-label::before, .table th .custom-control-label:after {left:-16px;}
-.table .text-left a {display: block; min-width:150px;}
-.table-form {border-width:1px 0;}
-.table.table-form th, .table.table-form td {padding-top:10px; padding-bottom:10px; text-align: left;}
-.table.table-form th {padding-left:35px; vertical-align: middle; background:#f6f9fc;}
-.table-form th .required {margin-left:-10px; margin-right:6px;}
-.table-form tr > *:first-child {border-left: none;}
-.table-form tr > *:last-child {border-right: none;}
-.table.table-form td {text-align:left;}
-.btn_area {text-align:centeer;}
-.btn_area button {min-width:200px;}
-
-/***** text *****/
-.required {display:inline-block; width:4px; height:4px;  margin-right:5px; text-indent:-999em; font-size:.1em; vertical-align:middle; background:#5e72e4; border-radius:4px;}
-
-/***** contents *****/
-.txt_channel {display:inline-block; width:20px; height:20px; font-style:normal; font-weight: 500; font-size:.75rem; color:#fff; text-align:center; line-height:20px; background:var(--info); border-radius:2px;}
-.txt_channel.a {background:var(--orange);}
-
-/* step */
-.stepWrap {position:relative; display:inline-block; margin:0; padding:0; list-style: none; font-size:.8125rem; color:#fff;}
-.stepWrap:before {content:""; position:absolute; left:8px; top:50%; right:8px; height:1px; background:#eee;}
-.stepWrap > * {position:relative; display:inline-block; margin:0 5px;}
-.stepWrap .box {padding:2px;  width:25px; height:25px; text-align:center; line-height:21px; background:#dfdfdf; border-radius:20px;}
-.stepWrap .box .txt {position:absolute; left:-999em; top:-9999em; opacity:0;}
-.stepWrap .current .box {width:auto; min-width:80px; padding:2px 10px; font-weight:bold; font-size:.875rem; background:#5e72e4}
-.stepWrap .current .box .txt {position:static; margin-right:.5em; opacity:1;}
-
-
