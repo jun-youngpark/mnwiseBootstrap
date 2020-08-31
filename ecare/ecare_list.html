@@ -1,0 +1,183 @@
+@@ -1,182 +0,0 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>이케어 리스트</title>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+ 
+  <script>
+    $(function () {
+      $("#subNav").load("../subNav.html");
+      $("#js").load("../js.html");
+      $("#headerTop").load("../headerTop.html");
+    });
+  </script>
+</head>
+
+
+
+
+<body>
+<!-- wrapper -->
+<div class="wrapper">
+    <!-- 메뉴 -->
+    <div id="subNav"></div>
+    <div id="js"></div>
+    <div id="headerTop"></div>
+    <!-- 메뉴 End-->
+
+    <!-- 본문  -->
+    <div class="main-panel">
+        <!-- Page content -->
+        <div class="container-fluid mt-4 mb-2">
+
+            <!-- card -->
+            <div class="card">
+                <!-- Card header -->
+                <div class="card-header">
+                    <!-- title  -->
+                    <h3 class="mb-0">이케어 리스트</h3>
+                    <!-- //title -->
+                </div>
+                <!-- e.Card header -->
+                
+                <!-- card body -->
+                <div class="card-body pb-1">
+
+                    <!-- search area & buttons -->
+                    <div class="row align-items-center py-2 table_option">
+                        <!-- buttons -->
+                        <div class="col-auto btn_area">
+                            <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                                <span class="btn-inner--icon"><i class="fas fa-edit"></i></span><span class="btn-inner--text">상태변경</span>
+                            </button>
+                            <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                                <span class="btn-inner--icon"><i class="fas fa-sync-alt"></i></span><span class="btn-inner--text">대상자 갱신</span>
+                            </button>
+                            <button class="btn btn-sm btn-outline-danger btn-round btn-icon">
+                                <span class="btn-inner--icon"><i class="fas fa-trash"></i></span><span class="btn-inner--text">삭제</span>
+                            </button>
+                        </div>
+                        <!-- e.buttons -->
+
+                        <!-- search -->
+                        <div class="col-auto row searchWrap">
+                            <div class="col-auto form-group searchbox">
+                                <select class="form-control form-control-sm">
+                                    <option>수행상태</option>
+                                    <option>작성중</option>
+                                    <option>중지</option>
+                                    <option>실행</option>
+                                    <option>일시정지</option>
+                                    <option>점검중</option>
+                                </select>
+                                <select class="form-control form-control-sm">
+                                    <option>서비스 타입</option>
+                                    <option>실시간</option>
+                                    <option>준 실시간</option>
+                                    <option>스케쥴(분)</option>
+                                    <option>스케쥴</option>
+                                </select>
+                            </div>
+
+                            <div class="col-auto form-group searchbox">
+                                <div class="search_input">
+                                    <span class="form-control-label txt">검색어</span>
+                                    <select class="form-control form-control-sm">
+                                        <option>서비스명</option>
+                                        <option>이케어 번호</option>
+                                    </select>
+                                    <input type="search" class="form-control form-control-sm" placeholder="" aria-controls="datatable-basic" />
+                                    <button href="#" class="btn btn-sm btn-neutral btn-round mr-0">조회</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //search -->
+                    </div>
+                    <!-- e.search area & buttons -->
+                </div>
+                <!-- e.card body -->
+
+                <!-- Light table -->
+                <div class="table-responsive">
+                    <table class="table table-flush dataTable">
+                        <thead class="thead-light">
+                        <tr>
+                            <th scope="col">선택</th>
+                            <th class="sorting" aria-controls="datatable-basic" scope="col">이케어 번호</th>
+                            <th class="text-left" scope="col">이케어 명</th>
+                            <th scope="col">채널</th>
+                            <th scope="col">수행상태</th>
+                            <th scope="col">유형</th>
+                            <th scope="col">대상자수</th>
+                            <th scope="col">발송시간</th>
+                            <th scope="col">담당부서</th>
+                            <th scope="col">담당자</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="radio1" name="customRadio" class="custom-control-input" />
+                                    <label class="custom-control-label" for="radio1"></label>
+                                </div>
+                            </th>
+                            <td>348</td>
+                            <td class="text-left">
+                                <a href="#!" class="font-weight-bold">스케줄 이메일</a>
+                            </td>
+                            <td><em class="txt_channel">E</em></td>
+                            <td>실행</td>
+                            <td>스케쥴</td>
+                            <td class="text-right">3 명</td>
+                            <td>16:03:00</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="radio2" name="customRadio" class="custom-control-input" />
+                                    <label class="custom-control-label" for="radio2"></label>
+                                </div>
+                            </th>
+                            <td>347</td>
+                            <td class="text-left">
+                                <a href="#!" class="font-weight-bold">스케줄 이메일</a>
+                            </td>
+                            <td><em class="txt_channel a">A</em></td>
+                            <td>작성중</td>
+                            <td>스케쥴</td>
+                            <td class="text-right">3 명</td>
+                            <td>16:03:00</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- e.Light table -->
+
+                <!-- pagenation -->
+                <div class="pagination pagination-sm mb-0 pb-2 pt-1 justify-content-center">
+                    <ul class="pagination">
+                        <li class="paginate_button page-item previous disabled" id="datatable-basic_previous"><a href="#" aria-controls="datatable-basic" data-dt-idx="0" tabindex="0" class="page-link"><i class="fas fa-angle-left"></i></a></li>
+                        <li class="paginate_button page-item active"><a href="#" aria-controls="datatable-basic" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                        <li class="paginate_button page-item next disabled" id="datatable-basic_next"><a href="#" aria-controls="datatable-basic" data-dt-idx="2" tabindex="0" class="page-link"><i class="fas fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
+                <!-- e.pagenation -->
+            
+            </div>
+            <!-- e.card -->
+
+        </div> <!-- e.page content -->
+    </div>
+    <!--e.본문-->
+</div>
+<!-- e.wrapper -->
+
+</html>
