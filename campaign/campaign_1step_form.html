@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>템플릿 등록</title>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $("#subNav").load("../subNav.html");
+      $("#js").load("../js.html");
+      $("#headerTop").load("../headerTop.html");
+    });
+  </script>
+</head>
+
+<body>
+    <div class="wapper">
+  <!-- 메뉴 -->
+  <div id="subNav"></div>
+  <div id="js"></div>
+  <div id="headerTop"></div>
+  <!-- 메뉴 End-->
+
+
+  <div class="main-panel">
+    <!-- Page content -->
+    <div class="container-fluid mt-4 mb-2">
+      <!-- card -->
+      <div class="card">
+        <!-- Card header / title -->
+        <div class="card-header">
+          <div class="row align-items-center">
+            <div class="col-8">
+              <h3 class="mb-0">템플릿 등록</h3>
+            </div>
+              <!-- step -->
+              <div class="col-4 row pr-0 justify-content-end">
+                <ul class="stepWrap">
+                    <li class="current"><div class="box"><span class="txt">STEP</span><strong>1</strong></div></li>
+                    <li><div class="box"><span class="txt">STEP</span><strong>2</strong></div></li>
+                    <li><div class="box"><span class="txt">STEP</span><strong>3</strong></div></li>
+                </ul>
+            </div>
+            <!-- e.step -->
+          </div>
+        </div>
+        <!-- card-body -->
+        <div class="card-body">
+            <form>
+                <div class="row  mb-3">
+                   
+                    <div class="col-4">
+                        <div class="fomrgroup"> <label class="form-control-label"
+                                for="">* 캠페인명</label>
+                            <input class="form-control" type="text"  value="캐롯 손해보험 MMS 발송 테스트"  id="">
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="fomrgroup"> <label class="form-control-label" for="">캠페인 설명</label>
+                            <input class="form-control" type="text" id="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-12">
+                        <div class="fomrgroup"> <label class="form-control-label" for="">태그</label>
+                            <input class="form-control" type="text" id="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-3">
+                        <div class="fomrgroup">
+                            <label class="form-control-label" for="">담당부서</label>
+                            <input class="form-control " type="text" id="">
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="fomrgroup"> <label class="form-control-label" for="">담당자</label>
+                            <input class="form-control" type="text" id="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label class="col-2 col-form-label form-control-label">채널</label>
+                    <div class="col-12">
+                        <div class="fomrgroup">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="" class="custom-control-input" checked>
+                                <label class="custom-control-label">EMAIL</label>
+                              </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadioInline2" class="custom-control-input">
+                                <label class="custom-control-label">SMS</label>
+                              </div>
+                              <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="" class="custom-control-input">
+                                <label class="custom-control-label">LMS/MMS</label>
+                              </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadioInline2" class="custom-control-input">
+                                <label class="custom-control-label">친구톡</label>
+                              </div>
+                              <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="" class="custom-control-input">
+                                <label class="custom-control-label">브랜드톡</label>
+                              </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadioInline2" class="custom-control-input">
+                                <label class="custom-control-label">PUSH</label>
+                              </div>
+                              <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="customRadioInline2" class="custom-control-input">
+                                <label class="custom-control-label">FAX</label>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <label class="col-2 col-form-label form-control-label ">A/B테스트</label>
+                    <div class="col-12">
+                        <div class="fomrgroup">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="" class="custom-control-input" checked>
+                                <label class="custom-control-label">미사용</label>
+                              </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="" class="custom-control-input" >
+                                <label class="custom-control-label">제목 </label>
+                              </div>
+                              <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="" class="custom-control-input" >
+                                <label class="custom-control-label">템플릿 </label>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+           <!-- button area -->
+           <div class="card-body text-center btn_area">
+            <button type="button" class="btn btn-primary btn-icon">
+                <span class="btn-inner--icon"><i class="fas fa-save"></i></span><span class="btn-inner--text">저장</span>
+            </button>
+            <button type="button" class="btn btn-outline-primary btn-icon">
+                <span class="btn-inner--text mr-2">다음</span><span class="btn-inner--icon"><i class="fas fa-chevron-right"></i></span>
+            </button>
+        </div>
+        <!-- e.button area -->
+    
+            
+        </div> <!-- e.Card body -->
+      </div>
+   
+  </div> <!-- e.page content -->
+</div>
+  <!--내용-->
+</div>
+
+
+</html>
