@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>템플릿 등록</title>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $("#subNav").load("../subNav.html");
+      $("#js").load("../js.html");
+      $("#headerTop").load("../headerTop.html");
+    });
+  </script>
+</head>
+
+<body>
+  <div class="wapper">
+    <!-- 메뉴 -->
+    <div id="subNav"></div>
+    <div id="js"></div>
+    <div id="headerTop"></div>
+    <!-- 메뉴 End-->
+
+    <!-- 내용 -->
+    <div class="main-panel">
+      <!-- Page content -->
+      <div class="container-fluid mt-4 mb-2">
+        <div class="card mb-4">
+          <div class="card">
+            <!-- Card header -->
+            <div class="card-header">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h3 class="mb-0">템플릿 등록</h3>
+                </div>
+                <div class="col text-right">
+                  <a href="#" class="btn btn-sm btn-primary btn-round btn-icon" data-toggle="tooltip"
+                    data-original-title="Edit product">
+                    <span class="btn-inner--icon"><i class="fas fa-save"></i></span>
+                    <span class="btn-inner--text">저장</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- card-body -->
+            <div class="card-body">
+              <form>
+                <div class="row  mb-3">
+                  <div class="col-6">
+                    <div class="fomrgroup"> <label class="form-control-label" for="">* 템플릿명</label>
+                      <input class="form-control" type="text" id="">
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="fomrgroup"> <label class="form-control-label" for="">설명</label>
+                      <input class="form-control" type="text" id="">
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-12">
+                    <div class="fomrgroup"> <label class="form-control-label" for="">태그</label>
+                      <input class="form-control" type="text" id="">
+                    </div>
+                  </div>
+                </div>
+                <div class="row mb-5">
+                  <div class="col-4">
+                    <label class="col-form-label form-control-label">* 공유유형</label>
+                    <div class="fomrgroup">
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="" class="custom-control-input" checked>
+                        <label class="custom-control-label">EMAIL</label>
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="customRadioInline2" class="custom-control-input">
+                        <label class="custom-control-label">SMS</label>
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="" class="custom-control-input">
+                        <label class="custom-control-label">LMS/MMS</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-5">
+                    <label class="form-control-label" for="">*파일선택</label>
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" id="customFileLang" lang="en">
+                      <label class="custom-file-label" for="customFileLang"></label>
+                    </div>
+                  </div>
+                  <div class="col-3">
+                    <label class="form-control-label" for="">* 작성자</label>
+                    <div class="fomrgroup">
+                      <input class="form-control" type="text" id="" value="admin" disabled>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <button type="button" class="btn  btn-outline-primary px-8  mb-4">등록</button>
+            </div> <!-- e.Card body -->
+          </div>
+        </div>
+        <!--e.container-fluid-->
+      </div> <!-- e.page content -->
+    </div>
+    <!--내용-->
+  </div>
+
+</html>
