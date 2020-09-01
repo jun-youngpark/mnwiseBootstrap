@@ -90,13 +90,16 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {justify-content: c
 .table.table-form td {text-align:left;}
 
 /***** text *****/
-.required {display:inline-block; width:4px; height:4px;  margin-right:5px; text-indent:-999em; font-size:.1em; vertical-align:middle; background:#5e72e4; border-radius:4px;}
+.required {display:inline-block; width:4px; height:4px;  margin-right:5px; text-indent:-999em; font-size:.1em; vertical-align:middle; text-align:left; background:#5e72e4; border-radius:4px;}
 
 /***** forms *****/
 .form-group dl {font-size:.875rem;}
-.form-group dt {margin-bottom:.5rem; font-weight:600; color:#525f7f;}
+.form-group dt {font-weight:600; color:#525f7f;}
 .form-group dd {display:-webkit-box; display:flex; min-height:46px; margin:0; -webkit-box-align:center; align-items:center;}
 .form-group dd .custom-control-label {vertical-align: middle;}
+
+.col-form-label {text-align:right; background:#f7fafc;}
+
 
 /***** custom contents *****/
 .txt_channel {display:inline-block; width:20px; height:20px; font-style:normal; font-weight: 500; font-size:.75rem; color:#fff; text-align:center; line-height:20px; background:var(--info); border-radius:2px;}
