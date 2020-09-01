@@ -81,13 +81,15 @@
 
                             <div class="form-group searchbox">
                                 <div class="search_input">
-                                    <span class="form-control-label txt">서비스 명</span>
+                                    <span class="form-control-label txt">검색어</span>
                                     <select class="form-control form-control-sm">
                                         <option>서비스 명</option>
                                         <option>이케어 번호</option>
                                     </select>
                                     <input type="search" class="form-control form-control-sm" placeholder="" aria-controls="datatable-basic" />
-                                    <button class="btn btn-sm btn-neutral btn-round mr-0">검색</button>
+                                    <button class="btn btn-sm btn-outline-info btn-icon btn_search">
+                                        <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span class="btn-inner--text">검색</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -104,7 +106,7 @@
                         <tr>
                             <th scope="col">선택</th>
                             <th class="sorting" aria-controls="datatable-basic" scope="col">이케어 번호</th>
-                            <th class="text-left" scope="col">이케어 명</th>
+                            <th scope="col">이케어 명</th>
                             <th scope="col">채널</th>
                             <th scope="col">수행상태</th>
                             <th scope="col">유형</th>
