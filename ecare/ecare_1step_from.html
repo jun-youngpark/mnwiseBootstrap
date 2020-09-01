@@ -102,10 +102,20 @@
                     <!-- row -->
                     <div class="row">
                         <!-- col -->
-                        <div class="col-12">
+                        <div class="col-6">
                             <div class="row form-group">
-                                <label class="col col-form-label form-control-label" for=""><em class="required">required</em>이케어명</label>
-                                <div class="col-10">
+                                <label class="col-4 col-form-label form-control-label" for=""><em class="required">required</em>이케어명</label>
+                                <div class="col-8">
+                                    <input type="text" class="form-control" required placeholder="" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                        <!-- col -->
+                        <div class="col-6">
+                            <div class="row form-group">
+                                <label class="col-4 col-form-label form-control-label" for="">이케어 설명</label>
+                                <div class="col-8">
                                     <input type="text" class="form-control" required placeholder="" />
                                 </div>
                             </div>
@@ -113,20 +123,8 @@
                         <!-- //col -->
                     </div>
                     <!-- //row -->
-                    <!-- row -->
-                    <div class="row">
-                        <!-- col -->
-                        <div class="col-12">
-                            <div class="row form-group">
-                                <label class="col-2 col-form-label form-control-label" for="">이케어 설명</label>
-                                <div class="col-10">
-                                    <textarea class="form-control" id="" rows="3"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- //col -->
-                    </div>
-                    <!-- //row -->
+
+                    <!-- modify -->
                     <!-- row -->
                     <div class="row">
                         <!-- col -->
@@ -236,6 +234,121 @@
                         <!-- //col -->
                     </div>
                     <!-- //row -->
+                    <!-- //modify -->
+
+                    <!-- registration -->
+                    <!-- row -->
+                    <div class="row">
+                        <!-- col -->
+                        <div class="col-4">
+                            <div class="row form-group">
+                                <label class="col-6 col-form-label form-control-label" for="">담당부서</label>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" required placeholder="" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                        <!-- col -->
+                        <div class="col-4">
+                            <div class="row form-group">
+                                <label class="col-4 col-form-label form-control-label" for="">담당자</label>
+                                <div class="col-8">
+                                    <input type="text" class="form-control" placeholder="" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                        <!-- col -->
+                        <div class="col-4">
+                            <div class="row form-group">
+                                <label class="col-5 col-form-label form-control-label" for="">요청 부서코드</label>
+                                <div class="col-7">
+                                    <input type="text" class="form-control" placeholder="" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                    </div>
+                    <!-- //row -->
+                    <!-- row -->
+                    <div class="row">
+                        <!-- col -->
+                        <div class="col-6">
+                            <div class="row form-group">
+                                <label class="col-4 col-form-label form-control-label" for=""><em class="required">required</em>요청자 아이디</label>
+                                <div class="col-8">
+                                    <input type="text" class="form-control" required placeholder="" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                        <!-- col -->
+                        <div class="col-6">
+                            <div class="form-group">
+                                <dl class="row">
+                                    <dt class="col-4 col-form-label form-control-label"><em class="required">required</em>핸들러 타입</dt class="col-3 col-form-label form-control-label">
+                                    <dd class="col-8">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="handler1" name="handler" class="custom-control-input" />
+                                            <label class="custom-control-label" for="handler1">groovy</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="handler2" name="handler" class="custom-control-input" />
+                                            <label class="custom-control-label" for="handler2">script</label>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                    </div>
+                    <!-- //row -->
+                    <!-- row -->
+                    <div class="row">
+                        <!-- col -->
+                        <div class="col-12">
+                            <div class="form-group">
+                                <dl class="row">
+                                    <dt class="col-2 col-form-label form-control-label"><em class="required">required</em>채널</dt>
+                                    <dd class="col-10">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" />
+                                            <label class="custom-control-label" for="customRadioInline1">EMAIL</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox custom-control-inline form_subcheckbox">
+                                            <input type="checkbox" id="security" name="security" class="custom-control-input" />
+                                            <label class="custom-control-label" for="security">보안메일</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" />
+                                            <label class="custom-control-label" for="customRadioInline2">SMS</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input" />
+                                            <label class="custom-control-label" for="customRadioInline3">LMS/MMS</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="customRadioInline4" name="customRadioInline1" class="custom-control-input" />
+                                            <label class="custom-control-label" for="customRadioInline4">PUSH</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="customRadioInline5" name="customRadioInline1" class="custom-control-input" />
+                                            <label class="custom-control-label" for="customRadioInline5">알림톡</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="customRadioInline6" name="customRadioInline1" class="custom-control-input" />
+                                            <label class="custom-control-label" for="customRadioInline6">FAX</label>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                        
+                    </div>
+                    <!-- //row -->
+                    <!-- //registration -->
                 </div>
                 <!-- //grid -->
                 
