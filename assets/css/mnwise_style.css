@@ -82,7 +82,7 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {justify-content: c
 
 /***** table *****/
 .card .table {border-collapse: collapse !important;}
-.card .table td, .card .table th {padding-left:20px; padding-right:20px; text-align:center; border:1px solid #e9ecef;}
+.card .table td, .card .table th {padding-left:20px; padding-right:20px; text-align:center; vertical-align: middle; border:1px solid #e9ecef;}
 .card .table tr > *:first-child {border-left:none;}
 .card .table tr > *:last-child {border-right:none;}
 .table thead th {font-size:.8125rem;}
@@ -107,6 +107,10 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {justify-content: c
 .form-group dd .custom-control-label {vertical-align: middle;}
 
 .col-form-label {text-align:right; background:#f7fafc;}
+
+.form_subcheckbox {position:relative; margin:0 20px 0 0;}
+.form_subcheckbox::before {content:"("; position:absolute; left:-.6em; top:0;}
+.form_subcheckbox::after {content:")"; position:absolute; right:-.5em; top:0;}
 
 
 /***** custom contents *****/
