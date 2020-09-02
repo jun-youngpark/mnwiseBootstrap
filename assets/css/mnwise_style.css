@@ -114,8 +114,14 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {justify-content: c
 
 
 /***** custom contents *****/
-.txt_channel {display:inline-block; width:20px; height:20px; font-style:normal; font-weight: 500; font-size:.75rem; color:#fff; text-align:center; line-height:20px; background:var(--info); border-radius:2px;}
-.txt_channel.a {background:var(--orange);}
+.txt_channel {display:inline-block; width:20px; height:20px; font-style:normal; font-weight: 500; font-size:.75rem; color:#fff; text-align:center; line-height:20px; background:#1ac1e7; border-radius:2px;}
+.txt_channel.s {background:#4491fc;}
+.txt_channel.m {background:#fd831f;}
+.txt_channel.a {background:#fcd72c;}
+.txt_channel.b {background:#3c1e1e;}
+.txt_channel.p {background:#dd3b41;}
+.txt_channel.f {background:#9b11fc;}
+
 
 /* step */
 .stepWrap {position:relative; display:inline-block; margin:0; padding:0; list-style: none; font-size:.8125rem; color:#fff;}
