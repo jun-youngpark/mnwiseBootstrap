@@ -135,3 +135,13 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {justify-content: c
 .stepWrap .current .box .txt {position:static; margin-right:.5em; opacity:1;}
 
 
+/* list depth */
+.list_depth {position:relative; padding-left:40px;}
+.list_depth.depth3 {padding-left:50px;}
+.list_depth.depth4 {padding-left:60px;}
+.list_depth.depth5 {padding-left:70px;}
+.depth_type {position:absolute; left:10px; top:50%; width:22px; height:14px; margin-top:-7px; text-indent:-999em; background:url("../img/type_S.png") no-repeat left center;}
+.depth_type.f {background-image:url("../img/type_F.png");}
+.list_depth.depth3 .depth_type {left:20px;}
+.list_depth.depth4 .depth_type {left:30px;}
+.list_depth.depth5 .depth_type {left:40px;}
