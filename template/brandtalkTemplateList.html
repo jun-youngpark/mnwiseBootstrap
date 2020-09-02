@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script>
+        $(function () {
+            $("#subNav").load("../subNav.html");
+            $("#js").load("../js.html");
+            $("#headerTop").load("../headerTop.html");
+        });
+    </script>
+</head>
+
+<body>
+    <!-- wrapper -->
+    <div class="wrapper">
+        <!-- 메뉴 -->
+        <div id="subNav"></div>
+        <div id="js"></div>
+        <div id="headerTop"></div>
+        <!-- //메뉴-->
+
+        <!-- Contents area  -->
+        <div class="main-panel">
+            <!-- Page content -->
+            <div class="container-fluid mt-4 mb-2">
+
+                <!-- card -->
+                <div class="card">
+                    <!-- Card header -->
+                    <div class="card-header">
+                        <!-- title  -->
+                        <h3 class="mb-0">브랜드톡 템플릿 리스트</h3>
+                        <!-- //title -->
+                    </div>
+                    <!-- e.Card header -->
+
+                    <!-- card body -->
+                    <div class="card-body pb-1">
+
+                        <!-- search area & buttons -->
+                        <div class="row align-items-center py-2 table_option">
+                            <!-- buttons -->
+                            <div class="col-auto btn_area">
+                                <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                                    <span class="btn-inner--icon"><i class="fas fa-trash"></i></span><span
+                                        class="btn-inner--text">템플릿 삭제</span>
+                                </button>
+                                <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                                    <span class="btn-inner--icon"><i class="fas fa-download"></i></span><span
+                                        class="btn-inner--text">템플릿 다운로드</span>
+                                </button>
+                            </div>
+                            <!-- e.buttons -->
+                            <!-- search -->
+                            <div class="col-auto searchWrap">
+                                <div class="form-group searchbox">
+                                    <select class="form-control form-control-sm">
+                                        <option>사용여부</option>
+                                        <option>사용</option>
+                                        <option>미사용</option>
+                                    </select>
+                                    <select class="form-control form-control-sm">
+                                        <option>플러스 친구 ID</option>
+                                        <option>@엠앤와이즈</option>
+                                    </select>
+                                    <select class="form-control form-control-sm">
+                                        <option>템플릿 상태</option>
+                                        <option>정상</option>
+                                        <option>대기</option>
+                                        <option>중단</option>
+                                    </select>
+                                    <button class="btn btn-sm btn-outline-info btn-icon btn_search">
+                                        <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span class="btn-inner--text">검색</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- //search -->
+                            
+                        </div>                       
+                        <!-- e.search area & buttons -->
+                    </div>
+                    <!-- e.card body -->
+                    <!-- Light table -->
+                    <div class="table-responsive">
+                        <table class="table dataTable">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">선택</th>
+                                    <th scope="col">플러스친구ID</th>
+                                    <th scope="col">템플릿 코드</th>
+                                    <th scope="col">템플릿명</th>
+                                    <th scope="col">템플릿 내용</th>
+                                    <th scope="col">사용여부</th>
+                                    <th scope="col">템플릿 상태</th>
+                                    <th scope="col">공유유형</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" id="checkbox1" name="customcheckbox"
+                                                class="custom-control-input" />
+                                            <label class="custom-control-label" for="checkbox1"></label>
+                                        </div>
+                                    </th>
+                                    <td>@엠앤와이즈</td>
+                                    <td class="text-left">c0b132a8993eb5e9d3871e1b842a8d9b7b2c716e</td>
+                                    <td class="text-left">
+                                        <a href="#!" class="font-weight-bold">#{test} 님 안녕하세요</a></td>
+                                    <td class="text-left">테스트 템플릿 테스트 템플릿 테스트 템플릿 테스트 템플릿 입니다!😄</td>
+                                    <td>사용</td>
+                                    <td>대기</td>
+                                    <td>전체</td>
+                                </tr>	
+                                <tr>
+                                    <th scope="row">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" id="checkbox1" name="customcheckbox"
+                                                class="custom-control-input" />
+                                            <label class="custom-control-label" for="checkbox1"></label>
+                                        </div>
+                                    </th>
+                                    <td>@엠앤와이즈</td>
+                                    <td class="text-left">e7a774a1610fa35932a22a71ce6572948c04fa7c</td>
+                                    <td class="text-left">
+                                        <a href="#!" class="font-weight-bold">브랜드톡테스트</a></td>
+                                    <td class="text-left">브랜드톡테스트 입니다!</td>
+                                    <td>사용</td>
+                                    <td>승인</td>
+                                    <td>사용자</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- e.Light table -->
+
+                    <!-- pagenation -->
+                    <div class="pagination pagination-sm mb-0 pb-2 pt-1 justify-content-center">
+                        <ul class="pagination">
+                            <li class="paginate_button page-item previous disabled" id="datatable-basic_previous"><a
+                                    href="#" aria-controls="datatable-basic" data-dt-idx="0" tabindex="0"
+                                    class="page-link"><i class="fas fa-angle-left"></i></a></li>
+                            <li class="paginate_button page-item active"><a href="#" aria-controls="datatable-basic"
+                                    data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                            <li class="paginate_button page-item next disabled" id="datatable-basic_next"><a href="#"
+                                    aria-controls="datatable-basic" data-dt-idx="2" tabindex="0" class="page-link"><i
+                                        class="fas fa-angle-right"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- e.pagenation -->
+
+                </div>
+                <!-- e.card -->
+
+            </div> <!-- e.page content -->
+        </div>
+        <!--e.Contents area-->
+    </div>
+    <!-- e.wrapper -->
+
+</html>
