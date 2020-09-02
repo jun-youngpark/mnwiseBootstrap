@@ -48,6 +48,7 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {justify-content: c
 .div-control-box{font-size: .875rem;  font-weight: 400;  line-height: 1.5;  width: 100%; height: calc(1.5em + 1.25rem + 3px);  padding: .625rem .75rem;
   transition: all .15s cubic-bezier(.68, -.55, .265, 1.55);   color: #8898aa;   border: 1px solid #dee2e6; border-radius: .25rem;
   background-color: #fff; background-clip: padding-box;  box-shadow: 0 3px 2px rgba(233, 236, 239, .05);}
+  
 
 
 
@@ -96,6 +97,7 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {justify-content: c
 .table-form tr > *:first-child {border-left: none;}
 .table-form tr > *:last-child {border-right: none;}
 .table.table-form td {text-align:left;}
+.table th, .table td, .table td>a{max-width:170px; overflow: hidden; white-space: nowrap;  text-overflow: ellipsis;} 
 
 /***** text *****/
 .required {display:inline-block; width:4px; height:4px;  margin-right:5px; text-indent:-999em; font-size:.1em; vertical-align:middle; text-align:left; background:#5e72e4; border-radius:4px;}
