@@ -51,11 +51,17 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {justify-content: c
   
 
 
-
+/***** common class *****/
+.hide {position: absolute; left:-999em; top:-999em; opacity:0;}
+.none {display:none !important;}
 
 /***** button *****/
 .card-footer.btn_area {text-align:center;}
+.card-footer.btn_area .col {text-align:left;}
+.card-footer.btn_area .col:last-child {text-align:right;}
+.card-footer.btn_area .col:only-child {text-align:center;}
 .card-footer.btn_area button {min-width:15em;}
+.card-footer.btn_area .col button {min-width:10em;}
 
 
 
@@ -107,16 +113,23 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {justify-content: c
 .form-group dt {font-weight:600; color:#525f7f;}
 .form-group dd {display:-webkit-box; display:flex; min-height:46px; margin:0; -webkit-box-align:center; align-items:center;}
 .form-group dd .custom-control-label {vertical-align: middle;}
+.form-group button {min-width:46px; height:46px; padding:5px 10px;}
 
 .col-form-label {text-align:right; background:#f7fafc;}
+.col-form-label + div .row > div + div {padding-left:0;}
 
 .form_subcheckbox {position:relative; margin:0 20px 0 0;}
 .form_subcheckbox::before {content:"("; position:absolute; left:-.6em; top:0;}
 .form_subcheckbox::after {content:")"; position:absolute; right:-.5em; top:0;}
 
+.input-has-unit {position: relative;}
+.input-has-unit input {padding-right:2em;}
+.input-has-unit .unit {position:absolute; right:5px; top:50%; font-size:.875rem; -webkit-transform: translateY(-50%); transform: translateY(-50%);}
+.row .input-has-unit .unit {right:25px;}
+
 
 /***** custom contents *****/
-.txt_channel {display:inline-block; width:20px; height:20px; font-style:normal; font-weight: 500; font-size:.75rem; color:#fff; text-align:center; line-height:20px; background:#1ac1e7; border-radius:2px;}
+.txt_channel {display:inline-block; width:20px; height:20px; margin:0 5px; font-style:normal; font-weight: 500; font-size:.75rem; color:#fff; text-align:center; line-height:20px; vertical-align:middle; background:#1ac1e7; border-radius:2px;}
 .txt_channel.s {background:#4491fc;}
 .txt_channel.m {background:#fd831f;}
 .txt_channel.a {background:#fcd72c;}
