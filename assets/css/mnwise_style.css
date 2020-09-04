@@ -52,7 +52,10 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {justify-content: c
 .custom-file-input {display:none;}
 .notice-text {padding-inline-start: 10px;}
 .notice-text li{list-style:none; font-size: .8125rem; }
-    
+/*** mms-view-img**/
+.mms-view-img{width:220px; height:184px; margin-bottom: 1rem; border:1px solid #e8e8e8;}
+.mms-view-img img{background-size: contain; width: 100%; height: 100%;  resize: both;}
+.textarea-font-style{text-align-last: right; font-size:0.85em}
 
 
 /***** common class *****/
