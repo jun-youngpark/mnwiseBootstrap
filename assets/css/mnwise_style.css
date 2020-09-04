@@ -17,9 +17,6 @@
   .dp-flex{display: flex ;}
   .form-group-mb{ margin-bottom: .8rem;}
 
- /*dataTablest CSS */
- /* 분리된 테두리 표: separate */
- table.dataTable {border-collapse: separate !important;}
 
  /*플러그인에 있는 select box, script단에서 초기화 후 display: none*/
  div.dataTables_wrapper div.dataTables_length label { display: none;}
@@ -49,6 +46,11 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {justify-content: c
   transition: all .15s cubic-bezier(.68, -.55, .265, 1.55);   color: #8898aa;   border: 1px solid #dee2e6; border-radius: .25rem;
   background-color: #fff; background-clip: padding-box;  box-shadow: 0 3px 2px rgba(233, 236, 239, .05);}
   
+
+/*** input-file**/
+.custom-file-input:lang(ko) ~ .custom-file-label::after{content: '파일 선택';}
+.custom-file-input {display:none;}
+    
 
 
 /***** common class *****/

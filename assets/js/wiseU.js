@@ -3,6 +3,7 @@ $(document).ready(function () {
     treeViewFnc();
     tableReset();
     calendarFnc();
+    inputFileFnc();
 
   
   
@@ -57,4 +58,14 @@ function tableReset(){
             },
         },
     });
+}
+function inputFileFnc(){
+    $('input[type=file]').on('change',function(){
+        if(window.Filereder){ // modern browser
+            var filename = $(this)[0].files[0].name;
+        }else{ // oldIE
+            var filename = $(this).val().split('/').pop().split('\\').pop();
+        }
+        $('.custom-file-label').text(filename);
+    })
 }
