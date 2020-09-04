@@ -4,6 +4,7 @@ $(document).ready(function () {
     tableReset();
     calendarFnc();
     inputFileFnc();
+    countTextFnc();
 
   
   
@@ -59,6 +60,7 @@ function tableReset(){
         },
     });
 }
+/*input file 라벨에 파일이름 추가 */
 function inputFileFnc(){
     $('input[type=file]').on('change',function(){
         if(window.Filereder){ // modern browser
@@ -69,3 +71,12 @@ function inputFileFnc(){
         $('.custom-file-label').text(filename);
     })
 }
+
+/* textarea 글자수 카운트 */
+function countTextFnc(){
+    $('.textarea').keyup(function (e){
+        var content = $(this).val();
+        $('.count-text').html(content.length );
+    });
+    $('.count-text').keyup();
+    }
