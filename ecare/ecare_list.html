@@ -12,7 +12,27 @@
         $("#subNav").load("../subNav.html");
         $("#js").load("../js.html");
         $("#headerTop").load("../headerTop.html");
+        
+        searchui();
+        $(window).resize(function() {
+            searchui();
+        });
     });
+
+    // table top button & search ui
+    function searchui() {
+        var tot_section = $(".table_option").innerWidth();
+        var left_section = $(".table_option .btn_area").innerWidth();
+        var right_section = $(".table_option .searchWrap").innerWidth();
+
+        if(tot_section < left_section + right_section) {
+            $(".table_option").addClass("st02");
+        } else {
+            $(".table_option").removeClass("st02");
+        }
+    }
+
+
     </script>
 </head>
 
@@ -56,6 +76,15 @@
                             <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
                                 <span class="btn-inner--icon"><i class="fas fa-trash"></i></span><span class="btn-inner--text">삭제</span>
                             </button>
+                            <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                                <span class="btn-inner--icon"><i class="fas fa-download"></i></span><span class="btn-inner--text">핸들러 다운로드</span>
+                            </button>
+                            <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                                <span class="btn-inner--icon"><i class="fas fa-download"></i></span><span class="btn-inner--text">템플릿 다운로드</span>
+                            </button>
+                            <select class="form-control form-control-sm">
+                                <option value="">서비스 점검</option>
+                            </select>
                         </div>
                         <!-- e.buttons -->
 
