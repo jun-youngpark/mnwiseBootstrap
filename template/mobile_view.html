@@ -49,33 +49,7 @@
                 <div class="card-body gridWrap">
                     <!-- row -->
                     <div class="row">
-                        <!-- col -->
-                        <div class="col-8">  
-                            <div class="form-group">
-                                <dl class="row">
-                                    <dt class="col-2 col-form-label form-control-label"><em class="required">required</em>템플릿 유형</dt>
-                                    <dd class="col-10">
-                                        <div class="custom-control custom-radio custom-control-inline">
-                                            <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" />
-                                            <label class="custom-control-label" for="customRadioInline1">단문 메시지(80 byte) </label>
-                                        </div>
-                                        <div class="custom-control custom-radio custom-control-inline">
-                                            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" checked/>
-                                            <label class="custom-control-label" for="customRadioInline2">장문 메시지(2000 byte)</label>
-                                        </div>
-                                        <div class="custom-control custom-radio custom-control-inline">
-                                            <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input" />
-                                            <label class="custom-control-label" for="customRadioInline3">MMS 이미지</label>
-                                        </div>
-                                        <div class="custom-control custom-radio custom-control-inline">
-                                            <input type="radio" id="customRadioInline4" name="customRadioInline1" class="custom-control-input" />
-                                            <label class="custom-control-label" for="customRadioInline4">친구톡 이미지</label>
-                                        </div>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </div>
-                        <!-- //col -->
+                      
                          <!-- col -->
                          <div class="col-4">
                             <div class="row form-group">
@@ -85,14 +59,8 @@
                                 </div>
                             </div>
                         </div>
-                        <!-- //col -->
-                     
-                    </div>
-                    <!-- //row -->
-                     <!-- row -->
-                     <div class="row">
-                        <!-- col -->
-                        <div class="col-6">
+                           <!-- col -->
+                           <div class="col-4">
                             <div class="row form-group">
                                 <label class="col-4 col-form-label form-control-label" for=""><em class="required">required</em>템플릿 명</label></label>
                                 <div class="col-8">
@@ -102,7 +70,7 @@
                         </div>
                         <!-- //col -->
                         <!-- col -->
-                        <div class="col-6">
+                        <div class="col-4">
                             <div class="row form-group">
                                 <label class="col-4 col-form-label form-control-label" for="">템플릿 설명</label>
                                 <div class="col-8">
@@ -111,30 +79,14 @@
                             </div>
                         </div>
                         <!-- //col -->
+                        <!-- //col -->
+                     
                     </div>
                     <!-- //row -->
-                    <!-- row -->
-                    <div class="row">
-                        <!--col-->
-                        <div class="col-6">
-                            <div class="row form-group">
-                                <label class="col-4 col-form-label form-control-label" for=""><em class="required">required</em>템플릿 내용</label>
-                                <div class="col-8">
-                                    <textarea class="form-control textarea" id="" rows="6" style="background: #f7fafc;"></textarea>
-                                    <div class="textarea-font-style"><span class="count-text">0</span> bytes</div>
-                                 <!--  휴대폰 모양 추가해서 만들어본 textarea
-                                     <div class="mobile-wrap" style="width:100%; height:auto; border:1px solid #dee2e6; border-radius: 7% 7% 2% 2%; padding:5px 30px;">
-                                       <div class="line" style="text-align:center">
-                                        <span  style="display: inline-block; width:25%; height:5px; border-radius:5px ; background:#dee2e6;margin-right:5px "></span>
-                                        <span style="display: inline-block; width:5px; height:5px; border-radius:50%; background: #dee2e6;;"></span></div>
-                                    </div>
-                                  --> 
-                                </div>
-                            </div>
-                        </div>
-                        <!--//col-->
-                        <!-- col -->
-                        <div class="col-6">
+                     <!-- row -->
+                     <div class="row">
+                          <!-- col -->
+                        <div class="col-4">
                             <div class="form-group">
                                 <dl class="row">
                                     <dt class="col-4 col-form-label form-control-label"><em class="required">required</em>공유 유형</dt>
@@ -156,6 +108,50 @@
                             </div>
                         </div>
                         <!-- //col -->
+                        <!--col-->
+                        <div class="col-4">
+                            <div class="row form-group">
+                                <label class="col-4 col-form-label form-control-label" for=""><em class="required">required</em>작성자</label></label>
+                                <div class="col-8">
+                                    <input type="text" class="form-control" placeholder="" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                        <!-- col -->
+                        <div class="col-4">
+                            <div class="row form-group">
+                                <label class="col-4 col-form-label form-control-label" for=""><em class="required">required</em>작성일자</label>
+                                <div class="col-8">
+                                    <input type="text" class="form-control" placeholder="" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                    </div>
+                    <!-- //row -->
+                    
+                    <!-- row -->
+                    <div class="row">
+                        <!--col-->
+                        <div class="col-6">
+                            <div class="row form-group">
+                                <label class="col-4 col-form-label form-control-label" for=""><em class="required">required</em>MMS 이미지</label>
+                                <div class="col-8">
+                                    <div class="mms-view-img"><img src="../assets/img/brand/wiseU_new.png" alt="mms이미지 미리보기" ></div>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="customFileLang" lang="ko">
+                                        <label class="custom-file-label" for="customFileLang"></label>
+                                    </div>
+                                    <ul class="notice-text mb-0">
+                                        <li><em class="required">required</em>지원하는 파일 확장자: jpg, 파일 최대 사이즈: 40KB</li>
+                                        <li><em class="required">required</em>권장 해상도: 220 x 184</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--//col-->
+                       
                     </div>
                     <!-- //row -->
                    
@@ -167,7 +163,9 @@
                     <button type="submit" class="btn btn btn-outline-primary btn-icon">
                         <span class="btn-inner--icon"><i class="fas fa-save"></i></span><span class="btn-inner--text">저장</span>
                     </button>
-                  
+                    <button type="button" class="btn btn btn-outline-info btn-icon">
+                        <span class="btn-inner--text mr-2">다음단계</span><span class="btn-inner--icon"><i class="fas fa-chevron-right"></i></span>
+                    </button>
                 </div>
                 <!-- e.button area -->
                 </form>
