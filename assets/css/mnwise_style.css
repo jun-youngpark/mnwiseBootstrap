@@ -87,10 +87,12 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {justify-content: c
 .search_input .btn_search .btn-inner--text {margin-left:2px;}
 
 .table_option {-webkit-box-align:center; align-items:center; -webkit-justify-content:space-between; -moz-justify-content:space-between; -ms-justify-content:space-between; justify-content:space-between;}
-.table_option .searchWrap {-webkit-flex:1; flex:1; text-align:right;}
+.table_option .searchWrap {text-align:right;}
 .table_option .searchWrap > * {display:inline-block; white-space: nowrap;}
 .table_option .btn:not(:last-child) {margin-right:5px;}
-
+.table_option .form-control {display:inline-block; width:auto;}
+.table_option.st02 .btn_area {-webkit-order:2; order:2;}
+.table_option.st02 .searchWrap {-webkit-order:1; order:1; margin-bottom:10px; margin-left:auto;}
 
 
 
