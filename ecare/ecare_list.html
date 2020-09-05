@@ -13,25 +13,9 @@
         $("#js").load("../js.html");
         $("#headerTop").load("../headerTop.html");
         
-        searchui();
-        $(window).resize(function() {
-            searchui();
-        });
     });
 
-    // table top button & search ui
-    function searchui() {
-        var tot_section = $(".table_option").innerWidth();
-        var left_section = $(".table_option .btn_area").innerWidth();
-        var right_section = $(".table_option .searchWrap").innerWidth();
-
-        if(tot_section < left_section + right_section) {
-            $(".table_option").addClass("st02");
-        } else {
-            $(".table_option").removeClass("st02");
-        }
-    }
-
+    
 
     </script>
 </head>
@@ -264,5 +248,27 @@
     <!--e.Contents area-->
 </div>
 <!-- e.wrapper -->
+
+<script>
+    $(window).load(function() {
+        // table top button & search ui
+        function searchui() {
+            var tot = $(".table_option").width();
+            var w01 = $(".table_option .btn_area").innerWidth() + $(".table_option .searchWrap").innerWidth();
+
+            if(tot  < w01 ) {
+                $(".table_option").addClass("st02");
+            } else {
+                $(".table_option").removeClass("st02");
+            }
+        };
+
+        searchui();
+
+        $(window).resize(function() {
+            searchui();
+        });
+    }); 
+</script>
 
 </html>
