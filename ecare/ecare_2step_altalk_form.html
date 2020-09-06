@@ -339,7 +339,33 @@
                                 <!-- //템플릿 tab -->
 
                                 <!-- 핸들러 tab -->
-                                <div class="tab-pane" id="handler" role="tabpanel" aria-labelledby="handler-tab">...</div>
+                                <div class="tab-pane" id="handler" role="tabpanel" aria-labelledby="handler-tab">
+                                    <!-- textarea -->
+                                    <div class="edit_area mt-3">
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="15"></textarea>
+                                    </div>
+                                    <!-- //textarea -->
+
+                                    <!-- edit area - option -->
+                                    <div class="row mt-3 mb-1 align-items-center">
+                                        <div class="col-auto mr-3">
+                                            <div class="row align-items-center">
+                                                <label class="col-auto col-form-label form-control-label" for="">기본 핸들러</label>
+                                                <select class="col form-control form-control-sm">
+                                                    <option value="">SMS Schedule</option>
+                                                    <option value=""></option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto align-items-center">
+                                            <div class="custom-control custom-switch">
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch1" />
+                                                <label class="custom-control-label" for="customSwitch1">핸들러 수정</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //edit area - option -->
+                                </div>
                                 <!-- //핸들러 tab -->
                             </div>
                             <!-- //tab content -->
@@ -356,7 +382,7 @@
                             <button type="submit" class="btn btn btn-outline-primary btn-icon">
                                 <span class="btn-inner--icon"><i class="fas fa-save"></i></span><span class="btn-inner--text">저장</span>
                             </button>
-                            <button type="submit" class="btn btn btn-outline-default">테스트 발송</button>
+                            <button type="button" class="btn btn btn-outline-default">테스트 발송</button>
                         </div>
                         <div class="col col-6">
                             <button type="button" class="btn btn btn-outline-info btn-icon">
