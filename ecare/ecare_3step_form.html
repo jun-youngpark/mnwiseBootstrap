@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script>
+    $(function () {
+        $("#subNav").load("../subNav.html");
+        $("#js").load("../js.html");
+        $("#headerTop").load("../headerTop.html");
+    });
+    </script>
+</head>
+
+<body>
+<!-- wrapper -->
+<div class="wrapper">
+    <!-- 메뉴 -->
+    <div id="subNav"></div>
+    <div id="js"></div>
+    <div id="headerTop"></div>
+    <!-- //메뉴-->
+
+    <!-- Contents area -->
+    <div class="main-panel">
+        <!-- Page content -->
+        <div class="container-fluid mt-4 mb-2">
+
+            <!-- card -->
+            <div class="card">
+                <!-- Card header -->
+                <div class="card-header">
+                    <div class="row">
+                        <!-- title  -->
+                        <div class="col-8">
+                            <h3 class="mb-0">이케어 등록(이케어 수행)</h3>
+                        </div>
+                        <!-- //title -->
+
+                        <!-- step -->
+                        <div class="col-4 row pr-0 justify-content-end">
+                            <ul class="stepWrap">
+                                <li><div class="box"><span class="txt">STEP</span><strong>1</strong></div></li>
+                                <li><div class="box"><span class="txt">STEP</span><strong>2</strong></div></li>
+                                <li class="current"><div class="box"><span class="txt">STEP</span><strong>3</strong></div></li>
+                            </ul>
+                        </div>
+                        <!-- e.step -->
+                    </div>
+                </div>
+                <!-- e.Card header -->
+
+                <!-- grid -->
+                <div class="card-body gridWrap">
+                    <!-- row -->
+                    <div class="row">
+                        <!-- col -->
+                        <div class="col-6 col-xxl-4">
+                            <div class="form-group">
+                                <dl class="row">
+                                    <dt class="col-4 col-xxl-6 col-form-label form-control-label">이케어 명</dt>
+                                    <dd class="col-8 col-xxl-6">
+                                        <span>알림톡</span>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                        <!-- col -->
+                        <div class="col-6 col-xxl-4">
+                            <div class="form-group">
+                                <dl class="row">
+                                    <dt class="col-4 col-form-label form-control-label">이케어 설명</dt>
+                                    <dd class="col-8">
+                                        <span>설명 설명 설명 설명 설명</span>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                        <!-- col -->
+                        <div class="col-6 col-xxl-4">
+                            <div class="form-group">
+                                <dl class="row">
+                                    <dt class="col-4 col-form-label form-control-label">대상자</dt>
+                                    <dd class="col-8">
+                                        <span>대상자(2명)</span>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                    </div>
+                    <!-- //row -->
+                    <!-- row -->
+                    <div class="row">
+                        <!-- col -->
+                        <div class="col-4">
+                            <div class="form-group">
+                                <dl class="row">
+                                    <dt class="col-6 col-form-label form-control-label">담당부서</dt>
+                                    <dd class="col-6">
+                                        <span>부서명</span>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                        <!-- col -->
+                        <div class="col-8">
+                            <div class="form-group">
+                                <dl class="row">
+                                    <dt class="col-2 col-form-label form-control-label">담당자</dt>
+                                    <dd class="col-10">
+                                        <span>담당자이름</span>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                    </div>
+                    <!-- //row -->
+                    <!-- row -->
+                    <div class="row">
+                        <!-- col -->
+                        <div class="col-6 col-xxl-4">
+                            <div class="form-group">
+                                <dl class="row">
+                                    <dt class="col-4 col-xxl-6 col-form-label form-control-label">작성일</dt>
+                                    <dd class="col-8 col-xxl-6">
+                                        <span>2020-09-03 00:00:00</span>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                        <!-- col -->
+                        <div class="col-6 col-xxl-4">
+                            <div class="form-group">
+                                <dl class="row">
+                                    <dt class="col-4 col-form-label form-control-label">최종 수정일</dt>
+                                    <dd class="col-8">
+                                        <span>2020-09-03 00:00:00</span>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                        <!-- col -->
+                        <div class="col-6 col-xxl-4">
+                            <div class="form-group">
+                                <dl class="row">
+                                    <dt class="col-4 col-form-label form-control-label">서버 현재시간</dt>
+                                    <dd class="col-8">
+                                        <span>2020-09-03 00:00:00</span>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                    </div>
+                    <!-- //row -->
+                </div>
+                <!-- //grid -->
+
+                <!-- form -->
+                <form>
+                <!-- grid -->
+                <div class="card-body gridWrap">
+                    <h1 class="h3 text-primary mb-3">수행정보</h1>
+                    <!-- row -->
+                    <div class="row">
+                        <!-- col -->
+                        <div class="col-6">
+                            <div class="row form-group">
+                                <label class="col-4 col-form-label form-control-label" for=""><em class="required">required</em>서비스 시작일</label>
+                                <div class="col-8">
+                                    <div class="input-group date" id="datetimepicker1">
+                                        <input type="text" class="form-control" />
+                                        <span class="input-group-addon input-group-append">
+                                          <button class="btn btn-outline-primary" type="button"> <span class="fa fa-calendar"></span></button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                        <!-- col -->
+                        <div class="col-6">
+                            <div class="row form-group">
+                                <label class="col-4 col-form-label form-control-label" for=""><em class="required">required</em>서비스 종료일</label>
+                                <div class="col-8">
+                                    <div class="input-group date" id="datetimepicker2">
+                                        <input type="text" class="form-control" />
+                                        <span class="input-group-addon input-group-append">
+                                          <button class="btn btn-outline-primary" type="button"> <span class="fa fa-calendar"></span></button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                    </div>
+                    <!-- //row -->
+                    <!-- row -->
+                    <div class="row">
+                        <!-- col -->
+                        <div class="col-6">
+                            <div class="row form-group">
+                                <label class="col-4 col-form-label form-control-label" for=""><em class="required">required</em>발송 시작 시간</label>
+                                <div class="col-8">
+                                    <input class="form-control" type="time" value="10:30:00" id="example-time-input">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                        <!-- col -->
+                        <div class="col-6">
+                            <div class="row form-group">
+                                <label class="col-4 col-form-label form-control-label" for=""><em class="required">required</em>스케쥴 설정</label>
+                                <div class="col-8">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="schedule1" name="scheduleSet" class="custom-control-input" />
+                                        <label class="custom-control-label" for="schedule1">매일</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="schedule2" name="scheduleSet" class="custom-control-input" />
+                                        <label class="custom-control-label" for="schedule2">매주</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="schedule3" name="scheduleSet" class="custom-control-input" />
+                                        <label class="custom-control-label" for="schedule3">매월</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="schedule4" name="scheduleSet" class="custom-control-input" />
+                                        <label class="custom-control-label" for="schedule4">한번만</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                    </div>
+                    <!-- //row -->
+                    <!-- row -->
+                    <div class="row">
+                        <!-- col -->
+                        <div class="col-4">
+                            <div class="form-group">
+                                <dl class="row">
+                                    <dt class="col-4 col-form-label form-control-label">세부 설정</dt>
+                                    <dd class="col-8">
+                                        setting
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                        <!-- col -->
+                        <div class="col-4">
+                            <div class="form-group">
+                                <dl class="row">
+                                    <dt class="col-4 col-form-label form-control-label">스케쥴 저장</dt>
+                                    <dd class="col-8">
+                                        <button type="button" class="btn btn btn-primary btn-sm">스케쥴 저장</button>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                        <!-- col -->
+                        <div class="col-4">
+                            <div class="form-group">
+                                <dl class="row">
+                                    <dt class="col-4 col-form-label form-control-label">수행상태</dt>
+                                    <dd class="col-8">
+                                        <span>작성중</span>
+                                        <button type="button" class="btn btn btn-secondary ml-3 btn-sm">상태변경</button>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                    </div>
+                    <!-- //row -->
+                </div>
+                <!-- //grid -->
+
+                <!-- grid -->
+                <div class="card-body gridWrap">
+                    <h1 class="h3 text-primary mb-3">옴니채널 메시지</h1>
+                    <!-- row -->
+                    <div class="row">
+                        <!-- col -->
+                        <div class="col-6">
+                            <div class="row form-group">
+                                <label class="col-4 col-form-label form-control-label" for="">성공</label>
+                                <div class="col-8">
+                                    <select class="col form-control d-inline-block w-auto">
+                                        <option value="">개인화 정보</option>
+                                        <option value=""></option>
+                                    </select>
+                                    <button type="button" class="btn btn btn-primary ml-2">생성</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                        <!-- col -->
+                        <div class="col-6">
+                            <div class="row form-group">
+                                <label class="col-4 col-form-label form-control-label" for="">실패</label>
+                                <div class="col-8">
+                                    <select class="col form-control d-inline-block w-auto">
+                                        <option value="">개인화 정보</option>
+                                        <option value=""></option>
+                                    </select>
+                                    <button type="button" class="btn btn btn-primary ml-2">생성</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                    </div>
+                    <!-- //row -->
+                </div>
+                <!-- //grid -->
+                
+                <!-- button area -->
+                <div class="card-footer pb-4 btn_area">
+                    <div class="row">
+                        <div class="col text-right">
+                            <button type="button" class="btn btn btn-outline-info btn-icon">
+                                <span class="btn-inner--icon"><i class="fas fa-chevron-left"></i></span><span class="btn-inner--text">이전단계</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- e.button area -->
+                </form>
+                <!-- e.form -->
+            
+            </div>
+            <!-- e.card -->
+
+        </div> <!-- e.page content -->
+    </div>
+    <!-- e.Contents area -->
+</div>
+<!-- e.wrapper -->
+
+</html>
