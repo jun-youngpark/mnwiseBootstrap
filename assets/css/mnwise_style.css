@@ -61,6 +61,7 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {justify-content: c
 /***** common class *****/
 .hide {position: absolute; left:-999em; top:-999em; opacity:0;}
 .none {display:none !important;}
+em {font-style: normal; color:var(--primary);}
 
 /***** button *****/
 .card-footer.btn_area {text-align:center;}
@@ -70,7 +71,7 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {justify-content: c
 .card-footer.btn_area button {min-width:10em;}
 .card-footer.btn_area .col-auto button {min-width:7em;}
 
-.btn-secondary {background-color:#f5f5f5;}
+.btn-secondary {background-color:#f9f9f9; border-color:#f9f9f9;}
 
 .btn_mail_reject {min-width:30px; height:28px; text-indent:-9999em; background:url("../img/btn_mail_reject.png") no-repeat 55% center;}
 .btn_mail_reject:hover {background-color:#ffd600;}
@@ -135,9 +136,15 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {justify-content: c
 .form-group dd {display:-webkit-box; display:flex; min-height:46px; margin:0; -webkit-box-align:center; align-items:center;}
 .form-group dd .custom-control-label {vertical-align: middle;}
 .form-group button {min-width:46px; height:46px; padding:5px 10px;}
+.form-group button.btn-sm {height:30px;}
 
 .gridWrap .col-form-label {text-align:right; background:#f7fafc;}
+.gridWrap .row > .col-form-label:first-child {padding-left:0; border-left:15px solid #fff;}
 .col-form-label + div .row > div + div {padding-left:0;}
+
+@media screen and (max-width:1499px) {
+    .form-group dt, .gridWrap .col-form-label {padding-right:10px; letter-spacing:-.05em;}
+}
 
 .form_subcheckbox {position:relative; margin:0 20px 0 0;}
 .form_subcheckbox::before {content:"("; position:absolute; left:-.6em; top:0;}
@@ -152,6 +159,9 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {justify-content: c
 .custom-switch .custom-control-label::before {left:-2.25rem;}
 .custom-switch .custom-control-label::after {left:calc(-2.25rem + 2px);}
 .custom-switch .custom-control-input:checked~.custom-control-label::after {-webkit-transform: translateX(.75rem); transform: translateX(.75rem);}
+
+/* period */
+.periodWrap .txt {width:2em; text-align:center;}
 
 /***** custom contents *****/
 .txt_channel {display:inline-block; width:20px; height:20px; margin:0 5px; font-style:normal; font-weight: 500; font-size:.75rem; color:#fff; text-align:center; line-height:20px; vertical-align:middle; background:#1ac1e7; border-radius:2px;}
@@ -184,6 +194,23 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {justify-content: c
 .list_depth.depth4 .depth_type {left:30px;}
 .list_depth.depth5 .depth_type {left:40px;}
 
+/* gird */
+@media screen and (min-width: 1500px) {
+    .col-xxl-auto {flex:0 0 auto; width:auto; max-width:100%;}
+    .col-xxl-1 {flex:0 0 8.33333%; max-width:8.33333%;}
+    .col-xxl-2 {flex:0 0 16.66667%; max-width:16.66667%;}
+    .col-xxl-3 {flex:0 0 25%; max-width:25%;}
+    .col-xxl-4 {flex:0 0 33.33333%; max-width:33.33333%;}
+    .col-xxl-5 {flex:0 0 41.66667%; max-width:41.66667%;}
+    .col-xxl-6 {flex:0 0 50%; max-width:50%;}
+    .col-xxl-7 {flex:0 0 58.33333%; max-width:58.33333%;}
+    .col-xxl-8 {flex:0 0 66.66667%; max-width:66.66667%;}
+    .col-xxl-9 {flex:0 0 75%; max-width:75%;}
+    .col-xxl-10 {flex:0 0 83.33333%; max-width:83.33333%;}
+    .col-xxl-11 {flex:0 0 91.66667%; max-width:91.66667%;}
+    .col-xxl-12 {flex:0 0 100%; max-width:100%;}
+}
+
 
 /* phone message */
 .col-phone {width:280px; min-width:280px; max-width:280px;}
@@ -202,4 +229,5 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {justify-content: c
 .msgsample_list .image-area {display:-webkit-box; display:flex; -webkit-box-align: center; align-items:center; width:100%; height:100%;}
 
 .msgsample_list img {max-width:100%;}
+
 
