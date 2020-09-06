@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script>
+    $(function () {
+        $("#subNav").load("../subNav.html");
+        $("#js").load("../js.html");
+        $("#headerTop").load("../headerTop.html");
+    });
+    </script>
+</head>
+
+<body>
+<!-- wrapper -->
+<div class="wrapper">
+    <!-- 메뉴 -->
+    <div id="subNav"></div>
+    <div id="js"></div>
+    <div id="headerTop"></div>
+    <!-- //메뉴-->
+
+    <!-- Contents area -->
+    <div class="main-panel">
+        <!-- Page content -->
+        <div class="container-fluid mt-4 mb-2">
+
+            <!-- card -->
+            <div class="card">
+                <!-- Card header -->
+                <div class="card-header">
+                    <div class="row">
+                        <!-- title  -->
+                        <div class="col-8">
+                            <h3 class="mb-0">이케어 등록- mms(메시지작성)</h3>
+                        </div>
+                        <!-- //title -->
+
+                        <!-- step -->
+                        <div class="col-4 row pr-0 justify-content-end">
+                            <ul class="stepWrap">
+                                <li><div class="box"><span class="txt">STEP</span><strong>1</strong></div></li>
+                                <li class="current"><div class="box"><span class="txt">STEP</span><strong>2</strong></div></li>
+                                <li><div class="box"><span class="txt">STEP</span><strong>3</strong></div></li>
+                            </ul>
+                        </div>
+                        <!-- e.step -->
+                    </div>
+                </div>
+                <!-- e.Card header -->
+
+                <!-- form -->
+                <form>
+                <!-- grid -->
+                <div class="card-body gridWrap">
+                    <!-- row -->
+                    <div class="row">
+                        <!-- col -->
+                        <div class="col-6">
+                            <div class="form-group">
+                                <dl class="row">
+                                    <dt class="col-4 col-form-label form-control-label">이케어 번호</dt>
+                                    <dd class="col-8">
+                                        <em class="txt_channel">E</em> <span>357</span>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                        <!-- col -->
+                        <div class="col-6">
+                            <div class="form-group">
+                                <dl class="row">
+                                    <dt class="col-4 col-form-label form-control-label">이케어 명</dt>
+                                    <dd class="col-8">
+                                        <span>알림톡</span>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                    </div>
+                    <!-- //row -->
+                    <!-- row -->
+                    <div class="row">
+                        <!-- col -->
+                        <div class="col-12">
+                            <div class="row form-group">
+                                <label class="col-2 col-form-label form-control-label" for=""><em class="required">required</em>대상자</label>
+                                <div class="col-10">
+                                    <div class="row">
+                                        <div class="col-4"><input type="text" class="form-control" placeholder="" /></div>
+                                        <div class="col-2 input-has-unit"><input type="text" class="form-control" placeholder="" /><spa class="unit">명</spa></div>
+                                        <div class="col-auto">
+                                            <button class="btn btn-secondary btn-icon btn_search">
+                                                <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span class="btn-inner--text hide">검색</span>
+                                            </button>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button class="btn btn-secondary" type="button">대상자 선택</button>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button class="btn btn-secondary" type="button">대상자 등록</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                    </div>
+                    <!-- //row -->
+                    <!-- row -->
+                    <div class="row">
+                        <!-- col -->
+                        <div class="col-6">
+                            <div class="row form-group">
+                                <label class="col-4 col-form-label form-control-label" for=""><em class="required">required</em>발신자 명</label>
+                                <div class="col-8">
+                                    <input type="text" id="" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                        <!-- col -->
+                        <div class="col-6">
+                            <div class="row form-group">
+                                <label class="col-4 col-form-label form-control-label" for=""><em class="required">required</em>발신자 번호</label>
+                                <div class="col-8">
+                                    <input type="text" id="" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                    </div>
+                    <!-- //row -->
+                </div>
+                <!-- //grid -->
+
+                <!-- message -->
+                <div class="card-body message_contents border-top">
+                    <div class="row">
+                        <!-- mobile preview -->
+                        <div class="col col-phone">
+                            <div class="phone_preview">
+                                <div class="preview_box">
+                                    <div class="tit form-group">
+                                        <select class="col form-control form-control-sm">
+                                            <option value="">개인화 정보</option>
+                                            <option value=""></option>
+                                        </select>
+                                    </div>
+                                    <div class="text"><iframe src=""></iframe></div>
+                                </div>
+                                <span class="letter_count">67자</span>
+                            </div>
+                        </div>
+                        <!-- //mobile preview -->
+
+                        <!-- message list -->
+                        <div class="col">
+                            <!-- tab -->
+                            <ul class="nav nav-tabs tab01">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="template-tab" data-toggle="tab" href="#template" role="tab" aria-controls="template" aria-selected="true">템플릿</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="image-tab" data-toggle="tab" href="#image" role="tab" aria-controls="image" aria-selected="true">이미지</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="handler-tab" data-toggle="tab" href="#handler" role="tab" aria-controls="handler" aria-selected="false">핸들러</a>
+                                </li>
+                            </ul>
+                            <!-- //tab -->
+
+                            <!-- tab content -->
+                            <div class="tab-content">
+                                <!-- 템플릿 tab -->
+                                <div class="tab-pane active" id="template" role="tabpanel" aria-labelledby="template-tab">
+                                    <!-- search -->
+                                    <div class="row justify-content-end mt-3 mb-3">
+                                        <div class="col-auto">
+                                            <div class="search_input">
+                                                <span class="form-control-label txt">템플릿 내용</span>
+                                                <input type="search" class="form-control form-control-sm" placeholder="" aria-controls="datatable-basic" />
+                                                <button class="btn btn-sm btn-outline-info btn-icon btn_search">
+                                                    <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span class="btn-inner--text">검색</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //search -->
+
+                                    <!-- message sample list -->
+                                    <div class="msgsample_list">
+                                        <ul>
+                                            <li>
+                                                <div class="text-area">검수요청/취소 기능 테스트 입니다.</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-area">[앰엔와이즈 테스트]
+안녕하세요 #[고객명] 고개님
+팀입니다.
+
+검수요청/취소 기능 테스트 입니다.
+</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-area">[앰엔와이즈 테스트]
+안녕하세요 #[고객명] 고개님
+팀입니다.
+
+검수요청/취소 기능 테스트 입니다.
+</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-area">[앰엔와이즈 테스트]
+안녕하세요 #[고객명] 고개님
+팀입니다.
+
+검수요청/취소 기능 테스트 입니다.
+</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-area">[앰엔와이즈 테스트]
+안녕하세요 #[고객명] 고개님
+팀입니다.
+
+검수요청/취소 기능 테스트 입니다.
+</div>
+                                            </li>
+                                            <li>
+                                                <div class="text-area">검수요청/취소 기능 테스트 입니다.</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- //message sample list -->
+
+                                    <!-- pagenation -->
+                                    <div class="pagination pagination-sm mb-0 pb-2 pt-1 justify-content-center">
+                                        <ul class="pagination">
+                                            <li class="paginate_button page-item previous disabled" id="datatable-basic_previous"><a href="#" aria-controls="datatable-basic" data-dt-idx="0" tabindex="0" class="page-link"><i class="fas fa-angle-left"></i></a></li>
+                                            <li class="paginate_button page-item active"><a href="#" aria-controls="datatable-basic" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                                            <li class="paginate_button page-item next disabled" id="datatable-basic_next"><a href="#" aria-controls="datatable-basic" data-dt-idx="2" tabindex="0" class="page-link"><i class="fas fa-angle-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- e.pagenation -->
+                                </div>
+                                <!-- //템플릿 tab -->
+
+                                <!-- 이미지 tab -->
+                                <div class="tab-pane" id="image" role="tabpanel" aria-labelledby="image-tab">
+                                    <div class="msgsample_list image_type">
+                                        <ul>
+                                            <li>
+                                                <div class="image-area"><img src="http://wiseu-demo.carrym.com:8080/template/mobile/20200525/212/dog.jpg" alt="" /></div>
+                                            </li>
+                                            <li>
+                                                <div class="image-area"><img src="http://wiseu-demo.carrym.com:8080/template/mobile/20200525/212/dog.jpg" alt="" /></div>
+                                            </li>
+                                            <li>
+                                                <div class="image-area"><img src="http://wiseu-demo.carrym.com:8080/template/mobile/20200525/212/dog.jpg" alt="" /></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <!-- pagenation -->
+                                    <div class="pagination pagination-sm mb-0 pb-2 pt-1 justify-content-center">
+                                        <ul class="pagination">
+                                            <li class="paginate_button page-item previous disabled" id="datatable-basic_previous"><a href="#" aria-controls="datatable-basic" data-dt-idx="0" tabindex="0" class="page-link"><i class="fas fa-angle-left"></i></a></li>
+                                            <li class="paginate_button page-item active"><a href="#" aria-controls="datatable-basic" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                                            <li class="paginate_button page-item next disabled" id="datatable-basic_next"><a href="#" aria-controls="datatable-basic" data-dt-idx="2" tabindex="0" class="page-link"><i class="fas fa-angle-right"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- e.pagenation -->
+                                </div>
+                                <!-- //이미지 tab -->
+
+                                <!-- 핸들러 tab -->
+                                <div class="tab-pane" id="handler" role="tabpanel" aria-labelledby="handler-tab">
+                                    <!-- textarea -->
+                                    <div class="edit_area mt-3">
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="15"></textarea>
+                                    </div>
+                                    <!-- //textarea -->
+
+                                    <!-- edit area - option -->
+                                    <div class="row mt-3 mb-1 align-items-center">
+                                        <div class="col-auto mr-3">
+                                            <div class="row align-items-center">
+                                                <label class="col-auto col-form-label form-control-label" for="">기본 핸들러</label>
+                                                <select class="col form-control form-control-sm">
+                                                    <option value="">SMS Schedule</option>
+                                                    <option value=""></option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto align-items-center">
+                                            <div class="custom-control custom-switch">
+                                                <input type="checkbox" class="custom-control-input" id="customSwitch1" />
+                                                <label class="custom-control-label" for="customSwitch1">핸들러 수정</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- //edit area - option -->
+                                </div>
+                                <!-- //핸들러 tab -->
+                            </div>
+                            <!-- //tab content -->
+                        </div>
+                        <!-- //message list -->
+                    </div>
+                </div>
+                <!-- //message -->
+                
+                <!-- button area -->
+                <div class="card-footer pb-4 btn_area">
+                    <div class="row">
+                        <div class="col col-6">
+                            <button type="submit" class="btn btn btn-outline-primary btn-icon">
+                                <span class="btn-inner--icon"><i class="fas fa-save"></i></span><span class="btn-inner--text">저장</span>
+                            </button>
+                            <button type="button" class="btn btn btn-outline-default">금칙어 검사</button>
+                            <button type="button" class="btn btn btn-outline-default">테스트 발송</button>
+                        </div>
+                        <div class="col col-6">
+                            <button type="button" class="btn btn btn-outline-info btn-icon">
+                                <span class="btn-inner--icon"><i class="fas fa-chevron-left"></i></span><span class="btn-inner--text">이전단계</span>
+                            </button>
+                            <button type="button" class="btn btn btn-outline-info btn-icon">
+                                <span class="btn-inner--text mr-2">다음단계</span><span class="btn-inner--icon"><i class="fas fa-chevron-right"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- e.button area -->
+                </form>
+                <!-- e.form -->
+            
+            </div>
+            <!-- e.card -->
+
+        </div> <!-- e.page content -->
+    </div>
+    <!-- e.Contents area -->
+</div>
+<!-- e.wrapper -->
+
+</html>
