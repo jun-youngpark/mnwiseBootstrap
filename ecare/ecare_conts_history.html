@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script>
+    $(function () {
+        $("#subNav").load("../subNav.html");
+        $("#js").load("../js.html");
+        $("#headerTop").load("../headerTop.html");
+        
+    });
+
+    
+
+    </script>
+</head>
+
+<body>
+<!-- wrapper -->
+<div class="wrapper">
+    <!-- 메뉴 -->
+    <div id="subNav"></div>
+    <div id="js"></div>
+    <div id="headerTop"></div>
+    <!-- //메뉴-->
+
+    <!-- Contents area  -->
+    <div class="main-panel">
+        <!-- Page content -->
+        <div class="container-fluid mt-4 mb-2">
+
+            <!-- card -->
+            <div class="card">
+                <!-- Card header -->
+                <div class="card-header">
+                    <!-- title  -->
+                    <h3 class="mb-0">컨텐츠 변경이력</h3>
+                    <!-- //title -->
+                </div>
+                <!-- e.Card header -->
+
+                <!-- form -->
+                <form>
+                <!-- grid -->
+                <div class="card-body gridWrap">
+                    <!-- row -->
+                    <div class="row">
+                        <!-- col -->
+                        <div class="col-12 col-xxl-9">
+                            <div class="row form-group align-items-center">
+                                <label class="col-2 col-form-label form-control-label" for=""><em class="required">required</em>컨텐츠 구분</label>
+                                <div class="col-10">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="cont_type1" name="cont_type" class="custom-control-input" />
+                                        <label class="custom-control-label" for="cont_type1">템플릿</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="cont_type2" name="cont_type" class="custom-control-input" />
+                                        <label class="custom-control-label" for="cont_type2">핸들러</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                    </div>
+                    <!-- //row -->
+                    <!-- row -->
+                    <div class="row">
+                        <!-- col -->
+                        <div class="col-4 col-xxl-3">
+                            <div class="row form-group">
+                                <label class="col-6 col-form-label form-control-label" for="">이케어 번호</label>
+                                <div class="col-6">
+                                    <input type="text" id="" class="form-control" required />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                        <!-- col -->
+                        <div class="col-8 col-xxl-6">
+                            <div class="row form-group">
+                                <label class="col-3 col-form-label form-control-label" for="">이케어 명</label>
+                                <div class="col-9">
+                                    <div class="row">
+                                        <div class="col-10"><input type="text" class="form-control" placeholder=""></div>
+                                        <div class="col-2">
+                                            <button class="btn btn-secondary btn-icon btn_search w-100">
+                                                <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span class="btn-inner--text hide">검색</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                    </div>
+                    <!-- //row -->
+                </div>
+                </form>
+                <!-- //form -->
+
+                <!-- Light table -->
+                <div class="table-responsive">
+                    <table class="table dataTable">
+                        <thead class="thead-light">
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">이케어 번호</th>
+                            <th scope="col">이케어 명</th>
+                            <th scope="col">컨텐츠 구분</th>
+                            <th scope="col">버전</th>
+                            <th scope="col">수정자</th>
+                            <th scope="col">수정일시</th>
+                            <th scope="col">비교</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>348</td>
+                            <td class="text-left">
+                                <a href="#!" class="font-weight-bold"><em class="txt_channel">E</em>스케줄 이메일</a>
+                            </td>
+                            <td>본문</td>
+                            <td>1</td>
+                            <td>시스템관리자</td>
+                            <td>20-08-31 00:00:00</td>
+                            <td>
+                                <button type="submit" class="btn btn-sm btn-secondary">비교함 담기</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- e.Light table -->
+
+                <!-- pagenation -->
+                <div class="pagination pagination-sm mb-0 pb-2 pt-1 justify-content-center">
+                    <ul class="pagination">
+                        <li class="paginate_button page-item previous disabled" id="datatable-basic_previous"><a href="#" aria-controls="datatable-basic" data-dt-idx="0" tabindex="0" class="page-link"><i class="fas fa-angle-left"></i></a></li>
+                        <li class="paginate_button page-item active"><a href="#" aria-controls="datatable-basic" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                        <li class="paginate_button page-item next disabled" id="datatable-basic_next"><a href="#" aria-controls="datatable-basic" data-dt-idx="2" tabindex="0" class="page-link"><i class="fas fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
+                <!-- e.pagenation -->
+            
+            </div>
+            <!-- e.card -->
+
+        </div> <!-- e.page content -->
+    </div>
+    <!--e.Contents area-->
+</div>
+<!-- e.wrapper -->
+
+</html>
