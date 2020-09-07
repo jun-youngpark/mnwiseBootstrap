@@ -124,14 +124,14 @@
                             <th scope="row">3</th>
                             <td>348</td>
                             <td class="text-left">
-                                <a href="#!" class="font-weight-bold"><em class="txt_channel">E</em>스케줄 이메일</a>
+                                <a href="#!" class="font-weight-bold" data-toggle="modal" data-target="#ecare_modal"><em class="txt_channel">E</em>스케줄 이메일</a>
                             </td>
                             <td>본문</td>
                             <td>1</td>
                             <td>시스템관리자</td>
                             <td>20-08-31 00:00:00</td>
                             <td>
-                                <button type="submit" class="btn btn-sm btn-secondary">비교함 담기</button>
+                                <button type="submit" class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#put_compare">비교함 담기</button>
                             </td>
                         </tr>
                         </tbody>
@@ -157,5 +157,209 @@
     <!--e.Contents area-->
 </div>
 <!-- e.wrapper -->
+
+<!-- modal :: 컨텐츠 내용 조회 -->
+<div class="modal fade" id="ecare_modal" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header align-items-center">
+                <h5 class="modal-title" id="exampleModalLabel">컨텐츠 내용 조회</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+                <!-- Light table -->
+                <div class="table-responsive">
+                    <table class="table dataTable table-view">
+                        <colgroup>
+                            <col style="width:15%;" />
+                            <col style="width:35%;" />
+                            <col style="width:15%;" />
+                            <col style="width:35%;" />
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th scope="row">컨텐츠 구분</th>
+                            <td>본문</td>
+                            <th scope="row">버전</th>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">이케어 번호</th>
+                            <td>349</td>
+                            <th scope="row">이케어 명</th>
+                            <td>수신거부 테스트</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">수정자</th>
+                            <td>시스템관리자</td>
+                            <th scope="row">수정일시</th>
+                            <td>20-08-31 00:00:00</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">수정사유</th>
+                            <td colspan="3">
+                                <textarea rows="3" cols="100" class="form-control"></textarea>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- //Light table -->
+
+                <!-- 편집기 -->
+                <div class="editorWrap">
+                    편집기 영역
+                </div>
+                <!-- //편집기 -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                <button type="button" class="btn btn-primary">저장</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //modal :: 컨텐츠 내용 조회 -->
+
+<!-- modal :: 비교함 담기 -->
+<div class="modal fade" id="put_compare" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header align-items-center">
+                <h5 class="modal-title" id="exampleModalLabel">컨텐츠 비교함</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+                <!-- Light table -->
+                <div class="table-responsive">
+                    <table class="table dataTable">
+                        <colgroup>
+                            <col style="width:10%;" />
+                            <col  />
+                            <col style="width:10%;" />
+                            <col style="width:5%;" />
+                            <col style="width:15%;" />
+                            <col style="width:20%;" />
+                            <col style="width:5%;" />
+                        </colgroup>
+                        <thead class="thead-light">
+                        <tr>
+                            <th scope="col">이케어 번호</th>
+                            <th scope="col">이케어 명</th>
+                            <th scope="col">컨텐츠 구분</th>
+                            <th scope="col">버전</th>
+                            <th scope="col">수정자</th>
+                            <th scope="col">수정일시</th>
+                            <th scope="col">삭제</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>357</td>
+                            <td class="text-left">알림톡</td>
+                            <td>본문</td>
+                            <td>1</td>
+                            <td>시스템관리자</td>
+                            <td>2020-09-03 00:00:00</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-danger btn-round btn-icon">
+                                    <span class="btn-inner--icon"><i class="fas fa-trash"></i></span><span class="btn-inner--text">삭제</span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>357</td>
+                            <td class="text-left">알림톡</td>
+                            <td>본문</td>
+                            <td>1</td>
+                            <td>시스템관리자</td>
+                            <td>2020-09-03 00:00:00</td>
+                            <td>
+                                <button class="btn btn-sm btn-outline-danger btn-round btn-icon">
+                                    <span class="btn-inner--icon"><i class="fas fa-trash"></i></span><span class="btn-inner--text">삭제</span>
+                                </button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- //Light table -->
+
+                <!-- 편집기 -->
+                <div class="editorWrap">
+                    편집기 영역
+                </div>
+                <!-- //편집기 -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#compare">비교</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //modal :: 비교함 담기 -->
+
+<!-- modal :: 비교 -->
+<div class="modal fade" id="compare" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header align-items-center">
+                <h5 class="modal-title" id="exampleModalLabel">컨텐츠 비교</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+            </div>
+            <div class="modal-body">
+                <!-- grid -->
+                <div class="row compare-row">
+                    <div class="col">
+                        <div class="compare_wrapper">
+                            <!--head-->
+                            <div class="titWrap">
+                                <h6 class="h5">이케어 357번호 본문 - 버전 1<span>(20-09-04 00:00:00)</span></h6>
+                            </div>
+                            <!--//head-->
+
+                            <div class="">
+                                <textarea rows="20" cols="20" class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="compare_wrapper">
+                            <!--head-->
+                            <div class="titWrap">
+                                <h6 class="h5">이케어 358번호 본문 - 버전 1<span>(20-09-04 00:00:00)</span></h6>
+                            </div>
+                            <!--//head-->
+
+                            <div class="">
+                                <textarea rows="20" cols="20" class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="compare_wrapper">
+                            <!--head-->
+                            <div class="titWrap">
+                                <h6 class="h5">비교내용</h6>
+                            </div>
+                            <!--//head-->
+
+                            <div class="">
+                                <textarea rows="20" cols="20" class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //grid -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#compare">비교</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //modal :: 비교 -->
 
 </html>
