@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+   
+
+    <script>
+    $(function () {
+        $("#subNav").load("../subNav.html");
+        $("#js").load("../js.html");
+        $("#headerTop").load("../headerTop.html");
+    });
+    </script>
+</head>
+
+<body>
+<!-- wrapper -->
+<div class="wrapper">
+    <!-- 메뉴 -->
+    <div id="subNav"></div>
+    <div id="js"></div>
+    <div id="headerTop"></div>
+    <!-- //메뉴-->
+
+    <!-- Contents area -->
+    <div class="main-panel">
+        <!-- Page content -->
+        <div class="container-fluid mt-4 mb-2">
+
+            <!-- card -->
+            <div class="card">
+                <!-- Card header -->
+                <div class="card-header">
+                    <div class="row">
+                        <!-- title  -->
+                        <div class="col-8">
+                            <h3 class="mb-0">모바일 템플릿 등록 </h3>
+                        </div>
+                        <!-- //title -->
+                    </div>
+                </div>
+                <!-- e.Card header -->
+                <!-- form -->
+                <form>
+                <!-- grid -->
+                <div class="card-body gridWrap">
+                  
+                    <!-- row -->
+                    <div class="row">
+                        <!--col-->
+                        <div class="col-6">
+                            <div class="row formgroup">
+                                <label class="col-4 col-form-label form-control-label" >파일추가</label>
+                                <div class="col-8">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" id="customFileLang" lang="en" style="display:none;">
+                                    <label class="custom-file-label" for="customFileLang">파일 선택</label>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        <!--//col-->
+                      
+                    <!-- //modify -->
+                 
+                    <!-- //modify -->
+
+                </div>
+                <!-- //grid -->
+                
+                <!-- button area -->
+                <div class="card-footer pb-4 btn_area">
+                    <button type="submit" class="btn btn btn-outline-primary btn-icon">
+                        <span class="btn-inner--icon"><i class="fas fa-save"></i></span><span class="btn-inner--text">저장</span>
+                    </button>
+                    <button type="button" class="btn btn btn-outline-info btn-icon">
+                        <span class="btn-inner--text mr-2">다음단계</span><span class="btn-inner--icon"><i class="fas fa-chevron-right"></i></span>
+                    </button>
+                </div>
+                <!-- e.button area -->
+                </form>
+                <!-- e.form -->
+            
+            </div>
+            <!-- e.card -->
+
+        </div> <!-- e.page content -->
+    </div>
+    <!-- e.Contents area -->
+</div>
+<!-- e.wrapper -->
+
+<script>
+    $(function(){
+        $('input[type=file]').on('change',function(){
+            if(window.Filereder){
+                var filename = $(this)[0].files[0].name;
+            }else{
+                var filename = $(this).val().split('/').pop().split('\\').pop();
+            }
+            $('.custom-file-label').text(filename);
+
+        })
+    })
+</script>
+</html>

@@ -37,7 +37,7 @@
 
 .treeview .hover { color: red; cursor: pointer; }
 
-.treeview li { background: url(../../assets/img/tree/treeview-default-line.gif) 0 0 no-repeat; }
+.treeview li { background: url(../../assets/img/tree/treeview-default-line1.png) 0 0 no-repeat; }
 .treeview li.collapsable, .treeview li.expandable { background-position: 0 -176px; }
 
 .treeview .expandable-hitarea { background-position: -80px -3px; }
