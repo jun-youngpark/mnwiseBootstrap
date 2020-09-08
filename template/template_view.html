@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
-<title>템플릿 수정</title>
+<title>Wise U</title>
 
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
@@ -25,101 +25,163 @@
     <div class="main-panel">
       <!-- Page content -->
       <div class="container-fluid mt-4 mb-2">
-        <div class="card mb-4">
-          <div class="card">
-            <!-- Card header -->
-            <div class="card-header">
-              <div class="row align-items-center">
-                <div class="col">
-                  <h3 class="mb-0">템플릿 수정</h3>
-                </div>
-                <div class="col text-right">
-                  <a href="#" class="btn btn-sm btn-primary btn-round btn-icon">
-                    <span class="btn-inner--icon"><i class="fas fa-save"></i></span>
-                    <span class="btn-inner--text">저장</span>
-                  </a>
-                  <button href="#" class="btn btn-sm btn-danger btn-round btn-icon">
-                    <span class="btn-inner--icon"><i class="fas fa-trash"></i></span>
-                    <span class="btn-inner--text">삭제</span>
-                  </button>
-                </div>
+        <div class="card">
+          <!-- Card header -->
+          <div class="card-header">
+            <div class="row align-items-center">
+              <div class="col">
+                <h3 class="mb-0">템플릿 수정</h3>
               </div>
             </div>
-            <!-- card-body -->
-            <div class="card-body">
-             
-              <form>
-                <div class="row  mb-3">
-                  <div class="col-6">
-                    <div class="fomrgroup"> <label class="form-control-label" for="">* 템플릿명</label>
-                      <input class="form-control" type="text" id="">
-                    </div>
-                  </div>
-                  <div class="col-6">
-                    <div class="fomrgroup"> <label class="form-control-label" for="">설명</label>
-                      <input class="form-control" type="text" id="">
-                    </div>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <div class="col-12">
-                    <div class="fomrgroup"> <label class="form-control-label" for="">태그</label>
-                      <input class="form-control" type="text" id="">
-                    </div>
-                  </div>
-                </div>
-                <div class="row mb-3">
-                  <div class="col-4">
-                    <label class="form-control-label">* 공유유형</label>
-                    <div class="fomrgroup">
-                      <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="" class="custom-control-input" checked>
-                        <label class="custom-control-label">EMAIL</label>
-                      </div>
-                      <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="customRadioInline2" class="custom-control-input">
-                        <label class="custom-control-label">SMS</label>
-                      </div>
-                      <div class="custom-control custom-radio custom-control-inline">
-                        <input type="radio" id="" class="custom-control-input">
-                        <label class="custom-control-label">LMS/MMS</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-3">
-                    <div class="fomrgroup"> <label class="form-control-label" for="">* 템플릿URL</label>
-                      <div class="div-control-box"><a href="#">test.img</a></div>
-                    </div>
-                  </div>
-                  <div class="col-5">
-                    <label class=" form-control-label" for="">*파일선택</label>
-                    <div class="custom-file">
-                      <input type="file" class="custom-file-input" id="customFileLang" lang="en">
-                      <label class="custom-file-label" for="customFileLang"></label>
-                    </div>
-                  </div>
-                </div>
-                <div class="row mb-5">
-                  <div class="col-4">
-                    <div class="fomrgroup"> <label class="form-control-label" >* 작성자</label>
-                      <input class="form-control" type="text" value="테스터" disabled>
-                    </div>
-                  </div>
-                  <div class="col-4">
-                    <div class="fomrgroup"> <label class="form-control-label">* 작성일</label>
-                      <input class="form-control" type="text" value="2020-07-20 03:23:54" disabled>
-                    </div>
-                  </div>
-                </div>
-              </form>
-              <button type="button" class="btn  btn-outline-primary px-8  mb-4">등록</button>
-            </div> <!-- e.Card body -->
           </div>
+          <!-- e. Card header -->
+
+          <form>
+            <!-- grid -->
+            <div class="card-body gridWrap">
+               <!-- 템플릿 이미지 팝업 -->
+              <div class="col-auto btn_area mb-3">
+                <a href="" class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                  <span class="btn-inner--icon"><i class="fas fa-eye"></i></span><span class="btn-inner--text">템플릿
+                    보기</span>
+                </a>
+              </div>
+              <!-- buttons -->
+              <!-- row -->
+              <div class="row">
+                <div class="col-4">
+                  <div class="row form-group">
+                    <label class="col-4 col-form-label form-control-label" for="">태그</label>
+                    <div class="col-8">
+                      <input type="text" class="form-control" placeholder="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="row form-group">
+                    <label class="col-4 col-form-label form-control-label" for=""><em
+                        class="required">required</em>템플릿명</label>
+                    <div class="col-8">
+                      <input type="text" class="form-control" placeholder="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="row form-group">
+                    <label class="col-4 col-form-label form-control-label" for="">설명</label>
+                    <div class="col-8">
+                      <input type="text" class="form-control" placeholder="" />
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <!-- //row -->
+              <!--row-->
+              <div class="row">
+                <!--col-->
+                <div class="col-6">
+                  <div class="row form-group mb-0">
+                    <label class="col-4 col-form-label form-control-label label-height" for=""><em
+                        class="required">required</em>파일선택</label>
+                    <div class="col-8 ">
+                      <!---->
+                      <div class="custom-file ">
+                        <input type="file" class="custom-file-input" id="customFileLang" lang="ko">
+                        <label class="custom-file-label" for="customFileLang"></label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--//col-->
+                <!-- col -->
+                <div class="col-6">
+                  <div class="form-group">
+                    <dl class="row">
+                      <dt class="col-4 col-form-label form-control-label"><em class="required">required</em>공유 유형
+                      </dt>
+                      <dd class="col-8">
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input type="radio" id="customRadioInline1" name="customRadioInline1"
+                            class="custom-control-input" />
+                          <label class="custom-control-label" for="customRadioInline1">사용자</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input type="radio" id="customRadioInline2" name="customRadioInline1"
+                            class="custom-control-input" />
+                          <label class="custom-control-label" for="customRadioInline2">부서</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input type="radio" id="customRadioInline3" name="customRadioInline1"
+                            class="custom-control-input" />
+                          <label class="custom-control-label" for="customRadioInline3">전체</label>
+                        </div>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+                <!-- //col -->
+              </div>
+              <!-- // row -->
+              <!-- row -->
+              <div class="row">
+                <!-- 템플릿 이미지 팝업 -->
+                <div class="col-4">
+                  <div class="form-group">
+                    <dl class="row">
+                      <dt class="col-4 col-form-label form-control-label"><em class="required">required</em>템플릿 URL</dt>
+                      <dd class="col-8">
+                        <span><a href="">1111브랜드톡 템플릿수정.JPG</a></span>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="form-group">
+                    <dl class="row">
+                      <dt class="col-4 col-form-label form-control-label"><em class="required">required</em>작성자</dt>
+                      <dd class="col-8">
+                        <span>테스터</span>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="form-group">
+                    <dl class="row">
+                      <dt class="col-4 col-form-label form-control-label"><em class="required">required</em>작성일</dt>
+                      <dd class="col-8">
+                        <span>2020-04-09 06:00:05</span>
+                      </dd>
+                    </dl>
+                  </div>
+                </div>
+
+              </div>
+              <!-- //row -->
+
+            </div>
+            <!-- //grid -->
+            <!-- button area -->
+            <div class="card-footer pb-4 btn_area">
+              <button type="submit" class="btn btn btn-outline-primary btn-icon">
+                <span class="btn-inner--icon"><i class="fas fa-save"></i></span><span class="btn-inner--text">저장</span>
+              </button>
+              <button type="button" class="btn btn btn-outline-info btn-icon">
+                <span class="btn-inner--text mr-2">삭제</span><span class="btn-inner--icon"><i
+                    class="fas fa-trash"></i></span>
+              </button>
+            </div>
+            <!-- e.button area -->
+          </form>
+
         </div>
-        <!--e.container-fluid-->
-      </div> <!-- e.page content -->
-    </div>
-    <!--내용-->
+        <!-- e.Card body -->
+      </div>
+      <!--e.container-fluid-->
+    </div> <!-- e.page content -->
+  </div>
+  <!--내용-->
   </div>
 
 
