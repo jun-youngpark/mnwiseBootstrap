@@ -123,6 +123,9 @@ em {font-style: normal; color:var(--primary);}
 .table.table-view th {height:40px; vertical-align: middle; background:#f6f9fc;}
 .table-view tr > *:first-child {border-left: none;}
 .table-view tr > *:last-child {border-right: none;}
+.table-view .btn-outline-secondary, .table-view .btn-outline-danger {min-width:60px;}
+.table-view .form-row .btn {height:calc(.45em + 1.25rem + 5px);}
+.table-view .form-row .btn-outline-secondary {border-color:#dee2e6;}
 .table.table-view td {text-align:left;}
 .table th, .table td, .table td>a{max-width:170px; overflow: hidden; white-space: nowrap;  text-overflow: ellipsis;}
 
@@ -237,6 +240,9 @@ em {font-style: normal; color:var(--primary);}
 
 /* editor */
 .editorWrap {min-height:200px;}
+
+/* 첨부파일 갯수 현황 */
+.attrfiles_status {background:#f6f9fc;}
 
 /* 비교함 - 비교 */
 .compare-row {margin-left:-10px; margin-right:-10px;}
