@@ -73,6 +73,9 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {justify-content: c
 .none {display:none !important;}
 em {font-style: normal; color:var(--primary);}
 
+/* icon */
+.fa-file-excel {font-size:.9375rem;}
+
 /***** button *****/
 .card-footer.btn_area {text-align:center;}
 .card-footer.btn_area .col {text-align:left;}
@@ -85,6 +88,8 @@ em {font-style: normal; color:var(--primary);}
 
 .btn_mail_reject {min-width:30px; height:28px; text-indent:-9999em; background:url("../img/btn_mail_reject.png") no-repeat 55% center;}
 .btn_mail_reject:hover {background-color:#ffd600;}
+.btn_help {width:30px; min-width:30px !important; padding:0 !important;}
+.btn_help .far {font-size:1.25rem;}
 
 /***** search *****/
 .searchWrap > * {padding-left:15px;}
@@ -105,6 +110,9 @@ em {font-style: normal; color:var(--primary);}
 .table_option .searchWrap > * {display:inline-block; white-space: nowrap;}
 .table_option .btn:not(:last-child) {margin-right:5px;}
 .table_option .form-control {display:inline-block; width:auto;}
+.table_option .periodWrap {display:inline-flex;}
+.table_option .periodWrap .datepicker-inline {width:140px;}
+.table_option .periodWrap .btn {min-width:30px;}
 .table_option.st02 .btn_area {-webkit-order:2; order:2;}
 .table_option.st02 .searchWrap {-webkit-order:1; order:1; margin-bottom:10px; margin-left:auto;}
 
@@ -116,7 +124,7 @@ em {font-style: normal; color:var(--primary);}
 
 /***** table *****/
 .card .table {border-collapse: collapse !important;}
-.card .table td, .card .table th {padding-left:20px; padding-right:20px; text-align:center; vertical-align: middle; border:1px solid #e9ecef;}
+.card .table td, .card .table th {padding-left:12px; padding-right:12px; text-align:center; vertical-align: middle; border:0 solid #e9ecef; border-width:1px 1px 0 0;}
 .card .table tr > *:first-child {border-left:none;}
 .card .table tr > *:last-child {border-right:none;}
 .table thead th {font-size:.8125rem;}
@@ -139,6 +147,7 @@ em {font-style: normal; color:var(--primary);}
 /***** text *****/
 .required {display:inline-block; width:4px; height:4px;  margin-right:5px; text-indent:-999em; font-size:.1em; vertical-align:middle; text-align:left; background:#5e72e4; border-radius:4px;}
 
+.font-size-basic {font-size:1rem;}
 
 .alert {padding:5px 15px; font-size:.75rem;}
 .alert-warning {color:#fc7c5f; background:none; border:1px solid #fc7c5f;}
@@ -175,7 +184,10 @@ em {font-style: normal; color:var(--primary);}
 .custom-switch .custom-control-input:checked~.custom-control-label::after {-webkit-transform: translateX(.75rem); transform: translateX(.75rem);}
 
 /* period */
+.periodWrap {display:flex;}
 .periodWrap .txt {width:2em; text-align:center;}
+.periodWrap .date input {border-radius:.25rem 0 0 .25rem;}
+.periodWrap .date .btn {height:100%;}
 
 /***** custom contents *****/
 .txt_channel {display:inline-block; width:20px; height:20px; margin:0 5px; font-style:normal; font-weight: 500; font-size:.75rem; color:#fff; text-align:center; line-height:20px; vertical-align:middle; background:#1ac1e7; border-radius:2px;}
