@@ -75,6 +75,7 @@ em {font-style: normal; color:var(--primary);}
 
 /* icon */
 .fa-file-excel {font-size:.9375rem;}
+.btn-inner--icon i.far {top:0 !important;}
 
 /***** button *****/
 .card-footer.btn_area {text-align:center;}
@@ -88,7 +89,7 @@ em {font-style: normal; color:var(--primary);}
 
 .btn_mail_reject {min-width:30px; height:28px; text-indent:-9999em; background:url("../img/btn_mail_reject.png") no-repeat 55% center;}
 .btn_mail_reject:hover {background-color:#ffd600;}
-.btn_help {width:30px; min-width:30px !important; padding:0 !important;}
+.btn_help {width:30px; min-width:30px !important; height:30px; padding:0 !important;}
 .btn_help .far {font-size:1.25rem;}
 
 /***** search *****/
@@ -102,7 +103,7 @@ em {font-style: normal; color:var(--primary);}
 .search_input > * {display:inline-block; width:auto; vertical-align: middle;}
 .search_input input {width:150px; margin:0 5px;}
 .search_input input:last-of-type {width:160px; margin-right:0; border-radius:.25rem 0 0 .25rem;}
-.search_input .btn_search {position:absolute; right:0; top:0; width:50px; height:100%; padding:2px; border-radius:0 .25rem .25rem 0;}
+.search_input .btn_search {position:absolute; right:0; top:0; width:50px; height:100%; padding:2px; background-color:#fff; border-radius:0 .25rem .25rem 0;}
 .search_input .btn_search .btn-inner--text {margin-left:2px;}
 
 .table_option {-webkit-box-align:center; align-items:center; -webkit-justify-content:space-between; -moz-justify-content:space-between; -ms-justify-content:space-between; justify-content:space-between;}
