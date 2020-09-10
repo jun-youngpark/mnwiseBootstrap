@@ -97,9 +97,6 @@
                                         <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span class="btn-inner--text">검색</span>
                                     </button>
                                 </div>
-                                <button class="btn btn-sm btn-icon btn_help">
-                                    <span class="btn-inner--icon"><i class="far fa-question-circle"></i></span><span class="btn-inner--text hide">info</span>
-                                </button>
                             </div>
                         </div>
                         <!-- //search -->
@@ -129,7 +126,12 @@
                             <th colspan="2" scope="col">발송 실패</th>
                             <th colspan="2" scope="col">수신 확인</th>
                             <th colspan="2" scope="col">리턴메일</th>
-                            <th rowspan="2" scope="col">업데이트</th>
+                            <th rowspan="2" scope="col">
+                                <span class="d-block mb-2">업데이트</span>
+                                <button class="btn btn-sm btn-icon btn_help mr-0" data-toggle="popover" data-placement="left" data-content="업데이트 버튼을 클릭 하시면 수신확인/리턴메일/링크클릭의 통계값이 업데이트 됩니다.">
+                                    <span class="btn-inner--icon"><i class="far fa-question-circle"></i></span><span class="btn-inner--text hide">info</span>
+                                </button>
+                            </th>
                         </tr>
                         <tr>
                             <th scope="col">건수</th>
