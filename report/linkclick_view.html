@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script src="/assets/vendor/chart.js/dist/Chart.min.js"></script>
+    <script src="/assets/vendor/chart.js/dist/Chart.extension.js"></script>
+
+    <script>
+    $(function () {
+        $("#subNav").load("../subNav.html");
+        $("#js").load("../js.html");
+        $("#headerTop").load("../headerTop.html");
+    });
+
+    
+
+    </script>
+</head>
+
+<body>
+<!-- wrapper -->
+<div class="wrapper">
+    <!-- 메뉴 -->
+    <div id="subNav"></div>
+    <div id="js"></div>
+    <div id="headerTop"></div>
+    <!-- //메뉴-->
+
+    <!-- Contents area  -->
+    <div class="main-panel">
+        <!-- Page content -->
+        <div class="container-fluid mt-4 mb-2">
+
+            <!-- card -->
+            <div class="card">
+                <!-- Card header -->
+                <div class="card-header">
+                    <!-- title  -->
+                    <h3 class="mb-0">캠페인 리포트</h3>
+                    <!-- //title -->
+                </div>
+                <!-- e.Card header -->
+                
+                <!-- card body -->
+                <div class="card-body">
+                    <!-- tabs -->
+                    <ul class="nav nav-pills mb-4" id="tabs-text" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link mb-sm-3 mb-md-0" id="tabs-text-1-tab" data-toggle="tab" href="#tabs-text-1" role="tab" aria-controls="tabs-text-1" aria-selected="true">전체요약</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mb-sm-3 mb-md-0" id="tabs-text-2-tab" data-toggle="tab" href="#tabs-text-2" role="tab" aria-controls="tabs-text-2" aria-selected="false">요약분석</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mb-sm-3 mb-md-0" id="tabs-text-3-tab" data-toggle="tab" href="#tabs-text-3" role="tab" aria-controls="tabs-text-3" aria-selected="false">오류분석</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mb-sm-3 mb-md-0" id="tabs-text-4-tab" data-toggle="tab" href="#tabs-text-4" role="tab" aria-controls="tabs-text-4" aria-selected="false">도메인별 분석</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mb-sm-3 mb-md-0 active" id="tabs-text-5-tab" data-toggle="tab" href="#tabs-text-5" role="tab" aria-controls="tabs-text-5" aria-selected="false">링크클릭 분석</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mb-sm-3 mb-md-0" id="tabs-text-6-tab" data-toggle="tab" href="#tabs-text-6" role="tab" aria-controls="tabs-text-6" aria-selected="false">리턴메일 분석</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mb-sm-3 mb-md-0" id="tabs-text-7-tab" data-toggle="tab" href="#tabs-text-7" role="tab" aria-controls="tabs-text-7" aria-selected="false">수신거부 분석</a>
+                        </li>
+                    </ul>
+                    <!-- //tabs -->
+
+                    <!-- Light table -->
+                    <div class="table-responsive">
+                        <table class="table dataTable table-view">
+                            <colgroup>
+                                <col style="width:15%;" />
+                                <col />
+                                <col style="width:15%;" />
+                                <col style="width:25%;" />
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">캠페인 명</th>
+                                <td>[570] 승인요청
+                                    <button class="btn btn-sm btn-secondary btn-round btn-icon ml-3" data-toggle="modal" data-target="#template_view">
+                                        <span class="btn-inner--icon"><i class="far fa-file-alt"></i></span><span class="btn-inner--text">템플릿 보기</span>
+                                    </button>
+                                </td>
+                                <th scope="row">상태</th>
+                                <td>발송종료</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">요청부서</th>
+                                <td>발표</td>
+                                <th scope="row">담당자</th>
+                                <td>아무래</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">발송 수행일</th>
+                                <td>2020-09-09 00:00 ~ 2020-09-10 00:00</td>
+                                <th scope="row">발송 시간</th>
+                                <td>00:00:00</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">캠페인 형태</th>
+                                <td>일반</td>
+                                <th scope="row">채널유형</th>
+                                <td><em class="txt_channel">E</em></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">발송현황</th>
+                                <td colspan="3">
+                                    <span class="mr-3">대상건수 : 2건</span>
+                                    <span class="mr-3">발송건수 : 2 건</span>
+                                    <span class="mr-3">성공건수 : 2 건</span>
+                                    <span>실패건수 : 0 건</span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- e.Light table -->
+
+                    <!-- modal :: 템플릿 보기 -->
+                    <div class="modal fade" id="template_view" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header align-items-center">
+                                    <h5 class="modal-title" id="exampleModalLabel">템플릿 보기</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="code_view">
+<% com.mnwise.ASE.agent.util.TextReader record=context.get("record"); StringBuffer sb = new StringBuffer() sb.append("http://wiseu.demo.carrym.com:9000/servlet/LinkTraceEM") sb.append("?SEND_MODE=") sb.append(context.get("_SEND_MODE")) sb.append("&CAMPAIGN_NO=") sb.append(context.get("_CAMPAIGN_NO")) sb.append("&RESULT_SEQ=")
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //modal :: 템플릿 보기 -->
+                </div>
+                <!-- //card body -->
+
+                <!-- button area -->
+                <div class="card-footer pb-4 btn_area">
+                    <button type="button" class="btn btn btn-outline-primary btn-icon">
+                        <span class="btn-inner--icon"><i class="fas fa-list"></i></span><span class="btn-inner--text">목록</span>
+                    </button>
+                </div>
+                <!-- e.button area -->
+            </div>
+            <!-- //card -->
+
+            <!-- card -->
+            <div class="card">
+                <!-- card body -->
+                <div class="card-body">
+                    <!-- title  -->
+                    <div class="row">
+                        <div class="col-6">
+                            <h4 class="h3 text-primary mb-3">링크클릭 반응 결과</h4>
+                        </div>
+                        <div class="col-6 text-right">
+                            <button class="btn btn-sm btn-outline-primary btn-icon">
+                                <span class="btn-inner--icon"><i class="far fa-chart-bar"></i></span><span class="btn-inner--text">컨텐츠 반응분석</span>
+                            </button>
+                            <button class="btn btn-sm btn-outline-primary btn-icon">
+                                <span class="btn-inner--icon"><i class="far fa-envelope"></i></span><span class="btn-inner--text">타겟 발송</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- //title -->
+
+                    <!-- Light table -->
+                    <div class="table-responsive">
+                        <table class="table dataTable">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th rowspan="2" scope="col">No.</th>
+                                    <th rowspan="2" scope="col">URL / 이미지</th>
+                                    <th colspan="2" scope="col">클릭 수</th>
+                                    <th colspan="2" scope="col">1회 클릭</th>
+                                    <th colspan="2" scope="col">2회 이상 클릭</th>
+                                    <th rowspan="2" scope="col">선택</th>
+                                </tr>
+                                <tr>
+                                    <th scope="col">건수</th>
+                                    <th scope="col">%</th>
+                                    <th scope="col">명</th>
+                                    <th scope="col">%</th>
+                                    <th scope="col">명</th>
+                                    <th scope="col">%</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="9">
+                                        <div class="p-3 h3 text-warning"><i class="fas fa-exclamation-circle alert-icon m-0"></i><span class="d-block mt-2">링크클릭 데이터가 존재하지 않습니다.</span></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>100</td>
+                                    <td class="text-left"><a href="#">url url</a></td>
+                                    <td>2</td>
+                                    <td>5%</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                <!-- e.card body -->
+            </div>
+            <!-- e.card -->
+
+
+        </div> <!-- e.page content -->
+    </div>
+    <!--e.Contents area-->
+</div>
+<!-- e.wrapper -->
+
+</html>
