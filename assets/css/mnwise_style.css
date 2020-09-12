@@ -143,6 +143,7 @@ em {font-style: normal; color:var(--primary);}
 .table.table-view td {text-align:left;}
 .table th, .table td, .table td>a{max-width:170px; overflow: hidden; white-space: nowrap;  text-overflow: ellipsis;}
 .table-responsive:first-child > table {margin-top:0 !important;}
+.table .btn-icon:not(.btn-secondary) i {font-size:1.25rem;}
 
 /***** text *****/
 .required {display:inline-block; width:4px; height:4px;  margin-right:5px; text-indent:-999em; font-size:.1em; vertical-align:middle; text-align:left; background:#5e72e4; border-radius:4px;}
@@ -281,3 +282,7 @@ em {font-style: normal; color:var(--primary);}
 .modal-dialog .table {border-collapse: collapse !important;}
 .modal-dialog .table td, .modal-dialog .table th {padding-left:10px; padding-right:10px; text-align:center; vertical-align: middle; border:1px solid #e9ecef;}
 .modal-footer button {min-width:150px;}
+
+/***** 템플릿 보기 *****/
+.code_view {white-space: pre-wrap;}
+
