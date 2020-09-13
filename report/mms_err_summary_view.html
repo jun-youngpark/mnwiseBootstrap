@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script src="/assets/vendor/chart.js/dist/Chart.min.js"></script>
+    <script src="/assets/vendor/chart.js/dist/Chart.extension.js"></script>
+
+    <script>
+    $(function () {
+        $("#subNav").load("../subNav.html");
+        $("#js").load("../js.html");
+        $("#headerTop").load("../headerTop.html");
+    });
+
+    
+
+    </script>
+</head>
+
+<body>
+<!-- wrapper -->
+<div class="wrapper">
+    <!-- 메뉴 -->
+    <div id="subNav"></div>
+    <div id="js"></div>
+    <div id="headerTop"></div>
+    <!-- //메뉴-->
+
+    <!-- Contents area  -->
+    <div class="main-panel">
+        <!-- Page content -->
+        <div class="container-fluid mt-4 mb-2">
+
+            <!-- card -->
+            <div class="card">
+                <!-- Card header -->
+                <div class="card-header">
+                    <!-- title  -->
+                    <h3 class="mb-0">캠페인 리포트</h3>
+                    <!-- //title -->
+                </div>
+                <!-- e.Card header -->
+                
+                <!-- card body -->
+                <div class="card-body">
+                    <!-- tabs -->
+                    <ul class="nav nav-pills mb-4" id="tabs-text" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link mb-sm-3 mb-md-0" href="mms_summary_all_view.html">전체요약</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mb-sm-3 mb-md-0 active" href="mms_err_summary_view.html">오류분석</a>
+                        </li>
+                    </ul>
+                    <!-- //tabs -->
+
+                    <!-- Light table -->
+                    <div class="table-responsive">
+                        <table class="table dataTable table-view">
+                            <colgroup>
+                                <col style="width:15%;" />
+                                <col />
+                                <col style="width:15%;" />
+                                <col style="width:25%;" />
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">캠페인 명</th>
+                                <td>[570] 정보원 sms테스트</td>
+                                <th scope="row">상태</th>
+                                <td>발송종료</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">요청부서</th>
+                                <td>발표</td>
+                                <th scope="row">담당자</th>
+                                <td>아무래</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">메시지 생성 수행일</th>
+                                <td>2020-09-09 00:00 ~ 2020-09-10 00:00</td>
+                                <th scope="row">메시지 생성 시간</th>
+                                <td>00:00:00</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">캠페인 형태</th>
+                                <td>일반</td>
+                                <th scope="row">채널유형</th>
+                                <td><em class="txt_channel m">M</em></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">발송현황</th>
+                                <td colspan="3">
+                                    <span class="mr-3">대상건수 : 2건</span>
+                                    <span class="mr-3">발송건수 : 2 건</span>
+                                    <span class="mr-3">성공건수 : 2 건</span>
+                                    <span>실패건수 : 0 건</span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- e.Light table -->
+                </div>
+                <!-- //card body -->
+
+                <!-- button area -->
+                <div class="card-footer pb-4 btn_area">
+                    <button type="button" class="btn btn btn-outline-primary btn-icon">
+                        <span class="btn-inner--icon"><i class="fas fa-list"></i></span><span class="btn-inner--text">목록</span>
+                    </button>
+                </div>
+                <!-- e.button area -->
+            </div>
+            <!-- //card -->
+
+            <!-- card -->
+            <div class="card">
+                <!-- card body -->
+                <div class="card-body">
+                    <!-- title  -->
+                    <h4 class="h3 text-primary mb-3">오류분석</h4>
+                    <!-- //title -->
+
+                    <!-- Light table -->
+                    <div class="table-responsive">
+                        <table class="table dataTable">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">오류코드</th>
+                                    <th scope="col">오류 설명</th>
+                                    <th scope="col">건수</th>
+                                    <th scope="col">%(발송대비)</th>
+                                    <th scope="col">점유율</th>
+                                    <th scope="col">다운로드</th>
+                                </tr>
+                            </thead>
+                            <tfoot class="bg-secondary">
+                                <tr>
+                                    <th colspan="2" scope="row">합계</th>
+                                    <td>2</td>
+                                    <td>5%</td>
+                                    <td>5%</td>
+                                    <td>-</td>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                <tr>
+                                    <td>D</td>
+                                    <td class="text-left">메시지 저장개수 초과</td>
+                                    <td>2</td>
+                                    <td>5%</td>
+                                    <td>5%</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-icon">
+                                            <span class="btn-inner--icon"><i class="far fa-file-excel"></i></span><span class="btn-inner--text hide">엑셀 다운로드</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //Light table -->
+
+                </div>
+                <!-- e.card body -->
+            </div>
+            <!-- e.card -->
+
+        </div> <!-- e.page content -->
+    </div>
+    <!--e.Contents area-->
+</div>
+<!-- e.wrapper -->
+
+</html>
