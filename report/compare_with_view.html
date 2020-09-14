@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script>
+    $(function () {
+        $("#subNav").load("../subNav.html");
+        $("#js").load("../js.html");
+        $("#headerTop").load("../headerTop.html");
+    });
+
+    </script>
+</head>
+
+<body>
+<!-- wrapper -->
+<div class="wrapper">
+    <!-- 메뉴 -->
+    <div id="subNav"></div>
+    <div id="js"></div>
+    <div id="headerTop"></div>
+    <!-- //메뉴-->
+
+    <!-- Contents area  -->
+    <div class="main-panel">
+        <!-- Page content -->
+        <div class="container-fluid mt-4 mb-2">
+
+            <!-- card -->
+            <div class="card">
+                <!-- Card header -->
+                <div class="card-header">
+                    <!-- title  -->
+                    <h3 class="mb-0">캠페인 비교분석</h3>
+                    <!-- //title -->
+                </div>
+                <!-- e.Card header -->
+
+                <!-- card body -->
+                <div class="card-body pb-1">
+
+                    <!-- row -->
+                    <div class="row table_option">
+                        <!-- col -->
+                        <div class="col-6">
+                            <div class="form-row align-items-center">
+                                <label class="col-2 col-form-label form-control-label" for="">TAG Search</label>
+                                <div class="col-10 btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-secondary btn-sm active">
+                                        <input type="checkbox" checked /> <span>tag 1</span>
+                                    </label>
+                                    <label class="btn btn-secondary btn-sm">
+                                        <input type="checkbox" /> <span>tag2</span>
+                                    </label>
+                                    <label class="btn btn-secondary btn-sm">
+                                        <input type="checkbox" /> <span>tag 3</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                        <!-- search -->
+                        <div class="col-6 searchbox">
+                            <!-- period -->
+                            <div class="periodWrap align-items-center">
+                                <div class="input-group date datepicker datepicker-inline">
+                                    <input type="text" class="form-control form-control-sm" />
+                                    <span class="input-group-addon input-group-append">
+                                        <button class="btn btn-outline-primary btn-sm" type="button"> <span class="fa fa-calendar"></span></button>
+                                    </span>
+                                </div>
+                                <span class="txt">~</span>
+                                <div class="input-group date datepicker datepicker-inline">
+                                    <input type="text" class="form-control form-control-sm" />
+                                    <span class="input-group-addon input-group-append">
+                                        <button class="btn btn-outline-primary btn-sm" type="button"> <span class="fa fa-calendar"></span></button>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- //period -->
+                            <select class="form-control form-control-sm">
+                                <option>EMAIL</option>
+                                <option></option>
+                            </select>
+                        </div>
+                        <!-- //search -->
+                    </div>
+                    <!-- //row -->
+
+                    <h4 class="h3 text-primary mt-2 mb-3">발송 결과</h4>
+
+                    <!-- Light table -->
+                    <div class="table-responsive">
+                        <table class="table dataTable">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th rowspan="2" scope="col">캠페인<br />번호</th>
+                                    <th rowspan="2" scope="col">대상 수</th>
+                                    <th colspan="2" scope="col">발송 수</th>
+                                    <th colspan="2" scope="col">발송 성공</th>
+                                    <th colspan="2" scope="col">Soft Bounce</th>
+                                    <th colspan="2" scope="col">Hard Bounce</th>
+                                    <th rowspan="2" scope="col">발송일시</th>
+                                    <th rowspan="2" scope="col">발송시간</th>
+                                    <th rowspan="2" scope="col">상태</th>
+                                </tr>
+                                <tr>
+                                    <th scope="col">건수</th>
+                                    <th scope="col">%</th>
+                                    <th scope="col">건수</th>
+                                    <th scope="col">%</th>
+                                    <th scope="col">건수</th>
+                                    <th scope="col">%</th>
+                                    <th scope="col">건수</th>
+                                    <th scope="col">%</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">355</th>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">0%</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">0%</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">0%</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">0%</td>
+                                    <td>2020-09-09 10:00</td>
+                                    <td>00:00:00</td>
+                                    <td>발송완료</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //Light table -->
+
+                </div>
+                <!-- e.card body -->
+            </div>
+            <!-- //card -->
+
+            <!-- card -->
+            <div class="card">
+                <!-- card body -->
+                <div class="card-body">
+                    <!-- title  -->
+                    <h4 class="h3 text-primary mb-3">반응결과</h4>
+                    <!-- //title -->
+
+                    <!-- Light table -->
+                    <div class="table-responsive">
+                        <table class="table dataTable">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th rowspan="2" scope="col">캠페인<br />번호</th>
+                                    <th rowspan="2" scope="col">발송 성공</th>
+                                    <th colspan="2" scope="col">수신확인</th>
+                                    <th colspan="3" scope="col">유효수신</th>
+                                    <th colspan="3" scope="col">링크클릭</th>
+                                    <th rowspan="2" scope="col">발송일시</th>
+                                </tr>
+                                <tr>
+                                    <th scope="col">건수</th>
+                                    <th scope="col">%</th>
+                                    <th scope="col">건수</th>
+                                    <th scope="col">발송대비 %</th>
+                                    <th scope="col">오픈대비 %</th>
+                                    <th scope="col">건수</th>
+                                    <th scope="col">발송대비 %</th>
+                                    <th scope="col">오픈대비 %</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">355</th>
+                                    <td></td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">0%</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">0%</td>
+                                    <td class="text-right">0%</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">0%</td>
+                                    <td class="text-right">0%</td>
+                                    <td>2020-09-09 10:00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //Light table -->
+
+                </div>
+                <!-- e.card body -->
+            </div>
+            <!-- e.card -->
+
+
+        </div> <!-- e.page content -->
+    </div>
+    <!--e.Contents area-->
+</div>
+<!-- e.wrapper -->
+
+</html>
