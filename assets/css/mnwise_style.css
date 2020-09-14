@@ -51,7 +51,7 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {justify-content: c
 .custom-file-input:lang(ko) ~ .custom-file-label::after{content: '파일 선택';}
 .custom-file-input {display:none;}
 .notice-text {padding-inline-start: 10px;}
-.notice-text li{list-style:none; font-size: .8125rem; }
+.notice-text li{list-style:none;  }
 
 /******  templet > *** ***/
 
@@ -60,8 +60,8 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {justify-content: c
 
 /*** mms-view-img **/
 .mms-view-img{width:220px; height:184px; margin-bottom: 1rem; border:1px solid #e8e8e8;}
-.textarea-font-style{text-align-last: right; font-size:0.85em}
-
+.textarea-font-style{font-style: normal; text-align-last: right;}
+.count-text, .quill-count-text{color:#5e72e4;}
 /*** mms-view-img **/
 .brandtalk-view-img{width:350px; height:160px; margin-bottom: 1rem; border:1px solid #e8e8e8;}
 .friendtalk-view-img img, .mms-view-img img, .brandtalk-view-img img{background-size: contain; max-width: 100%; max-height: 100%;}
