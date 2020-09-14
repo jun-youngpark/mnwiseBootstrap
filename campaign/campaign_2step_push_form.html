@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script>
+    $(function () {
+        $("#subNav").load("../subNav.html");
+        $("#js").load("../js.html");
+        $("#headerTop").load("../headerTop.html");
+    });
+    </script>
+</head>
+
+<body>
+<!-- wrapper -->
+<div class="wrapper">
+    <!-- 메뉴 -->
+    <div id="subNav"></div>
+    <div id="js"></div>
+    <div id="headerTop"></div>
+    <!-- //메뉴-->
+
+    <!-- Contents area -->
+    <div class="main-panel">
+        <!-- Page content -->
+        <div class="container-fluid mt-4 mb-2">
+
+            <!-- card -->
+            <div class="card">
+                <!-- Card header -->
+                <div class="card-header">
+                    <div class="row">
+                        <!-- title  -->
+                        <div class="col-8">
+                            <h3 class="mb-0">캠페인 등록- push(메시지작성)</h3>
+                        </div>
+                        <!-- //title -->
+
+                        <!-- step -->
+                        <div class="col-4 row pr-0 justify-content-end">
+                            <ul class="stepWrap">
+                                <li><div class="box"><span class="txt">STEP</span><strong>1</strong></div></li>
+                                <li class="current"><div class="box"><span class="txt">STEP</span><strong>2</strong></div></li>
+                                <li><div class="box"><span class="txt">STEP</span><strong>3</strong></div></li>
+                            </ul>
+                        </div>
+                        <!-- e.step -->
+                    </div>
+                </div>
+                <!-- e.Card header -->
+
+                <!-- form -->
+                <form>
+                <!-- grid -->
+                <div class="card-body gridWrap">
+                    <!-- row -->
+                    <div class="row">
+                        <!-- col -->
+                        <div class="col-6">
+                            <div class="form-group">
+                                <dl class="row">
+                                    <dt class="col-4 col-form-label form-control-label">캠페인 번호</dt>
+                                    <dd class="col-8">
+                                        <em class="txt_channel p">P</em> <span>357</span>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                        <!-- col -->
+                        <div class="col-6">
+                            <div class="form-group">
+                                <dl class="row">
+                                    <dt class="col-4 col-form-label form-control-label">캠페인 명</dt>
+                                    <dd class="col-8">
+                                        <span>push test </span>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                    </div>
+                    <!-- //row -->
+                    <!-- row -->
+                    <div class="row">
+                        <!-- col -->
+                        <div class="col-12">
+                            <div class="row form-group">
+                                <label class="col-2 col-form-label form-control-label" for=""><em class="required">required</em>대상자</label>
+                                <div class="col-10">
+                                    <div class="row">
+                                        <div class="col-4"><input type="text" class="form-control" placeholder="" /></div>
+                                        <div class="col-2 input-has-unit"><input type="text" class="form-control" placeholder="" /><spa class="unit">명</spa></div>
+                                        <div class="col-auto">
+                                            <button class="btn btn-secondary btn-icon btn_search">
+                                                <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span class="btn-inner--text hide">검색</span>
+                                            </button>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button class="btn btn-secondary" type="button">대상자 선택</button>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button class="btn btn-secondary" type="button">대상자 등록</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                    </div>
+                    <!-- //row -->
+
+                    <!-- row -->
+                    <div class="row">
+                        <!-- mobile preview -->
+                        <div class="col col-phone">
+                            <div class="phone_preview">
+                                <div class="preview_box">
+                                    <div class="tit">PUSH</div>
+                                    <div class="text"><textarea rows="10" cols="20" class="form-control"></textarea></div>
+                                </div>
+                                <span class="letter_count">67자</span>
+                            </div>
+                        </div>
+                        <!-- //mobile preview -->
+
+                        <div class="col gridWrap">
+                            <!-- row -->
+                            <div class="row">
+                                 <!-- col -->
+                                <div class="col-12">
+                                     <div class="row form-group">
+                                        <label class="col-2 col-form-label form-control-label" for="">제목</label>
+                                        <div class="col-10">
+                                            <input type="text" id="" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                                     <!-- // col -->
+                            </div>
+                            <!-- //row -->
+                            <!-- row -->
+                            <div class="row">
+                                <!-- col -->
+                                <div class="col-12">
+                                    <div class="row form-group">
+                                        <label class="col-2 col-form-label form-control-label" for=""><em class="required">required</em>알림 내용</label>
+                                        <div class="col-10">
+                                            <div class="row align-items-center">
+                                                <div class="col-6">
+                                                    <select class="form-control" required>
+                                                        <option value="">개인화 없음</option>
+                                                        <option value=""></option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-auto "><div class="textarea-font-style"><span class="count-text ">0</span> bytes</div></div>
+                                            </div>
+                                            <div class="row mt-3">
+                                                <div class="col-12">
+                                                    <textarea class="form-control textarea" id="" rows="5"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //col -->
+                            </div>
+                            <!-- //row -->
+
+                            <!-- row -->
+                            <div class="row">
+                                <!-- col -->
+                                <div class="col-6 col-xxl-4">
+                                    <div class="row form-group">
+                                        <label class="col-4 col-form-label form-control-label" for=""><em class="required">required</em>앱선택</label>
+                                        <div class="col-8">
+                                            <select class="form-control" required>
+                                                <option value="">PUSH APP LIST</option>
+                                                <option value=""></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //col -->
+                                <!-- col -->
+                                <div class="col-6 col-xxl-4">
+                                    <div class="row form-group">
+                                        <label class="col-4 col-form-label form-control-label" for=""><em class="required">required</em>메시지 유형</label>
+                                        <div class="col-8">
+                                            <select class="form-control" required>
+                                                <option value="">일반</option>
+                                                <option value="">정보</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //col -->
+                                <!-- col -->
+                                <div class="col-12 col-xxl-4">
+                                    <div class="row form-group">
+                                        <label class="col-2 col-xxl-4 col-form-label form-control-label" for="">메뉴 ID</label>
+                                        <div class="col-10 col-xxl-8">
+                                            <input type="text" id="" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //col -->
+                            </div>
+                            <!-- //row -->
+                            <!-- row -->
+                            <div class="row">
+                                <!-- col -->
+                                <div class="col-6 col-xxl-4">
+                                    <div class="row form-group">
+                                        <label class="col-4 col-form-label form-control-label" for="">이미지 팝업 URL</label>
+                                        <div class="col-8">
+                                            <input class="form-control" type="url" value="https://www.creative-tim.com" id="example-url-input">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //col -->
+                                <!-- col -->
+                                <div class="col-6 col-xxl-4">
+                                    <div class="row form-group">
+                                        <label class="col-4 col-form-label form-control-label" for="">큰 이미지 URL</label>
+                                        <div class="col-8">
+                                            <input class="form-control" type="url" value="https://www.creative-tim.com" id="example-url-input">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //col -->
+                                <!-- col -->
+                                <div class="col-12 col-xxl-4">
+                                    <div class="row form-group">
+                                        <label class="col-2 col-xxl-4 col-form-label form-control-label" for="">웹 URL</label>
+                                        <div class="col-10 col-xxl-8">
+                                            <input class="form-control" type="url" value="https://www.creative-tim.com" id="example-url-input">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //col -->
+                            </div>
+                            <!-- //row -->
+
+                            <!-- row -->
+                            <div class="row">
+                                <!-- col -->
+                                <div class="col-12">
+                                    <div class="row form-group">
+                                        <label class="col-2 col-form-label form-control-label" for="">앱 내 메시지</label>
+                                        <div class="col-10">
+                                            <div class="row align-items-center">
+                                                <div class="col-auto "><div class="textarea-font-style"><span class="quill-count-text ">0</span> bytes</div></div>
+                                            </div>
+                                            <div class="row mt-3">
+                                                <div class="col-12">
+                                                    <div data-toggle="quill" data-quill-placeholder="Quill WYSIWYG"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //col -->
+                            </div>
+                            <!-- //row -->
+                        </div>
+                    </div>
+                    <!-- //row -->
+                </div>
+                <!-- //grid -->
+                
+                <!-- button area -->
+                <div class="card-footer pb-4 btn_area">
+                    <div class="row">
+                        <div class="col col-8">
+                            <button type="submit" class="btn btn btn-outline-primary btn-icon">
+                                <span class="btn-inner--icon"><i class="fas fa-save"></i></span><span class="btn-inner--text">저장</span>
+                            </button>
+                            <button type="button" class="btn btn btn-outline-default">금칙어 검사</button>
+                            <button type="button" class="btn btn btn-outline-default">테스트 발송</button>
+                            <button type="button" class="btn btn btn-outline-default">핸들러</button>
+                        </div>
+                        <div class="col col-4">
+                            <button type="button" class="btn btn btn-outline-info btn-icon">
+                                <span class="btn-inner--icon"><i class="fas fa-chevron-left"></i></span><span class="btn-inner--text">이전단계</span>
+                            </button>
+                            <button type="button" class="btn btn btn-outline-info btn-icon">
+                                <span class="btn-inner--text mr-2">다음단계</span><span class="btn-inner--icon"><i class="fas fa-chevron-right"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- e.button area -->
+                </form>
+                <!-- e.form -->
+            
+            </div>
+            <!-- e.card -->
+
+        </div> <!-- e.page content -->
+    </div>
+    <!-- e.Contents area -->
+</div>
+<!-- e.wrapper -->
+
+</html>
