@@ -5,9 +5,10 @@ $(document).ready(function () {
     calendarFnc();
     inputFileFnc();
     countTextFnc();
+    countTextQuillFnc();
 
-  
-  
+
+
 });
 
 
@@ -24,23 +25,23 @@ function chekFnc() {
 }
 
 /*트리 뷰 함수*/
-function treeViewFnc(){
+function treeViewFnc() {
     $("#tree").treeview({
         collapsed: true,
         animated: "medium",
-        control:"#sidetreecontrol",
+        control: "#sidetreecontrol",
         persist: "location"
     });
 }
 
 /**/
-function calendarFnc(){
+function calendarFnc() {
     $('.calendar').calendar();
 }
 
 
 /* 데이터테이블 플러그인 리셋 함수 */
-function tableReset(){
+function tableReset() {
     $("#datatable-basic").dataTable().fnDestroy();
     var table = $("#datatable-basic").dataTable({
         "bFilter": false,
@@ -61,18 +62,72 @@ function tableReset(){
     });
 }
 /*input file 라벨에 파일이름 추가 */
-function inputFileFnc(){
-    $('input[type=file]').on('change',function(){
-        if(window.Filereder){ // modern browser
+function inputFileFnc() {
+    $('input[type=file]').on('change', function () {
+        if (window.Filereder) { // modern browser
             var filename = $(this)[0].files[0].name;
-        }else{ // oldIE
+        } else { // oldIE
             var filename = $(this).val().split('/').pop().split('\\').pop();
         }
         $('.custom-file-label').text(filename);
     })
 }
 
-/* textarea 글자수 카운트 */
+
+   /* textarea 글자수 카운트 한글 2 / 영문+숫자 1  */
+function countTextFnc() {
+    $(".textarea").bind({"keyup": function () { 
+         var dom = $(this),
+                textDom = $('.count-text'),
+                str = dom.val(),
+                _byte = 0,
+                charStr = ''
+            if (str.length <= 0) {
+                textDom.text(str.length);
+                return;
+            }
+            for (var i = 0; i < str.length;  i++) {
+                charStr = str.charAt(i);
+                if (escape(charStr).length > 4) {
+                    _byte += 2;
+                } else {
+                    _byte++;
+                }
+            }
+            textDom.text(_byte);
+        }
+    });
+}
+
+   /* Quill 글자수 카운트 한글 2 / 영문+숫자 1  */
+function countTextQuillFnc() {
+    $(".ql-editor").bind({"keyup": function () { 
+         var dom = $(this),
+                textDom = $('.quill-count-text'),
+                strT = dom.text(),
+                _byte = 0,
+                charStr = ''
+            if (strT.length <= 0) {
+                textDom.text(strT.length);
+                return;
+            }
+            for (var i = 0; i < strT.length;  i++) {
+                charStr = strT.charAt(i);
+                if (escape(charStr).length > 4) {
+                    _byte += 2;
+                } else {
+                    _byte++;
+                }
+            }
+            textDom.text(_byte);
+        }
+    });
+}
+
+
+
+/*
+ 삭제 -------- textarea 글자수 카운트 
 function countTextFnc(){
     $('.textarea').keyup(function (e){
         var content = $(this).val();
@@ -80,3 +135,6 @@ function countTextFnc(){
     });
     $('.count-text').keyup();
     }
+*/
+
+
