@@ -102,9 +102,9 @@
                                         <div class="col-10">
                                             <div class="row">
                                                 <div class="col-4"><input type="text" class="form-control"
-                                                        placeholder="" /></div>
+                                                        placeholder="" required/></div>
                                                 <div class="col-2 input-has-unit"><input type="text"
-                                                        class="form-control" placeholder="" />
+                                                        class="form-control" placeholder="" required/>
                                                     <spa class="unit">명</spa>
                                                 </div>
                                                 <div class="col-auto">
@@ -135,7 +135,7 @@
                                         <label class="col-4 col-form-label form-control-label" for=""><em
                                                 class="required">required</em>플러스친구 ID</label>
                                         <div class="col-8">
-                                            <select class="form-control">
+                                            <select class="form-control" required>
                                                 <option>@엠앤와이즈</option>
                                             </select>
                                         </div>
@@ -151,13 +151,13 @@
                                             <dd class="col-8">
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" id="customRadioInline1"
-                                                        name="customRadioInline1" class="custom-control-input" />
+                                                        name="customRadioInline1" class="custom-control-input" required/>
                                                     <label class="custom-control-label"
                                                         for="customRadioInline1">표기함</label>
                                                 </div>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" id="customRadioInline2"
-                                                        name="customRadioInline1" class="custom-control-input" />
+                                                        name="customRadioInline1" class="custom-control-input" required/>
                                                     <label class="custom-control-label" for="customRadioInline2">표기
                                                         안함</label>
                                                 </div>
@@ -179,13 +179,13 @@
                                             <dd class="col-8">
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" id="customRadioInline3"
-                                                        name="customRadioInline2" class="custom-control-input" />
+                                                        name="customRadioInline2" class="custom-control-input" required/>
                                                     <label class="custom-control-label"
                                                         for="customRadioInline3">발송함</label>
                                                 </div>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" id="customRadioInline4"
-                                                        name="customRadioInline2" class="custom-control-input" />
+                                                        name="customRadioInline2" class="custom-control-input" required/>
                                                     <label class="custom-control-label" for="customRadioInline4">발송
                                                         안함</label>
                                                 </div>
@@ -339,7 +339,8 @@
                         </div>
                         <!-- //message -->
 
-                        <!-- button area -->
+                        <!-- button area 
+                        button type="button" ----  button type="submit"-->
                         <div class="card-footer pb-4 btn_area">
                             <div class="row">
                                 <div class="col col-6">
@@ -371,7 +372,8 @@
             </div> <!-- e.page content -->
         </div>
         <!-- e.Contents area -->
-    </div>
-    <!-- e.wrapper -->
+        </div>
+        <!-- e.wrapper -->
 
-</html>
+        
+        </html>
