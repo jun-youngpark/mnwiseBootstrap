@@ -58,10 +58,6 @@
                 <form>
                 <!-- grid -->
                 <div class="card-body gridWrap">
-                    <div class="alert alert-warning" role="alert">
-                        <span class="alert-icon"><i class="fas fa-exclamation-triangle"></i></span>
-                            <span class="alert-text">대상자를 선택해야 합니다.</span>
-                    </div>
                     <!-- row -->
                     <div class="row">
                         <!-- col -->
@@ -97,7 +93,7 @@
                             <div class="row form-group">
                                 <label class="col-4 col-form-label form-control-label" for=""><em class="required">required</em>발신자 번호</label>
                                 <div class="col-8">
-                                    <input type="text" id="" class="form-control" />
+                                    <input type="text" id="" class="form-control" required/>
                                 </div>
                             </div>
                         </div>
@@ -112,8 +108,8 @@
                                 <label class="col-2 col-form-label form-control-label" for=""><em class="required">required</em>대상자</label>
                                 <div class="col-10">
                                     <div class="row">
-                                        <div class="col-4"><input type="text" class="form-control" placeholder="" /></div>
-                                        <div class="col-2 input-has-unit"><input type="text" class="form-control" placeholder="" /><spa class="unit">명</spa></div>
+                                        <div class="col-4"><input type="text" class="form-control" placeholder="" required/></div>
+                                        <div class="col-2 input-has-unit"><input type="text" class="form-control" placeholder="" required/><spa class="unit">명</spa></div>
                                         <div class="col-auto">
                                             <button class="btn btn-secondary btn-icon btn_search">
                                                 <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span class="btn-inner--text hide">검색</span>
@@ -343,7 +339,7 @@
                             <button type="button" class="btn btn btn-outline-info btn-icon">
                                 <span class="btn-inner--icon"><i class="fas fa-chevron-left"></i></span><span class="btn-inner--text">이전단계</span>
                             </button>
-                            <button type="button" class="btn btn btn-outline-info btn-icon">
+                            <button type="submit" class="btn btn btn-outline-info btn-icon">
                                 <span class="btn-inner--text mr-2">다음단계</span><span class="btn-inner--icon"><i class="fas fa-chevron-right"></i></span>
                             </button>
                         </div>
