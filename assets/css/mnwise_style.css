@@ -202,7 +202,7 @@ em {font-style: normal; color:var(--primary);}
 .txt_channel.b {background:#3c1e1e;}
 .txt_channel.p {background:#dd3b41;}
 .txt_channel.f {background:#9b11fc;}
-
+.txt_channel.c {background:#fb6aa6;}
 
 /* step */
 .stepWrap {position:relative; display:inline-block; margin:0; padding:0; list-style: none; font-size:.8125rem; color:#fff;}
