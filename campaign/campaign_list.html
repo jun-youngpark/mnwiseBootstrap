@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script>
+        $(function () {
+            $("#subNav").load("../subNav.html");
+            $("#js").load("../js.html");
+            $("#headerTop").load("../headerTop.html");
+        });
+    </script>
+</head>
+
+<body>
+    <!-- wrapper -->
+    <div class="wrapper">
+        <!-- 메뉴 -->
+        <div id="subNav"></div>
+        <div id="js"></div>
+        <div id="headerTop"></div>
+        <!-- //메뉴-->
+
+        <!-- Contents area  -->
+        <div class="main-panel">
+            <!-- Page content -->
+            <div class="container-fluid mt-4 mb-2">
+
+                <!-- card -->
+                <div class="card">
+                    <!-- Card header -->
+                    <div class="card-header">
+                        <!-- title  -->
+                        <h3 class="mb-0">캠페인 리스트</h3>
+                        <!-- //title -->
+                    </div>
+                    <!-- e.Card header -->
+
+                    <!-- card body -->
+                    <div class="card-body pb-1">
+                        <!-- search area & buttons -->
+                        <div class="row align-items-center py-2 table_option">
+                            <!-- buttons -->
+                            <div class="col-auto btn_area">
+                                <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                                    <span class="btn-inner--icon"><i class="fas fa-edit"></i></span><span
+                                        class="btn-inner--text">상태변경</span>
+                                </button>
+                                <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                                    <span class="btn-inner--icon"><i class="fas fa-copy"></i></span><span
+                                        class="btn-inner--text">캠페인 복사</span>
+                                </button>
+                                <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                                    <span class="btn-inner--icon"><i class="fas fa-trash"></i></span><span
+                                        class="btn-inner--text">삭제</span>
+                                </button>
+                            </div>
+                            <!-- e.buttons -->
+
+                            <!-- search -->
+                            <div class="col-auto searchWrap">
+                                <div class="form-group searchbox">
+                                    <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                                        <span class="btn-inner--icon"><i class="fas fa-eye"></i></span><span
+                                            class="btn-inner--text">승인요청만
+                                            보기</span>
+                                    </button>
+                                    <select class="form-control form-control-sm">
+                                        <option>수행상태</option>
+                                        <option>작성중</option>
+                                        <option>보류</option>
+                                        <option>발송대기</option>
+                                        <option>발송중</option>
+                                        <option>발송종료</option>
+                                        <option>승인요청</option>
+                                        <option>승인거부</option>
+                                        <option>일시정지</option>
+                                        <option>분할정지</option>
+                                        <option>발송중단</option>
+                                        <option>발송에러</option>
+                                        <option>승인완료</option>
+                                    </select>
+                                </div>
+                                <div class="form-group searchbox">
+                                    <span class="form-control-label txt">작성일</span>
+                                    <input class="form-control form-control-sm" type="date" value=""
+                                        id="example-date-input">
+                                    <span class="form-control-label">~</span>
+                                    <input class="form-control form-control-sm ml-0" type="date" value=""
+                                        id="example-date-input">
+                                </div>
+                                <div class="form-group searchbox">
+                                    <div class="search_input">
+                                        <select class="form-control form-control-sm">
+                                            <option>캠페인명</option>
+                                            <option>발송제목</option>
+                                        </select>
+                                        <input type="search" class="form-control form-control-sm" placeholder=""
+                                            aria-controls="datatable-basic" />
+                                        <button class="btn btn-sm btn-outline-info btn-icon btn_search">
+                                            <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span
+                                                class="btn-inner--text">검색</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //search -->
+                        </div>
+                        <!-- e.search area & buttons -->
+                    </div>
+                    <!-- e.card body -->
+                    <!-- Light table -->
+                    <div class="table-responsive">
+                        <table class="table dataTable">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">선택</th>
+                                    <th scope="col">캠페인 NO</th>
+                                    <th scope="col">캠페인명(발송제목)</th>
+                                    <th scope="col">채널</th>
+                                    <th scope="col">수행상태</th>
+                                    <th scope="col">유형</th>
+                                    <th scope="col">대상자수</th>
+                                    <th scope="col">발송일시</th>
+                                    <th scope="col">발송부서</th>
+                                    <th scope="col">작성자</th>
+                                    <th scope="col">작성일</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" id="checkbox1" name="customcheckbox"
+                                                class="custom-control-input" />
+                                            <label class="custom-control-label" for="checkbox1"></label>
+                                        </div>
+                                    </th>
+                                    <td>1378</td>
+                                    <td class="text-left"><a href="#!" class="font-weight-bold">sms테스트</a></td>
+                                    <td><em class="txt_channel s">S</em></td>
+                                    <td>작성중</td>
+                                    <td>일반</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>mnwise2</td>
+                                    <td></td>
+                                    <td>20-09-15</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" id="checkbox2" name="customcheckbox"
+                                                class="custom-control-input" />
+                                            <label class="custom-control-label" for="checkbox2"></label>
+                                        </div>
+                                    </th>
+                                    <td>1377</td>
+                                    <td class="text-left"><a href="#!" class="font-weight-bold">push</a></td>
+                                    <td><em class="txt_channel p">P</em></td>
+                                    <td>작성중</td>
+                                    <td>일반</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>mnwise2</td>
+                                    <td></td>
+                                    <td>20-09-14</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" id="checkbox3" name="customcheckbox"
+                                                class="custom-control-input" />
+                                            <label class="custom-control-label" for="checkbox3"></label>
+                                        </div>
+                                    </th>
+                                    <td>1376</td>
+                                    <td class="text-left"><a href="#!" class="font-weight-bold">lms mms</a></td>
+                                    <td><em class="txt_channel m">M</em></td>
+                                    <td>발송종료</td>
+                                    <td>일반</td>
+                                    <td>1 명</td>
+                                    <td>20-08-27 10:57</td>
+                                    <td>mnwise2</td>
+                                    <td></td>
+                                    <td>20-09-14</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" id="checkbox4" name="customcheckbox"
+                                                class="custom-control-input" />
+                                            <label class="custom-control-label" for="checkbox4"></label>
+                                        </div>
+                                    </th>
+                                    <td>1375</td>
+                                    <td class="text-left"><a href="#!" class="font-weight-bold">email</a></td>
+                                    <td><em class="txt_channel">E</em></td>
+                                    <td>작성중</td>
+                                    <td>일반</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>mnwise2</td>
+                                    <td></td>
+                                    <td>20-09-14</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" id="checkbox5" name="customcheckbox"
+                                                class="custom-control-input" />
+                                            <label class="custom-control-label" for="checkbox5"></label>
+                                        </div>
+                                    </th>
+                                    <td>1374</td>
+                                    <td class="text-left"><a href="#!" class="font-weight-bold">친구톡</a></td>
+                                    <td><em class="txt_channel c">C</em></td>
+                                    <td>작성중</td>
+                                    <td>일반</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>mnwise2</td>
+                                    <td></td>
+                                    <td>20-09-14</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" id="checkbox6" name="customcheckbox"
+                                                class="custom-control-input" />
+                                            <label class="custom-control-label" for="checkbox6"></label>
+                                        </div>
+                                    </th>
+                                    <td>1373</td>
+                                    <td class="text-left"><a href="#!" class="font-weight-bold">Fax</a></td>
+                                    <td><em class="txt_channel f">F</em></td>
+                                    <td>작성중</td>
+                                    <td>일반</td>
+                                    <td>3 명</td>
+                                    <td></td>
+                                    <td>mnwise2</td>
+                                    <td></td>
+                                    <td>20-09-14</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" id="checkbox7" name="customcheckbox"
+                                                class="custom-control-input" />
+                                            <label class="custom-control-label" for="checkbox7"></label>
+                                        </div>
+                                    </th>
+                                    <td>1372</td>
+                                    <td class="text-left"><a href="#!" class="font-weight-bold">브랜드톡</a></td>
+                                    <td><em class="txt_channel b">B</em></td>
+                                    <td>작성중</td>
+                                    <td>일반</td>
+                                    <td>3 명</td>
+                                    <td></td>
+                                    <td>mnwise2</td>
+                                    <td></td>
+                                    <td>20-09-14</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- e.Light table -->
+
+                    <!-- pagenation -->
+                    <div class="pagination pagination-sm mb-0 pb-2 pt-1 justify-content-center">
+                        <ul class="pagination">
+                            <li class="paginate_button page-item previous disabled" id="datatable-basic_previous"><a
+                                    href="#" aria-controls="datatable-basic" data-dt-idx="0" tabindex="0"
+                                    class="page-link"><i class="fas fa-angle-left"></i></a></li>
+                            <li class="paginate_button page-item active"><a href="#" aria-controls="datatable-basic"
+                                    data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                            <li class="paginate_button page-item next disabled" id="datatable-basic_next"><a href="#"
+                                    aria-controls="datatable-basic" data-dt-idx="2" tabindex="0" class="page-link"><i
+                                        class="fas fa-angle-right"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- e.pagenation -->
+
+                </div>
+                <!-- e.card -->
+
+            </div> <!-- e.page content -->
+        </div>
+        <!--e.Contents area-->
+    </div>
+    <!-- e.wrapper -->
+
+
+   <!--  처음 로드시, tot = w01값이 동일 // resize시 정상적으로 width 값 가져옴 -->
+    <script>
+        $(window).load(function () {
+            // table top button & search ui
+            function searchui() {
+                var tot = $(".table_option").width();
+                var w01 = $(".table_option .btn_area").innerWidth() + $(".table_option .searchWrap").innerWidth();
+                console.log("전체  너비 = "+tot)
+                console.log("버튼 + searchWrap 너비 = "+w01)
+
+                if (tot < w01) {
+                    $(".table_option").addClass("st02");
+                } else {
+                    $(".table_option").removeClass("st02");
+                }
+            };
+            searchui();
+            $(window).resize(function () {
+                searchui();
+            });
+        }); 
+    </script>
+
+</html>
