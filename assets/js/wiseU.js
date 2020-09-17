@@ -137,4 +137,10 @@ function countTextFnc(){
     }
 */
 
+/*고객이력 > 다시보기 팝업*/
+function openPreviousPop() {
+    NewWin = window.open('../resend/previous_template.html',"LargeImage","resizable=yes,scrollbars=auto,status=no,width=800, height=460, top=100, left=100");
+  
+}
+
 
