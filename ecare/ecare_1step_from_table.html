@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script>
+    $(function () {
+        $("#subNav").load("../subNav.html");
+        $("#js").load("../js.html");
+        $("#headerTop").load("../headerTop.html");
+    });
+    </script>
+</head>
+
+<body>
+<!-- wrapper -->
+<div class="wrapper">
+    <!-- 메뉴 -->
+    <div id="subNav"></div>
+    <div id="js"></div>
+    <div id="headerTop"></div>
+    <!-- //메뉴-->
+
+    <!-- Contents area -->
+    <div class="main-panel">
+        <!-- Page content -->
+        <div class="container-fluid mt-4 mb-2">
+
+            <!-- card -->
+            <div class="card">
+                <!-- Card header -->
+                <div class="card-header">
+                    <div class="row">
+                        <!-- title  -->
+                        <div class="col-8">
+                            <h3 class="mb-0">이케어 등록 (기본정보)</h3>
+                        </div>
+                        <!-- //title -->
+
+                        <!-- step -->
+                        <div class="col-4 row pr-0 justify-content-end">
+                            <ul class="stepWrap">
+                                <li class="current"><div class="box"><span class="txt">STEP</span><strong>1</strong></div></li>
+                                <li><div class="box"><span class="txt">STEP</span><strong>2</strong></div></li>
+                                <li><div class="box"><span class="txt">STEP</span><strong>3</strong></div></li>
+                            </ul>
+                        </div>
+                        <!-- e.step -->
+                    </div>
+                </div>
+                <!-- e.Card header -->
+
+                <!-- form -->
+                <form>
+                <h3 class="h3">table type</h3>
+                <!-- grid -->
+                <div class="card-body gridWrap">
+                    <table class="table">
+                        <colgroup>
+                            <col style="width:150px;" />
+                            <col />
+                            <col style="width:130px;" />
+                            <col style="width:20%;" />
+                            <col style="width:130px;" />
+                            <col style="width:20%;" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><em class="required">required</em>유형</th>
+                                <td colspan="3">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" />
+                                        <label class="custom-control-label" for="customRadioInline1">실시간</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" />
+                                        <label class="custom-control-label" for="customRadioInline2">준실시간</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input" />
+                                        <label class="custom-control-label" for="customRadioInline3">스케쥴(분)</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="customRadioInline4" name="customRadioInline1" class="custom-control-input" />
+                                        <label class="custom-control-label" for="customRadioInline4">스케쥴</label>
+                                    </div>
+                                </td>
+                                <th scope="row">태그</th>
+                                <td><input type="text" class="form-control" placeholder="태그" /></td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><em class="required">required</em>이케어명</th>
+                                <td colspan="2"><input type="text" class="form-control" required placeholder="" /></td>
+                                <th scope="row">이케어 설명</th>
+                                <td colspan="2"><input type="text" class="form-control" placeholder="" /></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">담당부서</th>
+                                <td><input type="text" class="form-control" placeholder="" /></td>
+                                <th scope="row">담당자</th>
+                                <td><input type="text" class="form-control" placeholder="" /></td>
+                                <th scope="row">요청 부서코드</th>
+                                <td><input type="text" class="form-control" placeholder="" /></td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><em class="required">required</em>요청자 아이디</th>
+                                <td><input type="text" class="form-control" placeholder="" /></td>
+                                <th scope="row">작성일</th>
+                                <td><input type="text" class="form-control" placeholder="" /></td>
+                                <th scope="row">최종수정일</th>
+                                <td><input type="text" class="form-control" placeholder="" /></td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><em class="required">required</em>채널</th>
+                                <td colspan="3">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" />
+                                        <label class="custom-control-label" for="customRadioInline1">실시간</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" />
+                                        <label class="custom-control-label" for="customRadioInline2">준실시간</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input" />
+                                        <label class="custom-control-label" for="customRadioInline3">스케쥴(분)</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="customRadioInline4" name="customRadioInline1" class="custom-control-input" />
+                                        <label class="custom-control-label" for="customRadioInline4">스케쥴</label>
+                                    </div>
+                                </td>
+                                <th scope="row"><em class="required">required</em>핸들러 타입</th>
+                                <td>Groovy</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><em class="required">required</em>요청자 아이디</th>
+                                <td colspan="2"><input type="text" class="form-control" placeholder="" /></td>
+                                <th scope="row"><em class="required">required</em>핸들러 타입</th>
+                                <td colspan="2">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" />
+                                        <label class="custom-control-label" for="customRadioInline1">실시간</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" />
+                                        <label class="custom-control-label" for="customRadioInline2">준실시간</label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><em class="required">required</em>채널</th>
+                                <td colspan="5"><input type="text" class="form-control" placeholder="" /></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3 class="h3">Grid type</h3>
+                    <!-- row -->
+                    <div class="row">
+                        <!-- col -->
+                        <div class="col-8">
+                            <div class="form-group">
+                                <dl class="row">
+                                    <dt class="col-3 col-form-label form-control-label"><em class="required">required</em>유형</dt>
+                                    <dd class="col-9">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" />
+                                            <label class="custom-control-label" for="customRadioInline1">실시간</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" />
+                                            <label class="custom-control-label" for="customRadioInline2">준실시간</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input" />
+                                            <label class="custom-control-label" for="customRadioInline3">스케쥴(분)</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="customRadioInline4" name="customRadioInline1" class="custom-control-input" />
+                                            <label class="custom-control-label" for="customRadioInline4">스케쥴</label>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                        <!-- col -->
+                        <div class="col-4">
+                            <div class="row form-group">
+                                <label class="col-5 col-form-label form-control-label" for="">태그</label>
+                                <div class="col-7">
+                                    <input type="text" class="form-control" placeholder="태그" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                    </div>
+                    <!-- //row -->
+                    <!-- row -->
+                    <div class="row">
+                        <!-- col -->
+                        <div class="col-6">
+                            <div class="row form-group">
+                                <label class="col-4 col-form-label form-control-label" for=""><em class="required">required</em>이케어명</label>
+                                <div class="col-8">
+                                    <input type="text" class="form-control" required placeholder="" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                        <!-- col -->
+                        <div class="col-6">
+                            <div class="row form-group">
+                                <label class="col-4 col-form-label form-control-label" for="">이케어 설명</label>
+                                <div class="col-8">
+                                    <input type="text" class="form-control" required placeholder="" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                    </div>
+                    <!-- //row -->
+                    <!-- row -->
+                    <div class="row">
+                        <!-- col -->
+                        <div class="col-4">
+                            <div class="row form-group">
+                                <label class="col-6 col-form-label form-control-label" for="">담당부서</label>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" required placeholder="" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                        <!-- col -->
+                        <div class="col-4">
+                            <div class="row form-group">
+                                <label class="col-4 col-form-label form-control-label" for="">담당자</label>
+                                <div class="col-8">
+                                    <input type="text" class="form-control" placeholder="" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                        <!-- col -->
+                        <div class="col-4">
+                            <div class="row form-group">
+                                <label class="col-5 col-form-label form-control-label" for="">요청 부서코드</label>
+                                <div class="col-7">
+                                    <input type="text" class="form-control" placeholder="" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                    </div>
+                    <!-- //row -->
+
+                    <!-- modify -->
+                    <!-- row -->
+                    <div class="row">
+                        <!-- col -->
+                        <div class="col-4">
+                            <div class="row form-group">
+                                <label class="col-6 col-form-label form-control-label" for=""><em class="required">required</em>요청자 아이디</label>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" required placeholder="" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                        <!-- col -->
+                        <div class="col-4">
+                            <div class="row form-group">
+                                <label class="col-4 col-form-label form-control-label" for="">작성일</label>
+                                <div class="col-8">
+                                    <input type="text" class="form-control" placeholder="" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                        <!-- col -->
+                        <div class="col-4">
+                            <div class="row form-group">
+                                <label class="col-5 col-form-label form-control-label" for="">최종수정일</label>
+                                <div class="col-7">
+                                    <input type="text" class="form-control" placeholder="" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                    </div>
+                    <!-- //row -->
+                    <!-- row -->
+                    <div class="row">
+                        <!-- col -->
+                        <div class="col-8">
+                            <div class="form-group">
+                                <dl class="row">
+                                    <dt class="col-3 col-form-label form-control-label"><em class="required">required</em>채널</dt>
+                                    <dd class="col-9">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" />
+                                            <label class="custom-control-label" for="customRadioInline1">실시간</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" />
+                                            <label class="custom-control-label" for="customRadioInline2">준실시간</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input" />
+                                            <label class="custom-control-label" for="customRadioInline3">스케쥴(분)</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="customRadioInline4" name="customRadioInline1" class="custom-control-input" />
+                                            <label class="custom-control-label" for="customRadioInline4">스케쥴</label>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                        <!-- col -->
+                        <div class="col-4">
+                            <div class="form-group">
+                                <dl class="row">
+                                    <dt class="col-5 col-form-label form-control-label"><em class="required">required</em>핸들러 타입</dt class="col-3 col-form-label form-control-label">
+                                    <dd class="col-7">Groovy</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                    </div>
+                    <!-- //row -->
+                    <!-- //modify -->
+
+                    <!-- registration -->
+                    <!-- row -->
+                    <div class="row">
+                        <!-- col -->
+                        <div class="col-6">
+                            <div class="row form-group">
+                                <label class="col-4 col-form-label form-control-label" for=""><em class="required">required</em>요청자 아이디</label>
+                                <div class="col-8">
+                                    <input type="text" class="form-control" required placeholder="" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                        <!-- col -->
+                        <div class="col-6">
+                            <div class="form-group">
+                                <dl class="row">
+                                    <dt class="col-4 col-form-label form-control-label"><em class="required">required</em>핸들러 타입</dt class="col-3 col-form-label form-control-label">
+                                    <dd class="col-8">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="handler1" name="handler" class="custom-control-input" />
+                                            <label class="custom-control-label" for="handler1">groovy</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="handler2" name="handler" class="custom-control-input" />
+                                            <label class="custom-control-label" for="handler2">script</label>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                    </div>
+                    <!-- //row -->
+                    <!-- row -->
+                    <div class="row">
+                        <!-- col -->
+                        <div class="col-12">
+                            <div class="form-group">
+                                <dl class="row">
+                                    <dt class="col-2 col-form-label form-control-label"><em class="required">required</em>채널</dt>
+                                    <dd class="col-10">
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" />
+                                            <label class="custom-control-label" for="customRadioInline1">EMAIL</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox custom-control-inline form_subcheckbox">
+                                            <input type="checkbox" id="security" name="security" class="custom-control-input" />
+                                            <label class="custom-control-label" for="security">보안메일</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" />
+                                            <label class="custom-control-label" for="customRadioInline2">SMS</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input" />
+                                            <label class="custom-control-label" for="customRadioInline3">LMS/MMS</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="customRadioInline4" name="customRadioInline1" class="custom-control-input" />
+                                            <label class="custom-control-label" for="customRadioInline4">PUSH</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="customRadioInline5" name="customRadioInline1" class="custom-control-input" />
+                                            <label class="custom-control-label" for="customRadioInline5">알림톡</label>
+                                        </div>
+                                        <div class="custom-control custom-radio custom-control-inline">
+                                            <input type="radio" id="customRadioInline6" name="customRadioInline1" class="custom-control-input" />
+                                            <label class="custom-control-label" for="customRadioInline6">FAX</label>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <!-- //col -->
+                        
+                    </div>
+                    <!-- //row -->
+                    <!-- //registration -->
+                </div>
+                <!-- //grid -->
+                
+                <!-- button area -->
+                <div class="card-footer pb-4 btn_area">
+                    <div class="row">
+                        <div class="col col-6">
+                            <button type="submit" class="btn btn btn-outline-primary btn-icon">
+                                <span class="btn-inner--icon"><i class="fas fa-save"></i></span><span class="btn-inner--text">저장</span>
+                            </button>
+                        </div>
+                        <div class="col col-6">
+                            <button type="button" class="btn btn btn-outline-info btn-icon">
+                                <span class="btn-inner--text mr-2">다음단계</span><span class="btn-inner--icon"><i class="fas fa-chevron-right"></i></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- e.button area -->
+                </form>
+                <!-- e.form -->
+            
+            </div>
+            <!-- e.card -->
+
+        </div> <!-- e.page content -->
+    </div>
+    <!-- e.Contents area -->
+</div>
+<!-- e.wrapper -->
+
+</html>
