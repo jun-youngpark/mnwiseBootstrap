@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script>
+    $(function () {
+        $("#subNav").load("../subNav.html");
+        $("#js").load("../js.html");
+        $("#headerTop").load("../headerTop.html");
+    });
+
+    </script>
+</head>
+
+<body>
+<!-- wrapper -->
+<div class="wrapper">
+    <!-- 메뉴 -->
+    <div id="subNav"></div>
+    <div id="js"></div>
+    <div id="headerTop"></div>
+    <!-- //메뉴-->
+
+    <!-- Contents area  -->
+    <div class="main-panel">
+        <!-- Page content -->
+        <div class="container-fluid mt-4 mb-2">
+
+            <!-- card -->
+            <div class="card">
+                <!-- Card header -->
+                <div class="card-header">
+                    <!-- title  -->
+                    <h3 class="mb-0">이케어 리포트 리스트</h3>
+                    <!-- //title -->
+                </div>
+                <!-- e.Card header -->
+
+                <!-- card body -->
+                <div class="card-body pb-1">
+                    <!-- tabs -->
+                    <ul class="nav nav-tabs tab02 mb-4" id="tabs-text" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link mb-sm-3 mb-md-0 active" href="#">실시간</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mb-sm-3 mb-md-0" href="#">준 실시간</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mb-sm-3 mb-md-0" href="#">스케쥴(분)</a>
+                        </li>
+                    </ul>
+                    <!-- //tabs -->
+
+                    <!-- row -->
+                    <div class="row table_option py-2">
+                        <!-- search -->
+                        <div class="col-12 searchbox">
+                            <!-- period -->
+                            <div class="periodWrap align-items-center">
+                                <div class="input-group date datepicker datepicker-inline">
+                                    <input type="text" class="form-control form-control-sm" />
+                                    <span class="input-group-addon input-group-append">
+                                        <button class="btn btn-outline-primary btn-sm" type="button"> <span class="fa fa-calendar"></span></button>
+                                    </span>
+                                </div>
+                                <span class="txt">~</span>
+                                <div class="input-group date datepicker datepicker-inline">
+                                    <input type="text" class="form-control form-control-sm" />
+                                    <span class="input-group-addon input-group-append">
+                                        <button class="btn btn-outline-primary btn-sm" type="button"> <span class="fa fa-calendar"></span></button>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- //period -->
+                            <div class="form-group searchbox pl-2">
+                                <div class="search_input">
+                                    <span class="form-control-label txt">이케어 명</span>
+                                    <select class="form-control form-control-sm">
+                                        <option>서비스 명</option>
+                                        <option>이케어 번호</option>
+                                    </select>
+                                    <input type="search" class="form-control form-control-sm" placeholder="" aria-controls="datatable-basic" />
+                                    <button class="btn btn-sm btn-outline-info btn-icon btn_search">
+                                        <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span class="btn-inner--text">검색</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //search -->
+                    </div>
+                    <!-- //row -->
+
+                    <!-- Light table -->
+                    <div class="table-responsive">
+                        <table class="table dataTable">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">이케어 번호</th>
+                                    <th scope="col">이케어 명</th>
+                                    <th scope="col">채널</th>
+                                    <th scope="col">상태</th>
+                                    <th scope="col">담당자</th>
+                                    <th scope="col">요청부서</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">348</th>
+                                    <td class="text-left">
+                                        <a href="#!" class="font-weight-bold">스케줄 이메일</a>
+                                    </td>
+                                    <td><em class="txt_channel">E</em></td>
+                                    <td>실행</td>
+                                    <td>시스템관리자</td>
+                                    <td>부서명</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //Light table -->
+
+                </div>
+                <!-- e.card body -->
+            </div>
+            <!-- //card -->
+
+            <!-- card -->
+            <div class="card">
+                <!-- card body -->
+                <div class="card-body">
+                    <!-- title  -->
+                    <h4 class="h3 text-primary mb-3">반응결과</h4>
+                    <!-- //title -->
+
+                    <!-- Light table -->
+                    <div class="table-responsive">
+                        <table class="table dataTable">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th rowspan="2" scope="col">캠페인<br />번호</th>
+                                    <th rowspan="2" scope="col">발송 성공</th>
+                                    <th colspan="2" scope="col">수신확인</th>
+                                    <th colspan="3" scope="col">유효수신</th>
+                                    <th colspan="3" scope="col">링크클릭</th>
+                                    <th rowspan="2" scope="col">발송일시</th>
+                                </tr>
+                                <tr>
+                                    <th scope="col">건수</th>
+                                    <th scope="col">%</th>
+                                    <th scope="col">건수</th>
+                                    <th scope="col">발송대비 %</th>
+                                    <th scope="col">오픈대비 %</th>
+                                    <th scope="col">건수</th>
+                                    <th scope="col">발송대비 %</th>
+                                    <th scope="col">오픈대비 %</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">355</th>
+                                    <td></td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">0%</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">0%</td>
+                                    <td class="text-right">0%</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">0%</td>
+                                    <td class="text-right">0%</td>
+                                    <td>2020-09-09 10:00</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //Light table -->
+
+                </div>
+                <!-- e.card body -->
+            </div>
+            <!-- e.card -->
+
+
+        </div> <!-- e.page content -->
+    </div>
+    <!--e.Contents area-->
+</div>
+<!-- e.wrapper -->
+
+</html>
