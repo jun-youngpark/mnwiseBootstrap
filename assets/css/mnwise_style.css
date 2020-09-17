@@ -104,6 +104,7 @@ em {font-style: normal; color:var(--primary);}
 .search_input input:last-of-type {width:160px; margin-right:0; border-radius:.25rem 0 0 .25rem;}
 .search_input .btn_search {position:absolute; right:0; top:0; width:50px; height:100%; padding:2px; background-color:#fff; border-radius:0 .25rem .25rem 0;}
 .search_input .btn_search .btn-inner--text {margin-left:2px;}
+.search_input .btn_search:hover {background:#11cdef;}
 
 .table_option {-webkit-box-align:center; align-items:center; -webkit-justify-content:space-between; -moz-justify-content:space-between; -ms-justify-content:space-between; justify-content:space-between;}
 .table_option .form-group {margin-bottom:0;}
@@ -128,7 +129,7 @@ em {font-style: normal; color:var(--primary);}
 .nav-tabs.tab02 .nav-link:before {content:""; position:absolute; left:0; right:0; bottom:0; height:4px; background:#dde7fa; border-radius:4px;}
 .nav-tabs.tab02 .nav-link.active, .nav-tabs.tab01 .nav-item.show .nav-link {font-weight:bold; color:#0764ff; background:none; border:none;}
 .nav-tabs.tab02 .nav-link.active:before, .nav-tabs.tab01 .nav-item.show .nav-link:before {background:#0764ff;}
-.nav-tabs.tab02 .nav-link:hover {color:#0764ff;}
+.nav-tabs.tab02 .nav-link:hover {color:#5e72e4;}
 
 
 /***** table *****/
