@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script>
+        $(function () {
+            $("#js").load("../js.html");
+        });
+    </script>
+</head>
+
+<body style=background:#fff;>
+
+    <!-- 메뉴 -->
+    <div id="js"></div>
+    <!-- //메뉴-->
+    <!-- modal :: 다시보기 -->
+    <div class="modal-content">
+        <div class="modal-header align-items-center">
+            <h5 class="modal-title" id="exampleModalLabel">다시 보기</h5> 
+        </div>
+        <div class="modal-body gridWrap">
+            <form >
+                 <!-- Light table -->
+                 <div class="table-responsive">
+                    <table class="table dataTable table-view">
+                        <colgroup>
+                            <col style="width:15%;" />
+                            <col style="width:34%;" />
+                            <col style="width:17%;" />
+                            <col style="width:34%;" />
+                        </colgroup>
+                        <tbody>
+                        <tr>
+                            <th scope="row"><em  class="required">required</em>재발송 사유</th> 
+                            <td> <input type="text" class="form-control" placeholder="" required/></td>
+                            <th scope="row"><em  class="required">required</em>재발송 수신처</th>
+                            <td> <input type="text" class="form-control" placeholder="" required/></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">제목</th> 
+                            <td colspan="3" class="align-middle">test </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" style="height: 150px;">[엠앤와이즈]테스트템플릿입니다.</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+               
+               
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary">발송</button>
+        </div>
+        </form>
+    </div>
+    <!-- //modal :: 다시보기 -->
+    <script>
+
+    </script>
+
+</html>
