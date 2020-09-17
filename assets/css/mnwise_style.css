@@ -122,6 +122,14 @@ em {font-style: normal; color:var(--primary);}
 .nav-tabs.tab01 .nav-link.active, .nav-tabs.tab01 .nav-item.show .nav-link {position:relative; font-weight:bold; color:#0764ff;}
 .nav-tabs.tab01 .nav-link.active:before {content:""; position:absolute; left:10px; right:10px; bottom:0; height:2px; background:#0764ff; border-radius:2px;}
 
+.nav-tabs.tab02 {flex-wrap:nowrap; border-bottom:none;}
+.nav-tabs.tab02 .nav-item {width:200px; min-width:110px; margin:0 10px 0 0; flex:0 1 auto;}
+.nav-tabs.tab02 .nav-link {position:relative; padding:15px 10px 20px; font-size:.875rem; color:#8f96a3; text-align:center; border:none;}
+.nav-tabs.tab02 .nav-link:before {content:""; position:absolute; left:0; right:0; bottom:0; height:4px; background:#dde7fa; border-radius:4px;}
+.nav-tabs.tab02 .nav-link.active, .nav-tabs.tab01 .nav-item.show .nav-link {font-weight:bold; color:#0764ff; background:none; border:none;}
+.nav-tabs.tab02 .nav-link.active:before, .nav-tabs.tab01 .nav-item.show .nav-link:before {background:#0764ff;}
+.nav-tabs.tab02 .nav-link:hover {color:#0764ff;}
+
 
 /***** table *****/
 .card .table {border-collapse: collapse !important;}
@@ -147,6 +155,13 @@ em {font-style: normal; color:var(--primary);}
 .table th, .table td, .table td>a{max-width:170px; overflow: hidden; white-space: nowrap;  text-overflow: ellipsis;}
 .table-responsive:first-child > table {margin-top:0 !important;}
 .table .btn-icon:not(.btn-secondary) .far {font-size:1.25rem;}
+
+/* test sample */
+.gridWrap .table th, .gridWrap .table td {padding:0 15px; font-size:.875rem; text-align:left; border:none;}
+.gridWrap .table tr {border:0 solid #fff; border-width:20px 0;}
+.gridWrap .table th {height:66px; padding:7px 15px; font-weight:600; color:#525f7f; text-align:right; background:#f7fafc;}
+.gridWrap .table td {padding-right:20px;}
+.gridWrap .table td:last-child {padding-right:0;}
 
 /***** text *****/
 .required {display:inline-block; width:4px; height:4px;  margin-right:5px; text-indent:-999em; font-size:.1em; vertical-align:middle; text-align:left; background:#5e72e4; border-radius:4px;}
