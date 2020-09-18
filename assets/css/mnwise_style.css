@@ -1,7 +1,7 @@
 
 /* wrap = sidebar(250px) + mainpanel(100%-250px) */
 
-/*sideNav*/
+/*sideNav 1260 작업 시 스크롤 x */
 .wrapper { min-width:1280px;  max-width:none!important;  position: relative; top: 0;  height: 100vh;}
 .sidebar {position: fixed;  top: 0; bottom: 0;  left: 0;  z-index: 2; width: 250px;  background: #fff; border:none; }
 .sidebar .sidebar-wrapper{position: relative;  height: calc(100vh - 75px); overflow-y: auto ; overflow-x: hidden; width: 250px; z-index: 4;  padding-bottom: 30px;}
@@ -69,7 +69,8 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {justify-content: c
 
 .window-pop .table {border-collapse: collapse !important;  border:0 solid #e9ecef; border-width:1px;}
 .window-pop .table.table-view td, .window-pop .table.table-view th {padding:0 10px; vertical-align: middle; border:1px solid #e9ecef;}
-.window-pop .table.table-view .valign-t{vertical-align: top; height:180px;}
+.window-pop .table.table-view .valign-t{vertical-align: top; height:220px;}
+.window-pop .modal-footer {justify-content: center;}
 
 /***** common class *****/
 .hide {position: absolute; left:-999em; top:-999em; opacity:0;}
@@ -169,7 +170,7 @@ em {font-style: normal; color:var(--primary);}
 .gridWrap .table td:last-child {padding-right:0;}
 
 
-/* new test sample --  */
+/* new test sample  --  위  코드  참조하여 ---  예시) campaign_per_history.html -- 작업 */
 .newgridWrap .table {border-collapse: collapse !important;  border:0 solid #e9ecef; border-width:1px 0 1px 0;  }
 .newgridWrap .table th, .gridWrap .table td { font-size:.875rem;}
 .newgridWrap .table th {  font-weight:600; color:#525f7f;  text-align:center; background:#f7fafc;}
