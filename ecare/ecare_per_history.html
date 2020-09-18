@@ -44,206 +44,167 @@
                 </div>
                 <!-- e.Card header -->
 
-                <!-- form -->
-                <form>
-                <!-- grid -->
-                <div class="card-body gridWrap">
-                    <!-- row -->
-                    <div class="row">
-                        <!-- col -->
-                        <div class="col-5">
-                            <div class="row form-group">
-                                <label class="col-5 col-form-label form-control-label" for=""><em class="required">required</em>채널</label>
-                                <div class="col-7">
-                                    <select class="form-control" required>
-                                        <option value="">E-mail</option>
-                                        <option value=""></option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- //col -->
-                        <!-- col -->
-                        <div class="col-7">
-                            <div class="row form-group">
-                                <label class="col-3 col-form-label form-control-label" for=""><em class="required">required</em>발송기간</label>
-                                <div class="col-9">
-                                    <!-- period -->
-                                    <div class="periodWrap d-flex align-items-center">
-                                        <div class="input-group date datepicker-inline" id="datepicker1">
-                                            <input type="text" class="form-control" />
-                                            <span class="input-group-addon input-group-append">
-                                                <button class="btn btn-outline-primary" type="button"> <span class="fa fa-calendar"></span></button>
-                                            </span>
+                <!-- card body -->
+                <div class="card-body newgridWrap">
+                    <!-- form -->
+                    <form>
+                    <!-- Light table -->
+                    <div class="table-responsive">
+                        <table class="table table-sm dataTable">
+                            <colgroup>
+                                <col style="width:10%;" />
+                                <col style="width:15%;" />
+                                <col style="width:10%;" />
+                                <col />
+                                <col style="width:10%;" />
+                                <col style="width:20%;" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><em class="required">required</em>채널</th>
+                                    <td>
+                                        <select class="form-control form-control-sm" required>
+                                            <option value="">E-mail</option>
+                                            <option value=""></option>
+                                        </select>
+                                    </td>
+                                    <th scope="row"><em class="required">required</em>발송기간</th>
+                                    <td>
+                                        <!-- period -->
+                                        <div class="periodWrap d-flex align-items-center">
+                                            <div class="input-group date datepicker datepicker-inline">
+                                                <input type="text" class="form-control form-control-sm" />
+                                                <span class="input-group-addon input-group-append">
+                                                    <button class="btn btn-sm btn-outline-primary" type="button"> <span class="fa fa-calendar"></span></button>
+                                                </span>
+                                            </div>
+                                            <span class="txt">~</span>
+                                            <div class="input-group date datepicker datepicker-inline">
+                                                <input type="text" class="form-control form-control-sm" />
+                                                <span class="input-group-addon input-group-append">
+                                                    <button class="btn btn-sm btn-outline-primary" type="button"> <span class="fa fa-calendar"></span></button>
+                                                </span>
+                                            </div>
                                         </div>
-                                        <span class="txt">~</span>
-                                        <div class="input-group date datepicker-inline" id="datepicker2">
-                                            <input type="text" class="form-control" />
-                                            <span class="input-group-addon input-group-append">
-                                                <button class="btn btn-outline-primary" type="button"> <span class="fa fa-calendar"></span></button>
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <!-- //period -->
-                                </div>
-                            </div>
-                        </div>
-                        <!-- //col -->
+                                        <!-- //period -->
+                                    </td>
+                                    <th scope="row">발송결과</th>
+                                    <td>
+                                        <select class="form-control form-control-sm" required>
+                                            <option value="">전체</option>
+                                            <option value=""></option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">이케어 번호</th>
+                                    <td><input type="text" class="form-control form-control-sm" /></td>
+                                    <th scope="row">이케어 명</th>
+                                    <td><input type="text" class="form-control form-control-sm" /></td>
+                                    <th scope="row">수신자 이메일</th>
+                                    <td><input type="text" class="form-control form-control-sm" /></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <!-- //row -->
-                    <!-- row -->
-                    <div class="row">
-                        <!-- col -->
-                        <div class="col-6">
-                            <div class="row form-group">
-                                <label class="col-4 col-form-label form-control-label" for="">이케어 번호</label>
-                                <div class="col-8">
-                                    <input type="text" id="" class="form-control" required />
-                                </div>
-                            </div>
-                        </div>
-                        <!-- //col -->
-                        <!-- col -->
-                        <div class="col-6">
-                            <div class="row form-group">
-                                <label class="col-4 col-form-label form-control-label" for="">이케어 명</label>
-                                <div class="col-8">
-                                    <input type="text" id="" class="form-control" required />
-                                </div>
-                            </div>
-                        </div>
-                        <!-- //col -->
+                    <!-- button area -->
+                    <div class="btn_area">
+                        <button class="btn btn-outline-info btn-icon btn_search">
+                            <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span class="btn-inner--text">검색</span>
+                        </button>
                     </div>
-                    <!-- //row -->
-                    <!-- row -->
-                    <div class="row">
-                        <!-- col -->
-                        <div class="col-6">
-                            <div class="row form-group">
-                                <label class="col-4 col-form-label form-control-label" for="">수신자 이메일</label>
-                                <div class="col-8">
-                                    <input type="text" id="" class="form-control" required />
-                                </div>
-                            </div>
-                        </div>
-                        <!-- //col -->
-                        <!-- col -->
-                        <div class="col-6">
-                            <div class="row form-group">
-                                <label class="col-4 col-form-label form-control-label" for="">발송결과</label>
-                                <div class="col-8">
-                                    <select class="form-control">
-                                        <option value="">전체</option>
-                                        <option value=""></option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- //col -->
+                    <!-- e.button area -->
+                    </form>
+                    <!-- //form -->
+
+                    <!-- Light table -->
+                    <div class="table-responsive pt-5">
+                        <table class="table table-sm dataTable">
+                            <thead class="thead-light">
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">이케어 번호</th>
+                                <th scope="col">이케어 명</th>
+                                <th scope="col">수신자 이메일</th>
+                                <th scope="col">수신자 이름</th>
+                                <th scope="col">수신자 ID</th>
+                                <th scope="col">발송일시</th>
+                                <th scope="col">발송결과</th>
+                                <th scope="col">수신확인</th>
+                                <th scope="col">다시보기</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>348</td>
+                                <td class="text-left">
+                                    <a href="#!" class="font-weight-bold">스케줄 이메일</a>
+                                </td>
+                                <td>email*****</td>
+                                <td>김*진</td>
+                                <td>1</td>
+                                <td>20-08-31 00:00:00</td>
+                                <td>성공</td>
+                                <td>N</td>
+                                <td>
+                                    <button type="submit" class="btn btn-sm btn-outline-secondary border-0 btn-icon">
+                                        <span class="btn-inner--icon icon-sm"><i class="fas fa-file-download"></i></span><span class="btn-inner--text hide">다시보기</span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>348</td>
+                                <td class="text-left">
+                                    <a href="#!" class="font-weight-bold">스케줄 이메일</a>
+                                </td>
+                                <td>email*****</td>
+                                <td>김*진</td>
+                                <td>1</td>
+                                <td>20-08-31 00:00:00</td>
+                                <td>성공</td>
+                                <td>N</td>
+                                <td>
+                                    <button type="submit" class="btn btn-sm btn-outline-secondary border-0 btn-icon">
+                                        <span class="btn-inner--icon icon-sm"><i class="fas fa-file-download"></i></span><span class="btn-inner--text hide">다시보기</span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>348</td>
+                                <td class="text-left">
+                                    <a href="#!" class="font-weight-bold">스케줄 이메일</a>
+                                </td>
+                                <td>email*****</td>
+                                <td>김*진</td>
+                                <td>1</td>
+                                <td>20-08-31 00:00:00</td>
+                                <td>성공</td>
+                                <td>N</td>
+                                <td>
+                                    <button type="submit" class="btn btn-sm btn-outline-secondary border-0 btn-icon">
+                                        <span class="btn-inner--icon icon-sm"><i class="fas fa-file-download"></i></span><span class="btn-inner--text hide">다시보기</span>
+                                    </button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <!-- //row -->
-                </div>
-                </form>
-                <!-- //form -->
-                <!-- button area -->
-                <div class="card-footer pb-4 btn_area">
-                    <button class="btn btn-outline-info btn-icon btn_search">
-                        <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span class="btn-inner--text">검색</span>
-                    </button>
-                </div>
-                <!-- e.button area -->
-            </div>
-            <!-- //card -->
+                    <!-- e.Light table -->
 
-            <!-- card -->
-            <div class="card">
-
-                <!-- Light table -->
-                <div class="table-responsive pt-4">
-                    <table class="table dataTable">
-                        <thead class="thead-light">
-                        <tr>
-                            <th scope="col">No</th>
-                            <th scope="col">이케어 번호</th>
-                            <th scope="col">이케어 명</th>
-                            <th scope="col">수신자 이메일</th>
-                            <th scope="col">수신자 이름</th>
-                            <th scope="col">수신자 ID</th>
-                            <th scope="col">발송일시</th>
-                            <th scope="col">발송결과</th>
-                            <th scope="col">수신확인</th>
-                            <th scope="col">다시보기</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>348</td>
-                            <td class="text-left">
-                                <a href="#!" class="font-weight-bold">스케줄 이메일</a>
-                            </td>
-                            <td>email*****</td>
-                            <td>김*진</td>
-                            <td>1</td>
-                            <td>20-08-31 00:00:00</td>
-                            <td>성공</td>
-                            <td>N</td>
-                            <td>
-                                <button type="submit" class="btn btn-sm btn-outline-secondary border-0 btn-icon">
-                                    <span class="btn-inner--icon icon-sm"><i class="fas fa-file-download"></i></span><span class="btn-inner--text hide">다시보기</span>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>348</td>
-                            <td class="text-left">
-                                <a href="#!" class="font-weight-bold">스케줄 이메일</a>
-                            </td>
-                            <td>email*****</td>
-                            <td>김*진</td>
-                            <td>1</td>
-                            <td>20-08-31 00:00:00</td>
-                            <td>성공</td>
-                            <td>N</td>
-                            <td>
-                                <button type="submit" class="btn btn-sm btn-outline-secondary border-0 btn-icon">
-                                    <span class="btn-inner--icon icon-sm"><i class="fas fa-file-download"></i></span><span class="btn-inner--text hide">다시보기</span>
-                                </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>348</td>
-                            <td class="text-left">
-                                <a href="#!" class="font-weight-bold">스케줄 이메일</a>
-                            </td>
-                            <td>email*****</td>
-                            <td>김*진</td>
-                            <td>1</td>
-                            <td>20-08-31 00:00:00</td>
-                            <td>성공</td>
-                            <td>N</td>
-                            <td>
-                                <button type="submit" class="btn btn-sm btn-outline-secondary border-0 btn-icon">
-                                    <span class="btn-inner--icon icon-sm"><i class="fas fa-file-download"></i></span><span class="btn-inner--text hide">다시보기</span>
-                                </button>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
+                    <!-- pagenation -->
+                    <div class="pagination pagination-sm mb-0 pb-2 pt-1 justify-content-center">
+                        <ul class="pagination">
+                            <li class="paginate_button page-item previous disabled" id="datatable-basic_previous"><a href="#" aria-controls="datatable-basic" data-dt-idx="0" tabindex="0" class="page-link"><i class="fas fa-angle-left"></i></a></li>
+                            <li class="paginate_button page-item active"><a href="#" aria-controls="datatable-basic" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                            <li class="paginate_button page-item next disabled" id="datatable-basic_next"><a href="#" aria-controls="datatable-basic" data-dt-idx="2" tabindex="0" class="page-link"><i class="fas fa-angle-right"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- e.pagenation -->
                 </div>
-                <!-- e.Light table -->
-
-                <!-- pagenation -->
-                <div class="pagination pagination-sm mb-0 pb-2 pt-1 justify-content-center">
-                    <ul class="pagination">
-                        <li class="paginate_button page-item previous disabled" id="datatable-basic_previous"><a href="#" aria-controls="datatable-basic" data-dt-idx="0" tabindex="0" class="page-link"><i class="fas fa-angle-left"></i></a></li>
-                        <li class="paginate_button page-item active"><a href="#" aria-controls="datatable-basic" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
-                        <li class="paginate_button page-item next disabled" id="datatable-basic_next"><a href="#" aria-controls="datatable-basic" data-dt-idx="2" tabindex="0" class="page-link"><i class="fas fa-angle-right"></i></a></li>
-                    </ul>
-                </div>
-                <!-- e.pagenation -->
+                <!-- e.card body -->
             
             </div>
             <!-- e.card -->
