@@ -44,110 +44,97 @@
                 </div>
                 <!-- e.Card header -->
 
-                <!-- form -->
-                <form>
                 <!-- grid -->
-                <div class="card-body gridWrap">
-                    <!-- row -->
-                    <div class="row">
-                        <!-- col -->
-                        <div class="col-12 col-xxl-9">
-                            <div class="row form-group align-items-center">
-                                <label class="col-2 col-form-label form-control-label" for=""><em class="required">required</em>컨텐츠 구분</label>
-                                <div class="col-10">
-                                    <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" id="cont_type1" name="cont_type" class="custom-control-input" />
-                                        <label class="custom-control-label" for="cont_type1">템플릿</label>
-                                    </div>
-                                    <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" id="cont_type2" name="cont_type" class="custom-control-input" />
-                                        <label class="custom-control-label" for="cont_type2">핸들러</label>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="card-body">
+                    <!-- form -->
+                    <form>
+                        <!-- Light table -->
+                        <div class="table-responsive newgridWrap">
+                            <table class="table table-sm dataTable">
+                                <colgroup>
+                                    <col style="width:15%;" />
+                                    <col style="width:30%;" />
+                                    <col style="width:15%;" />
+                                    <col style="width:40%;" />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row"><em class="required">required</em>컨텐츠 구분</th>
+                                        <td colspan="3">
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="cont_type1" name="cont_type" class="custom-control-input" />
+                                                <label class="custom-control-label" for="cont_type1">템플릿</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="cont_type2" name="cont_type" class="custom-control-input" />
+                                                <label class="custom-control-label" for="cont_type2">핸들러</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">이케어 번호</th>
+                                        <td><input type="text" class="form-control form-control-sm" /></td>
+                                        <th scope="row">이케어 명</th>
+                                        <td><input type="text" class="form-control form-control-sm" placeholder=""></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <!-- //col -->
-                    </div>
-                    <!-- //row -->
-                    <!-- row -->
-                    <div class="row">
-                        <!-- col -->
-                        <div class="col-4 col-xxl-3">
-                            <div class="row form-group">
-                                <label class="col-6 col-form-label form-control-label" for="">이케어 번호</label>
-                                <div class="col-6">
-                                    <input type="text" id="" class="form-control" required />
-                                </div>
-                            </div>
+                        <!-- //Light table -->
+                        <div class="btn_area">
+                            <button class="btn btn-outline-info btn-icon btn_search">
+                                <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span class="btn-inner--text">검색</span>
+                            </button>
                         </div>
-                        <!-- //col -->
-                        <!-- col -->
-                        <div class="col-8 col-xxl-6">
-                            <div class="row form-group">
-                                <label class="col-3 col-form-label form-control-label" for="">이케어 명</label>
-                                <div class="col-9">
-                                    <div class="row">
-                                        <div class="col-10"><input type="text" class="form-control" placeholder=""></div>
-                                        <div class="col-2">
-                                            <button class="btn btn-secondary btn-icon btn_search w-100">
-                                                <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span class="btn-inner--text hide">검색</span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- //col -->
-                    </div>
-                    <!-- //row -->
-                </div>
-                </form>
-                <!-- //form -->
+                    </form>
+                    <!-- //form -->
 
-                <!-- Light table -->
-                <div class="table-responsive">
-                    <table class="table dataTable">
-                        <thead class="thead-light">
-                        <tr>
-                            <th scope="col">No</th>
-                            <th scope="col">이케어 번호</th>
-                            <th scope="col">이케어 명</th>
-                            <th scope="col">컨텐츠 구분</th>
-                            <th scope="col">버전</th>
-                            <th scope="col">수정자</th>
-                            <th scope="col">수정일시</th>
-                            <th scope="col">비교</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>348</td>
-                            <td class="text-left">
-                                <a href="#!" class="font-weight-bold" data-toggle="modal" data-target="#ecare_modal"><em class="txt_channel">E</em>스케줄 이메일</a>
-                            </td>
-                            <td>본문</td>
-                            <td>1</td>
-                            <td>시스템관리자</td>
-                            <td>20-08-31 00:00:00</td>
-                            <td>
-                                <button type="submit" class="btn btn-sm btn-secondary" data-toggle="modal" data-target="#put_compare">비교함 담기</button>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <!-- e.Light table -->
+                    <!-- Light table -->
+                    <div class="table-responsive pt-5">
+                        <table class="table dataTable">
+                            <thead class="thead-light">
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">이케어 번호</th>
+                                <th scope="col">이케어 명</th>
+                                <th scope="col">컨텐츠 구분</th>
+                                <th scope="col">버전</th>
+                                <th scope="col">수정자</th>
+                                <th scope="col">수정일시</th>
+                                <th scope="col">비교</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>348</td>
+                                <td class="text-left">
+                                    <a href="#!" class="font-weight-bold" data-toggle="modal" data-target="#ecare_modal"><em class="txt_channel">E</em>스케줄 이메일</a>
+                                </td>
+                                <td>본문</td>
+                                <td>1</td>
+                                <td>시스템관리자</td>
+                                <td>20-08-31 00:00:00</td>
+                                <td>
+                                    <button type="submit" class="btn btn-sm btn-outline-primary" data-toggle="modal" data-target="#put_compare">비교함 담기</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- e.Light table -->
 
-                <!-- pagenation -->
-                <div class="pagination pagination-sm mb-0 pb-2 pt-1 justify-content-center">
-                    <ul class="pagination">
-                        <li class="paginate_button page-item previous disabled" id="datatable-basic_previous"><a href="#" aria-controls="datatable-basic" data-dt-idx="0" tabindex="0" class="page-link"><i class="fas fa-angle-left"></i></a></li>
-                        <li class="paginate_button page-item active"><a href="#" aria-controls="datatable-basic" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
-                        <li class="paginate_button page-item next disabled" id="datatable-basic_next"><a href="#" aria-controls="datatable-basic" data-dt-idx="2" tabindex="0" class="page-link"><i class="fas fa-angle-right"></i></a></li>
-                    </ul>
+                    <!-- pagenation -->
+                    <div class="pagination pagination-sm mb-0 pb-2 pt-1 justify-content-center">
+                        <ul class="pagination">
+                            <li class="paginate_button page-item previous disabled" id="datatable-basic_previous"><a href="#" aria-controls="datatable-basic" data-dt-idx="0" tabindex="0" class="page-link"><i class="fas fa-angle-left"></i></a></li>
+                            <li class="paginate_button page-item active"><a href="#" aria-controls="datatable-basic" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                            <li class="paginate_button page-item next disabled" id="datatable-basic_next"><a href="#" aria-controls="datatable-basic" data-dt-idx="2" tabindex="0" class="page-link"><i class="fas fa-angle-right"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- e.pagenation -->
                 </div>
-                <!-- e.pagenation -->
+                <!-- //card body-->
             
             </div>
             <!-- e.card -->
