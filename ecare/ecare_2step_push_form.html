@@ -56,67 +56,52 @@
 
                 <!-- form -->
                 <form>
-                <!-- grid -->
-                <div class="card-body gridWrap">
-                    <!-- row -->
-                    <div class="row">
-                        <!-- col -->
-                        <div class="col-6">
-                            <div class="form-group">
-                                <dl class="row">
-                                    <dt class="col-4 col-form-label form-control-label">이케어 번호</dt>
-                                    <dd class="col-8">
-                                        <em class="txt_channel">E</em> <span>357</span>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </div>
-                        <!-- //col -->
-                        <!-- col -->
-                        <div class="col-6">
-                            <div class="form-group">
-                                <dl class="row">
-                                    <dt class="col-4 col-form-label form-control-label">이케어 명</dt>
-                                    <dd class="col-8">
-                                        <span>알림톡</span>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </div>
-                        <!-- //col -->
+                
+                <!-- card body -->
+                <div class="card-body">
+                    <!-- Light table -->
+                    <div class="table-responsive newgridWrap">
+                        <table class="table table-sm dataTable">
+                            <colgroup>
+                                <col style="width:15%;" />
+                                <col style="width:35%;" />
+                                <col style="width:15%;" />
+                                <col style="width:35%;" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">이케어 번호</th>
+                                    <td><em class="txt_channel">E</em> <span>357</span></td>
+                                    <th scope="row">이케어 명</th>
+                                    <td>알림톡</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><em class="required">required</em>대상자</th>
+                                    <td colspan="3">
+                                        <div class="form-row align-items-center">
+                                            <div class="col-4"><input type="text" class="form-control form-control-sm" placeholder="" /></div>
+                                            <div class="col-2 input-has-unit"><input type="text" class="form-control form-control-sm" placeholder="" /><spa class="unit">명</spa></div>
+                                            <div class="col-auto">
+                                                <button type="button" class="btn btn-outline-primary btn-sm btn-icon btn_search">
+                                                    <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span class="btn-inner--text hide">검색</span>
+                                                </button>
+                                            </div>
+                                            <div class="col-auto">
+                                                <button class="btn btn-outline-primary btn-sm" type="button">대상자 선택</button>
+                                            </div>
+                                            <div class="col-auto">
+                                                <button class="btn btn-outline-primary btn-sm" type="button">대상자 등록</button>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <!-- //row -->
-                    <!-- row -->
-                    <div class="row">
-                        <!-- col -->
-                        <div class="col-12">
-                            <div class="row form-group">
-                                <label class="col-2 col-form-label form-control-label" for=""><em class="required">required</em>대상자</label>
-                                <div class="col-10">
-                                    <div class="row">
-                                        <div class="col-4"><input type="text" class="form-control" placeholder="" /></div>
-                                        <div class="col-2 input-has-unit"><input type="text" class="form-control" placeholder="" /><spa class="unit">명</spa></div>
-                                        <div class="col-auto">
-                                            <button class="btn btn-secondary btn-icon btn_search">
-                                                <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span class="btn-inner--text hide">검색</span>
-                                            </button>
-                                        </div>
-                                        <div class="col-auto">
-                                            <button class="btn btn-secondary" type="button">대상자 선택</button>
-                                        </div>
-                                        <div class="col-auto">
-                                            <button class="btn btn-secondary" type="button">대상자 등록</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- //col -->
-                    </div>
-                    <!-- //row -->
+                    <!-- //Light table -->
 
                     <!-- row -->
-                    <div class="row">
+                    <div class="form-row mt-3">
                         <!-- mobile preview -->
                         <div class="col col-phone">
                             <div class="phone_preview">
@@ -129,136 +114,79 @@
                         </div>
                         <!-- //mobile preview -->
 
-                        <div class="col gridWrap">
-                            <!-- row -->
-                            <div class="row">
-                                <!-- col -->
-                                <div class="col-12">
-                                    <div class="row form-group">
-                                        <label class="col-2 col-form-label form-control-label" for=""><em class="required">required</em>알림 내용</label>
-                                        <div class="col-10">
-                                            <div class="row align-items-center">
-                                                <div class="col-6">
-                                                    <select class="form-control" required>
-                                                        <option value=""></option>
-                                                        <option value=""></option>
-                                                    </select>
+                        <div class="col">
+                            <!-- Light table -->
+                            <div class="table-responsive newgridWrap">
+                                <table class="table table-sm dataTable">
+                                    <colgroup>
+                                        <col style="width:10%;" />
+                                        <col style="width:23%;" />
+                                        <col style="width:10%;" />
+                                        <col style="width:23%;" />
+                                        <col style="width:10%;" />
+                                        <col style="width:24%;" />
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row" class="align-text-top"><em class="required">required</em>알림 내용</th>
+                                            <td colspan="5">
+                                                <div class="form-row align-items-center">
+                                                    <div class="col-6">
+                                                        <select class="form-control form-control-sm" required>
+                                                            <option value=""></option>
+                                                            <option value=""></option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-auto "><em>0</em> bytes</div>
                                                 </div>
-                                                <div class="col-auto "><em>0</em> bytes</div>
-                                            </div>
-                                            <div class="row mt-3">
-                                                <div class="col-12">
-                                                    <textarea class="form-control" id="" rows="5"></textarea>
+                                                <div class="row mt-2">
+                                                    <div class="col-12">
+                                                        <textarea class="form-control" id="" rows="5"></textarea>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- //col -->
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><em class="required">required</em>앱선택</th>
+                                            <td>
+                                                <select class="form-control form-control-sm" required>
+                                                    <option value=""></option>
+                                                    <option value=""></option>
+                                                </select>
+                                            </td>
+                                            <th scope="row"><em class="required">required</em>메시지 유형</th>
+                                            <td>
+                                                <select class="form-control form-control-sm" required>
+                                                    <option value=""></option>
+                                                    <option value=""></option>
+                                                </select>
+                                            </td>
+                                            <th scope="row"><em class="required">required</em>메뉴 ID</th>
+                                            <td><input type="text" class="form-control form-control-sm" /></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">이미지 팝업 URL</th>
+                                            <td><input type="text" class="form-control form-control-sm" /></td>
+                                            <th scope="row">큰 이미지 URL</th>
+                                            <td><input type="text" class="form-control form-control-sm" /></td>
+                                            <th scope="row">웹 URL</th>
+                                            <td><input type="text" class="form-control form-control-sm" /></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" class="align-text-top">앱 내 메시지</th>
+                                            <td colspan="5">
+                                                Editor area
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <!-- //row -->
-
-                            <!-- row -->
-                            <div class="row">
-                                <!-- col -->
-                                <div class="col-6 col-xxl-4">
-                                    <div class="row form-group">
-                                        <label class="col-4 col-form-label form-control-label" for=""><em class="required">required</em>앱선택</label>
-                                        <div class="col-8">
-                                            <select class="form-control" required>
-                                                <option value=""></option>
-                                                <option value=""></option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- //col -->
-                                <!-- col -->
-                                <div class="col-6 col-xxl-4">
-                                    <div class="row form-group">
-                                        <label class="col-4 col-form-label form-control-label" for=""><em class="required">required</em>메시지 유형</label>
-                                        <div class="col-8">
-                                            <select class="form-control" required>
-                                                <option value=""></option>
-                                                <option value=""></option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- //col -->
-                                <!-- col -->
-                                <div class="col-12 col-xxl-4">
-                                    <div class="row form-group">
-                                        <label class="col-2 col-xxl-4 col-form-label form-control-label" for="">메뉴 ID</label>
-                                        <div class="col-10 col-xxl-8">
-                                            <input type="text" id="" class="form-control" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- //col -->
-                            </div>
-                            <!-- //row -->
-                            <!-- row -->
-                            <div class="row">
-                                <!-- col -->
-                                <div class="col-6 col-xxl-4">
-                                    <div class="row form-group">
-                                        <label class="col-4 col-form-label form-control-label" for="">이미지 팝업 URL</label>
-                                        <div class="col-8">
-                                            <input class="form-control" type="url" value="https://www.creative-tim.com" id="example-url-input">
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- //col -->
-                                <!-- col -->
-                                <div class="col-6 col-xxl-4">
-                                    <div class="row form-group">
-                                        <label class="col-4 col-form-label form-control-label" for="">큰 이미지 URL</label>
-                                        <div class="col-8">
-                                            <input class="form-control" type="url" value="https://www.creative-tim.com" id="example-url-input">
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- //col -->
-                                <!-- col -->
-                                <div class="col-12 col-xxl-4">
-                                    <div class="row form-group">
-                                        <label class="col-2 col-xxl-4 col-form-label form-control-label" for="">웹 URL</label>
-                                        <div class="col-10 col-xxl-8">
-                                            <input class="form-control" type="url" value="https://www.creative-tim.com" id="example-url-input">
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- //col -->
-                            </div>
-                            <!-- //row -->
-
-                            <!-- row -->
-                            <div class="row">
-                                <!-- col -->
-                                <div class="col-12">
-                                    <div class="row form-group">
-                                        <label class="col-2 col-form-label form-control-label" for="">앱 내 메시지</label>
-                                        <div class="col-10">
-                                            <div class="row align-items-center">
-                                                <div class="col-auto "><em>0</em> bytes</div>
-                                            </div>
-                                            <div class="row mt-3">
-                                                <div class="col-12">
-                                                    <div data-toggle="quill" data-quill-placeholder="Quill WYSIWYG"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- //col -->
-                            </div>
-                            <!-- //row -->
+                            <!-- //Light table -->
                         </div>
                     </div>
                     <!-- //row -->
                 </div>
-                <!-- //grid -->
+                <!-- //card body -->
                 
                 <!-- button area -->
                 <div class="card-footer pb-4 btn_area">
