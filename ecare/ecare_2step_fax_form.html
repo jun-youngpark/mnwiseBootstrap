@@ -22,7 +22,6 @@
     <!-- 메뉴 -->
     <div id="subNav"></div>
     <div id="js"></div>
-    <div id="headerTop"></div>
     <!-- //메뉴-->
 
     <!-- Contents area -->
@@ -56,96 +55,59 @@
 
                 <!-- form -->
                 <form>
-                <!-- grid -->
-                <div class="card-body gridWrap">
-                    <!-- row -->
-                    <div class="row">
-                        <!-- col -->
-                        <div class="col-6">
-                            <div class="form-group">
-                                <dl class="row">
-                                    <dt class="col-4 col-form-label form-control-label">이케어 번호</dt>
-                                    <dd class="col-8">
-                                        <em class="txt_channel">E</em> <span>357</span>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </div>
-                        <!-- //col -->
-                        <!-- col -->
-                        <div class="col-6">
-                            <div class="form-group">
-                                <dl class="row">
-                                    <dt class="col-4 col-form-label form-control-label">이케어 명</dt>
-                                    <dd class="col-8">
-                                        <span>FAX</span>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </div>
-                        <!-- //col -->
-                    </div>
-                    <!-- //row -->
-                    
-                    <!-- row -->
-                    <div class="row">
-                        <!-- col -->
-                        <div class="col-6">
-                            <div class="form-group">
-                                <dl class="row">
-                                    <dt class="col-4 col-form-label form-control-label"><em class="required">required</em>발신자 명</dt>
-                                    <dd class="col-8">
-                                        <input type="text" id="" class="form-control" />
-                                    </dd>
-                                </dl>
-                            </div>
-                        </div>
-                        <!-- //col -->
-                        <!-- col -->
-                        <div class="col-6">
-                            <div class="row form-group">
-                                <label class="col-4 col-form-label form-control-label" for=""><em class="required">required</em>발신자 번호</label>
-                                <div class="col-8">
-                                    <input type="text" id="" class="form-control" />
-                                </div>
-                            </div>
-                        </div>
-                        <!-- //col -->
-                    </div>
-                    <!-- //row -->
-                    <!-- row -->
-                    <div class="row">
-                        <!-- col -->
-                        <div class="col-12">
-                            <div class="row form-group">
-                                <label class="col-2 col-form-label form-control-label" for=""><em class="required">required</em>대상자</label>
-                                <div class="col-10">
-                                    <div class="row">
-                                        <div class="col-4"><input type="text" class="form-control" placeholder="" /></div>
-                                        <div class="col-2 input-has-unit"><input type="text" class="form-control" placeholder="" /><spa class="unit">명</spa></div>
-                                        <div class="col-auto">
-                                            <button class="btn btn-secondary btn-icon btn_search">
-                                                <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span class="btn-inner--text hide">검색</span>
-                                            </button>
+                <!-- card body -->
+                <div class="card-body">
+                    <!-- Light table -->
+                    <div class="table-responsive newgridWrap">
+                        <table class="table table-sm dataTable">
+                            <colgroup>
+                                <col style="width:15%;" />
+                                <col style="width:35%;" />
+                                <col style="width:15%;" />
+                                <col style="width:35%;" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">이케어 번호</th>
+                                    <td><em class="txt_channel">E</em> <span>357</span></td>
+                                    <th scope="row">이케어 명</th>
+                                    <td>FAX</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><em class="required">required</em>발신자 명</th>
+                                    <td><input type="text" class="form-control form-control-sm" /></td>
+                                    <th scope="row"><em class="required">required</em>발신자 번호</th>
+                                    <td><input type="text" class="form-control form-control-sm" /></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><em class="required">required</em>대상자</th>
+                                    <td colspan="3">
+                                        <div class="form-row align-items-center">
+                                            <div class="col-4"><input type="text" class="form-control form-control-sm" placeholder="" /></div>
+                                            <div class="col-2 input-has-unit"><input type="text" class="form-control form-control-sm" placeholder="" /><spa class="unit">명</spa></div>
+                                            <div class="col-auto">
+                                                <button type="button" class="btn btn-outline-primary btn-sm btn-icon btn_search">
+                                                    <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span class="btn-inner--text hide">검색</span>
+                                                </button>
+                                            </div>
+                                            <div class="col-auto">
+                                                <button class="btn btn-outline-primary btn-sm" type="button">대상자 선택</button>
+                                            </div>
+                                            <div class="col-auto">
+                                                <button class="btn btn-outline-primary btn-sm" type="button">대상자 등록</button>
+                                            </div>
                                         </div>
-                                        <div class="col-auto">
-                                            <button class="btn btn-secondary" type="button">대상자 선택</button>
-                                        </div>
-                                        <div class="col-auto">
-                                            <button class="btn btn-secondary" type="button">대상자 등록</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- //col -->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <!-- //row -->
+                    <!-- //Light table -->
                 </div>
-                <!-- //grid -->
+                <!-- //card body -->
 
                 <!-- message -->
-                <div class="card-body border-top">
+                <div class="card-body">
                     <!-- tab -->
                     <ul class="nav nav-tabs tab01">
                         <li class="nav-item">
@@ -194,7 +156,7 @@
                             <!-- //textarea -->
 
                             <!-- edit area - option -->
-                            <div class="row mt-3 mb-1 align-items-center">
+                            <div class="row mt-3 align-items-center">
                                 <div class="col-auto mr-3">
                                     <div class="row align-items-center">
                                         <label class="col-auto col-form-label form-control-label" for="">기본 핸들러</label>
