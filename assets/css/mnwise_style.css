@@ -158,8 +158,8 @@ em {font-style: normal; color:var(--primary);}
 .table .text-left a {display: block; min-width:150px;}
 .table-view {margin:0; border-width:1px 0;}
 .table-view:only-child {margin:0 !important;}
-.table.table-view th, .table.table-view td {padding:10px 15px; text-align: left; white-space: normal;}
-.table.table-view th {height:40px; vertical-align: middle; background:#f6f9fc;}
+.table.table-view th, .table.table-view td {padding:.5rem 12px; font-size:.875rem; text-align: left; white-space: normal;}
+.table.table-view th {height:31px; vertical-align: middle; background:#f6f9fc;}
 .table-view tr > *:first-child {border-left: none;}
 .table-view tr > *:last-child {border-right: none;}
 .table-view .btn-outline-secondary, .table-view .btn-outline-danger {min-width:60px;}
@@ -170,22 +170,21 @@ em {font-style: normal; color:var(--primary);}
 .table-responsive:first-child > table {margin-top:0 !important;}
 .table .btn-icon:not(.btn-secondary) .far {font-size:1.25rem;}
 
-/* test sample */
-.gridWrap .table th, .gridWrap .table td {padding:0 15px; font-size:.875rem; text-align:left; border:none;}
-.gridWrap .table tr {border:0 solid #fff; border-width:20px 0;}
-.gridWrap .table th {height:66px; padding:7px 15px; font-weight:600; color:#525f7f; text-align:right; background:#f7fafc;}
-.gridWrap .table td {padding-right:20px;}
-.gridWrap .table td:last-child {padding-right:0;}
-
+.card-body .table-responsive:last-child .dataTable:last-child {margin-bottom: 0 !important;}
 
 /* new test sample  --  위  코드  참조하여 ---  예시) campaign_per_history.html -- 작업 */
 .newgridWrap .table {border-collapse: collapse !important;  border:0 solid #e9ecef; border-width:1px 0 1px 0;  }
 .newgridWrap .table th, .gridWrap .table td { font-size:.875rem;}
-.newgridWrap .table th {  font-weight:600; color:#525f7f;  text-align:center; background:#f7fafc;}
-.newgridWrap .table td {padding-right:20px;}
+.newgridWrap .table th { height:31px; font-weight:600; color:#525f7f;  text-align:center; background:#f7fafc;}
+.newgridWrap .table td {padding-right:20px; text-align: left;}
+.newgridWrap .table td * {vertical-align: middle;}
+.newgridWrap .table .align-text-top {line-height:31px;}
 .card  {box-shadow:none;}
   
-
+@media screen and (max-width:1350px) {
+    .newgridWrap .table th, .newgridWrap .table td {padding:8px 10px;}
+    .col-phone + div .newgridWrap {letter-spacing:-1px;}
+}
 
 
 /***** text *****/
@@ -215,8 +214,8 @@ em {font-style: normal; color:var(--primary);}
 }
 
 .form_subcheckbox {position:relative; margin:0 20px 0 0;}
-.form_subcheckbox::before {content:"("; position:absolute; left:-.6em; top:0;}
-.form_subcheckbox::after {content:")"; position:absolute; right:-.5em; top:0;}
+.form_subcheckbox::before {content:"("; position:absolute; left:-.6em; top:50%; height:1.2rem; margin-top:-.6rem; line-height:1.2rem;}
+.form_subcheckbox::after {content:")"; position:absolute; right:-.5em; top:50%; height:1.2rem; margin-top:-.6rem; line-height:1.2rem;}
 
 .input-has-unit {position: relative;}
 .input-has-unit input {padding-right:2em;}
@@ -228,11 +227,14 @@ em {font-style: normal; color:var(--primary);}
 .custom-switch .custom-control-label::after {left:calc(-2.25rem + 2px);}
 .custom-switch .custom-control-input:checked~.custom-control-label::after {-webkit-transform: translateX(.75rem); transform: translateX(.75rem);}
 
+.custom-control.custom-radio, .custom-control.custom-radio label, .custom-control.custom-checkbox, .custom-control.custom-checkbox label {min-height:inherit; height:auto !important;}
+
 /* period */
 .periodWrap {display:flex;}
 .periodWrap .txt {width:2em; text-align:center;}
 .periodWrap .date input {border-radius:.25rem 0 0 .25rem;}
 .periodWrap .date .btn {height:100%;}
+.date.datepicker, input[type='date'], input[type='time'], input[type='datetime-local'], input[type='month'] {max-width:150px;}
 
 /***** custom contents *****/
 .txt_channel {display:inline-block; width:20px; height:20px; margin:0 5px; font-style:normal; font-weight: 500; font-size:.75rem; color:#fff; text-align:center; line-height:20px; vertical-align:middle; background:#1ac1e7; border-radius:2px;}
