@@ -1,8 +1,10 @@
 
-/* wrap = sidebar(250px) + mainpanel(100%-250px) */
+/* wrap = sidebar(250px) + mainpanel(100% / padding-left 250px) */
 
-/*sideNav 1260 작업 시 스크롤 x */
-.wrapper { min-width:1260px;  max-width:none !important;  position: relative; top: 0;  min-height: 100vh; padding-left:250px;}
+/*wrapper 1260 작업 시 스크롤 x 
+-min-height사용 이유- height 사용할 경우 자식의 height가 최대 100vh,  자식의 높이가 더 커질 경우 부모가 감쌀 수 없다 
+- :after 추가 -clear, width , padding-left (sidebar너비)줌으로 자식의 float해제 */ 
+.wrapper { min-width:1260px;  max-width:none !important;  position: relative; top: 0;  min-height: 100vh; padding-left:250px; }
 .wrapper:after {content:""; display:block; clear:both; width:100%; height:0;}
 .sidebar {position: fixed;  top: 0; bottom: 0;  left: 0;  z-index: 2; width: 250px;  background: #fff; border:none; }
 .sidebar .sidebar-wrapper{position: relative;  height: calc(100vh - 75px); overflow-y: auto ; overflow-x: hidden; width: 250px; z-index: 4;  padding-bottom: 30px;}
@@ -15,7 +17,7 @@
 .navbar-vertical .navbar-brand-img, .navbar-vertical .navbar-brand>img { max-width: 100%; max-height: 3rem;}
 body{background:#fff;}
 
-/*mainpanel*/
+/*mainpanel - 자식의 값에 float가 있을 경우 부모가 감싸지 못한다 -> 부모에 overflow값 or :after{clear:both} */
 /*.main-panel {position: relative; float: right; width: calc(100% - 250px);}*/
 .main-panel {position: relative;}
 .main-panel > .container-fluid {padding-left:30px;}
@@ -27,14 +29,14 @@ body{background:#fff;}
   .form-group-mb{ margin-bottom: .8rem;}
 
 
- /*플러그인에 있는 select box, script단에서 초기화 후 display: none*/
+ /*  ---- 삭제 예정 ----  
+ 테이블 플러그인 사용 시   플러그인에 있는 select box, script단에서 초기화 후 display: none
  div.dataTables_wrapper div.dataTables_length label { display: none;}
-
- /*페이지네이션 중앙 정렬*/
+페이지네이션 중앙 정렬
 div.dataTables_wrapper div.dataTables_info {position:absolute;}
 div.dataTables_wrapper div.dataTables_paginate {float:none; text-align:center;}
 div.dataTables_wrapper div.dataTables_paginate ul.pagination {justify-content: center;}
-
+*/
 
 /*테이블 패딩 줄인 css env_smtpocode.html,env_push_setting.html */
 .table-xs th, .table-xs td {padding: .3rem;}
@@ -75,10 +77,8 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {justify-content: c
 .brandtalk-view-img{width:350px; height:160px; margin-bottom: 1rem; border:1px solid #e8e8e8;}
 .friendtalk-view-img img, .mms-view-img img, .brandtalk-view-img img{background-size: contain; max-width: 100%; max-height: 100%;}
 
-.window-pop .table {border-collapse: collapse !important;  border:0 solid #e9ecef; border-width:1px;}
-.window-pop .table.table-view td, .window-pop .table.table-view th {padding:0 10px; vertical-align: middle; border:1px solid #e9ecef;}
-.window-pop .table.table-view .valign-t{vertical-align: top; height:220px;}
-.window-pop .modal-footer {justify-content: center;}
+/* window-pop 
+.window-pop .modal-footer {justify-content: center;}*/
 
 /***** common class *****/
 .hide {position: absolute; left:-999em; top:-999em; opacity:0;}
@@ -170,6 +170,7 @@ em {font-style: normal; color:var(--primary);}
 .table-responsive:first-child > table {margin-top:0 !important;}
 .table .btn-icon:not(.btn-secondary) .far {font-size:1.25rem;}
 
+
 /* test sample */
 .gridWrap .table th, .gridWrap .table td {padding:0 15px; font-size:.875rem; text-align:left; border:none;}
 .gridWrap .table tr {border:0 solid #fff; border-width:20px 0;}
@@ -179,10 +180,10 @@ em {font-style: normal; color:var(--primary);}
 
 
 /* new test sample  --  위  코드  참조하여 ---  예시) campaign_per_history.html -- 작업 */
-.newgridWrap .table {border-collapse: collapse !important;  border:0 solid #e9ecef; border-width:1px 0 1px 0;  }
-.newgridWrap .table th, .gridWrap .table td { font-size:.875rem;}
-.newgridWrap .table th {  font-weight:600; color:#525f7f;  text-align:center; background:#f7fafc;}
-.newgridWrap .table td {padding-right:20px;}
+.newgridWrap .table {border-collapse: collapse !important; }
+.newgridWrap  table.dataTable.table-sm>thead>tr>th{padding:8px 12px;}
+.newgridWrap .table th, .gridWrap .table td { font-size:.875rem;  vertical-align: middle; border:0 solid #e9ecef; border-width:1px 1px 0 0;}
+.newgridWrap .table th { font-weight:600; color:#525f7f;  text-align:center; background:#f7fafc;}
 .card  {box-shadow:none;}
   
 
