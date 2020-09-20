@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script>
+    $(function () {
+        $("#subNav").load("../subNav.html");
+        $("#js").load("../js.html");
+        $("#headerTop").load("../headerTop.html");
+    });
+
+    </script>
+</head>
+
+<body>
+<!-- wrapper -->
+<div class="wrapper">
+    <!-- 메뉴 -->
+    <div id="subNav"></div>
+    <div id="js"></div>
+    <!-- //메뉴-->
+
+    <!-- Contents area  -->
+    <div class="main-panel">
+        <!-- Page content -->
+        <div class="container-fluid mt-4 mb-2">
+
+            <!-- card -->
+            <div class="card">
+                <!-- Card header -->
+                <div class="card-header">
+                    <!-- title  -->
+                    <h3 class="mb-0">이케어 리포트 리스트</h3>
+                    <!-- //title -->
+                </div>
+                <!-- e.Card header -->
+
+                <!-- card body -->
+                <div class="card-body pb-1">
+
+                    <!-- row -->
+                    <div class="row py-2 table_option justify-content-end">
+                        <!-- search -->
+                        <div class="col-auto searchbox form-row">
+                            <div class="col-auto">
+                                <label class="form-control-label mr-1 txt">발송일 : </label>
+                                <!-- period -->
+                                <div class="periodWrap align-items-center">
+                                    <div class="input-group date datepicker datepicker-inline">
+                                        <input type="text" class="form-control form-control-sm" />
+                                        <span class="input-group-addon input-group-append">
+                                            <button class="btn btn-outline-primary btn-sm" type="button"> <span class="fa fa-calendar"></span></button>
+                                        </span>
+                                    </div>
+                                    <span class="txt">~</span>
+                                    <div class="input-group date datepicker datepicker-inline">
+                                        <input type="text" class="form-control form-control-sm" />
+                                        <span class="input-group-addon input-group-append">
+                                            <button class="btn btn-outline-primary btn-sm" type="button"> <span class="fa fa-calendar"></span></button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- //period -->
+                            </div>
+                            <div class="col-auto">
+                                <button class="btn btn-sm btn-outline-info btn-icon btn_search">
+                                    <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span class="btn-inner--text">검색</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- //search -->
+                    </div>
+                    <!-- //row -->
+
+                    <!-- Light table -->
+                    <div class="table-responsive newgridWrap">
+                        <table class="table table-sm dataTable">
+                            <colgroup>
+                                <col style="width:9%;" />
+                                <col style="width:16%;" />
+                                <col style="width:9%;" />
+                                <col style="width:16%;" />
+                                <col style="width:9%;" />
+                                <col style="width:16%;" />
+                                <col style="width:9%;" />
+                                <col style="width:16%;" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">이케어 명</th>
+                                    <td colspan="3"><em class="txt_channel">E</em> <span>357</span></td>
+                                    <th scope="row">현재 수행 상태</th>
+                                    <td colspan="3">중지</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">담당부서</th>
+                                    <td></td>
+                                    <th scope="row">담당자</th>
+                                    <td></td>
+                                    <th scope="row">스케쥴</th>
+                                    <td></td>
+                                    <th scope="row">반응 추척기간</th>
+                                    <td>1주</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //Light table -->
+
+                    <h4 class="h3 text-primary mt-2 mb-3">일정별 발송 현황</h4>
+
+                    <!-- Light table -->
+                    <div class="table-responsive">
+                        <table class="table table-sm dataTable">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th rowspan="2" scope="col">발송일</th>
+                                    <th rowspan="2" scope="col">일</th>
+                                    <th rowspan="2" scope="col">발송 건수</th>
+                                    <th colspan="2" scope="col">발송 성공</th>
+                                    <th colspan="2" scope="col">발송 실패</th>
+                                    <th colspan="2" scope="col">수신 확인</th>
+                                    <th colspan="2" scope="col">유효 수신</th>
+                                    <th rowspan="2" scope="col">발송 시간</th>
+                                    <th rowspan="2" scope="col">업데이트</th>
+                                </tr>
+                                <tr>
+                                    <th scope="col">건수</th>
+                                    <th scope="col">%</th>
+                                    <th scope="col">건수</th>
+                                    <th scope="col">%</th>
+                                    <th scope="col">건수</th>
+                                    <th scope="col">%</th>
+                                    <th scope="col">건수</th>
+                                    <th scope="col">%</th>
+                                </tr>
+                            </thead>
+                            <tfoot class="bg-secondary">
+                                <tr>
+                                    <th scope="row" colspan="2">총 발송 합계</th>
+                                    <td>6</td>
+                                    <td class="text-right">4</td>
+                                    <td class="text-right">71.1%</td>
+                                    <td class="text-right">239</td>
+                                    <td class="text-right">71.1%</td>
+                                    <td class="text-right">239</td>
+                                    <td class="text-right">71.1%</td>
+                                    <td class="text-right">239</td>
+                                    <td class="text-right">71.1%</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                </tr>
+                            </tfoot>
+                            <tbody>
+                                <tr>
+                                    <td>2020-09-09</td>
+                                    <td>수</td>
+                                    <td>6</td>
+                                    <td class="text-right">4</td>
+                                    <td class="text-right">71.1%</td>
+                                    <td class="text-right">239</td>
+                                    <td class="text-right">71.1%</td>
+                                    <td class="text-right">239</td>
+                                    <td class="text-right">71.1%</td>
+                                    <td class="text-right">239</td>
+                                    <td class="text-right">71.1%</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-primary btn-icon">
+                                            <span class="btn-inner--icon"><i class="fas fa-sync-alt"></i></span><span class="btn-inner--text hide">업데이트</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //Light table -->
+
+                    <!-- chart area -->
+                    <div class="chartWrap">
+                        chart area
+                    </div>
+                    <!-- //chart area -->
+                </div>
+                <!-- e.card body -->
+            </div>
+            <!-- //card -->
+
+        </div> <!-- e.page content -->
+    </div>
+    <!--e.Contents area-->
+</div>
+<!-- e.wrapper -->
+
+</html>
