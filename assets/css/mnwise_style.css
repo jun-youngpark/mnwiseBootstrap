@@ -87,7 +87,6 @@ em {font-style: normal; color:var(--primary);}
 
 /* icon */
 .fa-file-excel {font-size:.9375rem;}
-.btn-inner--icon i.far {top:0 !important;}
 
 /***** button *****/
 .card-footer.btn_area, .btn_area {text-align:center;}
@@ -170,7 +169,8 @@ button.btn-sm {min-height:30px;}
 .table.table-view td {text-align:left;}
 .table th, .table td, .table td>a{max-width:170px; overflow: hidden; white-space: nowrap;  text-overflow: ellipsis;}
 .table-responsive:first-child > table {margin-top:0 !important;}
-.table .btn-icon:not(.btn-secondary) .far {font-size:1.25rem;}
+
+.card .table-sm th, .card .table-sm td, .card .table.table-sm thead > tr > th {padding:.5rem;}
 
 .card-body .table-responsive:last-child .dataTable:last-child {margin-bottom: 0 !important;}
 
