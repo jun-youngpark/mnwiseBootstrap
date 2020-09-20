@@ -1,11 +1,11 @@
 
 /* wrap = sidebar(250px) + mainpanel(100% / padding-left 250px) */
 
-/*wrapper 1260 작업 시 스크롤 x 
--min-height사용 이유- height 사용할 경우 자식의 height가 최대 100vh,  자식의 높이가 더 커질 경우 부모가 감쌀 수 없다 
-- :after 추가 -clear, width , padding-left (sidebar너비)줌으로 자식의 float해제 */ 
+/*wrapper 1260 작업 시 스크롤 x : 최소 해상도 1280px에서 스크롤이 발생하지 않도록 최소 너비는 스크롤바 너비를 제외한 1260px로 해야 합니다. 
+- min-height사용 이유- height 사용할 경우 자식의 height가 최대 100vh,  자식의 높이가 더 커질 경우 부모가 감쌀 수 없다 
+- float 해제 방법 : 부모 element에 "overflow:hidden;"추가 또는 :after 요소를 활용하여 "clear:both;" 추가하여 float를 해제할 수 있습니다. 
+현재는 main-panel에 float:left; 를 삭제 하였으므로 float해제 불필요함 */ 
 .wrapper { min-width:1260px;  max-width:none !important;  position: relative; top: 0;  min-height: 100vh; padding-left:250px; }
-.wrapper:after {content:""; display:block; clear:both; width:100%; height:0;}
 .sidebar {position: fixed;  top: 0; bottom: 0;  left: 0;  z-index: 2; width: 250px;  background: #fff; border:none; }
 .sidebar .sidebar-wrapper{position: relative;  height: calc(100vh - 75px); overflow-y: auto ; overflow-x: hidden; width: 250px; z-index: 4;  padding-bottom: 30px;}
  
@@ -103,6 +103,8 @@ em {font-style: normal; color:var(--primary);}
 .btn_mail_reject:hover {background-color:#ffd600;}
 .btn_help {width:30px; min-width:30px !important; height:30px; padding:0 !important;}
 .btn_help .far {font-size:1.25rem;}
+
+button.btn-sm {min-height:30px;}
 
 /***** search *****/
 .searchWrap > * {padding-left:15px;}
@@ -331,4 +333,7 @@ em {font-style: normal; color:var(--primary);}
 
 /***** 템플릿 보기 *****/
 .code_view {white-space: pre-wrap;}
+
+/***** chart area *****/
+.chartWrap {position:relative; min-height:200px;}
 
