@@ -23,7 +23,7 @@
         <!-- 메뉴 -->
         <div id="subNav"></div>
         <div id="js"></div>
-   
+
         <!-- //메뉴-->
 
         <!-- Contents area  -->
@@ -31,340 +31,343 @@
             <!-- Page content -->
             <div class="container-fluid mt-4 mb-2">
 
-            <!-- card -->
-            <div class="card " >
-                <!-- Card header -->
-                <div class="card-header">
-                    <!-- title  -->
-                    <h3 class="mb-0">캠페인 고객이력</h3>
-                    <!-- //title -->
+                <!-- card -->
+                <div class="card ">
+                    <!-- Card header -->
+                    <div class="card-header">
+                        <!-- title  -->
+                        <h3 class="mb-0">캠페인 고객이력</h3>
+                        <!-- //title -->
+                    </div>
+                    <!-- e.Card header -->
+
+                    <!-- form -->
+                    <form>
+
+                        <!-- grid -->
+                        <div class="card-body">
+                            <!-- Light table -->
+                            <div class="table-responsive  newgridWrap">
+                                <table class="table table-sm dataTable">
+                                    <thead class="thead-light">
+                                        <colgroup>
+                                            <col style="width:10%;" />
+                                            <col style="width:20%;" />
+                                            <col style="width:10%;" />
+                                            <col style="width:30%;" />
+                                            <col style="width:10%;" />
+                                            <col style="width:20%;" />
+
+                                        </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row"><em class="required">required</em>채널</th>
+                                            <td> <select class="form-control form-control-sm" required>
+                                                    <option value="">E-mail</option>
+                                                    <option value="">SMS</option>
+                                                    <option value="">LMS/MMS</option>
+                                                    <option value="">친구톡</option>
+                                                    <option value="">브랜드톡</option>
+                                                    <option value="">PUSH</option>
+                                                    <option value="">FAX</option>
+                                                </select></td>
+                                            <th scope="row"><em class="required">required</em>발송기간</th>
+                                            <td>
+                                                <div class="periodWrap d-flex align-items-center">
+                                                    <div class="input-group date datepicker-inline col-6 px-0">
+                                                        <input class="form-control form-control-sm" type="date"
+                                                            value=" " id="example-date-input">
+                                                    </div>
+                                                    <span class="txt">~</span>
+                                                    <div class="input-group date datepicker-inline col-6  px-0">
+                                                        <input class="form-control form-control-sm" type="date"
+                                                            value=" " id="example-date-input">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <th scope="row"><em class="required">required</em>캠페인 번호</th>
+                                            <td> <input type="text" class="form-control form-control-sm" placeholder=""
+                                                    required /></td>
+
+                                        </tr>
+                                        <tr>
+
+                                            <th scope="row"><em class="required">required</em>캠페인 명</th>
+                                            <td> <input type="text" class="form-control  form-control-sm" placeholder=""
+                                                    required /></td>
+                                            <th scope="row"><em class="required">required</em>수신자 이름</th>
+                                            <td> <input type="text" class="form-control form-control-sm" placeholder=""
+                                                    required /></td>
+                                            <th scope="row"><em class="required">required</em>수신자 ID</th>
+                                            <td> <input type="text" class="form-control  form-control-sm" placeholder=""
+                                                    required /></td>
+
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><em class="required">required</em>수신자 이메일</th>
+                                            <td> <input type="text" class="form-control  form-control-sm" placeholder=""
+                                                    required /></td>
+                                            <th scope="row"><em class="required">required</em>발송결과</th>
+                                            <td> <select class="form-control form-control-sm">
+                                                    <option value="">전체</option>
+                                                    <option value="">===================================================
+                                                    </option>
+                                                    <option value="FAIL">[*] 실패</option>
+                                                    <option value="0">[0] 성공</option>
+                                                    <option value="1">[1] TIMEOUT</option>
+                                                    <option value="A">[A] 핸드폰 번호 처리중</option>
+                                                    <option value="B">[B] 음영지역</option>
+                                                    <option value="C">[C] power off</option>
+                                                    <option value="D">[D] 메시지 저장개수 초과</option>
+                                                    <option value="2">[2] 잘못된 전화번호</option>
+                                                    <option value="a">[a] 일시 서비스 정지</option>
+                                                    <option value="b">[b] 기타 단말기 문제</option>
+                                                    <option value="c">[c] 착신 거절</option>
+                                                    <option value="d">[d] 기타</option>
+                                                    <option value="e">[e] 이통사 SMC 형식오류</option>
+                                                    <option value="n">[n] 건수제안 계약이 되어 있는경우 건수 제안</option>
+                                                    <option value="o">[o] 메시지길이가 제안된 길이를 벗어남</option>
+                                                    <option value="p">[p] 폰 번호가 형식에 어긋남</option>
+                                                    <option value="q">[q] ex)데이터 내용이 없는 경우</option>
+                                                    <option value="x">[x] MMS 콘텐트의정보를 참조할수 없음</option>
+                                                    <option value="z">[z] 처리되지 않은 기타 오류</option>
+                                                    <option value="k">[k] 이통사에서 spam 처리</option>
+                                                    <option value="j">[j] 이통사 내부 메시지 Que Full</option>
+                                                    <option value="i">[i] SMC 운영자가 메시지 삭제</option>
+                                                    <option value="h">[h] 핸드폰 번호 불가 상태</option>
+                                                    <option value="g">[g] SMS 서비스 불가 단말기</option>
+                                                    <option value="00000">[00000] 오류없음</option>
+                                                    <option value="10001">[10001] 알수없는가입자</option>
+                                                    <option value="10005">[10005] 식별되지않은가입자</option>
+                                                    <option value="10006">[10006] 부재중인가입자</option>
+                                                    <option value="10009">[10009] 불법가입자</option>
+                                                    <option value="30010">[30010] 전달자서비스가프로비저닝되지않음</option>
+                                                    <option value="10011">[10011] 텔레서비스가프로비저닝되지않음</option>
+                                                    <option value="10012">[10012] 불법장비</option>
+                                                    <option value="10013">[10013] 통화차단</option>
+                                                    <option value="30020">[30020] SS비호환성</option>
+                                                    <option value="10021">[10021] 지원되지않는설비</option>
+                                                    <option value="10031">[10031] MtSMS에대해가입자통화중</option>
+                                                    <option value="10032">[10032] SM전달실패</option>
+                                                    <option value="10033">[10033] 메시지대기목록꽉참</option>
+                                                    <option value="10034">[10034] 시스템장애</option>
+                                                    <option value="10035">[10035] 데이터누락</option>
+                                                    <option value="10036">[10036] 예상치못한데이터값</option>
+                                                    <option value="30051">[30051] 리소스제한</option>
+                                                    <option value="30071">[30071] 알수없는알파벳</option>
+                                                    <option value="10072">[10072] Ussd통화중</option>
+                                                    <option value="10255">[10255] EC_UNK알수없는오류NOWN_ERROR</option>
+                                                    <option value="10256">[10256] SMDF메모리용량초과</option>
+                                                    <option value="10257">[10257] SMDF장비프로토콜오류</option>
+                                                    <option value="900">[900] 핸들러 오류</option>
+                                                    <option value="v">[v] 발신자 번호 미등록</option>
+                                                    <option value="10258">[10258] SMDF장비프로토콜오류</option>
+                                                    <option value="10259">[10259] SMDF장비프로토콜오류</option>
+                                                    <option value="10260">[10260] SMDF장비프로토콜오류</option>
+                                                    <option value="10261">[10261] SMDFInvalidSME주소</option>
+                                                    <option value="10262">[10262] SMDFSubscribernotsc가입자</option>
+                                                    <option value="10500">[10500] 공급업체일반오류</option>
+                                                    <option value="30501">[30501] 잘못된응답수신</option>
+                                                    <option value="10502">[10502] 응답없음</option>
+                                                    <option value="10503">[10503] 서비스완료실패</option>
+                                                    <option value="10504">[10504] 피어로부터예상치못한응답</option>
+                                                    <option value="10507">[10507] 잘못입력된매개변수</option>
+                                                    <option value="10508">[10508] 지원되는서비스</option>
+                                                    <option value="10509">[10509] 중복된ID호출</option>
+                                                    <option value="10511">[10511] 릴리즈시작중</option>
+                                                    <option value="11024">[11024] 앱컨텍스트지원안됨</option>
+                                                    <option value="11026">[11026] 잘못된원본참조</option>
+                                                    <option value="11027">[11027] 캡슐화된AC지원안됨</option>
+                                                    <option value="11028">[11028] 전송보호부적절함</option>
+                                                    <option value="11029">[11029] 제공된사유없음</option>
+                                                    <option value="11030">[11030] 잠재적버전비호환성</option>
+                                                    <option value="11031">[11031] 원격노드연결불가</option>
+                                                    <option value="11152">[11152] 이러한특성의주소에대한변환없음</option>
+                                                    <option value="11153">[11153] 이특정주소에대한변환없음</option>
+                                                    <option value="11154">[11154] 하위시스템정체</option>
+                                                    <option value="11155">[11155] 하위시스템장애</option>
+                                                    <option value="11156">[11156] 장비를갖추지않은사용자</option>
+                                                    <option value="11157">[11157] MTP실패</option>
+                                                    <option value="11158">[11158] 네트워크정체</option>
+                                                    <option value="11159">[11159] 자격없음</option>
+                                                    <option value="11160">[11160] 메시지전송XUDT에오류있음</option>
+                                                    <option value="11161">[11161] 로컬처리XUDT에오류있음</option>
+                                                    <option value="11162">[11162] 목적지에서리어셈블리XUDT를수행할수없음</option>
+                                                    <option value="11163">[11163] SCCP실패</option>
+                                                    <option value="11164">[11164] 홉카운터위반</option>
+                                                    <option value="11165">[11165] 세그먼트화지원안됨</option>
+                                                    <option value="11166">[11166] 세그먼트화실패</option>
+                                                    <option value="11281">[11281] 사용자별사유</option>
+                                                    <option value="11282">[11282] 사용자리소스제한</option>
+                                                    <option value="11283">[11283] 리소스사용불가</option>
+                                                    <option value="11284">[11284] 애플리케이션프로시저취소</option>
+                                                    <option value="11536">[11536] 공급업체오작동</option>
+                                                    <option value="11537">[11537] 지원대화상자또는트랜잭션릴리즈됨</option>
+                                                    <option value="11538">[11538] 리소스제한</option>
+                                                    <option value="11539">[11539] 유지보수활동</option>
+                                                    <option value="11540">[11540] 버전비호환성</option>
+                                                    <option value="11541">[11541] 비정상적맵대화상자</option>
+                                                    <option value="11792">[11792] 피어에서비정상적이벤트감지됨</option>
+                                                    <option value="11793">[11793] 피어에서응답거부</option>
+                                                    <option value="11794">[11794] 피어로부터비정상적이벤트수신됨</option>
+                                                    <option value="11795">[11795] 메시지를피어에전달할수없음</option>
+                                                    <option value="11796">[11796] 공급업체호출불가</option>
+                                                    <option value="32048">[32048] 시간초과</option>
+                                                    <option value="22049">[22049] IMSI차단됨</option>
+                                                    <option value="32050">[32050] DND차단됨</option>
+                                                    <option value="32051">[32051] 텍스트차단됨</option>
+                                                    <option value="24096">[24096] 잘못된PDU형식</option>
+                                                    <option value="34097">[34097] GMSC에제출되지않음</option>
+                                                    <option value="24100">[24100] 메시지취소됨</option>
+                                                    <option value="24101">[24101] Validityperiod만료됨</option>
+                                                    <option value="34102">[34102] Smpp채널에제출안됨</option>
+                                                    <option value="05000">[05000] 사람이통화에응답함</option>
+                                                    <option value="05001">[05001] 기계가통화에응답함</option>
+                                                    <option value="05002">[05002] 통화시도중에사용자가통화중이었음</option>
+                                                    <option value="25003">[25003] 사용자에게알렸지만전화를받지않음</option>
+                                                    <option value="25004">[25004] 통화를위해제공된파일을다운로드할수없었음</option>
+                                                    <option value="25005">[25005] 통화를위해제공된파일의형식이지원되지않음</option>
+                                                    <option value="99990">[99990] 인포빕 API로 HTTP 통신하는 동안 오류</option>
+                                                    <option value="99999">[99999] 에이전트내 처리하는 동안 오류</option>
+                                                    <option value="99991">[99991] SMS가 아닌 다른 채널로 발송시 오류</option>
+                                                    <option value="99992">[99992] 인포빕 시스템 오류(상태코드를 통해 에러를 분석해야 함)
+                                                    </option>
+                                                    <option value="f">[f] 중계사 자체 형식 오류</option>
+                                                    <option value="l">[l] www.nospan.go.kr에 등록된 번호에 대해 중계사에서 spam 처리한건
+                                                    </option>
+                                                    <option value="m">[m] 중계사에서 실패처리함</option>
+                                                </select></td>
+                                            <th scope="row"><em class="required">required</em>발송유형</th>
+                                            <td><select class="form-control form-control-sm">
+                                                    <option value="">전체</option>
+                                                    <option value="">본발송</option>
+                                                    <option value="">재발송</option>
+                                                </select></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- // Light table -->
+                    </form>
+                    <!-- //form -->
+
+                    <!-- Light table -->
+                    <div class="table-responsive  pt-5">
+                        <table class="table table-sm dataTable">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">No</th>
+                                    <th scope="col">캠페인<br>번호</th>
+                                    <th scope="col">캠페인 명</th>
+                                    <th scope="col">문자<br>유형</th>
+                                    <th scope="col">수신자 전화번호</th>
+                                    <th scope="col">발송일시</th>
+                                    <th scope="col">발송내용</th>
+                                    <th scope="col">발송결과</th>
+                                    <th scope="col">대체발송<br>여부</th>
+                                    <th scope="col">발신자 ID</th>
+                                    <th scope="col">발신자 번호</th>
+                                    <th scope="col">다시보기</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>1360</td>
+                                    <td class="text-left">
+                                        <a href="#!" class="font-weight-bold">캐롯손해보험 MMS 발송 테스트</a>
+                                    </td>
+                                    <td>1</td>
+                                    <td>010****3075</td>
+                                    <td>20-08-27 10:57:12</td>
+                                    <td>MMS 발송 테스트</td>
+                                    <td>성공</td>
+                                    <td>-</td>
+                                    <td>admin</td>
+                                    <td>02-865-4210</td>
+                                    <td>
+                                        <a href="#" onclick="openPreviousPop()"
+                                            class="btn btn-sm btn-outline-secondary border-0 btn-icon">
+                                            <span class="btn-inner--icon icon-sm"><i
+                                                    class="fas fa-file-download"></i></span>
+                                            <span class="btn-inner--text hide">다시보기</span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>1360</td>
+                                    <td class="text-left">
+                                        <a href="#!" class="font-weight-bold">캐롯손해보험 MMS 발송 테스트</a>
+                                    </td>
+                                    <td>1</td>
+                                    <td>010****3075</td>
+                                    <td>20-08-27 10:57:12</td>
+                                    <td>MMS 발송 테스트</td>
+                                    <td>성공</td>
+                                    <td>-</td>
+                                    <td>admin</td>
+                                    <td>02-865-4210</td>
+                                    <td>
+                                        <a href="#" onclick="openPreviousPop()"
+                                            class="btn btn-sm btn-outline-secondary border-0 btn-icon">
+                                            <span class="btn-inner--icon icon-sm"><i
+                                                    class="fas fa-file-download"></i></span>
+                                            <span class="btn-inner--text hide">다시보기</span>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>1360</td>
+                                    <td class="text-left">
+                                        <a href="#!" class="font-weight-bold">캐롯손해보험 MMS 발송 테스트</a>
+                                    </td>
+                                    <td>1</td>
+                                    <td>010****3075</td>
+                                    <td>20-08-27 10:57:12</td>
+                                    <td>MMS 발송 테스트</td>
+                                    <td>성공</td>
+                                    <td>-</td>
+                                    <td>admin123</td>
+                                    <td>02-865-4210</td>
+                                    <td>
+                                        <a href="#" onclick="openPreviousPop()"
+                                            class="btn btn-sm btn-outline-secondary border-0 btn-icon">
+                                            <span class="btn-inner--icon icon-sm"><i
+                                                    class="fas fa-file-download"></i></span>
+                                            <span class="btn-inner--text hide">다시보기</span>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- e.Light table -->
+
+                    <!-- pagenation -->
+                    <div class="pagination pagination-sm mb-0 pb-2 pt-1 justify-content-center">
+                        <ul class="pagination">
+                            <li class="paginate_button page-item previous disabled" id="datatable-basic_previous"><a
+                                    href="#" aria-controls="datatable-basic" data-dt-idx="0" tabindex="0"
+                                    class="page-link"><i class="fas fa-angle-left"></i></a></li>
+                            <li class="paginate_button page-item active"><a href="#" aria-controls="datatable-basic"
+                                    data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                            <li class="paginate_button page-item next disabled" id="datatable-basic_next"><a href="#"
+                                    aria-controls="datatable-basic" data-dt-idx="2" tabindex="0" class="page-link"><i
+                                        class="fas fa-angle-right"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- e.pagenation -->
+
                 </div>
-                <!-- e.Card header -->
+                <!-- e.card -->
 
-                <!-- form -->
-                <form>
-
-                    <!-- grid -->
-                    <div class="card-body">
-                        <!-- Light table -->
-                        <div class="table-responsive  newgridWrap">
-                            <table class="table table-sm dataTable">
-                                <thead class="thead-light">
-                                    <colgroup>
-                                        <col style="width:10%;" />
-                                        <col style="width:20%;" />
-                                        <col style="width:10%;" />
-                                        <col style="width:30%;" />
-                                        <col style="width:10%;" />
-                                        <col style="width:20%;" />
-                                        
-                                    </colgroup>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row"><em class="required">required</em>채널</th>
-                                        <td> <select class="form-control form-control-sm" required>
-                                            <option value="">E-mail</option>
-                                            <option value="">SMS</option>
-                                            <option value="">LMS/MMS</option>
-                                            <option value="">친구톡</option>
-                                            <option value="">브랜드톡</option>
-                                            <option value="">PUSH</option>
-                                            <option value="">FAX</option>
-                                        </select></td>
-                                        <th scope="row"><em class="required">required</em>발송기간</th>
-                                        <td>   <div class="periodWrap d-flex align-items-center">
-                                            <div class="input-group date datepicker-inline col-6 px-0">
-                                                <input class="form-control form-control-sm" type="date" value=" "
-                                                    id="example-date-input">
-                                            </div>
-                                            <span class="txt">~</span>
-                                            <div class="input-group date datepicker-inline col-6  px-0">
-                                                <input class="form-control form-control-sm" type="date" value=" "
-                                                    id="example-date-input">
-                                            </div>
-                                        </div></td>
-                                        <th scope="row"><em class="required">required</em>캠페인 번호</th>
-                                        <td> <input type="text" class="form-control form-control-sm" placeholder=""
-                                                required /></td>
-                                     
-                                    </tr>
-                                    <tr>
-                                      
-                                        <th scope="row"><em class="required">required</em>캠페인 명</th>
-                                        <td> <input type="text" class="form-control  form-control-sm" placeholder=""
-                                                required /></td>
-                                                <th scope="row"><em class="required">required</em>수신자 이름</th>
-                                                <td> <input type="text" class="form-control form-control-sm" placeholder=""
-                                                        required /></td>
-                                                <th scope="row"><em class="required">required</em>수신자 ID</th>
-                                                <td> <input type="text" class="form-control  form-control-sm" placeholder=""
-                                                        required /></td>
-                                                       
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><em class="required">required</em>수신자 이메일</th>
-                                        <td> <input type="text" class="form-control  form-control-sm" placeholder=""
-                                            required /></td>
-                                        <th scope="row"><em class="required">required</em>발송결과</th>
-                                        <td>  <select class="form-control form-control-sm">
-                                            <option value="">전체</option>
-                                            <option value="">===================================================
-                                            </option>
-                                            <option value="FAIL">[*] 실패</option>
-                                            <option value="0">[0] 성공</option>
-                                            <option value="1">[1] TIMEOUT</option>
-                                            <option value="A">[A] 핸드폰 번호 처리중</option>
-                                            <option value="B">[B] 음영지역</option>
-                                            <option value="C">[C] power off</option>
-                                            <option value="D">[D] 메시지 저장개수 초과</option>
-                                            <option value="2">[2] 잘못된 전화번호</option>
-                                            <option value="a">[a] 일시 서비스 정지</option>
-                                            <option value="b">[b] 기타 단말기 문제</option>
-                                            <option value="c">[c] 착신 거절</option>
-                                            <option value="d">[d] 기타</option>
-                                            <option value="e">[e] 이통사 SMC 형식오류</option>
-                                            <option value="n">[n] 건수제안 계약이 되어 있는경우 건수 제안</option>
-                                            <option value="o">[o] 메시지길이가 제안된 길이를 벗어남</option>
-                                            <option value="p">[p] 폰 번호가 형식에 어긋남</option>
-                                            <option value="q">[q] ex)데이터 내용이 없는 경우</option>
-                                            <option value="x">[x] MMS 콘텐트의정보를 참조할수 없음</option>
-                                            <option value="z">[z] 처리되지 않은 기타 오류</option>
-                                            <option value="k">[k] 이통사에서 spam 처리</option>
-                                            <option value="j">[j] 이통사 내부 메시지 Que Full</option>
-                                            <option value="i">[i] SMC 운영자가 메시지 삭제</option>
-                                            <option value="h">[h] 핸드폰 번호 불가 상태</option>
-                                            <option value="g">[g] SMS 서비스 불가 단말기</option>
-                                            <option value="00000">[00000] 오류없음</option>
-                                            <option value="10001">[10001] 알수없는가입자</option>
-                                            <option value="10005">[10005] 식별되지않은가입자</option>
-                                            <option value="10006">[10006] 부재중인가입자</option>
-                                            <option value="10009">[10009] 불법가입자</option>
-                                            <option value="30010">[30010] 전달자서비스가프로비저닝되지않음</option>
-                                            <option value="10011">[10011] 텔레서비스가프로비저닝되지않음</option>
-                                            <option value="10012">[10012] 불법장비</option>
-                                            <option value="10013">[10013] 통화차단</option>
-                                            <option value="30020">[30020] SS비호환성</option>
-                                            <option value="10021">[10021] 지원되지않는설비</option>
-                                            <option value="10031">[10031] MtSMS에대해가입자통화중</option>
-                                            <option value="10032">[10032] SM전달실패</option>
-                                            <option value="10033">[10033] 메시지대기목록꽉참</option>
-                                            <option value="10034">[10034] 시스템장애</option>
-                                            <option value="10035">[10035] 데이터누락</option>
-                                            <option value="10036">[10036] 예상치못한데이터값</option>
-                                            <option value="30051">[30051] 리소스제한</option>
-                                            <option value="30071">[30071] 알수없는알파벳</option>
-                                            <option value="10072">[10072] Ussd통화중</option>
-                                            <option value="10255">[10255] EC_UNK알수없는오류NOWN_ERROR</option>
-                                            <option value="10256">[10256] SMDF메모리용량초과</option>
-                                            <option value="10257">[10257] SMDF장비프로토콜오류</option>
-                                            <option value="900">[900] 핸들러 오류</option>
-                                            <option value="v">[v] 발신자 번호 미등록</option>
-                                            <option value="10258">[10258] SMDF장비프로토콜오류</option>
-                                            <option value="10259">[10259] SMDF장비프로토콜오류</option>
-                                            <option value="10260">[10260] SMDF장비프로토콜오류</option>
-                                            <option value="10261">[10261] SMDFInvalidSME주소</option>
-                                            <option value="10262">[10262] SMDFSubscribernotsc가입자</option>
-                                            <option value="10500">[10500] 공급업체일반오류</option>
-                                            <option value="30501">[30501] 잘못된응답수신</option>
-                                            <option value="10502">[10502] 응답없음</option>
-                                            <option value="10503">[10503] 서비스완료실패</option>
-                                            <option value="10504">[10504] 피어로부터예상치못한응답</option>
-                                            <option value="10507">[10507] 잘못입력된매개변수</option>
-                                            <option value="10508">[10508] 지원되는서비스</option>
-                                            <option value="10509">[10509] 중복된ID호출</option>
-                                            <option value="10511">[10511] 릴리즈시작중</option>
-                                            <option value="11024">[11024] 앱컨텍스트지원안됨</option>
-                                            <option value="11026">[11026] 잘못된원본참조</option>
-                                            <option value="11027">[11027] 캡슐화된AC지원안됨</option>
-                                            <option value="11028">[11028] 전송보호부적절함</option>
-                                            <option value="11029">[11029] 제공된사유없음</option>
-                                            <option value="11030">[11030] 잠재적버전비호환성</option>
-                                            <option value="11031">[11031] 원격노드연결불가</option>
-                                            <option value="11152">[11152] 이러한특성의주소에대한변환없음</option>
-                                            <option value="11153">[11153] 이특정주소에대한변환없음</option>
-                                            <option value="11154">[11154] 하위시스템정체</option>
-                                            <option value="11155">[11155] 하위시스템장애</option>
-                                            <option value="11156">[11156] 장비를갖추지않은사용자</option>
-                                            <option value="11157">[11157] MTP실패</option>
-                                            <option value="11158">[11158] 네트워크정체</option>
-                                            <option value="11159">[11159] 자격없음</option>
-                                            <option value="11160">[11160] 메시지전송XUDT에오류있음</option>
-                                            <option value="11161">[11161] 로컬처리XUDT에오류있음</option>
-                                            <option value="11162">[11162] 목적지에서리어셈블리XUDT를수행할수없음</option>
-                                            <option value="11163">[11163] SCCP실패</option>
-                                            <option value="11164">[11164] 홉카운터위반</option>
-                                            <option value="11165">[11165] 세그먼트화지원안됨</option>
-                                            <option value="11166">[11166] 세그먼트화실패</option>
-                                            <option value="11281">[11281] 사용자별사유</option>
-                                            <option value="11282">[11282] 사용자리소스제한</option>
-                                            <option value="11283">[11283] 리소스사용불가</option>
-                                            <option value="11284">[11284] 애플리케이션프로시저취소</option>
-                                            <option value="11536">[11536] 공급업체오작동</option>
-                                            <option value="11537">[11537] 지원대화상자또는트랜잭션릴리즈됨</option>
-                                            <option value="11538">[11538] 리소스제한</option>
-                                            <option value="11539">[11539] 유지보수활동</option>
-                                            <option value="11540">[11540] 버전비호환성</option>
-                                            <option value="11541">[11541] 비정상적맵대화상자</option>
-                                            <option value="11792">[11792] 피어에서비정상적이벤트감지됨</option>
-                                            <option value="11793">[11793] 피어에서응답거부</option>
-                                            <option value="11794">[11794] 피어로부터비정상적이벤트수신됨</option>
-                                            <option value="11795">[11795] 메시지를피어에전달할수없음</option>
-                                            <option value="11796">[11796] 공급업체호출불가</option>
-                                            <option value="32048">[32048] 시간초과</option>
-                                            <option value="22049">[22049] IMSI차단됨</option>
-                                            <option value="32050">[32050] DND차단됨</option>
-                                            <option value="32051">[32051] 텍스트차단됨</option>
-                                            <option value="24096">[24096] 잘못된PDU형식</option>
-                                            <option value="34097">[34097] GMSC에제출되지않음</option>
-                                            <option value="24100">[24100] 메시지취소됨</option>
-                                            <option value="24101">[24101] Validityperiod만료됨</option>
-                                            <option value="34102">[34102] Smpp채널에제출안됨</option>
-                                            <option value="05000">[05000] 사람이통화에응답함</option>
-                                            <option value="05001">[05001] 기계가통화에응답함</option>
-                                            <option value="05002">[05002] 통화시도중에사용자가통화중이었음</option>
-                                            <option value="25003">[25003] 사용자에게알렸지만전화를받지않음</option>
-                                            <option value="25004">[25004] 통화를위해제공된파일을다운로드할수없었음</option>
-                                            <option value="25005">[25005] 통화를위해제공된파일의형식이지원되지않음</option>
-                                            <option value="99990">[99990] 인포빕 API로 HTTP 통신하는 동안 오류</option>
-                                            <option value="99999">[99999] 에이전트내 처리하는 동안 오류</option>
-                                            <option value="99991">[99991] SMS가 아닌 다른 채널로 발송시 오류</option>
-                                            <option value="99992">[99992] 인포빕 시스템 오류(상태코드를 통해 에러를 분석해야 함)</option>
-                                            <option value="f">[f] 중계사 자체 형식 오류</option>
-                                            <option value="l">[l] www.nospan.go.kr에 등록된 번호에 대해 중계사에서 spam 처리한건
-                                            </option>
-                                            <option value="m">[m] 중계사에서 실패처리함</option>
-                                        </select></td>
-                                        <th scope="row"><em class="required">required</em>발송유형</th>
-                                        <td><select class="form-control form-control-sm">
-                                            <option value="">전체</option>
-                                            <option value="">본발송</option>
-                                            <option value="">재발송</option>
-                                        </select></td>
-                                    </tr>
-                                    
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- // Light table -->
-                </form>
-                <!-- //form -->
-
-                <!-- Light table -->
-                <div class="table-responsive  pt-5">
-                    <table class="table table-sm dataTable">
-                        <thead class="thead-light">
-                            <tr>
-                                <th scope="col">No</th>
-                                <th scope="col">캠페인<br>번호</th>
-                                <th scope="col">캠페인 명</th>
-                                <th scope="col">문자<br>유형</th>
-                                <th scope="col">수신자 전화번호</th>
-                                <th scope="col">발송일시</th>
-                                <th scope="col">발송내용</th>
-                                <th scope="col">발송결과</th>
-                                <th scope="col">대체발송<br>여부</th>
-                                <th scope="col">발신자 ID</th>
-                                <th scope="col">발신자 번호</th>
-                                <th scope="col">다시보기</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>1360</td>
-                                <td class="text-left">
-                                    <a href="#!" class="font-weight-bold">캐롯손해보험 MMS 발송 테스트</a>
-                                </td>
-                                <td>1</td>
-                                <td>010****3075</td>
-                                <td>20-08-27 10:57:12</td>
-                                <td>MMS 발송 테스트</td>
-                                <td>성공</td>
-                                <td>-</td>
-                                <td>admin</td>
-                                <td>02-865-4210</td>
-                                <td>
-                                    <a href="#" onclick="openPreviousPop()"
-                                        class="btn btn-sm btn-outline-secondary border-0 btn-icon">
-                                        <span class="btn-inner--icon icon-sm"><i
-                                                class="fas fa-file-download"></i></span>
-                                        <span class="btn-inner--text hide">다시보기</span>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>1360</td>
-                                <td class="text-left">
-                                    <a href="#!" class="font-weight-bold">캐롯손해보험 MMS 발송 테스트</a>
-                                </td>
-                                <td>1</td>
-                                <td>010****3075</td>
-                                <td>20-08-27 10:57:12</td>
-                                <td>MMS 발송 테스트</td>
-                                <td>성공</td>
-                                <td>-</td>
-                                <td>admin</td>
-                                <td>02-865-4210</td>
-                                <td>
-                                    <a href="#" onclick="openPreviousPop()"
-                                        class="btn btn-sm btn-outline-secondary border-0 btn-icon">
-                                        <span class="btn-inner--icon icon-sm"><i
-                                                class="fas fa-file-download"></i></span>
-                                        <span class="btn-inner--text hide">다시보기</span>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>1360</td>
-                                <td class="text-left">
-                                    <a href="#!" class="font-weight-bold">캐롯손해보험 MMS 발송 테스트</a>
-                                </td>
-                                <td>1</td>
-                                <td>010****3075</td>
-                                <td>20-08-27 10:57:12</td>
-                                <td>MMS 발송 테스트</td>
-                                <td>성공</td>
-                                <td>-</td>
-                                <td>admin123</td>
-                                <td>02-865-4210</td>
-                                <td>
-                                    <a href="#" onclick="openPreviousPop()"
-                                        class="btn btn-sm btn-outline-secondary border-0 btn-icon">
-                                        <span class="btn-inner--icon icon-sm"><i
-                                                class="fas fa-file-download"></i></span>
-                                        <span class="btn-inner--text hide">다시보기</span>
-                                    </a>
-                                </td>
-                            </tr>
-
-                        </tbody>
-                    </table>
-                </div>
-                <!-- e.Light table -->
-
-                <!-- pagenation -->
-                <div class="pagination pagination-sm mb-0 pb-2 pt-1 justify-content-center">
-                    <ul class="pagination">
-                        <li class="paginate_button page-item previous disabled" id="datatable-basic_previous"><a
-                                href="#" aria-controls="datatable-basic" data-dt-idx="0" tabindex="0"
-                                class="page-link"><i class="fas fa-angle-left"></i></a></li>
-                        <li class="paginate_button page-item active"><a href="#" aria-controls="datatable-basic"
-                                data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
-                        <li class="paginate_button page-item next disabled" id="datatable-basic_next"><a href="#"
-                                aria-controls="datatable-basic" data-dt-idx="2" tabindex="0" class="page-link"><i
-                                    class="fas fa-angle-right"></i></a></li>
-                    </ul>
-                </div>
-                <!-- e.pagenation -->
-
-            </div>
-            <!-- e.card -->
-
-        </div> <!-- e.page content -->
-    </div>
-    <!--e.Contents area-->
+            </div> <!-- e.page content -->
+        </div>
+        <!--e.Contents area-->
     </div>
     <!-- e.wrapper -->
     <script>

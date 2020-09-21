@@ -8,190 +8,199 @@
     <link rel="stylesheet" href="tree_fontello/css/fontello.css">
 
     <script>
-    $(function () {
-        $("#subNav").load("../subNav.html");
-        $("#js").load("../js.html");
-    });
+        $(function () {
+            $("#subNav").load("../subNav.html");
+            $("#js").load("../js.html");
+        });
     </script>
 </head>
 
 <body>
-<!-- wrapper -->
-<div class="wrapper">
-    <!-- 메뉴 -->
-    <div id="subNav"></div>
-    <div id="js"></div>
-    <!-- //메뉴-->
+    <!-- wrapper -->
+    <div class="wrapper">
+        <!-- 메뉴 -->
+        <div id="subNav"></div>
+        <div id="js"></div>
+        <!-- //메뉴-->
 
-    <!-- Contents area -->
-    <div class="main-panel">
-        <!-- Page content -->
-        <div class="container-fluid mt-4 mb-2">
+        <!-- Contents area -->
+        <div class="main-panel">
+            <!-- Page content -->
+            <div class="container-fluid mt-4 mb-2">
 
-            <!-- card -->
-            <div class="card">
-                <!-- Card header -->
-                <div class="card-header">
-                    <div class="row">
-                        <!-- title  -->
-                        <div class="col-8">
-                            <h3 class="mb-0">캠페인 등록(캠페인 수행)</h3>
-                        </div>
-                        <!-- //title -->
-
-                        <!-- step -->
-                        <div class="col-4 row pr-0 justify-content-end">
-                            <ul class="stepWrap">
-                                <li><div class="box"><span class="txt">STEP</span><strong>1</strong></div></li>
-                                <li><div class="box"><span class="txt">STEP</span><strong>2</strong></div></li>
-                                <li class="current"><div class="box"><span class="txt">STEP</span><strong>3</strong></div></li>
-                            </ul>
-                        </div>
-                        <!-- e.step -->
-                    </div>
-                </div>
-                <!-- e.Card header -->
-
-                <!-- grid -->
-                <div class="card-body">
-                      <!-- Light table -->
-                      <div class="table-responsive  newgridWrap">
-                        <table class="table table-sm dataTable">
-                            <thead class="thead-light">
-                                <colgroup>
-                                    <col style="width:10%;" />
-                                    <col style="width:23%;" />
-                                    <col style="width:10%;" />
-                                    <col style="width:23%;" />
-                                    <col style="width:10%;" />
-                                    <col style="width:24%;" />
-                                </colgroup>
-                            <tbody>
-                                <tr>
-                                    <th scope="row"><em class="required">required</em>캠페인 명</th>
-                                    <td>알림톡</td>
-                                    <th scope="row"><em class="required">required</em>캠페인 명</th>
-                                    <td colspan="3"> 켐페인 설명</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><em class="required">required</em>대상자</th>
-                                    <td>대상자(2명)</td>
-                                    <th scope="row"><em class="required">required</em>담당부서</th>
-                                    <td>마케팅</td>
-                                    <th scope="row"><em class="required">required</em>작성자</th>
-                                    <td>홍길동</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><em class="required">required</em>작성일</th>
-                                    <td> 2020-09-03 00:00:00</td>
-                                    <th scope="row"><em class="required">required</em>최종 수정일</th>
-                                    <td>2020-09-03 00:00:00</td>
-                                    <th scope="row"><em class="required">required</em>서버 현재시간</th>
-                                    <td>2020-09-03 00:00:00</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <!-- // Light table -->
-                
-                </div>
-                <!-- //grid -->
-
-                 <!-- form -->
-                 <form>
-                    <!-- card body -->
-                    <div class="card-body">
-                        <h1 class="h3 text-primary mb-3">수행정보</h1>
-                        <!-- Light table -->
-                        <div class="table-responsive newgridWrap">
-                            <table class="table table-sm dataTable">
-                                <colgroup>
-                                    <col style="width:12%;" />
-                                    <col style="width:21%;" />
-                                    <col style="width:10%;" />
-                                    <col style="width:23%;" />
-                                    <col style="width:10%;" />
-                                    <col style="width:24%;" />
-                                </colgroup>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row"><em class="required">required</em>제목</th>
-                                        <td colspan="5">[오리온]</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row"><em class="required">required</em>발신자 전화번호</th>
-                                        <td>080-023-5701</td>
-                                        <th scope="row"><em class="required">required</em>발송일시</th>
-                                        <td>2020-09-18 14:00 (금)</td>
-                                        <th scope="row"><em class="required">required</em>수행상태</th>
-                                        <td>발송종료</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- //Light table -->
-                    </div>
-                    <!-- //card body -->
-    
-                    <!-- card body -->
-                    <div class="card-body">
-                        <h1 class="h3 text-primary mb-3">옴니채널 메시지</h1>
-                        <!-- Light table -->
-                        <div class="table-responsive newgridWrap">
-                            <table class="table table-sm dataTable">
-                                <colgroup>
-                                    <col style="width:15%;" />
-                                    <col style="width:30%;" />
-                                    <col style="width:15%;" />
-                                    <col style="width:40%;" />
-                                </colgroup>
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">성공</th>
-                                        <td>
-                                            <select class="form-control form-control-sm d-inline-block w-auto">
-                                                <option value="">EMAIL</option>
-                                                <option value=""></option>
-                                            </select>
-                                            <button type="button" class="btn btn-sm btn-outline-primary ml-2">생성</button>
-                                        </td>
-                                        <th scope="row">실패</th>
-                                        <td>
-                                            <select class="form-control form-control-sm d-inline-block w-auto">
-                                                <option value="">EMAIL</option>
-                                                <option value=""></option>
-                                            </select>
-                                            <button type="button" class="btn btn-sm btn-outline-primary ml-2">생성</button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- //Light table -->
-                    </div>
-                    <!-- //card body -->
-                    
-                    <!-- button area -->
-                    <div class="card-footer pb-4 btn_area">
+                <!-- card -->
+                <div class="card">
+                    <!-- Card header -->
+                    <div class="card-header">
                         <div class="row">
-                            <div class="col text-right">
-                                <button type="button" class="btn btn-outline-info btn-icon">
-                                    <span class="btn-inner--icon"><i class="fas fa-chevron-left"></i></span><span class="btn-inner--text">이전단계</span>
-                                </button>
+                            <!-- title  -->
+                            <div class="col-8">
+                                <h3 class="mb-0">캠페인 등록(캠페인 수행)</h3>
+                            </div>
+                            <!-- //title -->
+
+                            <!-- step -->
+                            <div class="col-4 row pr-0 justify-content-end">
+                                <ul class="stepWrap">
+                                    <li>
+                                        <div class="box"><span class="txt">STEP</span><strong>1</strong></div>
+                                    </li>
+                                    <li>
+                                        <div class="box"><span class="txt">STEP</span><strong>2</strong></div>
+                                    </li>
+                                    <li class="current">
+                                        <div class="box"><span class="txt">STEP</span><strong>3</strong></div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- e.step -->
+                        </div>
+                    </div>
+                    <!-- e.Card header -->
+
+                    <!-- grid -->
+                    <div class="card-body">
+                        <!-- Light table -->
+                        <div class="table-responsive  newgridWrap">
+                            <table class="table table-sm dataTable">
+                                <thead class="thead-light">
+                                    <colgroup>
+                                        <col style="width:10%;" />
+                                        <col style="width:23%;" />
+                                        <col style="width:10%;" />
+                                        <col style="width:23%;" />
+                                        <col style="width:10%;" />
+                                        <col style="width:24%;" />
+                                    </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row"><em class="required">required</em>캠페인 명</th>
+                                        <td>알림톡</td>
+                                        <th scope="row"><em class="required">required</em>캠페인 명</th>
+                                        <td colspan="3"> 켐페인 설명</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><em class="required">required</em>대상자</th>
+                                        <td>대상자(2명)</td>
+                                        <th scope="row"><em class="required">required</em>담당부서</th>
+                                        <td>마케팅</td>
+                                        <th scope="row"><em class="required">required</em>작성자</th>
+                                        <td>홍길동</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><em class="required">required</em>작성일</th>
+                                        <td> 2020-09-03 00:00:00</td>
+                                        <th scope="row"><em class="required">required</em>최종 수정일</th>
+                                        <td>2020-09-03 00:00:00</td>
+                                        <th scope="row"><em class="required">required</em>서버 현재시간</th>
+                                        <td>2020-09-03 00:00:00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- // Light table -->
+
+                    </div>
+                    <!-- //grid -->
+
+                    <!-- form -->
+                    <form>
+                        <!-- card body -->
+                        <div class="card-body">
+                            <h1 class="h3 text-primary mb-3">수행정보</h1>
+                            <!-- Light table -->
+                            <div class="table-responsive newgridWrap">
+                                <table class="table table-sm dataTable">
+                                    <colgroup>
+                                        <col style="width:12%;" />
+                                        <col style="width:21%;" />
+                                        <col style="width:10%;" />
+                                        <col style="width:23%;" />
+                                        <col style="width:10%;" />
+                                        <col style="width:24%;" />
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row"><em class="required">required</em>제목</th>
+                                            <td colspan="5">[오리온]</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><em class="required">required</em>발신자 전화번호</th>
+                                            <td>080-023-5701</td>
+                                            <th scope="row"><em class="required">required</em>발송일시</th>
+                                            <td>2020-09-18 14:00 (금)</td>
+                                            <th scope="row"><em class="required">required</em>수행상태</th>
+                                            <td>발송종료</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- //Light table -->
+                        </div>
+                        <!-- //card body -->
+
+                        <!-- card body -->
+                        <div class="card-body">
+                            <h1 class="h3 text-primary mb-3">옴니채널 메시지</h1>
+                            <!-- Light table -->
+                            <div class="table-responsive newgridWrap">
+                                <table class="table table-sm dataTable">
+                                    <colgroup>
+                                        <col style="width:15%;" />
+                                        <col style="width:30%;" />
+                                        <col style="width:15%;" />
+                                        <col style="width:40%;" />
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">성공</th>
+                                            <td>
+                                                <select class="form-control form-control-sm d-inline-block w-auto">
+                                                    <option value="">EMAIL</option>
+                                                    <option value=""></option>
+                                                </select>
+                                                <button type="button"
+                                                    class="btn btn-sm btn-outline-primary ml-2">생성</button>
+                                            </td>
+                                            <th scope="row">실패</th>
+                                            <td>
+                                                <select class="form-control form-control-sm d-inline-block w-auto">
+                                                    <option value="">EMAIL</option>
+                                                    <option value=""></option>
+                                                </select>
+                                                <button type="button"
+                                                    class="btn btn-sm btn-outline-primary ml-2">생성</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- //Light table -->
+                        </div>
+                        <!-- //card body -->
+
+                        <!-- button area -->
+                        <div class="card-footer pb-4 btn_area">
+                            <div class="row">
+                                <div class="col text-right">
+                                    <button type="button" class="btn btn-outline-info btn-icon">
+                                        <span class="btn-inner--icon"><i class="fas fa-chevron-left"></i></span><span
+                                            class="btn-inner--text">이전단계</span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- e.button area -->
+                        <!-- e.button area -->
                     </form>
                     <!-- e.form -->
-            
-            </div>
-            <!-- e.card -->
 
-        </div> <!-- e.page content -->
+                </div>
+                <!-- e.card -->
+
+            </div> <!-- e.page content -->
+        </div>
+        <!-- e.Contents area -->
     </div>
-    <!-- e.Contents area -->
-</div>
-<!-- e.wrapper -->
+    <!-- e.wrapper -->
 
 </html>

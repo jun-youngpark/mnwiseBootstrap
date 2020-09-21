@@ -61,82 +61,94 @@
                     <!-- e.Card header -->
 
                     <!-- form -->
-                    <form >
+                    <form>
                         <!-- card body -->
-                <div class="card-body">
-                    <div class="alert alert-warning" role="alert">
-                        <span class="alert-icon"><i class="fas fa-exclamation-triangle"></i></span>
-                        <span class="alert-text">실행 중인 캠페인는 변경/저장 하실 수 없습니다.</span>
-                    </div>
+                        <div class="card-body">
+                            <div class="alert alert-warning" role="alert">
+                                <span class="alert-icon"><i class="fas fa-exclamation-triangle"></i></span>
+                                <span class="alert-text">실행 중인 캠페인는 변경/저장 하실 수 없습니다.</span>
+                            </div>
 
-                    <!-- Light table -->
-                    <div class="table-responsive newgridWrap">
-                        <table class="table table-sm dataTable">
-                            <colgroup>
-                                <col style="width:10%;" />
-                                <col style="width:15%;" />
-                                <col style="width:10%;" />
-                                <col />
-                                <col style="width:10%;" />
-                                <col style="width:20%;" />
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">캠페인 번호</th>
-                                    <td><em class="txt_channel">E</em> <span>357</span></td>
-                                    <th scope="row">캠페인 명</th>
-                                    <td colspan="3">Mail</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><em class="required">required</em>발신자 명</th>
-                                    <td><input type="text" class="form-control form-control-sm" required/></td>
-                                    <th scope="row"><em class="required">required</em>발신자 이메일</th>
-                                    <td><input type="text" class="form-control form-control-sm" required/></td>
-                                    <th scope="row"><em class="required">required</em>반송 이메일</th>
-                                    <td><input type="text" class="form-control form-control-sm" required/></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><em class="required">required</em>대상자</th>
-                                    <td colspan="3">
-                                        <div class="form-row align-items-center">
-                                            <div class="col-4"><input type="text" class="form-control form-control-sm" placeholder="" /></div>
-                                            <div class="col-2 input-has-unit"><input type="text" class="form-control form-control-sm" placeholder="" /><spa class="unit">명</spa></div>
-                                            <div class="col-auto">
-                                                <button type="button" class="btn btn-outline-primary btn-sm btn-icon btn_search">
-                                                    <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span class="btn-inner--text hide">검색</span>
-                                                </button>
-                                            </div>
-                                            <div class="col-auto">
-                                                <button class="btn btn-outline-primary btn-sm" type="button">대상자 선택</button>
-                                            </div>
-                                            <div class="col-auto">
-                                                <button class="btn btn-outline-primary btn-sm" type="button">대상자 등록</button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <th scope="row">수신확인</th>
-                                    <td>
-                                        <div class="custom-control custom-checkbox custom-control-inline">
-                                            <input type="checkbox" id="recev_chk" name="recev_chk" class="custom-control-input" />
-                                            <label class="custom-control-label" for="recev_chk"></label>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><em class="required">required</em>재반복 횟수</th>
-                                    <td>
-                                        <div class="input-has-unit"><input type="text" class="form-control form-control-sm" placeholder="" required /><span class="unit">회</span></div>
-                                    </td>
-                                    <td colspan="4"></td>
-                                   
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <!-- //Light table -->
+                            <!-- Light table -->
+                            <div class="table-responsive newgridWrap">
+                                <table class="table table-sm dataTable">
+                                    <colgroup>
+                                        <col style="width:10%;" />
+                                        <col style="width:15%;" />
+                                        <col style="width:10%;" />
+                                        <col />
+                                        <col style="width:10%;" />
+                                        <col style="width:20%;" />
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">캠페인 번호</th>
+                                            <td><em class="txt_channel">E</em> <span>357</span></td>
+                                            <th scope="row">캠페인 명</th>
+                                            <td colspan="3">Mail</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><em class="required">required</em>발신자 명</th>
+                                            <td><input type="text" class="form-control form-control-sm" required /></td>
+                                            <th scope="row"><em class="required">required</em>발신자 이메일</th>
+                                            <td><input type="text" class="form-control form-control-sm" required /></td>
+                                            <th scope="row"><em class="required">required</em>반송 이메일</th>
+                                            <td><input type="text" class="form-control form-control-sm" required /></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><em class="required">required</em>대상자</th>
+                                            <td colspan="3">
+                                                <div class="form-row align-items-center">
+                                                    <div class="col-4"><input type="text"
+                                                            class="form-control form-control-sm" placeholder="" /></div>
+                                                    <div class="col-2 input-has-unit"><input type="text"
+                                                            class="form-control form-control-sm" placeholder="" />
+                                                        <spa class="unit">명</spa>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <button type="button"
+                                                            class="btn btn-outline-primary btn-sm btn-icon btn_search">
+                                                            <span class="btn-inner--icon"><i
+                                                                    class="fas fa-search"></i></span><span
+                                                                class="btn-inner--text hide">검색</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <button class="btn btn-outline-primary btn-sm" type="button">대상자
+                                                            선택</button>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <button class="btn btn-outline-primary btn-sm" type="button">대상자
+                                                            등록</button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <th scope="row">수신확인</th>
+                                            <td>
+                                                <div class="custom-control custom-checkbox custom-control-inline">
+                                                    <input type="checkbox" id="recev_chk" name="recev_chk"
+                                                        class="custom-control-input" />
+                                                    <label class="custom-control-label" for="recev_chk"></label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><em class="required">required</em>재반복 횟수</th>
+                                            <td>
+                                                <div class="input-has-unit"><input type="text"
+                                                        class="form-control form-control-sm" placeholder=""
+                                                        required /><span class="unit">회</span></div>
+                                            </td>
+                                            <td colspan="4"></td>
 
-                </div>
-                <!-- //card body -->
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- //Light table -->
+
+                        </div>
+                        <!-- //card body -->
 
                         <!-- message -->
                         <div class="card-body">
@@ -383,7 +395,7 @@
                                         <span class="btn-inner--icon"><i class="fas fa-chevron-left"></i></span><span
                                             class="btn-inner--text">이전단계</span>
                                     </button>
-                                    <button  type="submit" class="btn btn btn-outline-info btn-icon">
+                                    <button type="submit" class="btn btn btn-outline-info btn-icon">
                                         <span class="btn-inner--text mr-2">다음단계</span><span class="btn-inner--icon"><i
                                                 class="fas fa-chevron-right"></i></span>
                                     </button>

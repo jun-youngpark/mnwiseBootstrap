@@ -8,228 +8,250 @@
     <link rel="stylesheet" href="tree_fontello/css/fontello.css">
 
     <script>
-    $(function () {
-        $("#subNav").load("../subNav.html");
-        $("#js").load("../js.html");
-        $("#headerTop").load("../headerTop.html");
-    });
+        $(function () {
+            $("#subNav").load("../subNav.html");
+            $("#js").load("../js.html");
+            $("#headerTop").load("../headerTop.html");
+        });
     </script>
 </head>
 
 <body>
-<!-- wrapper -->
-<div class="wrapper">
-    <!-- 메뉴 -->
-    <div id="subNav"></div>
-    <div id="js"></div>
-    <div id="headerTop"></div>
-    <!-- //메뉴-->
+    <!-- wrapper -->
+    <div class="wrapper">
+        <!-- 메뉴 -->
+        <div id="subNav"></div>
+        <div id="js"></div>
+        <div id="headerTop"></div>
+        <!-- //메뉴-->
 
-    <!-- Contents area -->
-    <div class="main-panel">
-        <!-- Page content -->
-        <div class="container-fluid mt-4 mb-2">
+        <!-- Contents area -->
+        <div class="main-panel">
+            <!-- Page content -->
+            <div class="container-fluid mt-4 mb-2">
 
-            <!-- card -->
-            <div class="card">
-                <!-- Card header -->
-                <div class="card-header">
-                    <div class="row">
-                        <!-- title  -->
-                        <div class="col-8">
-                            <h3 class="mb-0">캠페인 등록- push(메시지작성)</h3>
-                        </div>
-                        <!-- //title -->
-
-                        <!-- step -->
-                        <div class="col-4 row pr-0 justify-content-end">
-                            <ul class="stepWrap">
-                                <li><div class="box"><span class="txt">STEP</span><strong>1</strong></div></li>
-                                <li class="current"><div class="box"><span class="txt">STEP</span><strong>2</strong></div></li>
-                                <li><div class="box"><span class="txt">STEP</span><strong>3</strong></div></li>
-                            </ul>
-                        </div>
-                        <!-- e.step -->
-                    </div>
-                </div>
-                <!-- e.Card header -->
-
-                <!-- form -->
-                <form>
-                <!-- card body -->
-                <div class="card-body">
-                    <!-- Light table -->
-                    <div class="table-responsive newgridWrap">
-                        <table class="table table-sm dataTable">
-                            <colgroup>
-                                <col style="width:15%;" />
-                                <col style="width:35%;" />
-                                <col style="width:15%;" />
-                                <col style="width:35%;" />
-                            </colgroup>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">캠페인 번호</th>
-                                    <td><em class="txt_channel p">P</em> <span>357</span></td>
-                                    <th scope="row">캠페인 명</th>
-                                    <td>Push</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><em class="required">required</em>대상자</th>
-                                    <td colspan="3">
-                                        <div class="form-row align-items-center">
-                                            <div class="col-4"><input type="text" class="form-control form-control-sm" placeholder="" /></div>
-                                            <div class="col-2 input-has-unit"><input type="text" class="form-control form-control-sm" placeholder="" /><spa class="unit">명</spa></div>
-                                            <div class="col-auto">
-                                                <button type="button" class="btn btn-outline-primary btn-sm btn-icon btn_search">
-                                                    <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span class="btn-inner--text hide">검색</span>
-                                                </button>
-                                            </div>
-                                            <div class="col-auto">
-                                                <button class="btn btn-outline-primary btn-sm" type="button">대상자 선택</button>
-                                            </div>
-                                            <div class="col-auto">
-                                                <button class="btn btn-outline-primary btn-sm" type="button">대상자 등록</button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><em class="required">required</em>제목</th>
-                                    <td colspan="5"><input type="text" class="form-control form-control-sm" required/></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <!-- //Light table -->
-                </div>
-                <!-- //card body -->
-
-                <!-- message -->
-                <div class="card-body message_contents">
-                    <div class="row">
-                        <!-- mobile preview -->
-                        <div class="col col-phone">
-                            <div class="phone_preview">
-                                <div class="preview_box">
-                                    <div class="tit form-group">
-                                        <select class="col form-control form-control-sm">
-                                            <option value="">개인화 정보</option>
-                                            <option value=""></option>
-                                        </select>
-                                    </div>
-                                    <div class="text"><textarea rows="10" cols="20" class="form-control"></textarea></div>
-                                </div>
-                                <span class="letter_count"><em>0</em> bytes</span>
+                <!-- card -->
+                <div class="card">
+                    <!-- Card header -->
+                    <div class="card-header">
+                        <div class="row">
+                            <!-- title  -->
+                            <div class="col-8">
+                                <h3 class="mb-0">캠페인 등록- push(메시지작성)</h3>
                             </div>
+                            <!-- //title -->
+
+                            <!-- step -->
+                            <div class="col-4 row pr-0 justify-content-end">
+                                <ul class="stepWrap">
+                                    <li>
+                                        <div class="box"><span class="txt">STEP</span><strong>1</strong></div>
+                                    </li>
+                                    <li class="current">
+                                        <div class="box"><span class="txt">STEP</span><strong>2</strong></div>
+                                    </li>
+                                    <li>
+                                        <div class="box"><span class="txt">STEP</span><strong>3</strong></div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- e.step -->
                         </div>
-                        <!-- //mobile preview -->
-                        <div class="col">
+                    </div>
+                    <!-- e.Card header -->
+
+                    <!-- form -->
+                    <form>
+                        <!-- card body -->
+                        <div class="card-body">
                             <!-- Light table -->
                             <div class="table-responsive newgridWrap">
                                 <table class="table table-sm dataTable">
                                     <colgroup>
-                                        <col style="width:10%;" />
-                                        <col style="width:23%;" />
-                                        <col style="width:10%;" />
-                                        <col style="width:23%;" />
-                                        <col style="width:10%;" />
-                                        <col style="width:24%;" />
+                                        <col style="width:15%;" />
+                                        <col style="width:35%;" />
+                                        <col style="width:15%;" />
+                                        <col style="width:35%;" />
                                     </colgroup>
                                     <tbody>
                                         <tr>
-                                            <th scope="row" class="align-text-top"><em class="required">required</em>알림 내용</th>
-                                            <td colspan="5">
+                                            <th scope="row">캠페인 번호</th>
+                                            <td><em class="txt_channel p">P</em> <span>357</span></td>
+                                            <th scope="row">캠페인 명</th>
+                                            <td>Push</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><em class="required">required</em>대상자</th>
+                                            <td colspan="3">
                                                 <div class="form-row align-items-center">
-                                                    <div class="col-6">
-                                                        <select class="form-control form-control-sm" required>
-                                                            <option value=""></option>
-                                                            <option value=""></option>
-                                                        </select>
+                                                    <div class="col-4"><input type="text"
+                                                            class="form-control form-control-sm" placeholder="" /></div>
+                                                    <div class="col-2 input-has-unit"><input type="text"
+                                                            class="form-control form-control-sm" placeholder="" />
+                                                        <spa class="unit">명</spa>
                                                     </div>
-                                                    <div class="col-auto "><em>0</em> bytes</div>
-                                                </div>
-                                                <div class="row mt-2">
-                                                    <div class="col-12">
-                                                        <textarea class="form-control" id="" rows="5"></textarea>
+                                                    <div class="col-auto">
+                                                        <button type="button"
+                                                            class="btn btn-outline-primary btn-sm btn-icon btn_search">
+                                                            <span class="btn-inner--icon"><i
+                                                                    class="fas fa-search"></i></span><span
+                                                                class="btn-inner--text hide">검색</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <button class="btn btn-outline-primary btn-sm" type="button">대상자
+                                                            선택</button>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <button class="btn btn-outline-primary btn-sm" type="button">대상자
+                                                            등록</button>
                                                     </div>
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th scope="row"><em class="required">required</em>앱선택</th>
-                                            <td>
-                                                <select class="form-control form-control-sm" required>
-                                                    <option value=""></option>
-                                                    <option value=""></option>
-                                                </select>
-                                            </td>
-                                            <th scope="row"><em class="required">required</em>메시지 유형</th>
-                                            <td>
-                                                <select class="form-control form-control-sm" required>
-                                                    <option value=""></option>
-                                                    <option value=""></option>
-                                                </select>
-                                            </td>
-                                            <th scope="row"><em class="required">required</em>메뉴 ID</th>
-                                            <td><input type="text" class="form-control form-control-sm" /></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">이미지 팝업 URL</th>
-                                            <td><input type="text" class="form-control form-control-sm" /></td>
-                                            <th scope="row">큰 이미지 URL</th>
-                                            <td><input type="text" class="form-control form-control-sm" /></td>
-                                            <th scope="row">웹 URL</th>
-                                            <td><input type="text" class="form-control form-control-sm" /></td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row" class="align-text-top">앱 내 메시지</th>
-                                            <td colspan="5">
-                                                Editor area
-                                            </td>
+                                            <th scope="row"><em class="required">required</em>제목</th>
+                                            <td colspan="5"><input type="text" class="form-control form-control-sm"
+                                                    required /></td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
                             <!-- //Light table -->
                         </div>
+                        <!-- //card body -->
 
-                      
-                    </div>
-                </div>
-                <!-- //message -->
-                
-                <!-- button area -->
-                <div class="card-footer pb-4 btn_area">
-                    <div class="row">
-                        <div class="col col-6">
-                            <button type="submit" class="btn btn btn-outline-primary btn-icon">
-                                <span class="btn-inner--icon"><i class="fas fa-save"></i></span><span class="btn-inner--text">저장</span>
-                            </button>
-                            <button type="button" class="btn btn btn-outline-default">금칙어 검사</button>
-                            <button type="button" class="btn btn btn-outline-default">테스트 발송</button>
-                        </div>
-                        <div class="col col-6">
-                            <button type="button" class="btn btn btn-outline-info btn-icon">
-                                <span class="btn-inner--icon"><i class="fas fa-chevron-left"></i></span><span class="btn-inner--text">이전단계</span>
-                            </button>
-                            <button type="button" class="btn btn btn-outline-info btn-icon">
-                                <span class="btn-inner--text mr-2">다음단계</span><span class="btn-inner--icon"><i class="fas fa-chevron-right"></i></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <!-- e.button area -->
-                </form>
-                <!-- e.form -->
-            
-            </div>
-            <!-- e.card -->
+                        <!-- message -->
+                        <div class="card-body message_contents">
+                            <div class="row">
+                                <!-- mobile preview -->
+                                <div class="col col-phone">
+                                    <div class="phone_preview">
+                                        <div class="preview_box">
+                                            <div class="tit form-group">
+                                                <select class="col form-control form-control-sm">
+                                                    <option value="">개인화 정보</option>
+                                                    <option value=""></option>
+                                                </select>
+                                            </div>
+                                            <div class="text"><textarea rows="10" cols="20"
+                                                    class="form-control"></textarea></div>
+                                        </div>
+                                        <span class="letter_count"><em>0</em> bytes</span>
+                                    </div>
+                                </div>
+                                <!-- //mobile preview -->
+                                <div class="col">
+                                    <!-- Light table -->
+                                    <div class="table-responsive newgridWrap">
+                                        <table class="table table-sm dataTable">
+                                            <colgroup>
+                                                <col style="width:10%;" />
+                                                <col style="width:23%;" />
+                                                <col style="width:10%;" />
+                                                <col style="width:23%;" />
+                                                <col style="width:10%;" />
+                                                <col style="width:24%;" />
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <th scope="row" class="align-text-top"><em
+                                                            class="required">required</em>알림 내용</th>
+                                                    <td colspan="5">
+                                                        <div class="form-row align-items-center">
+                                                            <div class="col-6">
+                                                                <select class="form-control form-control-sm" required>
+                                                                    <option value=""></option>
+                                                                    <option value=""></option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="col-auto "><em>0</em> bytes</div>
+                                                        </div>
+                                                        <div class="row mt-2">
+                                                            <div class="col-12">
+                                                                <textarea class="form-control" id=""
+                                                                    rows="5"></textarea>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row"><em class="required">required</em>앱선택</th>
+                                                    <td>
+                                                        <select class="form-control form-control-sm" required>
+                                                            <option value=""></option>
+                                                            <option value=""></option>
+                                                        </select>
+                                                    </td>
+                                                    <th scope="row"><em class="required">required</em>메시지 유형</th>
+                                                    <td>
+                                                        <select class="form-control form-control-sm" required>
+                                                            <option value=""></option>
+                                                            <option value=""></option>
+                                                        </select>
+                                                    </td>
+                                                    <th scope="row"><em class="required">required</em>메뉴 ID</th>
+                                                    <td><input type="text" class="form-control form-control-sm" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row">이미지 팝업 URL</th>
+                                                    <td><input type="text" class="form-control form-control-sm" /></td>
+                                                    <th scope="row">큰 이미지 URL</th>
+                                                    <td><input type="text" class="form-control form-control-sm" /></td>
+                                                    <th scope="row">웹 URL</th>
+                                                    <td><input type="text" class="form-control form-control-sm" /></td>
+                                                </tr>
+                                                <tr>
+                                                    <th scope="row" class="align-text-top">앱 내 메시지</th>
+                                                    <td colspan="5">
+                                                        Editor area
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- //Light table -->
+                                </div>
 
-        </div> <!-- e.page content -->
+
+                            </div>
+                        </div>
+                        <!-- //message -->
+
+                        <!-- button area -->
+                        <div class="card-footer pb-4 btn_area">
+                            <div class="row">
+                                <div class="col col-6">
+                                    <button type="submit" class="btn btn btn-outline-primary btn-icon">
+                                        <span class="btn-inner--icon"><i class="fas fa-save"></i></span><span
+                                            class="btn-inner--text">저장</span>
+                                    </button>
+                                    <button type="button" class="btn btn btn-outline-default">금칙어 검사</button>
+                                    <button type="button" class="btn btn btn-outline-default">테스트 발송</button>
+                                </div>
+                                <div class="col col-6">
+                                    <button type="button" class="btn btn btn-outline-info btn-icon">
+                                        <span class="btn-inner--icon"><i class="fas fa-chevron-left"></i></span><span
+                                            class="btn-inner--text">이전단계</span>
+                                    </button>
+                                    <button type="button" class="btn btn btn-outline-info btn-icon">
+                                        <span class="btn-inner--text mr-2">다음단계</span><span class="btn-inner--icon"><i
+                                                class="fas fa-chevron-right"></i></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- e.button area -->
+                    </form>
+                    <!-- e.form -->
+
+                </div>
+                <!-- e.card -->
+
+            </div> <!-- e.page content -->
+        </div>
+        <!-- e.Contents area -->
     </div>
-    <!-- e.Contents area -->
-</div>
-<!-- e.wrapper -->
+    <!-- e.wrapper -->
 
 </html>

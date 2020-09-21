@@ -173,13 +173,15 @@
                                 <tr>
                                     <th scope="row">
                                         <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" id="checkbox1" name="customcheckbox" class="custom-control-input" />
+                                            <input type="checkbox" id="checkbox1" name="customcheckbox"
+                                                class="custom-control-input" />
                                             <label class="custom-control-label" for="checkbox1"></label>
                                         </div>
                                     </th>
                                     <td>348</td>
                                     <td class="text-left">
-                                        <a href="#!" class="font-weight-bold list_depth depth2"><em class="depth_type s">Success</em>스케줄 이메일</a>
+                                        <a href="#!" class="font-weight-bold list_depth depth2"><em
+                                                class="depth_type s">Success</em>스케줄 이메일</a>
                                     </td>
                                     <td><em class="txt_channel">E</em></td>
                                     <td>실행</td>
@@ -193,13 +195,15 @@
                                 <tr>
                                     <th scope="row">
                                         <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" id="checkbox1" name="customcheckbox" class="custom-control-input" />
+                                            <input type="checkbox" id="checkbox1" name="customcheckbox"
+                                                class="custom-control-input" />
                                             <label class="custom-control-label" for="checkbox1"></label>
                                         </div>
                                     </th>
                                     <td>348</td>
                                     <td class="text-left">
-                                        <a href="#!" class="font-weight-bold list_depth depth3"><em class="depth_type f">Fail</em>스케줄 이메일</a>
+                                        <a href="#!" class="font-weight-bold list_depth depth3"><em
+                                                class="depth_type f">Fail</em>스케줄 이메일</a>
                                     </td>
                                     <td><em class="txt_channel">E</em></td>
                                     <td>실행</td>
@@ -213,13 +217,15 @@
                                 <tr>
                                     <th scope="row">
                                         <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" id="checkbox1" name="customcheckbox" class="custom-control-input" />
+                                            <input type="checkbox" id="checkbox1" name="customcheckbox"
+                                                class="custom-control-input" />
                                             <label class="custom-control-label" for="checkbox1"></label>
                                         </div>
                                     </th>
                                     <td>348</td>
                                     <td class="text-left">
-                                        <a href="#!" class="font-weight-bold list_depth depth4"><em class="depth_type s">Success</em>스케줄 이메일</a>
+                                        <a href="#!" class="font-weight-bold list_depth depth4"><em
+                                                class="depth_type s">Success</em>스케줄 이메일</a>
                                     </td>
                                     <td><em class="txt_channel">E</em></td>
                                     <td>실행</td>
@@ -249,8 +255,8 @@
                                     <td></td>
                                     <td>20-09-14</td>
                                 </tr>
-                               
-                              
+
+
                             </tbody>
                         </table>
                     </div>
@@ -281,15 +287,16 @@
     <!-- e.wrapper -->
 
 
-   <!--  처음 로드시, tot = w01값이 동일 // resize시 정상적으로 width 값 가져옴 -->
+    <!--  처음 로드시, tot = w01값이 동일 // resize시 정상적으로 width 값 가져옴 -->
     <script>
         $(window).load(function () {
             // table top button & search ui
             function searchui() {
                 var tot = $(".table_option").width();
-                var w01 = $(".table_option .btn_area").innerWidth() + $(".table_option .searchWrap").innerWidth();
-                console.log("전체  너비 = "+tot)
-                console.log("버튼 + searchWrap 너비 = "+w01)
+                var w01 = $(".table_option .btn_area").innerWidth() + $(".table_option .searchWrap")
+                .innerWidth();
+                console.log("전체  너비 = " + tot)
+                console.log("버튼 + searchWrap 너비 = " + w01)
 
                 if (tot < w01) {
                     $(".table_option").addClass("st02");
@@ -301,7 +308,7 @@
             $(window).resize(function () {
                 searchui();
             });
-        }); 
+        });
     </script>
 
 </html>
