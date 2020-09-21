@@ -61,167 +61,97 @@
                     <!-- e.Card header -->
 
                     <!-- form -->
-                    <form >
-                        <!-- grid -->
-                        <div class="card-body gridWrap">
-                            <!-- row -->
-                            <div class="row">
-                                <!-- col -->
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <dl class="row">
-                                            <dt class="col-4 col-form-label form-control-label">캠페인 번호</dt>
-                                            <dd class="col-8">
-                                                <em class="txt_channel">E</em> <span>357</span>
-                                            </dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                                <!-- //col -->
-                                <!-- col -->
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <dl class="row">
-                                            <dt class="col-4 col-form-label form-control-label">캠페인 명</dt>
-                                            <dd class="col-8">
-                                                <span>메일 test</span>
-                                            </dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                                <!-- //col -->
+                    <form>
+                        <!-- card body -->
+                        <div class="card-body">
+                            <div class="alert alert-warning" role="alert">
+                                <span class="alert-icon"><i class="fas fa-exclamation-triangle"></i></span>
+                                <span class="alert-text">실행 중인 캠페인는 변경/저장 하실 수 없습니다.</span>
                             </div>
-                            <!-- //row -->
 
-                            <!-- row -->
-                            <div class="row">
-                                <!-- col -->
-                                <div class="col-4">
-                                    <div class="form-group">
-                                        <dl class="row">
-                                            <dt class="col-6 col-form-label form-control-label"><em
-                                                    class="required">required</em>발신자 명</dt>
-                                            <dd class="col-6">
-                                                <input type="text" id="" class="form-control" required />
-                                            </dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                                <!-- //col -->
-                                <!-- col -->
-                                <div class="col-4">
-                                    <div class="row form-group">
-                                        <label class="col-4 col-form-label form-control-label" for=""><em
-                                                class="required">required</em>발신자 이메일</label>
-                                        <div class="col-8">
-                                            <input type="text" id="" class="form-control" required />
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- //col -->
-                                <!-- col -->
-                                <div class="col-4">
-                                    <div class="row form-group">
-                                        <label class="col-4 col-form-label form-control-label" for=""><em
-                                                class="required">required</em>반송 이메일</label>
-                                        <div class="col-8">
-                                            <input type="text" id="" class="form-control" required />
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- //col -->
-                            </div>
-                            <!-- //row -->
-                            <!-- row -->
-                            <div class="row">
-                                <!-- col -->
-                                <div class="col-12">
-                                    <div class="row form-group">
-                                        <label class="col-2 col-form-label form-control-label" for=""><em
-                                                class="required">required</em>대상자</label>
-                                        <div class="col-10">
-                                            <div class="row">
-                                                <div class="col-4"><input type="text" class="form-control"
-                                                        placeholder="" required/></div>
-                                                <div class="col-2 input-has-unit"><input type="text"
-                                                        class="form-control" placeholder="" required/>
-                                                    <span class="unit">명</span>
+                            <!-- Light table -->
+                            <div class="table-responsive newgridWrap">
+                                <table class="table table-sm dataTable">
+                                    <colgroup>
+                                        <col style="width:10%;" />
+                                        <col style="width:15%;" />
+                                        <col style="width:10%;" />
+                                        <col />
+                                        <col style="width:10%;" />
+                                        <col style="width:20%;" />
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">캠페인 번호</th>
+                                            <td><em class="txt_channel">E</em> <span>357</span></td>
+                                            <th scope="row">캠페인 명</th>
+                                            <td colspan="3">Mail</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><em class="required">required</em>발신자 명</th>
+                                            <td><input type="text" class="form-control form-control-sm" required /></td>
+                                            <th scope="row"><em class="required">required</em>발신자 이메일</th>
+                                            <td><input type="text" class="form-control form-control-sm" required /></td>
+                                            <th scope="row"><em class="required">required</em>반송 이메일</th>
+                                            <td><input type="text" class="form-control form-control-sm" required /></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><em class="required">required</em>대상자</th>
+                                            <td colspan="3">
+                                                <div class="form-row align-items-center">
+                                                    <div class="col-4"><input type="text"
+                                                            class="form-control form-control-sm" placeholder="" /></div>
+                                                    <div class="col-2 input-has-unit"><input type="text"
+                                                            class="form-control form-control-sm" placeholder="" />
+                                                        <spa class="unit">명</spa>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <button type="button"
+                                                            class="btn btn-outline-primary btn-sm btn-icon btn_search">
+                                                            <span class="btn-inner--icon"><i
+                                                                    class="fas fa-search"></i></span><span
+                                                                class="btn-inner--text hide">검색</span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <button class="btn btn-outline-primary btn-sm" type="button">대상자
+                                                            선택</button>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <button class="btn btn-outline-primary btn-sm" type="button">대상자
+                                                            등록</button>
+                                                    </div>
                                                 </div>
-                                                <div class="col-auto">
-                                                    <button class="btn btn-secondary btn-icon btn_search">
-                                                        <span class="btn-inner--icon"><i
-                                                                class="fas fa-search"></i></span><span
-                                                            class="btn-inner--text hide">검색</span>
-                                                    </button>
-                                                </div>
-                                                <div class="col-auto">
-                                                    <button class="btn btn-secondary" type="button">대상자 선택</button>
-                                                </div>
-                                                <div class="col-auto">
-                                                    <button class="btn btn-secondary" type="button">대상자 등록</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- //col -->
-                            </div>
-                            <!-- //row -->
-
-                            <!-- row -->
-                            <div class="row">
-                                <!-- col -->
-                                <div class="col-3">
-                                    <div class="form-group">
-                                        <dl class="row">
-                                            <dt class="col-8 col-form-label form-control-label">수신확인</dt>
-                                            <dd class="col-4">
+                                            </td>
+                                            <th scope="row">수신확인</th>
+                                            <td>
                                                 <div class="custom-control custom-checkbox custom-control-inline">
                                                     <input type="checkbox" id="recev_chk" name="recev_chk"
                                                         class="custom-control-input" />
                                                     <label class="custom-control-label" for="recev_chk"></label>
                                                 </div>
-                                            </dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                                <!-- //col -->
-                                <!-- col -->
-                                <div class="col-3">
-                                    <div class="row form-group">
-                                        <label class="col-6 col-form-label form-control-label" for=""><em
-                                                class="required">required</em>재반복 횟수</label>
-                                        <div class="col-6">
-                                            <div class="input-has-unit"><input type="text" class="form-control"
-                                                    placeholder="" required />
-                                                <spa class="unit">회</spa>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- //col -->
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><em class="required">required</em>재반복 횟수</th>
+                                            <td>
+                                                <div class="input-has-unit"><input type="text"
+                                                        class="form-control form-control-sm" placeholder=""
+                                                        required /><span class="unit">회</span></div>
+                                            </td>
+                                            <td colspan="4"></td>
+
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <!-- //row -->
-                            <!-- row -->
-                            <div class="row">
-                                <!-- col -->
-                                <div class="col-12">
-                                    <div class="row form-group">
-                                        <label class="col-2 col-form-label form-control-label" for=""><em
-                                                class="required">required</em>제목</label>
-                                        <div class="col-10">
-                                            <input type="text" id="" class="form-control" required />
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- //col -->
-                            </div>
-                            <!-- //row -->
+                            <!-- //Light table -->
+
                         </div>
-                        <!-- //grid -->
+                        <!-- //card body -->
 
                         <!-- message -->
-                        <div class="card-body border-top">
+                        <div class="card-body">
                             <!-- tab -->
                             <ul class="nav nav-tabs tab01">
                                 <li class="nav-item">
@@ -373,7 +303,7 @@
                                                             class="btn btn-sm btn-outline-secondary w-100">추가</button>
                                                     </div>
                                                     <div class="col-auto"><button type="button"
-                                                            class="btn btn-sm btn-outline-danger w-100">취소</button>
+                                                            class="btn btn-sm btn-outline-secondary w-100">취소</button>
                                                     </div>
                                                 </div>
                                             </td>
@@ -386,7 +316,7 @@
                                                             class="btn btn-sm btn-outline-secondary w-100">추가</button>
                                                     </div>
                                                     <div class="col-auto"><button type="button"
-                                                            class="btn btn-sm btn-outline-danger w-100">취소</button>
+                                                            class="btn btn-sm btn-outline-secondary w-100">취소</button>
                                                     </div>
                                                 </div>
                                             </td>
@@ -401,7 +331,7 @@
                                                             class="btn btn-sm btn-outline-secondary w-100">추가</button>
                                                     </div>
                                                     <div class="col-auto"><button type="button"
-                                                            class="btn btn-sm btn-outline-danger w-100">취소</button>
+                                                            class="btn btn-sm btn-outline-secondary w-100">취소</button>
                                                     </div>
                                                 </div>
                                             </td>
@@ -414,7 +344,7 @@
                                                             class="btn btn-sm btn-outline-secondary w-100">추가</button>
                                                     </div>
                                                     <div class="col-auto"><button type="button"
-                                                            class="btn btn-sm btn-outline-danger w-100">취소</button>
+                                                            class="btn btn-sm btn-outline-secondary w-100">취소</button>
                                                     </div>
                                                 </div>
                                             </td>
@@ -429,7 +359,7 @@
                                                             class="btn btn-sm btn-outline-secondary w-100">추가</button>
                                                     </div>
                                                     <div class="col-auto"><button type="button"
-                                                            class="btn btn-sm btn-outline-danger w-100">취소</button>
+                                                            class="btn btn-sm btn-outline-secondary w-100">취소</button>
                                                     </div>
                                                 </div>
                                             </td>
@@ -465,7 +395,7 @@
                                         <span class="btn-inner--icon"><i class="fas fa-chevron-left"></i></span><span
                                             class="btn-inner--text">이전단계</span>
                                     </button>
-                                    <button  type="submit" class="btn btn btn-outline-info btn-icon">
+                                    <button type="submit" class="btn btn btn-outline-info btn-icon">
                                         <span class="btn-inner--text mr-2">다음단계</span><span class="btn-inner--icon"><i
                                                 class="fas fa-chevron-right"></i></span>
                                     </button>
@@ -485,4 +415,4 @@
     </div>
     <!-- e.wrapper -->
 
-</html>
+</html> -->
