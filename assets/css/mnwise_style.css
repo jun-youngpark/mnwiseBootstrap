@@ -331,6 +331,18 @@ button.btn-sm {min-height:30px;}
 .modal-dialog .table td, .modal-dialog .table th {padding-left:10px; padding-right:10px; text-align:center; vertical-align: middle; border:1px solid #e9ecef;}
 .modal-footer button {min-width:150px;}
 
+/***** window open popup *****/
+.pop-card {height:100vh; min-height:100%; margin:0 !important}
+.pop-card .card-header {background:#f7fafc;}
+.pop-card .card-body {-webkit-flex:1; flex:1;}
+.pop-card .compare-row, .pop-card .compare-row .col {height:100%;}
+.pop-card .compare_wrapper {display:-webkit-box; display:flex; height:100%; -webkit-flex-direction:column; flex-direction:column;}
+.pop-card .compare_wrapper .text-area {-webkit-flex:1; flex:1;}
+.pop-card .compare_wrapper textarea {height:100% !important;}
+.pop-card .card-footer {text-align:center;}
+.pop-card .card-footer button {min-width:150px;}
+
+
 /***** 템플릿 보기 *****/
 .code_view {white-space: pre-wrap;}
 
