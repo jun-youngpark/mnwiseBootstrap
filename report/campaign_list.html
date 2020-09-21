@@ -102,92 +102,92 @@
                         <!-- //search -->
                     </div>
                     <!-- e.search area & buttons -->
+
+                    <!-- Light table -->
+                    <div class="table-responsive">
+                        <table class="table table-sm dataTable">
+                            <thead class="thead-light">
+                            <tr>
+                                <th rowspan="2" scope="col">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="checkbox-all" name="customcheckbox" class="custom-control-input" />
+                                        <label class="custom-control-label" for="checkbox-all"></label>
+                                    </div>
+                                </th>
+                                <th rowspan="2" scope="col">캠페인<br />번호</th>
+                                <th rowspan="2" scope="col">캠페인 명</th>
+                                <th rowspan="2" scope="col">채널</th>
+                                <th rowspan="2" scope="col">발송일자</th>
+                                <th rowspan="2" scope="col">대상<br />건수</th>
+                                <th rowspan="2" scope="col">발송<br />건수</th>
+                                <th colspan="2" scope="col">발송 성공</th>
+                                <th colspan="2" scope="col">발송 실패</th>
+                                <th colspan="2" scope="col">수신 확인</th>
+                                <th colspan="2" scope="col">리턴메일</th>
+                                <th rowspan="2" scope="col">
+                                    <span class="d-block mb-2">업데이트</span>
+                                    <button class="btn btn-sm btn-icon btn_help mr-0" data-toggle="popover" data-placement="left" data-content="업데이트 버튼을 클릭 하시면 수신확인/리턴메일/링크클릭의 통계값이 업데이트 됩니다.">
+                                        <span class="btn-inner--icon"><i class="far fa-question-circle"></i></span><span class="btn-inner--text hide">info</span>
+                                    </button>
+                                </th>
+                            </tr>
+                            <tr>
+                                <th scope="col">건수</th>
+                                <th scope="col">%</th>
+                                <th scope="col">건수</th>
+                                <th scope="col">%</th>
+                                <th scope="col">건수</th>
+                                <th scope="col">%</th>
+                                <th scope="col">건수</th>
+                                <th scope="col">%</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="checkbox1" name="customcheckbox" class="custom-control-input" />
+                                        <label class="custom-control-label" for="checkbox1"></label>
+                                    </div>
+                                </th>
+                                <td>348</td>
+                                <td class="text-left">
+                                    <a href="#!" class="font-weight-bold">스케줄 이메일</a>
+                                </td>
+                                <td><em class="txt_channel">E</em></td>
+                                <td>2020-09-09</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td class="text-right">0</td>
+                                <td class="text-right">0%</td>
+                                <td class="text-right">0</td>
+                                <td class="text-right">0%</td>
+                                <td class="text-right">0</td>
+                                <td class="text-right">0%</td>
+                                <td class="text-right">0</td>
+                                <td class="text-right">0%</td>
+                                <td>
+                                    <button class="btn btn-sm btn-outline-primary btn-icon">
+                                        <span class="btn-inner--icon"><i class="fas fa-sync-alt"></i></span><span class="btn-inner--text hide">업데이트</span>
+                                    </button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- e.Light table -->
+
+                    <!-- pagenation -->
+                    <div class="pagination pagination-sm mb-0 pb-2 pt-1 justify-content-center">
+                        <ul class="pagination">
+                            <li class="paginate_button page-item previous disabled" id="datatable-basic_previous"><a href="#" aria-controls="datatable-basic" data-dt-idx="0" tabindex="0" class="page-link"><i class="fas fa-angle-left"></i></a></li>
+                            <li class="paginate_button page-item active"><a href="#" aria-controls="datatable-basic" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                            <li class="paginate_button page-item next disabled" id="datatable-basic_next"><a href="#" aria-controls="datatable-basic" data-dt-idx="2" tabindex="0" class="page-link"><i class="fas fa-angle-right"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- e.pagenation -->
                 </div>
                 <!-- e.card body -->
-
-                <!-- Light table -->
-                <div class="table-responsive">
-                    <table class="table dataTable">
-                        <thead class="thead-light">
-                        <tr>
-                            <th rowspan="2" scope="col">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" id="checkbox-all" name="customcheckbox" class="custom-control-input" />
-                                    <label class="custom-control-label" for="checkbox-all"></label>
-                                </div>
-                            </th>
-                            <th rowspan="2" scope="col">캠페인<br />번호</th>
-                            <th rowspan="2" scope="col">캠페인 명</th>
-                            <th rowspan="2" scope="col">채널</th>
-                            <th rowspan="2" scope="col">발송일자</th>
-                            <th rowspan="2" scope="col">대상<br />건수</th>
-                            <th rowspan="2" scope="col">발송<br />건수</th>
-                            <th colspan="2" scope="col">발송 성공</th>
-                            <th colspan="2" scope="col">발송 실패</th>
-                            <th colspan="2" scope="col">수신 확인</th>
-                            <th colspan="2" scope="col">리턴메일</th>
-                            <th rowspan="2" scope="col">
-                                <span class="d-block mb-2">업데이트</span>
-                                <button class="btn btn-sm btn-icon btn_help mr-0" data-toggle="popover" data-placement="left" data-content="업데이트 버튼을 클릭 하시면 수신확인/리턴메일/링크클릭의 통계값이 업데이트 됩니다.">
-                                    <span class="btn-inner--icon"><i class="far fa-question-circle"></i></span><span class="btn-inner--text hide">info</span>
-                                </button>
-                            </th>
-                        </tr>
-                        <tr>
-                            <th scope="col">건수</th>
-                            <th scope="col">%</th>
-                            <th scope="col">건수</th>
-                            <th scope="col">%</th>
-                            <th scope="col">건수</th>
-                            <th scope="col">%</th>
-                            <th scope="col">건수</th>
-                            <th scope="col">%</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <th scope="row">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" id="checkbox1" name="customcheckbox" class="custom-control-input" />
-                                    <label class="custom-control-label" for="checkbox1"></label>
-                                </div>
-                            </th>
-                            <td>348</td>
-                            <td class="text-left">
-                                <a href="#!" class="font-weight-bold">스케줄 이메일</a>
-                            </td>
-                            <td><em class="txt_channel">E</em></td>
-                            <td>2020-09-09</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td class="text-right">0</td>
-                            <td class="text-right">0%</td>
-                            <td class="text-right">0</td>
-                            <td class="text-right">0%</td>
-                            <td class="text-right">0</td>
-                            <td class="text-right">0%</td>
-                            <td class="text-right">0</td>
-                            <td class="text-right">0%</td>
-                            <td>
-                                <button class="btn btn-sm btn-outline-primary btn-icon">
-                                    <span class="btn-inner--icon"><i class="fas fa-sync-alt"></i></span><span class="btn-inner--text hide">업데이트</span>
-                                </button>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <!-- e.Light table -->
-
-                <!-- pagenation -->
-                <div class="pagination pagination-sm mb-0 pb-2 pt-1 justify-content-center">
-                    <ul class="pagination">
-                        <li class="paginate_button page-item previous disabled" id="datatable-basic_previous"><a href="#" aria-controls="datatable-basic" data-dt-idx="0" tabindex="0" class="page-link"><i class="fas fa-angle-left"></i></a></li>
-                        <li class="paginate_button page-item active"><a href="#" aria-controls="datatable-basic" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
-                        <li class="paginate_button page-item next disabled" id="datatable-basic_next"><a href="#" aria-controls="datatable-basic" data-dt-idx="2" tabindex="0" class="page-link"><i class="fas fa-angle-right"></i></a></li>
-                    </ul>
-                </div>
-                <!-- e.pagenation -->
             
             </div>
             <!-- e.card -->
