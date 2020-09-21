@@ -11,7 +11,6 @@
         $(function () {
             $("#subNav").load("../subNav.html");
             $("#js").load("../js.html");
-            $("#headerTop").load("../headerTop.html");
         });
     </script>
 </head>
@@ -22,7 +21,6 @@
         <!-- 메뉴 -->
         <div id="subNav"></div>
         <div id="js"></div>
-        <div id="headerTop"></div>
         <!-- //메뉴-->
 
         <!-- Contents area -->
@@ -62,155 +60,87 @@
 
                     <!-- form -->
                     <form>
-                        <!-- grid -->
-                        <div class="card-body gridWrap">
-                            <!-- row -->
-                            <div class="row">
-                                <!-- col -->
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <dl class="row">
-                                            <dt class="col-4 col-form-label form-control-label">캠페인 번호</dt>
-                                            <dd class="col-8">
-                                                <em class="txt_channel c">C</em> <span>1374</span>
-                                            </dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                                <!-- //col -->
-                                <!-- col -->
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <dl class="row">
-                                            <dt class="col-4 col-form-label form-control-label">캠페인 명</dt>
-                                            <dd class="col-8">
-                                                <span>친구톡 테스트</span>
-                                            </dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                                <!-- //col -->
-                            </div>
-                            <!-- //row -->
-                            <!-- row -->
-                            <div class="row">
-                                <!-- col -->
-                                <div class="col-12">
-                                    <div class="row form-group">
-                                        <label class="col-2 col-form-label form-control-label" for=""><em
-                                                class="required">required</em>대상자</label>
-                                        <div class="col-10">
-                                            <div class="row">
-                                                <div class="col-4"><input type="text" class="form-control"
-                                                        placeholder="" required/></div>
-                                                <div class="col-2 input-has-unit"><input type="text"
-                                                        class="form-control" placeholder="" required/>
-                                                    <spa class="unit">명</spa>
-                                                </div>
-                                                <div class="col-auto">
-                                                    <button class="btn btn-secondary btn-icon btn_search">
-                                                        <span class="btn-inner--icon"><i
-                                                                class="fas fa-search"></i></span><span
-                                                            class="btn-inner--text hide">검색</span>
-                                                    </button>
-                                                </div>
-                                                <div class="col-auto">
-                                                    <button class="btn btn-secondary" type="button">대상자 선택</button>
-                                                </div>
-                                                <div class="col-auto">
-                                                    <button class="btn btn-secondary" type="button">대상자 등록</button>
-                                                </div>
+                         <!-- card body -->
+                        <div class="card-body">
+                                <!-- Light table -->
+                    <div class="table-responsive newgridWrap">
+                        <table class="table table-sm dataTable">
+                            <colgroup>
+                                <col style="width:15%;" />
+                                <col style="width:35%;" />
+                                <col style="width:15%;" />
+                                <col style="width:35%;" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">캠페인 번호</th>
+                                    <td><em class="txt_channel c">C</em> <span>1374</span></td>
+                                    <th scope="row">캠페인 명</th>
+                                    <td>친구톡</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><em class="required">required</em>대상자</th>
+                                    <td colspan="3">
+                                        <div class="form-row align-items-center">
+                                            <div class="col-4"><input type="text" class="form-control form-control-sm" placeholder="" /></div>
+                                            <div class="col-2 input-has-unit"><input type="text" class="form-control form-control-sm" placeholder="" /><spa class="unit">명</spa></div>
+                                            <div class="col-auto">
+                                                <button type="button" class="btn btn-outline-primary btn-sm btn-icon btn_search">
+                                                    <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span class="btn-inner--text hide">검색</span>
+                                                </button>
+                                            </div>
+                                            <div class="col-auto">
+                                                <button class="btn btn-outline-primary btn-sm" type="button">대상자 선택</button>
+                                            </div>
+                                            <div class="col-auto">
+                                                <button class="btn btn-outline-primary btn-sm" type="button">대상자 등록</button>
                                             </div>
                                         </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><em class="required">required</em>플러스친구 ID</th>
+                                    <td>
+                                        <select class="form-control form-control-sm">
+                                            <option value="">@엠앤와이즈</option>
+                                        </select>
+                                </td>
+                                    <th scope="row"><em class="required">required</em>광고문구표기여부</th>
+                                    <td> <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="show1" name="show" class="custom-control-input" required/>
+                                        <label class="custom-control-label" for="show1">표기함</label>
                                     </div>
-                                </div>
-                                <!-- //col -->
-                            </div>
-                            <!-- //row -->
-                            <!-- row -->
-                            <div class="row">
-                                <!-- col -->
-                                <div class="col-6">
-                                    <div class="row form-group">
-                                        <label class="col-4 col-form-label form-control-label" for=""><em
-                                                class="required">required</em>플러스친구 ID</label>
-                                        <div class="col-8">
-                                            <select class="form-control" required>
-                                                <option>@엠앤와이즈</option>
-                                            </select>
-                                        </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="show2" name="show" class="custom-control-input" required/>
+                                        <label class="custom-control-label" for="show2">표기안함</label>
                                     </div>
-                                </div>
-                                <!-- //col -->
-                                <!-- col -->
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <dl class="row">
-                                            <dt class="col-4 col-form-label form-control-label"><em
-                                                    class="required">required</em>광고문구표기여부</dt>
-                                            <dd class="col-8">
-                                                <div class="custom-control custom-radio custom-control-inline">
-                                                    <input type="radio" id="customRadioInline1"
-                                                        name="customRadioInline1" class="custom-control-input" required/>
-                                                    <label class="custom-control-label"
-                                                        for="customRadioInline1">표기함</label>
-                                                </div>
-                                                <div class="custom-control custom-radio custom-control-inline">
-                                                    <input type="radio" id="customRadioInline2"
-                                                        name="customRadioInline1" class="custom-control-input" required/>
-                                                    <label class="custom-control-label" for="customRadioInline2">표기
-                                                        안함</label>
-                                                </div>
-                                            </dd>
-                                        </dl>
+                                   </td>
+                                    
+                                </tr>
+                              
+                                <tr>
+                                    <th scope="row"><em class="required">required</em>실패건 문자발송여부</th>
+                                    <td> <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="show3" name="show2" class="custom-control-input"required />
+                                        <label class="custom-control-label" for="show3">발송함</label>
                                     </div>
-                                </div>
-                                <!-- //col -->
-                            </div>
-                            <!-- //row -->
-                            <!-- row -->
-                            <div class="row">
-                                <!-- col -->
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <dl class="row">
-                                            <dt class="col-4 col-form-label form-control-label"><em
-                                                    class="required">required</em>실패건 문자발송여부</dt>
-                                            <dd class="col-8">
-                                                <div class="custom-control custom-radio custom-control-inline">
-                                                    <input type="radio" id="customRadioInline3"
-                                                        name="customRadioInline2" class="custom-control-input" required/>
-                                                    <label class="custom-control-label"
-                                                        for="customRadioInline3">발송함</label>
-                                                </div>
-                                                <div class="custom-control custom-radio custom-control-inline">
-                                                    <input type="radio" id="customRadioInline4"
-                                                        name="customRadioInline2" class="custom-control-input" required/>
-                                                    <label class="custom-control-label" for="customRadioInline4">발송
-                                                        안함</label>
-                                                </div>
-                                            </dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                                <!-- //col -->
-                                <!-- col -->
-                                <div class="col-6">
-                                    <div class="row form-group">
-                                        <label class="col-4 col-form-label form-control-label" for="">실패시 발신자 번호</label>
-                                        <div class="col-8">
-                                            <input type="text" id="" class="form-control" value="02-865-4210" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- //col -->
-                            </div>
-                            <!-- //row -->
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="show4" name="show2" class="custom-control-input" required/>
+                                        <label class="custom-control-label" for="show4">발송안함</label>
+                                    </div></td>
+                                       <th scope="row">실패시 발신자 번호</th>
+                                    <td><input type="text" class="form-control form-control-sm" placeholder="" /></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //Light table -->
+
                         </div>
-                        <!-- //grid -->
+                       <!-- // card body -->
 
                         <!-- message -->
-                        <div class="card-body message_contents border-top">
+                        <div class="card-body message_contents">
                             <div class="row">
                                 <!-- mobile preview -->
                                 <div class="col col-phone">
@@ -376,4 +306,4 @@
         <!-- e.wrapper -->
 
         
-        </html>
+        </html> -->
