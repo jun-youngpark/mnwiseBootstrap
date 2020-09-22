@@ -9,9 +9,9 @@
 
     <script>
     $(function () {
-        $("#subNav").load("../subNav.html");
-        $("#js").load("../js.html");
-        $("#headerTop").load("../headerTop.html");
+        $("#subNav").load("/subNav.html");
+        $("#js").load("/js.html");
+        $("#headerTop").load("/headerTop.html");
     });
 
     </script>
@@ -46,94 +46,265 @@
                     <!-- tabs -->
                     <ul class="nav nav-tabs tab02 mb-4" id="tabs-text" role="tablist">
                         <li class="nav-item">
-                            <a class="nav-link mb-sm-3 mb-md-0 active" href="#">실시간</a>
+                            <a class="nav-link mb-sm-3 mb-md-0 active" href="#ecare_tab1">실시간</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mb-sm-3 mb-md-0" href="#">준 실시간</a>
+                            <a class="nav-link mb-sm-3 mb-md-0" href="#ecare_tab2">준 실시간</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link mb-sm-3 mb-md-0" href="#">스케쥴(분)</a>
+                            <a class="nav-link mb-sm-3 mb-md-0" href="#ecare_tab2">스케쥴(분)</a>
                         </li>
                     </ul>
                     <!-- //tabs -->
 
-                    <!-- row -->
-                    <div class="row table_option py-2">
-                        <!-- search -->
-                        <div class="col-12 searchbox">
-                            <!-- period -->
-                            <div class="periodWrap align-items-center">
-                                <div class="input-group date datepicker datepicker-inline">
-                                    <input type="text" class="form-control form-control-sm" />
-                                    <span class="input-group-addon input-group-append">
-                                        <button class="btn btn-outline-primary btn-sm" type="button"> <span class="fa fa-calendar"></span></button>
-                                    </span>
+                    <!-- tab contents -->
+                    <div id="ecare_tab1" class="tab_cont">
+                        <h4 class="hide">실시간</h4>
+                        <!-- row -->
+                        <div class="row table_option py-2">
+                            <!-- search -->
+                            <div class="col-12 searchbox">
+                                <!-- period -->
+                                <div class="periodWrap align-items-center">
+                                    <div class="input-group date datepicker datepicker-inline">
+                                        <input type="text" class="form-control form-control-sm" />
+                                        <span class="input-group-addon input-group-append">
+                                            <button class="btn btn-outline-primary btn-sm" type="button"> <span class="fa fa-calendar"></span></button>
+                                        </span>
+                                    </div>
+                                    <span class="txt">~</span>
+                                    <div class="input-group date datepicker datepicker-inline">
+                                        <input type="text" class="form-control form-control-sm" />
+                                        <span class="input-group-addon input-group-append">
+                                            <button class="btn btn-outline-primary btn-sm" type="button"> <span class="fa fa-calendar"></span></button>
+                                        </span>
+                                    </div>
                                 </div>
-                                <span class="txt">~</span>
-                                <div class="input-group date datepicker datepicker-inline">
-                                    <input type="text" class="form-control form-control-sm" />
-                                    <span class="input-group-addon input-group-append">
-                                        <button class="btn btn-outline-primary btn-sm" type="button"> <span class="fa fa-calendar"></span></button>
-                                    </span>
+                                <!-- //period -->
+                                <div class="form-group searchbox pl-2">
+                                    <div class="search_input">
+                                        <span class="form-control-label txt">이케어 명</span>
+                                        <select class="form-control form-control-sm">
+                                            <option>서비스 명</option>
+                                            <option>이케어 번호</option>
+                                        </select>
+                                        <input type="search" class="form-control form-control-sm" placeholder="" aria-controls="datatable-basic" />
+                                        <button class="btn btn-sm btn-outline-info btn-icon btn_search">
+                                            <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span class="btn-inner--text">검색</span>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-                            <!-- //period -->
-                            <div class="form-group searchbox pl-2">
-                                <div class="search_input">
-                                    <span class="form-control-label txt">이케어 명</span>
-                                    <select class="form-control form-control-sm">
-                                        <option>서비스 명</option>
-                                        <option>이케어 번호</option>
-                                    </select>
-                                    <input type="search" class="form-control form-control-sm" placeholder="" aria-controls="datatable-basic" />
-                                    <button class="btn btn-sm btn-outline-info btn-icon btn_search">
-                                        <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span class="btn-inner--text">검색</span>
-                                    </button>
-                                </div>
-                            </div>
+                            <!-- //search -->
                         </div>
-                        <!-- //search -->
-                    </div>
-                    <!-- //row -->
+                        <!-- //row -->
 
-                    <!-- Light table -->
-                    <div class="table-responsive">
-                        <table class="table dataTable">
-                            <thead class="thead-light">
-                                <tr>
-                                    <th scope="col">이케어 번호</th>
-                                    <th scope="col">이케어 명</th>
-                                    <th scope="col">채널</th>
-                                    <th scope="col">상태</th>
-                                    <th scope="col">담당자</th>
-                                    <th scope="col">요청부서</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">348</th>
-                                    <td class="text-left">
-                                        <a href="#!" class="font-weight-bold">스케줄 이메일</a>
-                                    </td>
-                                    <td><em class="txt_channel">E</em></td>
-                                    <td>실행</td>
-                                    <td>시스템관리자</td>
-                                    <td>부서명</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <!-- //Light table -->
+                        <!-- Light table -->
+                        <div class="table-responsive">
+                            <table class="table dataTable">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">이케어 번호</th>
+                                        <th scope="col">이케어 명</th>
+                                        <th scope="col">채널</th>
+                                        <th scope="col">상태</th>
+                                        <th scope="col">담당자</th>
+                                        <th scope="col">요청부서</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">348</th>
+                                        <td class="text-left">
+                                            <a href="#!" class="font-weight-bold">스케줄 이메일</a>
+                                        </td>
+                                        <td><em class="txt_channel">E</em></td>
+                                        <td>실행</td>
+                                        <td>시스템관리자</td>
+                                        <td>부서명</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //Light table -->
 
-                    <!-- pagenation -->
-                    <div class="pagination pagination-sm mb-0 pb-2 pt-1 justify-content-center">
-                        <ul class="pagination">
-                            <li class="paginate_button page-item previous disabled" id="datatable-basic_previous"><a href="#" aria-controls="datatable-basic" data-dt-idx="0" tabindex="0" class="page-link"><i class="fas fa-angle-left"></i></a></li>
-                            <li class="paginate_button page-item active"><a href="#" aria-controls="datatable-basic" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
-                            <li class="paginate_button page-item next disabled" id="datatable-basic_next"><a href="#" aria-controls="datatable-basic" data-dt-idx="2" tabindex="0" class="page-link"><i class="fas fa-angle-right"></i></a></li>
-                        </ul>
+                        <!-- pagenation -->
+                        <div class="pagination pagination-sm mb-0 pb-2 pt-1 justify-content-center">
+                            <ul class="pagination">
+                                <li class="paginate_button page-item previous disabled" id="datatable-basic_previous"><a href="#" aria-controls="datatable-basic" data-dt-idx="0" tabindex="0" class="page-link"><i class="fas fa-angle-left"></i></a></li>
+                                <li class="paginate_button page-item active"><a href="#" aria-controls="datatable-basic" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                                <li class="paginate_button page-item next disabled" id="datatable-basic_next"><a href="#" aria-controls="datatable-basic" data-dt-idx="2" tabindex="0" class="page-link"><i class="fas fa-angle-right"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- e.pagenation -->
                     </div>
-                    <!-- e.pagenation -->
+                    <!-- //tab contents -->
+
+                    <!-- tab contents -->
+                    <div id="ecare_tab2" class="tab_cont">
+                        <h4 class="hide">준 실시간</h4>
+                        <!-- row -->
+                        <div class="row table_option py-2">
+                            <!-- search -->
+                            <div class="col-12 searchbox">
+                                <!-- period -->
+                                <div class="periodWrap align-items-center">
+                                    <div class="input-group date datepicker datepicker-inline">
+                                        <input type="text" class="form-control form-control-sm" />
+                                        <span class="input-group-addon input-group-append">
+                                            <button class="btn btn-outline-primary btn-sm" type="button"> <span class="fa fa-calendar"></span></button>
+                                        </span>
+                                    </div>
+                                    <span class="txt">~</span>
+                                    <div class="input-group date datepicker datepicker-inline">
+                                        <input type="text" class="form-control form-control-sm" />
+                                        <span class="input-group-addon input-group-append">
+                                            <button class="btn btn-outline-primary btn-sm" type="button"> <span class="fa fa-calendar"></span></button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- //period -->
+                                <div class="form-group searchbox pl-2">
+                                    <div class="search_input">
+                                        <span class="form-control-label txt">이케어 명</span>
+                                        <select class="form-control form-control-sm">
+                                            <option>서비스 명</option>
+                                            <option>이케어 번호</option>
+                                        </select>
+                                        <input type="search" class="form-control form-control-sm" placeholder="" aria-controls="datatable-basic" />
+                                        <button class="btn btn-sm btn-outline-info btn-icon btn_search">
+                                            <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span class="btn-inner--text">검색</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //search -->
+                        </div>
+                        <!-- //row -->
+
+                        <!-- Light table -->
+                        <div class="table-responsive">
+                            <table class="table dataTable">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">이케어 번호</th>
+                                        <th scope="col">이케어 명</th>
+                                        <th scope="col">채널</th>
+                                        <th scope="col">상태</th>
+                                        <th scope="col">담당자</th>
+                                        <th scope="col">요청부서</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">348</th>
+                                        <td class="text-left">
+                                            <a href="#!" class="font-weight-bold">스케줄 이메일</a>
+                                        </td>
+                                        <td><em class="txt_channel">E</em></td>
+                                        <td>실행</td>
+                                        <td>시스템관리자</td>
+                                        <td>부서명</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //Light table -->
+
+                        <!-- pagenation -->
+                        <div class="pagination pagination-sm mb-0 pb-2 pt-1 justify-content-center">
+                            <ul class="pagination">
+                                <li class="paginate_button page-item previous disabled" id="datatable-basic_previous"><a href="#" aria-controls="datatable-basic" data-dt-idx="0" tabindex="0" class="page-link"><i class="fas fa-angle-left"></i></a></li>
+                                <li class="paginate_button page-item active"><a href="#" aria-controls="datatable-basic" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                                <li class="paginate_button page-item next disabled" id="datatable-basic_next"><a href="#" aria-controls="datatable-basic" data-dt-idx="2" tabindex="0" class="page-link"><i class="fas fa-angle-right"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- e.pagenation -->
+                    </div>
+                    <!-- //tab contents -->
+
+                    <!-- tab contents -->
+                    <div id="ecare_tab3" class="tab_cont">
+                        <h4 class="hide">스케쥴</h4>
+                        <!-- row -->
+                        <div class="row table_option py-2">
+                            <!-- search -->
+                            <div class="col-12 searchbox">
+                                <!-- period -->
+                                <div class="periodWrap align-items-center">
+                                    <div class="input-group date datepicker datepicker-inline">
+                                        <input type="text" class="form-control form-control-sm" />
+                                        <span class="input-group-addon input-group-append">
+                                            <button class="btn btn-outline-primary btn-sm" type="button"> <span class="fa fa-calendar"></span></button>
+                                        </span>
+                                    </div>
+                                    <span class="txt">~</span>
+                                    <div class="input-group date datepicker datepicker-inline">
+                                        <input type="text" class="form-control form-control-sm" />
+                                        <span class="input-group-addon input-group-append">
+                                            <button class="btn btn-outline-primary btn-sm" type="button"> <span class="fa fa-calendar"></span></button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- //period -->
+                                <div class="form-group searchbox pl-2">
+                                    <div class="search_input">
+                                        <span class="form-control-label txt">이케어 명</span>
+                                        <input type="search" class="form-control form-control-sm" placeholder="" aria-controls="datatable-basic" />
+                                        <button class="btn btn-sm btn-outline-info btn-icon btn_search">
+                                            <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span class="btn-inner--text">검색</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //search -->
+                        </div>
+                        <!-- //row -->
+
+                        <!-- Light table -->
+                        <div class="table-responsive">
+                            <table class="table dataTable">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">이케어 번호</th>
+                                        <th scope="col">이케어 명</th>
+                                        <th scope="col">채널</th>
+                                        <th scope="col">상태</th>
+                                        <th scope="col">대상수</th>
+                                        <th scope="col">발송시간</th>
+                                        <th scope="col">담당자</th>
+                                        <th scope="col">요청부서</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">348</th>
+                                        <td class="text-left">
+                                            <a href="#!" class="font-weight-bold">스케줄 이메일</a>
+                                        </td>
+                                        <td><em class="txt_channel">E</em></td>
+                                        <td>실행</td>
+                                        <td>1 명</td>
+                                        <td>09:32:00</td>
+                                        <td>시스템관리자</td>
+                                        <td>부서명</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //Light table -->
+
+                        <!-- pagenation -->
+                        <div class="pagination pagination-sm mb-0 pb-2 pt-1 justify-content-center">
+                            <ul class="pagination">
+                                <li class="paginate_button page-item previous disabled" id="datatable-basic_previous"><a href="#" aria-controls="datatable-basic" data-dt-idx="0" tabindex="0" class="page-link"><i class="fas fa-angle-left"></i></a></li>
+                                <li class="paginate_button page-item active"><a href="#" aria-controls="datatable-basic" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                                <li class="paginate_button page-item next disabled" id="datatable-basic_next"><a href="#" aria-controls="datatable-basic" data-dt-idx="2" tabindex="0" class="page-link"><i class="fas fa-angle-right"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- e.pagenation -->
+                    </div>
+                    <!-- //tab contents -->
                 </div>
                 <!-- e.card body -->
             </div>

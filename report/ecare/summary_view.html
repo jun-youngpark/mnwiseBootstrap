@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script src="/assets/vendor/chart.js/dist/Chart.min.js"></script>
+    <script src="/assets/vendor/chart.js/dist/Chart.extension.js"></script>
+
+    <script>
+    $(function () {
+        $("#subNav").load("/subNav.html");
+        $("#js").load("/js.html");
+        $("#headerTop").load("/headerTop.html");
+    });
+
+    
+
+    </script>
+</head>
+
+<body>
+<!-- wrapper -->
+<div class="wrapper">
+    <!-- 메뉴 -->
+    <div id="subNav"></div>
+    <div id="js"></div>
+    <div id="headerTop"></div>
+    <!-- //메뉴-->
+
+    <!-- Contents area  -->
+    <div class="main-panel">
+        <!-- Page content -->
+        <div class="container-fluid mt-4">
+
+            <!-- card -->
+            <div class="card">
+                <!-- Card header -->
+                <div class="card-header">
+                    <!-- title  -->
+                    <h3 class="mb-0">이케어 리포트</h3>
+                    <!-- //title -->
+                </div>
+                <!-- e.Card header -->
+                
+                <!-- card body -->
+                <div class="card-body">
+                    <!-- tabs -->
+                    <ul class="nav nav-tabs tab02 mb-4" id="tabs-text" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link mb-sm-3 mb-md-0 active" href="summary_view.html">요약분석</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mb-sm-3 mb-md-0" href="err_summary_view.html">오류분석</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mb-sm-3 mb-md-0" href="linkclick_view.html">링크클릭 분석</a>
+                        </li>
+                    </ul>
+                    <!-- //tabs -->
+
+                    <!-- Light table -->
+                    <div class="table-responsive newgridWrap">
+                        <table class="table table-sm dataTable">
+                            <colgroup>
+                                <col style="width:15%;" />
+                                <col />
+                                <col style="width:15%;" />
+                                <col style="width:25%;" />
+                            </colgroup>
+                            <tbody>
+                            <tr>
+                                <th scope="row">이케어 명</th>
+                                <td><em class="txt_channel">E</em><span>승인요청 테스트</span></td>
+                                <th scope="row">발송 상태</th>
+                                <td>발송종료</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">담당부서</th>
+                                <td>발표</td>
+                                <th scope="row">담당자</th>
+                                <td>아무래</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">반응 추적기간</th>
+                                <td>2020-09-09 00:00 ~ 2020-09-10 00:00</td>
+                                <th scope="row">이케어 유형</th>
+                                <td>일반발송</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- e.Light table -->
+                </div>
+                <!-- //card body -->
+
+                <!-- button area -->
+                <div class="card-footer btn_area">
+                    <div class="row">
+                        <div class="col col-6">
+                            <button type="button" class="btn btn btn-outline-primary btn-icon">
+                                <span class="btn-inner--icon"><i class="fas fa-list"></i></span><span class="btn-inner--text">목록</span>
+                            </button>
+                        </div>
+                        <div class="col col-6">
+                            <button type="button" class="btn btn btn-outline-info btn-icon">
+                                <span class="btn-inner--icon"><i class="fas fa-chevron-left"></i></span><span class="btn-inner--text">이전단계</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- e.button area -->
+            </div>
+            <!-- //card -->
+
+            <!-- card -->
+            <div class="card">
+                <!-- card body -->
+                <div class="card-body">
+                    <!-- title  -->
+                    <div class="row">
+                        <div class="col-6">
+                            <h4 class="h3 text-primary mb-3">발송 결과</h4>
+                        </div>
+                        <div class="col-6 text-right">
+                            <button class="btn btn-sm btn-outline-primary btn-icon">
+                                <span class="btn-inner--icon"><i class="far fa-file-excel"></i></span><span class="btn-inner--text">엑셀 다운로드</span>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- //title -->
+
+                    <!-- Light table -->
+                    <div class="table-responsive">
+                        <table class="table table-sm dataTable">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th rowspan="2" scope="col">이케어 명</th>
+                                    <th rowspan="2" scope="col">대상 수</th>
+                                    <th colspan="2" scope="col">발송 수</th>
+                                    <th colspan="2" scope="col">발송 성공</th>
+                                    <th colspan="2" scope="col">Hard Bounce</th>
+                                    <th colspan="2" scope="col">Soft Bounce</th>
+                                    <th rowspan="2" scope="col">발송일자</th>
+                                    <th rowspan="2" scope="col">성공</th>
+                                    <th rowspan="2" scope="col">실패</th>
+                                </tr>
+                                <tr>
+                                    <th scope="col">건수</th>
+                                    <th scope="col">%</th>
+                                    <th scope="col">건수</th>
+                                    <th scope="col">%</th>
+                                    <th scope="col">건수</th>
+                                    <th scope="col">%</th>
+                                    <th scope="col">건수</th>
+                                    <th scope="col">%</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-left"><a href="#!" class="font-weight-bold">승인요청 테스트</a></td>
+                                    <td>2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">0%</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">0%</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">0%</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">0%</td>
+                                    <td>2020-09-09</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-primary btn-icon">
+                                            <span class="btn-inner--icon"><i class="far fa-file-excel"></i></span><span class="btn-inner--text hide">Excel download</span>
+                                        </button>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-sm btn-outline-primary btn-icon">
+                                            <span class="btn-inner--icon"><i class="far fa-file-excel"></i></span><span class="btn-inner--text hide">Excel download</span>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- accordion -->
+                    <div class="accordion mt-3" id="chatToggle">
+                        <div class="card m-0">
+                            <div class="card-header p-0" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left p-3" type="button" data-toggle="collapse" data-target="#chartview" aria-expanded="true" aria-controls="chartview">차트 보기</button>
+                                </h5>
+                            </div>
+                      
+                            <div id="chartview" class="collapse show" aria-labelledby="headingOne" data-parent="#chatToggle">
+                                <div class="card-body">
+                                    <!-- row -->
+                                    <div class="row align-items-center">
+                                        <!-- chart column -->
+                                        <div class="col-6">
+                                            <div class="chart">
+                                                <!-- Chart wrapper -->
+                                                <canvas id="chart-pie" class="chart-canvas"></canvas>
+                                            </div>
+                                        </div>
+                                        <!-- //chart column -->
+
+                                        <!-- chart legend -->
+                                        <div class="col-6">
+                                            <ul class="list-group list">
+                                                <li class="list-group-item">
+                                                    <dl class="row m-0">
+                                                        <dt class="col-sm-4 text-info">Soft Bounce</dt>
+                                                        <dd class="col-sm-8 m-0">
+                                                            <p class="m-0">이케어 발송 시 네트워크 환경 장애로 인한 일시적인 발송실패(재발송시 발송성공 가능성이 있는 실패)</p>
+                                                        </dd>
+                                                    </dl>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <dl class="row m-0">
+                                                        <dt class="col-sm-4 text-info">Hard Bounce</dt>
+                                                        <dd class="col-sm-8 m-0">
+                                                            <p class="m-0">대상자의 도메인, 이메일 주소가 없어 발송성공이 물리적으로 될 수 없는 상태 (재발송 시 발송 성공 불가능)</p>
+                                                        </dd>
+                                                    </dl>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- //chart legend -->
+                                    </div>
+                                    <!-- //row -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //accordion -->
+                    
+                </div>
+                <!-- e.card body -->
+            </div>
+            <!-- e.card -->
+
+            <!-- card -->
+            <div class="card">
+                <!-- card body -->
+                <div class="card-body">
+                    <h4 class="h3 text-primary mb-3">수신확인결과</h4>
+
+                    <!-- Light table -->
+                    <div class="table-responsive">
+                        <table class="table table-sm dataTable">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th rowspan="2" scope="col">발송성공</th>
+                                    <th colspan="2" scope="col">수신확인</th>
+                                    <th colspan="2" scope="col">유효 수신</th>
+                                    <th colspan="2" scope="col">중복 수신</th>
+                                    <th colspan="2" scope="col">모바일 수신</th>
+                                </tr>
+                                <tr>
+                                    <th scope="col">건수</th>
+                                    <th scope="col">%</th>
+                                    <th scope="col">건수</th>
+                                    <th scope="col">%</th>
+                                    <th scope="col">건수</th>
+                                    <th scope="col">%</th>
+                                    <th scope="col">건수</th>
+                                    <th scope="col">%</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">0%</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">0%</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">0%</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">0%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //Light table -->
+                    
+                    <!-- accordion -->
+                    <div class="accordion mt-3" id="chatToggle_result">
+                        <!-- card -->
+                        <div class="card mb-3">
+                            <div class="card-header p-0" id="day-chart">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link btn-block text-left p-3" type="button" data-toggle="collapse" data-target="#chartview2-1" aria-expanded="true" aria-controls="chartview2-1">일자별 대상자 반응 분석</button>
+                                </h5>
+                            </div>
+                      
+                            <div id="chartview2-1" class="collapse show" aria-labelledby="day-chart" data-parent="#chatToggle_result">
+                                <div class="card-body">
+                                    <!-- Chart wrapper -->
+                                    <canvas id="chart-points" class="chart-canvas"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //card -->
+                    </div>
+                    <!-- //accordion -->
+                    
+                </div>
+                <!-- e.card body -->
+            </div>
+            <!-- e.card -->
+
+        </div> <!-- e.page content -->
+    </div>
+    <!--e.Contents area-->
+</div>
+<!-- e.wrapper -->
+
+</html>
