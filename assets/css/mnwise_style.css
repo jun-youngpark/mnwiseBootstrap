@@ -355,3 +355,4 @@ button.btn-sm {min-height:30px;}
 /***** chart area *****/
 .chartWrap {position:relative; min-height:200px;}
 
+.dp-none {	display:none; }
