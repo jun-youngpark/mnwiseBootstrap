@@ -12,9 +12,9 @@
 
     <script>
     $(function () {
-        $("#subNav").load("../subNav.html");
-        $("#js").load("../js.html");
-        $("#headerTop").load("../headerTop.html");
+        $("#subNav").load("/subNav.html");
+        $("#js").load("/js.html");
+        $("#headerTop").load("/headerTop.html");
     });
 
     
@@ -106,72 +106,70 @@
                         </table>
                     </div>
                     <!-- e.Light table -->
-
-                    <!-- grid -->
-                    <div class="gridWrap mt-5">
-                        <!-- row -->
-                        <div class="row">
-                            <!-- col -->
-                            <div class="col-4">
-                                <div class="row form-group">
-                                    <label class="col-6 col-form-label form-control-label" for=""><em class="required">required</em>발송 일련번호</label>
-                                    <div class="col-6">
-                                        <input type="text" id="" class="form-control form-control-sm" />
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- //col -->
-                            <!-- col -->
-                            <div class="col-4">
-                                <div class="row form-group">
-                                    <label class="col-6 col-form-label form-control-label" for=""><em class="required">required</em>실패 대상자 수</label>
-                                    <div class="col-6">
-                                        <input type="text" id="" class="form-control form-control-sm" />
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- //col -->
-                            <!-- col -->
-                            <div class="col-4">
-                                <div class="row form-group">
-                                    <label class="col-6 col-form-label form-control-label" for=""><em class="required">required</em>재발송 대상자 수</label>
-                                    <div class="col-6">
-                                        <input type="text" id="" class="form-control form-control-sm" />
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- //col -->
-                        </div>
-                        <!-- //row -->
-                         <!-- row -->
-                         <div class="row">
-                            <!-- col -->
-                            <div class="col-12">
-                                <div class="row form-group">
-                                    <label class="col-2 col-form-label form-control-label" for=""><em class="required">required</em>재발송 사유</label>
-                                    <div class="col-8">
-                                        <input type="text" id="" class="form-control form-control-sm" />
-                                    </div>
-                                    <div class="col-2">
-                                        <button class="btn btn-sm btn-outline-info">재발송</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- //col -->
-                        </div>
-                        <!-- //row -->
-                    </div>
-                    <!-- //grid -->
                 </div>
                 <!-- //card body -->
 
                 <!-- button area -->
                 <div class="card-footer pb-4 btn_area">
-                    <button type="button" class="btn btn btn-outline-primary btn-icon">
+                    <button type="button" class="btn btn-outline-primary btn-icon">
                         <span class="btn-inner--icon"><i class="fas fa-list"></i></span><span class="btn-inner--text">목록</span>
+                    </button>
+                    <button type="button" class="btn btn-default btn-icon" data-toggle="modal" data-target="#resend">
+                        <span class="btn-inner--icon"><i class="fas fa-reply"></i></span><span class="btn-inner--text">재발송</span>
                     </button>
                 </div>
                 <!-- e.button area -->
+
+                <!-- Modal :: 재발송 -->
+                <div class="modal fade" id="resend" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">재발송</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- Light table -->
+                                <div class="table-responsive newgridWrap">
+                                    <table class="table table-sm dataTable">
+                                        <colgroup>
+                                            <col style="width:10%;" />
+                                            <col style="width:24%;" />
+                                            <col style="width:10%;" />
+                                            <col style="width:23%;" />
+                                            <col style="width:10%;" />
+                                            <col style="width:23%;" />
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row"><em class="required">required</em>발송 일련번호</th>
+                                                <td><input type="text" class="form-control form-control-sm" /></td>
+                                                <th scope="row"><em class="required">required</em>실패 대상자 수</th>
+                                                <td><input type="text" class="form-control form-control-sm" /></td>
+                                                <th scope="row"><em class="required">required</em>재발송 대상자 수</th>
+                                                <td><input type="text" class="form-control form-control-sm" /></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row"><em class="required">required</em>재발송 사유</th>
+                                                <td colspan="5"><input type="text" class="form-control form-control-sm" /></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- //Light table -->
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-primary btn-icon" data-toggle="modal" data-target="#resend">
+                                    <span class="btn-inner--icon"><i class="fas fa-reply"></i></span><span class="btn-inner--text">재발송</span>
+                                </button>
+                                <button type="button" class="btn btn-outline-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //Modal :: 재발송 -->
             </div>
             <!-- //card -->
 
