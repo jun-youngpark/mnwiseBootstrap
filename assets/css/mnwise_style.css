@@ -1,4 +1,10 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+
+body {font-family:'Roboto', 'Noto Sans KR', sans-serif;}
+
+
 /* wrap = sidebar(250px) + mainpanel(100% / padding-left 250px) */
 
 /*wrapper 1260 작업 시 스크롤 x : 최소 해상도 1280px에서 스크롤이 발생하지 않도록 최소 너비는 스크롤바 너비를 제외한 1260px로 해야 합니다. 
@@ -12,7 +18,7 @@
 .navbar-vertical .navbar-nav {margin:0;}
 
 /*.sidebar .nav li {margin: 0 15px;}*/
-.sidebar .nav-link {padding: .675rem 1.5rem;}
+.sidebar .nav-link {padding: .675rem 1.5rem; font-weight:500;}
 .sidebar .navbar-brand {padding: 1.5rem;}
 .navbar-vertical .navbar-brand-img, .navbar-vertical .navbar-brand>img { max-width: 100%; max-height: 3rem;}
 body{background:#fff;}
@@ -89,6 +95,7 @@ em {font-style: normal; color:var(--primary);}
 .fa-file-excel {font-size:.9375rem;}
 
 /***** button *****/
+.btn {font-weight:500;}
 .card-footer.btn_area, .btn_area {text-align:center;}
 .card-footer.btn_area .col {text-align:left;}
 .card-footer.btn_area .col:last-child {text-align:right;}
@@ -167,6 +174,7 @@ button.btn-sm {min-height:30px;}
 .table-view .form-row .btn {height:calc(.45em + 1.25rem + 5px);}
 .table-view .form-row .btn-outline-secondary {border-color:#dee2e6;}
 .table.table-view td {text-align:left;}
+.table th {font-weight:500;}
 .table th, .table td, .table td>a{max-width:170px; overflow: hidden; white-space: nowrap;  text-overflow: ellipsis;}
 .table-responsive:first-child > table {margin-top:0 !important;}
 .table .btn-icon {min-width:30px; padding:4px 7px;}
@@ -339,9 +347,10 @@ button.btn-sm {min-height:30px;}
 .modal-footer button {min-width:150px;}
 
 /***** window open popup *****/
-.pop-card {height:100vh; min-height:100%; margin:0 !important}
-.pop-card .card-header {background:#f7fafc;}
-.pop-card .card-body {-webkit-flex:1; flex:1;}
+.pop-card {height:100vh; min-height:100%; margin:0 !important;}
+.pop-card .card-header {background:#eeeff3; border-radius:0 !important;}
+.pop-card .card-header * {color:#212121;}
+.pop-card .card-body {-webkit-flex:1; flex:1; overflow: auto;}
 .pop-card .compare-row, .pop-card .compare-row .col {height:100%;}
 .pop-card .compare_wrapper {display:-webkit-box; display:flex; height:100%; -webkit-flex-direction:column; flex-direction:column;}
 .pop-card .compare_wrapper .text-area {-webkit-flex:1; flex:1;}
