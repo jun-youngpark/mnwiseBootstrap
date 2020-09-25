@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script>
+    $(function () {
+        $("#js").load("/js.html");
+    });
+
+    
+
+    </script>
+</head>
+
+<body>
+<div id="js"></div>
+
+<div class="card pop-card">
+    <div class="card-header">
+        <h5 class="mb-0">재발송</h5>
+    </div>
+
+    <div class="card-body">
+        <!-- Light table -->
+        <div class="table-responsive newgridWrap">
+            <table class="table table-sm dataTable">
+                <colgroup>
+                    <col style="width:10%;" />
+                    <col style="width:24%;" />
+                    <col style="width:10%;" />
+                    <col style="width:23%;" />
+                    <col style="width:10%;" />
+                    <col style="width:23%;" />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row"><em class="required">required</em>발송 일련번호</th>
+                        <td><input type="text" class="form-control form-control-sm" /></td>
+                        <th scope="row"><em class="required">required</em>실패 대상자 수</th>
+                        <td><input type="text" class="form-control form-control-sm" /></td>
+                        <th scope="row"><em class="required">required</em>재발송 대상자 수</th>
+                        <td><input type="text" class="form-control form-control-sm" /></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><em class="required">required</em>재발송 사유</th>
+                        <td colspan="5"><input type="text" class="form-control form-control-sm" /></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- //Light table -->
+    </div>
+
+    <div class="card-footer">
+        <button type="button" class="btn btn-outline-primary">재발송</button>
+        <button type="button" class="btn btn-outline-default" data-dismiss="modal">닫기</button>
+    </div>
+</div>
+
+</html>
