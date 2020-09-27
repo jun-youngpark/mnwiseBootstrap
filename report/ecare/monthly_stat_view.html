@@ -12,9 +12,9 @@
 
     <script>
     $(function () {
-        $("#subNav").load("../subNav.html");
-        $("#js").load("../js.html");
-        $("#headerTop").load("../headerTop.html");
+        $("#subNav").load("/subNav.html");
+        $("#js").load("/js.html");
+        $("#headerTop").load("/headerTop.html");
     });
 
     
@@ -41,7 +41,7 @@
                 <!-- Card header -->
                 <div class="card-header">
                     <!-- title  -->
-                    <h3 class="mb-0">캠페인 월별 발송 통계</h3>
+                    <h3 class="mb-0">이케어 월별 발송 통계</h3>
                     <!-- //title -->
                 </div>
                 <!-- e.Card header -->
@@ -77,6 +77,18 @@
                                 <div class="col">
                                     <select class="form-control form-control-sm">
                                         <option>EMAIL</option>
+                                        <option></option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <select class="form-control form-control-sm">
+                                        <option>이케어 타입 선택</option>
+                                        <option></option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <select class="form-control form-control-sm">
+                                        <option>전체</option>
                                         <option></option>
                                     </select>
                                 </div>

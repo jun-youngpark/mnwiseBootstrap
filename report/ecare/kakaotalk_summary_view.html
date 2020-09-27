@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script src="/assets/vendor/chart.js/dist/Chart.min.js"></script>
+    <script src="/assets/vendor/chart.js/dist/Chart.extension.js"></script>
+
+    <script>
+    $(function () {
+        $("#subNav").load("/subNav.html");
+        $("#js").load("/js.html");
+        $("#headerTop").load("/headerTop.html");
+    });
+
+    
+
+    </script>
+</head>
+
+<body>
+<!-- wrapper -->
+<div class="wrapper">
+    <!-- 메뉴 -->
+    <div id="subNav"></div>
+    <div id="js"></div>
+    <div id="headerTop"></div>
+    <!-- //메뉴-->
+
+    <!-- Contents area  -->
+    <div class="main-panel">
+        <!-- Page content -->
+        <div class="container-fluid mt-4 mb-2">
+
+            <!-- card -->
+            <div class="card">
+                <!-- Card header -->
+                <div class="card-header">
+                    <!-- title  -->
+                    <h3 class="mb-0">이케어 리포트</h3>
+                    <!-- //title -->
+                </div>
+                <!-- e.Card header -->
+                
+                <!-- card body -->
+                <div class="card-body">
+                    <!-- tabs -->
+                    <ul class="nav nav-tabs tab02 mb-4" id="tabs-text" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link mb-sm-3 mb-md-0 active" href="kakaotalk_summary_all_view.html">요약분석</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mb-sm-3 mb-md-0" href="kakaotalk_err_summary_view.html">오류분석</a>
+                        </li>
+                    </ul>
+                    <!-- //tabs -->
+
+                    <!-- Light table -->
+                    <div class="table-responsive newgridWrap">
+                        <table class="table table-sm dataTable">
+                            <colgroup>
+                                <col style="width:11%;" />
+                                <col style="width:22%;" />
+                                <col style="width:11%;" />
+                                <col style="width:22%;" />
+                                <col style="width:10%;" />
+                                <col style="width:24%;" />
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">이케어 명</th>
+                                    <td colspan="3"><em class="txt_channel">E</em> <span>357</span></td>
+                                    <th scope="row">발송 상태</th>
+                                    <td>중지</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">담당부서</th>
+                                    <td>발표</td>
+                                    <th scope="row">담당자</th>
+                                    <td>홍길동</td>
+                                    <th scope="row">이케어 유형</th>
+                                    <td>일반발송</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //Light table -->
+                </div>
+                <!-- //card body -->
+
+                <!-- button area -->
+                <div class="card-footer btn_area">
+                    <div class="row">
+                        <div class="col col-6">
+                            <button type="button" class="btn btn btn-outline-primary btn-icon">
+                                <span class="btn-inner--icon"><i class="fas fa-list"></i></span><span class="btn-inner--text">목록</span>
+                            </button>
+                        </div>
+                        <div class="col col-6">
+                            <button type="button" class="btn btn btn-outline-info btn-icon">
+                                <span class="btn-inner--icon"><i class="fas fa-chevron-left"></i></span><span class="btn-inner--text">이전단계</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- //button area -->
+            </div>
+            <!-- //card -->
+
+            <!-- card -->
+            <div class="card">
+                <!-- card body -->
+                <div class="card-body">
+                    <!-- title  -->
+                    <h4 class="h3 text-primary mb-3">발송결과</h4>
+                    <!-- //title -->
+
+                    <!-- Light table -->
+                    <div class="table-responsive">
+                        <table class="table table-sm dataTable">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th rowspan="2" scope="col">구분</th>
+                                    <th rowspan="2" scope="col">발송 수</th>
+                                    <th colspan="2" scope="col">발송 성공</th>
+                                    <th colspan="2" scope="col">발송 실패</th>
+                                    <th rowspan="2" scope="col">발송 일시</th>
+                                </tr>
+                                <tr>
+                                    <th scope="col">건수</th>
+                                    <th scope="col">%</th>
+                                    <th scope="col">건수</th>
+                                    <th scope="col">%</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>알림톡</td>
+                                    <td>2</td>
+                                    <td>2</td>
+                                    <td class="text-right">5%</td>
+                                    <td>2</td>
+                                    <td class="text-right">5%</td>
+                                    <td>2020-09-09</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- //Light table -->
+
+                </div>
+                <!-- e.card body -->
+            </div>
+            <!-- e.card -->
+
+        </div> <!-- e.page content -->
+    </div>
+    <!--e.Contents area-->
+</div>
+<!-- e.wrapper -->
+
+</html>

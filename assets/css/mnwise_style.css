@@ -209,6 +209,9 @@ button.btn-sm {min-height:30px;}
 .alert-warning {color:#fc7c5f; background:none; border:1px solid #fc7c5f;}
 .alert-icon {margin-right:10px;}
 
+.card h4.h3 em {font-size:.9375rem; color:#000;}
+.card h4.h3 em:before {content:"|"; margin:0 .5em; font-weight:bold; font-size:.875rem; color:#8898aa;}
+
 /***** forms *****/
 .form-group dl {font-size:.875rem;}
 .form-group dt {font-weight:600; color:#525f7f;}

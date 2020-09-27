@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script src="/assets/vendor/chart.js/dist/Chart.min.js"></script>
+    <script src="/assets/vendor/chart.js/dist/Chart.extension.js"></script>
+
+    <script>
+    $(function () {
+        $("#subNav").load("/subNav.html");
+        $("#js").load("/js.html");
+        $("#headerTop").load("/headerTop.html");
+    });
+
+    
+
+    </script>
+</head>
+
+<body>
+<!-- wrapper -->
+<div class="wrapper">
+    <!-- 메뉴 -->
+    <div id="subNav"></div>
+    <div id="js"></div>
+    <div id="headerTop"></div>
+    <!-- //메뉴-->
+
+    <!-- Contents area  -->
+    <div class="main-panel">
+        <!-- Page content -->
+        <div class="container-fluid mt-4 mb-2">
+
+            <!-- card -->
+            <div class="card">
+                <!-- Card header -->
+                <div class="card-header">
+                    <!-- title  -->
+                    <h3 class="mb-0">캠페인 월별 발송 통계</h3>
+                    <!-- //title -->
+                </div>
+                <!-- e.Card header -->
+                
+                <!-- card body -->
+                <div class="card-body pb-1">
+
+                    <!-- search area & buttons -->
+                    <div class="row py-2 table_option">
+                        <!-- buttons -->
+                        <div class="col-auto btn_area">
+                            <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                                <span class="btn-inner--icon "><i class="far fa-file-excel"></i></span><span class="btn-inner--text">엑셀 다운로드</span>
+                            </button>
+                        </div>
+                        <!-- e.buttons -->
+
+                        <!-- search -->
+                        <div class="col-auto">
+                            <div class="form-row form-group">
+                                <div class="col">
+                                    <select class="form-control form-control-sm">
+                                        <option>전체</option>
+                                        <option></option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <select class="form-control form-control-sm">
+                                        <option>월 선택</option>
+                                        <option></option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <select class="form-control form-control-sm">
+                                        <option>EMAIL</option>
+                                        <option></option>
+                                    </select>
+                                </div>
+                                <div class="col">
+                                    <button class="btn btn-sm btn-outline-info btn-icon btn_search">
+                                        <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span class="btn-inner--text">검색</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //search -->
+                    </div>
+                    <!-- e.search area & buttons -->
+                </div>
+                <!-- e.card body -->
+
+                <!-- Light table -->
+                <div class="table-responsive">
+                    <table class="table table-sm dataTable">
+                        <thead class="thead-light">
+                            <tr>
+                                <th rowspan="2" scope="col">구분</th>
+                                <th rowspan="2" scope="col">발송 수</th>
+                                <th colspan="2" scope="col">발송 성공</th>
+                                <th colspan="2" scope="col">발송 실패</th>
+                                <th colspan="2" scope="col">수신 확인</th>
+                                <th colspan="2" scope="col">유효 수신</th>
+                                <th colspan="2" scope="col">링크 클릭</th>
+                                <th colspan="2" scope="col">리턴 메일</th>
+                            </tr>
+                            <tr>
+                                <th scope="col">건수</th>
+                                <th scope="col">%</th>
+                                <th scope="col">건수</th>
+                                <th scope="col">%</th>
+                                <th scope="col">건수</th>
+                                <th scope="col">%</th>
+                                <th scope="col">건수</th>
+                                <th scope="col">%</th>
+                                <th scope="col">건수</th>
+                                <th scope="col">%</th>
+                                <th scope="col">건수</th>
+                                <th scope="col">%</th>
+                            </tr>
+                        </thead>
+                        <tfoot class="bg-secondary">
+                            <tr>
+                                <th scope="row">합계</th>
+                                <td>336</td>
+                                <td class="text-right">239</td>
+                                <td class="text-right">71.1%</td>
+                                <td class="text-right">239</td>
+                                <td class="text-right">71.1%</td>
+                                <td class="text-right">239</td>
+                                <td class="text-right">71.1%</td>
+                                <td class="text-right">239</td>
+                                <td class="text-right">71.1%</td>
+                                <td class="text-right">239</td>
+                                <td class="text-right">71.1%</td>
+                                <td class="text-right">239</td>
+                                <td class="text-right">71.1%</td>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>336</td>
+                                <td class="text-right">239</td>
+                                <td class="text-right">71.1%</td>
+                                <td class="text-right">239</td>
+                                <td class="text-right">71.1%</td>
+                                <td class="text-right">239</td>
+                                <td class="text-right">71.1%</td>
+                                <td class="text-right">239</td>
+                                <td class="text-right">71.1%</td>
+                                <td class="text-right">239</td>
+                                <td class="text-right">71.1%</td>
+                                <td class="text-right">239</td>
+                                <td class="text-right">71.1%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- e.Light table -->
+
+                <!-- card body -->
+                <div class="card-body">
+                    <h4 class="h3 text-primary mb-5">발송 결과</h4>
+
+                    <div class="chart">
+                        <!-- Chart wrapper -->
+                        <canvas id="chart-bars" class="chart-canvas"></canvas>
+                    </div>
+                </div>
+                <!-- //card body -->
+            </div>
+            <!-- e.card -->
+
+        </div> <!-- e.page content -->
+    </div>
+    <!--e.Contents area-->
+</div>
+<!-- e.wrapper -->
+
+</html>
