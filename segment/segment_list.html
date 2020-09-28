@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script>
+    $(function () {
+        $("#subNav").load("../subNav.html");
+        $("#js").load("../js.html");
+        $("#headerTop").load("../headerTop.html");
+        
+    });
+
+    
+
+    </script>
+</head>
+
+<body>
+<!-- wrapper -->
+<div class="wrapper">
+    <!-- 메뉴 -->
+    <div id="subNav"></div>
+    <div id="js"></div>
+    <div id="headerTop"></div>
+    <!-- //메뉴-->
+
+    <!-- Contents area  -->
+    <div class="main-panel">
+        <!-- Page content -->
+        <div class="container-fluid mt-4 mb-2">
+
+            <!-- card -->
+            <div class="card">
+                <!-- Card header -->
+                <div class="card-header">
+                    <!-- title  -->
+                    <h3 class="mb-0">대상자 리스트</h3>
+                    <!-- //title -->
+                </div>
+                <!-- e.Card header -->
+                
+                <!-- card body -->
+                <div class="card-body pb-1">
+
+                    <!-- search area & buttons -->
+                    <div class="row align-items-center py-2 table_option">
+                        <!-- buttons -->
+                        <div class="col-auto btn_area">
+                            <button class="btn btn-sm btn-outline-primary btn-round btn-icon"  onclick="window.open('target_list.html', '_blank', 'width=700,height=500');">
+                                <span class="btn-inner--icon"><i class="far fa-file-alt"></i></span><span class="btn-inner--text">대상자 보기</span>
+                            </button>
+                            <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                                <span class="btn-inner--icon"><i class="fas fa-sync-alt"></i></span><span class="btn-inner--text">대상자 갱신</span>
+                            </button>
+                            <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                                <span class="btn-inner--icon"><i class="fas fa-unlock-alt"></i></span><span class="btn-inner--text">권한 할당</span>
+                            </button>
+                            <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                                <span class="btn-inner--icon"><i class="far fa-copy"></i></span><span class="btn-inner--text">대상자 복사</span>
+                            </button>
+                            <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                                <span class="btn-inner--icon"><i class="fas fa-trash"></i></span><span class="btn-inner--text">삭제</span>
+                            </button>
+                            <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                                <span class="btn-inner--icon"><i class="fas fa-history"></i></span><span class="btn-inner--text">수행 이력</span>
+                            </button>
+                        </div>
+                        <!-- e.buttons -->
+
+                        <!-- search -->
+                        <div class="col-auto searchWrap">
+                            <div class="form-group searchbox">
+                                <div class="search_input">
+                                    <span class="form-control-label txt">대상자 명</span>
+                                    <input type="search" class="form-control form-control-sm" placeholder="" aria-controls="datatable-basic" />
+                                    <button class="btn btn-sm btn-outline-info btn-icon btn_search">
+                                        <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span class="btn-inner--text">검색</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //search -->
+                    </div>
+                    <!-- e.search area & buttons -->
+                </div>
+                <!-- e.card body -->
+
+                <!-- Light table -->
+                <div class="table-responsive">
+                    <table class="table table-sm dataTable">
+                        <thead class="thead-light">
+                        <tr>
+                            <th scope="col">선택</th>
+                            <th scope="col">No</th>
+                            <th scope="col">태그</th>
+                            <th scope="col">대상자 명</th>
+                            <th scope="col">대상자 수</th>
+                            <th scope="col">작성자</th>
+                            <th scope="col">유형</th>
+                            <th scope="col">작성일</th>
+                            <th scope="col">할당부서 수</th>
+                            <th scope="col">공유 유형</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th scope="row">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" id="checkbox1" name="customcheckbox" class="custom-control-input" />
+                                    <label class="custom-control-label" for="checkbox1"></label>
+                                </div>
+                            </th>
+                            <td>348</td>
+                            <td>정보원</td>
+                            <td class="text-left">
+                                <a href="#!" class="font-weight-bold"><em class="txt_channel s">S</em> 테스트목록 </a>
+                            </td>
+                            <td>2</td>
+                            <td>배철완</td>
+                            <td>파일</td>
+                            <td>2020-09-09</td>
+                            <td>0</td>
+                            <td>N</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- e.Light table -->
+
+                <!-- pagenation -->
+                <div class="pagination pagination-sm mb-0 pb-2 pt-1 justify-content-center">
+                    <ul class="pagination">
+                        <li class="paginate_button page-item previous" id="datatable-basic_previous"><a href="#" aria-controls="datatable-basic" class="page-link"><i class="fas fa-angle-left"></i></a></li>
+                        <li class="paginate_button page-item active"><a href="#" aria-controls="datatable-basic"  class="page-link">1</a></li>
+                        <li class="paginate_button page-item next" id="datatable-basic_next"><a href="#" aria-controls="datatable-basic"  class="page-link"><i class="fas fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
+                <!-- e.pagenation -->
+ 
+
+            
+            </div>
+            <!-- e.card -->
+
+        </div> <!-- e.page content -->
+    </div>
+    <!--e.Contents area-->
+</div>
+<!-- e.wrapper -->
+
+</html>

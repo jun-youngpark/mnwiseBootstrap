@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script>
+    $(function () {
+        $("#js").load("/js.html");
+        
+    });
+
+    
+
+    </script>
+</head>
+
+<body>
+<div id="js"></div>
+
+<div class="card pop-card">
+    <div class="card-header">
+        <h5 class="mb-0">대상자 리스트<em>(2명)</em></h5>
+    </div>
+
+    <div class="card-body">
+
+        <!-- search area & buttons -->
+        <div class="row align-items-center py-2 table_option">
+            <!-- buttons -->
+            <div class="col-auto btn_area">
+                <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                    <span class="btn-inner--icon"><i class="far fa-file-alt"></i></span><span class="btn-inner--text">전체보기</span>
+                </button>
+                <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                    <span class="btn-inner--icon"><i class="fas fa-plus"></i></span><span class="btn-inner--text">추가</span>
+                </button>
+            </div>
+            <!-- e.buttons -->
+
+            <!-- search -->
+            <div class="col-auto text-right searchWrap">
+
+                <select class="form-control form-control-sm">
+                    <option>서비스 명</option>
+                    <option>이케어 번호</option>
+                </select>
+                <div class="form-group searchbox">
+                    <div class="search_input">
+                        <span class="form-control-label txt">대상자 명</span>
+                        <input type="search" class="form-control form-control-sm" placeholder="" aria-controls="datatable-basic" />
+                        <button class="btn btn-sm btn-outline-info btn-icon btn_search">
+                            <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span class="btn-inner--text">검색</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- //search -->
+        </div>
+        <!-- e.search area & buttons -->
+
+        <!-- Light table -->
+        <div class="table-responsive newgridWrap">
+            <table class="table table-sm dataTable">
+                <colgroup>
+                    <col style="width:20%;" />
+                    <col />
+                    <col style="width:20%;" />
+                    <col style="width:30%;" />
+                </colgroup>
+                <tbody>
+                <tr>
+                    <th scope="row">대상자 명</th>
+                    <td>테스트 목록</td>
+                    <th scope="row">유형</th>
+                    <td>파일</td>
+                </tr>
+                <tr>
+                    <th scope="row">DB 서버</th>
+                    <td>wisedemo</td>
+                    <th scope="row">공유</th>
+                    <td>N</td>
+                </tr>
+                <tr>
+                    <th scope="row">등록일</th>
+                    <td>2020-09-09</td>
+                    <th scope="row">작성자</th>
+                    <td>배철완</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- //Light table -->
+
+        <!-- Light table -->
+        <div class="table-responsive">
+            <table class="table table-sm dataTable">
+                <colgroup>
+                    <col style="width:15%;" />
+                    <col style="width:15%;" />
+                    <col />
+                    <col style="width:20%;" />
+                    <col style="width:20%;" />
+                </colgroup>
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">아이디</th>
+                        <th scope="col">이름</th>
+                        <th scope="col">이메일</th>
+                        <th scope="col">고객 휴대폰</th>
+                        <th scope="col">기타</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="text-left">userid</td>
+                    <td>테*트</td>
+                    <td class="text-left">asdfsd********</td>
+                    <td>010****1234</td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- //Light table -->
+
+        <!-- pagenation -->
+        <div class="pagination pagination-sm mb-0 pt-1 justify-content-center">
+            <ul class="pagination">
+                <li class="paginate_button page-item previous" id="datatable-basic_previous"><a href="#" aria-controls="datatable-basic" class="page-link"><i class="fas fa-angle-left"></i></a></li>
+                <li class="paginate_button page-item active"><a href="#" aria-controls="datatable-basic"  class="page-link">1</a></li>
+                <li class="paginate_button page-item next" id="datatable-basic_next"><a href="#" aria-controls="datatable-basic"  class="page-link"><i class="fas fa-angle-right"></i></a></li>
+            </ul>
+        </div>
+        <!-- e.pagenation -->
+    </div>
+
+    <div class="card-footer">
+        <button type="button" class="btn btn-default">닫기</button>
+    </div>
+</div>
+
+</html>
