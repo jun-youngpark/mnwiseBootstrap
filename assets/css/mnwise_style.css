@@ -186,7 +186,6 @@ button.btn-sm {min-height:30px;}
 .newgridWrap  table.dataTable.table-sm>thead>tr>th{padding:8px 12px;}
 .newgridWrap .table th, .gridWrap .table td { font-size:.875rem;  vertical-align: middle; border:0 solid #e9ecef; border-width:1px 1px 0 0;}
 .newgridWrap .table th {font-weight:600; color:#525f7f;  text-align:right; background:#f7fafc;}
-.newgridWrap .table td { height:31px;}
 .newgridWrap .table td {text-align: left;}
 .newgridWrap .table td > * {vertical-align: middle;}
 .newgridWrap .table .align-text-top {line-height:31px;}
@@ -358,6 +357,8 @@ ex, campaign/campaign_2step_mail_form.html 수신확인 체크박스
 .pop-card {height:100vh; min-height:100%; margin:0 !important;}
 .pop-card .card-header {background:#eeeff3; border-radius:0 !important;}
 .pop-card .card-header * {color:#212121;}
+.pop-card .card-header h5 {font-size:1rem;}
+.pop-card .card-header em {margin-left:5px; font-weight:500; font-size:.875rem; color:#359bff;}
 .pop-card .card-body {-webkit-flex:1; flex:1; overflow: auto;}
 .pop-card .compare-row, .pop-card .compare-row .col {height:100%;}
 .pop-card .compare_wrapper {display:-webkit-box; display:flex; height:100%; -webkit-flex-direction:column; flex-direction:column;}
