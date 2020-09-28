@@ -11,9 +11,9 @@ body {font-family:'Roboto', 'Nanum Gothic', sans-serif;}
 - min-height사용 이유- height 사용할 경우 자식의 height가 최대 100vh,  자식의 높이가 더 커질 경우 부모가 감쌀 수 없다 
 - float 해제 방법 : 부모 element에 "overflow:hidden;"추가 또는 :after 요소를 활용하여 "clear:both;" 추가하여 float를 해제할 수 있습니다. 
 현재는 main-panel에 float:left; 를 삭제 하였으므로 float해제 불필요함 */ 
-.wrapper { min-width:1260px;  max-width:none !important;  position: relative; top: 0;  min-height: 100vh; padding-left:250px; }
-.sidebar {position: fixed;  top: 0; bottom: 0;  left: 0;  z-index: 2; width: 250px;  background: #172b4d; border:none; }
-.sidebar .sidebar-wrapper{position: relative;  height: calc(100vh - 75px); overflow-y: auto ; overflow-x: hidden; width: 250px; z-index: 4;  padding-bottom: 30px;}
+.wrapper { min-width:1260px;  max-width:none !important;  position: relative; top: 0;  min-height: 100vh; padding-left:220px; }
+.sidebar {position: fixed;  top: 0; bottom: 0;  left: 0;  z-index: 2; width: 220px;  background: #172b4d; border:none; }
+.sidebar .sidebar-wrapper{position: relative;  height: calc(100vh - 75px); overflow-y: auto ; overflow-x: hidden; width: 220px; z-index: 4;  padding-bottom: 30px;}
  
 .navbar-vertical .navbar-nav {margin:0;}
 
@@ -26,7 +26,7 @@ body{background:#fff;}
 /*mainpanel - 자식의 값에 float가 있을 경우 부모가 감싸지 못한다 -> 부모에 overflow값 or :after{clear:both} */
 /*.main-panel {position: relative; float: right; width: calc(100% - 250px);}*/
 .main-panel {position: relative;}
-.main-panel > .container-fluid {padding-left:30px;}
+.main-panel > .container-fluid {padding-left:15px;}
 
 /* headerTop 없을 경우 대응 */
 .main-panel > .container-fluid {margin-top:0 !important; padding-top:1.5rem !important;}
@@ -69,8 +69,6 @@ div.dataTables_wrapper div.dataTables_paginate ul.pagination {justify-content: c
 .custom-file-input {display:none;}
 .notice-text {padding-inline-start: 10px;}
 .notice-text li{list-style:none;  }
-
-/******  templet > *** ***/
 
 /*** friendtalk-img **/
 .friendtalk-view-img{width:240px; height:240px; margin-bottom: 1rem; border:1px solid #e8e8e8;}
@@ -189,15 +187,16 @@ button.btn-sm {min-height:30px;}
 .newgridWrap .table th, .gridWrap .table td { font-size:.875rem;  vertical-align: middle; border:0 solid #e9ecef; border-width:1px 1px 0 0;}
 .newgridWrap .table th {font-weight:600; color:#525f7f;  text-align:right; background:#f7fafc;}
 .newgridWrap .table td { height:31px;}
-.newgridWrap .table td {padding-right:20px; text-align: left;}
+.newgridWrap .table td {text-align: left;}
 .newgridWrap .table td > * {vertical-align: middle;}
 .newgridWrap .table .align-text-top {line-height:31px;}
 .card  {box-shadow:none;}
 
 @media screen and (max-width:1350px) {
-    .newgridWrap .table th, .newgridWrap .table td {padding:8px 10px;}
+    .newgridWrap .table th, .newgridWrap .table td {padding:8px ;}
     .col-phone + div .newgridWrap {letter-spacing:-1px;}
 }
+
 
 
 /***** text *****/
@@ -247,7 +246,9 @@ button.btn-sm {min-height:30px;}
 .custom-switch .custom-control-label::after {left:calc(-2.25rem + 2px);}
 .custom-switch .custom-control-input:checked~.custom-control-label::after {-webkit-transform: translateX(.75rem); transform: translateX(.75rem);}
 
-.custom-control.custom-radio, .custom-control.custom-radio label, .custom-control.custom-checkbox, .custom-control.custom-checkbox label {min-height:inherit; height:auto !important;}
+/* 라벨이 없는 input 체크, 라디오에 height 값을 잡아 줄 수 없어 해당 인풋이 정상적으로 보여지지 않습니다. 
+ex, campaign/campaign_2step_mail_form.html 수신확인 체크박스  
+.custom-control.custom-radio, .custom-control.custom-radio label, .custom-control.custom-checkbox, .custom-control.custom-checkbox label {min-height:inherit; height:auto !important;} */
 
 /* period */
 .periodWrap {display:flex;}
@@ -302,6 +303,7 @@ button.btn-sm {min-height:30px;}
     .col-xxl-10 {flex:0 0 83.33333%; max-width:83.33333%;}
     .col-xxl-11 {flex:0 0 91.66667%; max-width:91.66667%;}
     .col-xxl-12 {flex:0 0 100%; max-width:100%;}
+
 }
 
 
