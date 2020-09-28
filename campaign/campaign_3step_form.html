@@ -66,11 +66,11 @@
                                 <thead class="thead-light">
                                     <colgroup>
                                         <col style="width:10%;" />
-                                        <col style="width:23%;" />
-                                        <col style="width:10%;" />
-                                        <col style="width:23%;" />
-                                        <col style="width:10%;" />
                                         <col style="width:24%;" />
+                                        <col style="width:10%;" />
+                                        <col style="width:23%;" />
+                                        <col style="width:10%;" />
+                                        <col style="width:23%;" />
                                     </colgroup>
                                 <tbody>
                                     <tr>
@@ -114,11 +114,11 @@
                                 <table class="table table-sm dataTable">
                                     <colgroup>
                                         <col style="width:10%;" />
-                                        <col style="width:23%;" />
-                                        <col style="width:10%;" />
-                                        <col style="width:23%;" />
-                                        <col style="width:10%;" />
                                         <col style="width:24%;" />
+                                        <col style="width:10%;" />
+                                        <col style="width:23%;" />
+                                        <col style="width:10%;" />
+                                        <col style="width:23%;" />
                                     </colgroup>
                                     <tbody>
                                         <tr>
@@ -155,10 +155,10 @@
                                                 </div>
                                             </td>
                                         </tr>
-                                        <tr>
+                                        <tr class="division-send d-none">
                                             <th scope="row"><em class="required">required</em>분할발송</th>
                                             <td colspan="5"> 
-                                                <table class="table table-sm dataTable" style="width:64%;">
+                                                <table class="table table-sm dataTable" style="width:80%;">
                                                     <colgroup>
                                                         <col style="width:15%;" />
                                                         <col style="width:15%;" />
@@ -193,12 +193,18 @@
                                         <tr>
                                             <th scope="row"><em class="required">required</em>발송일시</th>
                                             <td>
-                                                <div class="periodWrap d-flex align-items-center">
-                                                    <input class="form-control form-control-sm" type="date" value=""
+                                               
+                                                <div class="d-flex align-items-center w-auto" >
+                                                    <div class="input-group date datepicker-inline col-6 px-0">
+                                                        <input class="form-control form-control-sm" type="date" value=""
                                                         id="example-date-input">
-                                                    <span>&nbsp;</span>
-                                                    <input class="form-control form-control-sm" type="time"
+                                                    </div>
+                                                 
+                                                    <div class="input-group date datepicker-inline col-6  px-0">
+                                                        <input class="form-control form-control-sm " type="time"
                                                         value="10:30:00" id="example-time-input">
+                                                    </div>
+                                                   
                                                 </div>
                                             </td>
                                             <th scope="row"><em class="required">required</em>반응추적 시작일 </th>
@@ -228,11 +234,11 @@
                                 <table class="table table-sm dataTable">
                                     <colgroup>
                                         <col style="width:10%;" />
-                                        <col style="width:23%;" />
-                                        <col style="width:10%;" />
-                                        <col style="width:23%;" />
-                                        <col style="width:10%;" />
                                         <col style="width:24%;" />
+                                        <col style="width:10%;" />
+                                        <col style="width:23%;" />
+                                        <col style="width:10%;" />
+                                        <col style="width:23%;" />
                                     </colgroup>
                                     <tbody>
                                         <tr>
@@ -296,5 +302,18 @@
         <!-- e.Contents area -->
     </div>
     <!-- e.wrapper -->
+    <script>
+         $(document).ready(function(){
+            $('input:radio[name=send]').on('change',function(){
+              var temp =   $('input:radio[name=send]:checked').attr('id');
+              var target=$('.division-send')
+              if(temp==="send2"){
+                $(target).removeClass('d-none');
+              }else{
+                $(target).addClass('d-none');
+              }
+            })
+         })
+    </script>
 
 </html>
