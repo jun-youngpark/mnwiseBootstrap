@@ -74,25 +74,26 @@
                                     </colgroup>
                                 <tbody>
                                     <tr>
-                                        <th scope="row"><em class="required">required</em>캠페인 명</th>
+                                        <th scope="row" class="required-tri">캠페인 명</th>
+                                        <!--<em class="required">required</em>-->
                                         <td>알림톡</td>
-                                        <th scope="row"><em class="required">required</em>캠페인 명</th>
+                                        <th scope="row" class="required-tri">캠페인 설명</th>
                                         <td colspan="3"> 켐페인 설명</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row"><em class="required">required</em>대상자</th>
+                                        <th scope="row" class="required-tri">대상자</th>
                                         <td>대상자(2명)</td>
-                                        <th scope="row"><em class="required">required</em>담당부서</th>
+                                        <th scope="row" class="required-tri">담당부서</th>
                                         <td>마케팅</td>
-                                        <th scope="row"><em class="required">required</em>작성자</th>
+                                        <th scope="row" class="required-tri">작성자</th>
                                         <td>홍길동</td>
                                     </tr>
                                     <tr>
-                                        <th scope="row"><em class="required">required</em>작성일</th>
+                                        <th scope="row" class="required-tri">작성일</th>
                                         <td> 2020-09-03 00:00:00</td>
-                                        <th scope="row"><em class="required">required</em>최종 수정일</th>
+                                        <th scope="row" class="required-tri">최종 수정일</th>
                                         <td>2020-09-03 00:00:00</td>
-                                        <th scope="row"><em class="required">required</em>서버 현재시간</th>
+                                        <th scope="row" class="required-tri">서버 현재시간</th>
                                         <td>2020-09-03 00:00:00</td>
                                     </tr>
                                 </tbody>
@@ -112,8 +113,8 @@
                             <div class="table-responsive newgridWrap">
                                 <table class="table table-sm dataTable">
                                     <colgroup>
-                                        <col style="width:12%;" />
-                                        <col style="width:21%;" />
+                                        <col style="width:10%;" />
+                                        <col style="width:23%;" />
                                         <col style="width:10%;" />
                                         <col style="width:23%;" />
                                         <col style="width:10%;" />
@@ -121,17 +122,62 @@
                                     </colgroup>
                                     <tbody>
                                         <tr>
+                                            <th scope="row"><em class="required">required</em>캠페인 번호</th>
+                                            <td>1385</td>
                                             <th scope="row"><em class="required">required</em>제목</th>
-                                            <td colspan="5">[오리온]</td>
+                                            <td colspan="4">ddddq152345243523452345</td>
                                         </tr>
                                         <tr>
-                                            <th scope="row"><em class="required">required</em>발신자 전화번호</th>
-                                            <td>080-023-5701</td>
-                                            <th scope="row"><em class="required">required</em>발송일시</th>
-                                            <td>2020-09-18 14:00 (금)</td>
-                                            <th scope="row"><em class="required">required</em>수행상태</th>
-                                            <td>발송종료</td>
+                                            <th scope="row"><em class="required">required</em>발신자명</th>
+                                            <td>엠앤와이즈</td>
+                                            <th scope="row"><em class="required">required</em>발신자 이메일</th>
+                                            <td>helpdesk@mnwise.com</td>
+                                            <th scope="row"><em class="required">required</em>반송이메일</th>
+                                            <td>return@mnwise.com</td>
+
                                         </tr>
+                                        <tr>
+                                            <th scope="row"><em class="required">required</em>수신확인</th>
+                                            <td>수신확인</td>
+                                            <th scope="row"><em class="required">required</em>SMTP 재시도 횟수</th>
+                                            <td>1회</td>
+                                            <th scope="row"><em class="required">required</em>발송유형</th>
+                                            <td>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="send1" name="send"
+                                                        class="custom-control-input" />
+                                                    <label class="custom-control-label" for="send1">예약발송 </label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="send2" name="send"
+                                                        class="custom-control-input" />
+                                                    <label class="custom-control-label" for="send2">분할발송</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><em class="required">required</em>발송일시</th>
+                                            <td>
+                                                <div class="periodWrap d-flex align-items-center">
+                                                    <input class="form-control form-control-sm" type="date" value=""
+                                                        id="example-date-input">
+                                                    <span>&nbsp;</span>
+                                                    <input class="form-control form-control-sm" type="time"
+                                                        value="10:30:00" id="example-time-input">
+                                                </div>
+                                            </td>
+                                            <th scope="row"><em class="required">required</em>반응추적 시작일 </th>
+                                            <td> <input class="form-control form-control-sm" type="date" value=""
+                                                    id="example-date-input"></td>
+                                            <th scope="row"><em class="required">required</em>반응추적 종료일</th>
+                                            <td> <input class="form-control form-control-sm" type="date" value=""
+                                                    id="example-date-input"></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><em class="required">required</em>수행상태</th>
+                                            <td colspan="5">작성중</td>
+                                        </tr>
+
                                     </tbody>
                                 </table>
                             </div>
@@ -146,10 +192,12 @@
                             <div class="table-responsive newgridWrap">
                                 <table class="table table-sm dataTable">
                                     <colgroup>
-                                        <col style="width:15%;" />
-                                        <col style="width:30%;" />
-                                        <col style="width:15%;" />
-                                        <col style="width:40%;" />
+                                        <col style="width:10%;" />
+                                        <col style="width:23%;" />
+                                        <col style="width:10%;" />
+                                        <col style="width:23%;" />
+                                        <col style="width:10%;" />
+                                        <col style="width:24%;" />
                                     </colgroup>
                                     <tbody>
                                         <tr>
@@ -171,6 +219,17 @@
                                                 <button type="button"
                                                     class="btn btn-sm btn-outline-primary ml-2">생성</button>
                                             </td>
+                                            <th scope="row">오픈</th>
+                                            <td>
+                                                <select class="form-control form-control-sm d-inline-block w-auto">
+                                                    <option value="">EMAIL</option>
+                                                    <option value=""></option>
+                                                </select>
+                                                <button type="button"
+                                                    class="btn btn-sm btn-outline-primary ml-2">생성</button>
+                                            </td>
+
+
                                         </tr>
                                     </tbody>
                                 </table>
