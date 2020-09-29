@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <title>도메인 관리</title>
-  <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script> 
-      $(function(){
-        $("#subNav").load("../subNav.html");
-        $("#js").load("../js.html");
-    });  
-    </script>    
+<title>도메인 관리</title>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $("#subNav").load("../subNav.html");
+      $("#js").load("../js.html");
+    });
+  </script>
 </head>
 
 <body>
-    <!-- wrapper -->
-    <div class="wrapper">
+  <!-- wrapper -->
+  <div class="wrapper">
     <!-- 메뉴 -->
     <div id="subNav"></div>
     <div id="js"></div>
     <!-- 메뉴 End-->
-    
+
     <!-- 내용 -->
     <div class="main-panel">
       <!-- Page content -->
@@ -34,33 +35,59 @@
                   <div class="col">
                     <h3 class="mb-0">도메인 관리</h3>
                   </div>
-                
+
                 </div>
                 <!-- Card header -->
               </div>
-              <!-- card-body -->
-              <div class="card-body">
-                <form>
-                  <div class="form-group">
-                    <span><i class="far fa-envelope"></i></span>
-                    <label for="template">Email 도메인</label>
-                    <textarea class="form-control" id="template" rows="5"></textarea>
+              <form>
+                <!-- card-body -->
+                <div class="card-body newgridWrap">
+                  <h1> /* 테이블 */ </h1>
+                  <!-- Light table -->
+                  <div class="table-responsive">
+                    <table class="table table-sm dataTable">
+                      <thead class="thead-light">
+                        <colgroup>
+                          <col style="width:20%;" />
+                          <col style="width:80%;" />
+
+                        </colgroup>
+                      <tbody>
+                        <tr>
+                          <th scope="row"><em class="required">required</em>Email 도메인</th>
+                          <td> </span>
+                            <textarea class="form-control" id="template"
+                              rows="8">daum.net,gmail.com,google.com,hanmail.net,hotmail.com,mnwise.com,nate.com,naver.com,</textarea>
+                          </td>
+
+                        </tr>
+
+                      </tbody>
+                    </table>
                   </div>
-                </form>
-              </div> <!-- e.Card body -->
+                  <!-- // Light table -->
+                </div>
+                <!-- //card-body -->
+
+                <!-- card-body -->
+                <div class="card-body">
+                  <h1> /* 기존화면 */ </h1>
+                  <form>
+                    <div class="form-group">
+                      <span><i class="far fa-envelope"></i></span>
+                      <label for="template">Email 도메인</label>
+                      <textarea class="form-control" id="template" rows="5"></textarea>
+                    </div>
+                  </form>
+                </div> <!-- e.Card body -->
             </div>
           </div>
           <!--e.container-fluid-->
         </div> <!-- e.page content -->
       </div><!-- e.본문 e.main-panel -->
-      </div>
+    </div>
     <!--내용-->
-  </div> <!-- // wrapper --> 
+  </div> <!-- // wrapper -->
 
 
 </html>
-
- 
-
-
- 
