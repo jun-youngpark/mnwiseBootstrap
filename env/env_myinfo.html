@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
-<title>개인정보 관리</title>
+<title>WiseU</title>
 
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
@@ -29,14 +29,13 @@
                     <!-- Card header -->
                     <div class="card-header">
                         <!-- title  -->
-                        <h3 class="mb-0">캠페인 리스트</h3>
+                        <h3 class="mb-0">개인정보관리</h3>
                         <!-- //title -->
                     </div>
                     <!-- e.Card header -->
                     <form>
                         <!-- card-body -->
                         <div class="card-body newgridWrap">
-                            <h1> /* 테이블 */ </h1>
                             <!-- Light table -->
                             <div class="table-responsive">
                                 <table class="table table-sm dataTable">
@@ -90,145 +89,23 @@
                                         </tr>
                                         <tr>
                                             <th scope="row">페이지 리스트 사이즈</th>
-                                            <td><input class="form-control form-control-sm " type="password" value=""
-                                                    id="password"></td>
-                                            <td colspan="6"></td>
+                                            <td colspan="8"><input class="form-control form-control-sm col-1" type="text" value=""
+                                                    id=""></td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
                             <!-- // Light table -->
                         </div>
-                        <!-- //card-body -->
-                        <div class="card-body">
-                            <h1> /* 기존 화면 */</h1>
-                            <div class="row">
-                                <div class="col-3">
-                                    <div class="form-group">
-                                        <label class=" col-form-label form-control-label ">* 사용자 ID</label>
-                                        <div class="input-group input-group-merge">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="fas fa-user"></i></span>
-                                            </div>
-                                            <input class="form-control pl-2" value="admin" type="text" disabled>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="form-group">
-                                        <label for="senderEmail" class="col-form-label form-control-label ">*
-                                            사용자
-                                            유형</label>
-                                        <div class="input-group input-group-merge">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-                                            </div>
-                                            <input class="form-control pl-2" type="text" value="관리자" id="senderEmail"
-                                                disabled>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="form-group">
-                                        <label for="retmailReceiver" class="col-form-label form-control-label ">* 최종
-                                            수정일</label>
-                                        <div class="input-group input-group-merge">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="fas fa-clock"></i></span>
-                                            </div>
-                                            <input class="form-control  pl-2" type="text" value="2019-07-25"
-                                                id="retmailReceiver" disabled>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="form-group">
-                                        <label class="form-control-label col-form-label text-right"
-                                            for="listCountPerPage">* 페이지 리스트 사이즈
-                                        </label>
-                                        <input type="text" size="3" class="form-control" id="listCountPerPage"
-                                            value="10">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-3">
-                                    <div class="form-group mb--2">
-                                        <label for="password" class="col-form-label form-control-label">*
-                                            비밀번호</label>
-                                        <div class="input-group input-group-merge">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="fas fa-unlock"></i></span>
-                                            </div>
-                                            <input class="form-control " type="password" value="" id="password">
-                                        </div>
-                                        <h5 class="pt-1 text-danger h5">(영문 대문자, 소문자, 숫자,특수문자 조합 8자리 ~ 15자리 미만)
-                                        </h5>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="form-group">
-                                        <label for="passWdChk" class="col-form-label form-control-label">* 비밀번호
-                                            확인</label>
-                                        <div class="input-group input-group-merge">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                                            </div>
-                                            <input class="form-control" type="password" id="passWdChk" value="">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-3">
-                                    <div class="form-group">
-                                        <label for="nameKor" class="col-form-label form-control-label">성명</label>
-                                        <div class="input-group input-group-merge">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="fas fa-id-card-alt"></i></span>
-                                            </div>
-                                            <input class="form-control" type="text" id="nameKor" value="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="form-group">
-                                        <label for="userClass" class="col-form-label form-control-label">직급</label>
-                                        <div class="input-group input-group-merge">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="fas fa-sitemap"></i></span>
-                                            </div>
-                                            <input class="form-control" type="text" id="userClass" value="">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="form-group">
-                                        <label for="telNo" class="col-form-label form-control-label">전화번호</label>
-                                        <div class="input-group input-group-merge">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="fas fa-phone-alt"></i></span>
-                                            </div>
-                                            <input class="form-control" type="text" id="telNo" value="02-3445-0922">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="form-group">
-                                        <label for="email" class="col-form-label form-control-label">*
-                                            이메일</label>
-                                        <div class="input-group input-group-merge">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text"><i class="fas fa-at"></i></span>
-                                            </div>
-                                            <input class="form-control" type="text" id="email"
-                                                value="admin1@mnwise.com">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
+                         <!-- // card-body -->
+                          <!-- button area -->
+                <div class="btn_area">
+                    <button type="submit" class="btn btn btn-outline-primary btn-icon">
+                      <span class="btn-inner--icon"><i class="fas fa-save"></i></span><span
+                        class="btn-inner--text">저장</span>
+                    </button>
+                  </div>
+                  <!-- e.button area -->
                     </form>
                 </div>
             </div>
