@@ -196,9 +196,11 @@ button.btn-sm {min-height:30px;}
 .newgridWrap .table .align-text-top {line-height:31px;}
 .card  {box-shadow:none;}
 
+
 @media screen and (max-width:1350px) {
     .newgridWrap .table th, .newgridWrap .table td {padding:8px ;}
     .col-phone + div .newgridWrap {letter-spacing:-1px;}
+    .min-w250{min-width: 250px;}
 }
 
 /***** text *****/
