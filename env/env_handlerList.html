@@ -1,431 +1,159 @@
 <!DOCTYPE html>
 <html lang="ko">
+<title>Wise U</title>
 
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-
   <script>
     $(function () {
       $("#subNav").load("../subNav.html");
       $("#js").load("../js.html");
-      $("#headerTop").load("../headerTop.html");
     });
   </script>
 </head>
 
 <body>
-  <!-- 메뉴 -->
-  <div id="subNav"></div>
-  <div id="js"></div>
-  <div id="headerTop"></div>
-  <!-- 메뉴 End-->
+  <!-- wrapper -->
+  <div class="wrapper">
+    <!-- 메뉴 -->
+    <div id="subNav"></div>
+    <div id="js"></div>
+    <!-- 메뉴 End-->
 
-  <!-- 내용 -->
-  <div class="main-panel">
-    <!-- Page content -->
-    <div class="container-fluid mt-4 mb-2">
-      <!-- Table -->
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <!-- Card header -->
-            <div class="card-header">
-              <h3 class="mb-0">기본 핸들러 설정</h3>
-            </div>
-            <div class="card-body pb-0">
-              <div class="row align-items-center py-2">
-                <div class="col-2">
-                  <select class="form-control form-control-sm ">
-                    <option>서비스종류</option>
-                    <option value="">캠페인</option>
-                    <option value="">이케어 실시간</option>
-                    <option value="">이케어 준실시간</option>
-                    <option value="">이케어 스케줄</option>
-                  </select>
+    <!-- 내용 -->
+    <div class="main-panel">
+      <div class="container-fluid mt-4 mb-2">
+        <!-- Table -->
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <!-- Card header -->
+              <div class="card-header">
+                <h3 class="mb-0">기본 핸들러 설정</h3>
+              </div>
+              <div class="card-body pb-0">
+                <!-- search area & buttons -->
+                <div class="row align-items-center py-2 table_option">
+                  <!-- buttons -->
+                  <div class="col-auto btn_area">
+                    <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                      <span class="btn-inner--icon"><i class="fas fa-trash"></i></span><span
+                        class="btn-inner--text">삭제</span>
+                    </button>
+                    <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                      <span class="btn-inner--icon"><i class="fas fa-sync-alt"></i></span><span
+                        class="btn-inner--text">추가</span>
+                    </button>
+                  </div>
+                  <!-- e.buttons -->
+                  <!-- search -->
+                  
+                  <div class="col-auto searchWrap">
+                    <div class="searchbox">
+                      <div class="search_input">
+                        <select class="form-control form-control-sm">
+                          <option>서비스종류</option>
+                          <option></option>
+                        </select>
+                        <select class="form-control form-control-sm">
+                          <option>채널선택</option>
+                          <option></option>
+                        </select>
+                        <input type="search" class="form-control form-control-sm" placeholder=""
+                          aria-controls="datatable-basic" />
+                        <button class="btn btn-sm btn-outline-info btn-icon btn_search">
+                          <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span
+                            class="btn-inner--text">검색</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- //search -->
                 </div>
-                <div class="col-2">
-                  <select class="form-control form-control-sm ">
-                    <option>채널선택</option>
-                    <option value="">Emain</option>
-                    <option value="">SMS</option>
-                    <option value="">LMS/MMS</option>
-                    <option value="">FAX</option>
-                    <option value="">알림톡</option>
-                    <option value="">친구톡</option>
-                    <option value="">PUSH</option>
-                    <option value="">브랜드톡</option>
-                  </select>
-                </div>
+                <!-- e.search area & buttons -->
+                <!-- Light table -->
+                <div class="table-responsive">
+                  <table class="table table-sm dataTable">
+                    <thead class="thead-light">
+                      <tr>
+                        <th width="3%" class="text-center">
+                          <div class="custom-control custom-radio">
+                            <input class="custom-control-input all-check" id="table-check-all" type="radio">
+                            <label class="custom-control-label" for="table-check-all"></label>
+                          </div>
+                        </th>
+                        <th>구분</th>
+                        <th>서비스타입</th>
+                        <th>채널</th>
+                        <th>속성</th>
+                        <th>타입</th>
+                        <th>핸들러명</th>
+                        <th>작성자</th>
+                        <th>작성일</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">
+                          <div class="custom-control custom-radio">
+                            <input class="custom-control-input" id="table-check-all_1" type="radio">
+                            <label class="custom-control-label" for="table-check-all_1"></label>
+                          </div>
+                        </th>
+                        <td onclick="location.href='viewHandler.html'">캠페2222인</td>
+                        <td></td>
+                        <td>브랜드톡</td>
+                        <td>기본</td>
+                        <td>GROOVY</td>
+                        <td>BRANDTALK</td>
+                        <td>admin</td>
+                        <td>20200731</td>
 
-                <div class="col-4 row">
-                  <div class="col-8"> <input type="text" class="form-control form-control-sm"></div>
-                  <div class="col-4 p-0"> <a href=" #" class="btn btn-sm btn-neutral">조회</a></div>
-                </div>
-                <div class="col-4 text-right">
-                  <button href="#" class="btn btn-sm btn-danger btn-round btn-icon">
-                    <span class="btn-inner--icon"><i class="fas fa-trash"></i></span>
-                    <span class="btn-inner--text">삭제</span>
-                  </button>
-                  <button href="#" class="btn btn-sm btn-neutral btn-round btn-icon">
-                    <span class="btn-inner--icon"><i class="fas fa-user-edit"></i></span>
-                    <span class="btn-inner--text">추가</span>
-                  </button>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <div class="custom-control custom-radio">
+                            <input class="custom-control-input" id="table-check-all_2" type="radio">
+                            <label class="custom-control-label" for="table-check-all_2"></label>
+                          </div>
+                        </th>
+                        <td onclick="location.href='viewHandler.html'">캠123페인</td>
+                        <td></td>
+                        <td>친구톡</td>
+                        <td>기본</td>
+                        <td>GROOVY</td>
+                        <td>BRANDTALK</td>
+                        <td>admin</td>
+                        <td>20200731</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">
+                          <div class="custom-control custom-radio">
+                            <input class="custom-control-input" id="table-check-all_3" type="radio">
+                            <label class="custom-control-label" for="table-check-all_3"></label>
+                          </div>
+                        </th>
+                        <td>캠페인</td>
+                        <td></td>
+                        <td>fax</td>
+                        <td>기본</td>
+                        <td>GROOVY</td>
+                        <td>BRANDTALK</td>
+                        <td>admin</td>
+                        <td>20200731</td>
+                      </tr>
+
+                    </tbody>
+                  </table>
                 </div>
               </div>
+
             </div>
-            <div class="table-responsive pt-1 pb-4">
-              <table class="table table-flush td-cursor" id="datatable-basic">
-                <thead class="thead-light">
-                  <tr>
-                    <th width="3%" class="text-center">
-                      <div class="custom-control custom-checkbox">
-                        <input class="custom-control-input all-check" id="table-check-all" type="checkbox">
-                        <label class="custom-control-label" for="table-check-all"></label>
-                      </div>
-                    </th>
-                    <th>구분</th>
-                    <th>서비스타입</th>
-                    <th>채널</th>
-                    <th>속성</th>
-                    <th>타입</th>
-                    <th>핸들러명</th>
-                    <th>작성자</th>
-                    <th>작성일</th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  <tr>
-                    <td>
-                      <div class="custom-control custom-checkbox">
-                        <input class="custom-control-input" id="table-check-all_1" type="checkbox">
-                        <label class="custom-control-label" for="table-check-all_1"></label>
-                      </div>
-                    </td>
-                    <td onclick="location.href='viewHandler.html'">캠페2222인</td>
-                    <td></td>
-                    <td>브랜드톡</td>
-                    <td>기본</td>
-                    <td>GROOVY</td>
-                    <td>BRANDTALK</td>
-                    <td>admin</td>
-                    <td>20200731</td>
-
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="custom-control custom-checkbox">
-                        <input class="custom-control-input" id="table-check-all_2" type="checkbox">
-                        <label class="custom-control-label" for="table-check-all_2"></label>
-                      </div>
-                    </td>
-                    <td onclick="location.href='viewHandler.html'">캠123페인</td>
-                    <td></td>
-                    <td>친구톡</td>
-                    <td>기본</td>
-                    <td>GROOVY</td>
-                    <td>BRANDTALK</td>
-                    <td>admin</td>
-                    <td>20200731</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="custom-control custom-checkbox">
-                        <input class="custom-control-input" id="table-check-all_3" type="checkbox">
-                        <label class="custom-control-label" for="table-check-all_3"></label>
-                      </div>
-                    </td>
-                    <td>캠페인</td>
-                    <td></td>
-                    <td>fax</td>
-                    <td>기본</td>
-                    <td>GROOVY</td>
-                    <td>BRANDTALK</td>
-                    <td>admin</td>
-                    <td>20200731</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="custom-control custom-checkbox">
-                        <input class="custom-control-input" id="table-check-all" type="checkbox">
-                        <label class="custom-control-label" for="table-check-all"></label>
-                      </div>
-                    </td>
-                    <td>캠페인</td>
-                    <td></td>
-                    <td>브랜드톡</td>
-                    <td>기본</td>
-                    <td>GROOVY</td>
-                    <td>BRANDTALK</td>
-                    <td>admin</td>
-                    <td>20200731</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="custom-control custom-checkbox">
-                        <input class="custom-control-input" id="table-check-all" type="checkbox">
-                        <label class="custom-control-label" for="table-check-all"></label>
-                      </div>
-                    </td>
-                    <td>캠페인</td>
-                    <td></td>
-                    <td>브랜드톡</td>
-                    <td>기본</td>
-                    <td>GROOVY</td>
-                    <td>BRANDTALK</td>
-                    <td>admin</td>
-                    <td>20200731</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="custom-control custom-checkbox">
-                        <input class="custom-control-input" id="table-check-all" type="checkbox">
-                        <label class="custom-control-label" for="table-check-all"></label>
-                      </div>
-                    </td>
-                    <td>캠페인</td>
-                    <td></td>
-                    <td>브랜드톡</td>
-                    <td>기본</td>
-                    <td>GROOVY</td>
-                    <td>BRANDTALK</td>
-                    <td>admin</td>
-                    <td>20200731</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="custom-control custom-checkbox">
-                        <input class="custom-control-input" id="table-check-all" type="checkbox">
-                        <label class="custom-control-label" for="table-check-all"></label>
-                      </div>
-                    </td>
-                    <td>캠페인</td>
-                    <td></td>
-                    <td>브랜드톡</td>
-                    <td>기본</td>
-                    <td>GROOVY</td>
-                    <td>BRANDTALK</td>
-                    <td>admin</td>
-                    <td>20200731</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="custom-control custom-checkbox">
-                        <input class="custom-control-input" id="table-check-all" type="checkbox">
-                        <label class="custom-control-label" for="table-check-all"></label>
-                      </div>
-                    </td>
-                    <td>캠페인</td>
-                    <td></td>
-                    <td>브랜드톡</td>
-                    <td>기본</td>
-                    <td>GROOVY</td>
-                    <td>BRANDTALK</td>
-                    <td>admin</td>
-                    <td>20200731</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="custom-control custom-checkbox">
-                        <input class="custom-control-input" id="table-check-all" type="checkbox">
-                        <label class="custom-control-label" for="table-check-all"></label>
-                      </div>
-                    </td>
-                    <td>캠페인</td>
-                    <td></td>
-                    <td>브랜드톡</td>
-                    <td>기본</td>
-                    <td>GROOVY</td>
-                    <td>BRANDTALK</td>
-                    <td>admin</td>
-                    <td>20200731</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="custom-control custom-checkbox">
-                        <input class="custom-control-input" id="table-check-all" type="checkbox">
-                        <label class="custom-control-label" for="table-check-all"></label>
-                      </div>
-                    </td>
-                    <td>캠페인</td>
-                    <td></td>
-                    <td>브랜드톡</td>
-                    <td>기본</td>
-                    <td>GROOVY</td>
-                    <td>BRANDTALK</td>
-                    <td>admin</td>
-                    <td>20200731</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="custom-control custom-checkbox">
-                        <input class="custom-control-input" id="table-check-all" type="checkbox">
-                        <label class="custom-control-label" for="table-check-all"></label>
-                      </div>
-                    </td>
-                    <td>캠페인</td>
-                    <td></td>
-                    <td>브랜드톡</td>
-                    <td>기본</td>
-                    <td>GROOVY</td>
-                    <td>BRANDTALK</td>
-                    <td>admin</td>
-                    <td>20200731</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="custom-control custom-checkbox">
-                        <input class="custom-control-input" id="table-check-all" type="checkbox">
-                        <label class="custom-control-label" for="table-check-all"></label>
-                      </div>
-                    </td>
-                    <td>캠페인</td>
-                    <td></td>
-                    <td>브랜드톡</td>
-                    <td>기본</td>
-                    <td>GROOVY</td>
-                    <td>BRANDTALK</td>
-                    <td>admin</td>
-                    <td>20200731</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="custom-control custom-checkbox">
-                        <input class="custom-control-input" id="table-check-all" type="checkbox">
-                        <label class="custom-control-label" for="table-check-all"></label>
-                      </div>
-                    </td>
-                    <td>캠페인</td>
-                    <td></td>
-                    <td>브랜드톡</td>
-                    <td>기본</td>
-                    <td>GROOVY</td>
-                    <td>BRANDTALK</td>
-                    <td>admin</td>
-                    <td>20200731</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="custom-control custom-checkbox">
-                        <input class="custom-control-input" id="table-check-all" type="checkbox">
-                        <label class="custom-control-label" for="table-check-all"></label>
-                      </div>
-                    </td>
-                    <td>캠페인</td>
-                    <td></td>
-                    <td>브랜드톡</td>
-                    <td>기본</td>
-                    <td>GROOVY</td>
-                    <td>BRANDTALK</td>
-                    <td>admin</td>
-                    <td>20200731</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="custom-control custom-checkbox">
-                        <input class="custom-control-input" id="table-check-all" type="checkbox">
-                        <label class="custom-control-label" for="table-check-all"></label>
-                      </div>
-                    </td>
-                    <td>캠페인</td>
-                    <td></td>
-                    <td>브랜드톡</td>
-                    <td>기본</td>
-                    <td>GROOVY</td>
-                    <td>BRANDTALK</td>
-                    <td>admin</td>
-                    <td>20200731</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="custom-control custom-checkbox">
-                        <input class="custom-control-input" id="table-check-all" type="checkbox">
-                        <label class="custom-control-label" for="table-check-all"></label>
-                      </div>
-                    </td>
-                    <td>캠페인</td>
-                    <td></td>
-                    <td>브랜드톡</td>
-                    <td>기본</td>
-                    <td>GROOVY</td>
-                    <td>BRANDTALK</td>
-                    <td>admin</td>
-                    <td>20200731</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="custom-control custom-checkbox">
-                        <input class="custom-control-input" id="table-check-all" type="checkbox">
-                        <label class="custom-control-label" for="table-check-all"></label>
-                      </div>
-                    </td>
-                    <td>캠페인</td>
-                    <td></td>
-                    <td>브랜드톡</td>
-                    <td>기본</td>
-                    <td>GROOVY</td>
-                    <td>BRANDTALK</td>
-                    <td>admin</td>
-                    <td>20200731</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="custom-control custom-checkbox">
-                        <input class="custom-control-input" id="table-check-all" type="checkbox">
-                        <label class="custom-control-label" for="table-check-all"></label>
-                      </div>
-                    </td>
-                    <td>캠페인</td>
-                    <td></td>
-                    <td>브랜드톡</td>
-                    <td>기본</td>
-                    <td>GROOVY</td>
-                    <td>BRANDTALK</td>
-                    <td>admin</td>
-                    <td>20200731</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="custom-control custom-checkbox">
-                        <input class="custom-control-input" id="table-check-all" type="checkbox">
-                        <label class="custom-control-label" for="table-check-all"></label>
-                      </div>
-                    </td>
-                    <td>캠페인</td>
-                    <td></td>
-                    <td>브랜드톡</td>
-                    <td>기본</td>
-                    <td>GROOVY</td>
-                    <td>BRANDTALK</td>
-                    <td>admin</td>
-                    <td>20200731</td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="custom-control custom-checkbox">
-                        <input class="custom-control-input" id="table-check-all" type="checkbox">
-                        <label class="custom-control-label" for="table-check-all"></label>
-                      </div>
-                    </td>
-                    <td>캠페인</td>
-                    <td></td>
-                    <td>브랜드톡</td>
-                    <td>기본</td>
-                    <td>GROOVY</td>
-                    <td>BRANDTALK</td>
-                    <td>admin</td>
-                    <td>20200731</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
+          </div><!-- e.Page content / e.container-fluid-->
         </div>
-      </div><!-- e.Page content / e.container-fluid-->
-    </div>
-  </div>
-  <!--내용-->
+      </div>
+      <!--내용-->
+    </div> <!-- // wrapper -->
 
 
 
