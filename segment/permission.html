@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script>
+    $(function () {
+        $("#js").load("/js.html");
+        
+    });
+
+    
+
+    </script>
+</head>
+
+<body>
+<div id="js"></div>
+
+<div class="card pop-card">
+    <div class="card-header">
+        <h5 class="mb-0">부서 선택</h5>
+    </div>
+
+    <div class="card-body">
+
+        <!-- Card body 트리 -->
+        <div id="sidetree" class="overflow-auto" style="height:100%; max-height:508px;border:1px solid  #e9ecef; ">
+            <ul id="tree">
+                <li>
+                    <h5><input type="checkbox" id="" name="" /><label><span class="hide">check</span></label> mnwise</h5>
+                    <ul class="description">
+                        <li><input type="checkbox" id="" name="" /><label><span class="hide">check</span></label><a href="#" class="on">RND</a></li>
+                        <li><input type="checkbox" id="" name="" /><label><span class="hide">check</span></label><a href="#">TS팀</a></li>
+                        <li><input type="checkbox" id="" name="" /><label><span class="hide">check</span></label><a href="#">서비스팀</a></li>
+                        <li><input type="checkbox" id="" name="" /><label><span class="hide">check</span></label><a href="#">사업팀</a>
+                            <ul>
+                                <li><input type="checkbox" id="" name="" /><label><span class="hide">check</span></label><a href="#">aaaa</a></li>
+                                <li><input type="checkbox" id="" name="" /><label><span class="hide">check</span></label><a href="#">bbbb</a></li>
+                            </ul>
+                        </li>
+                        <li><input type="checkbox" id="" name="" /><label><span class="hide">check</span></label><a href="#">BI팀</a></li>
+                        <li><input type="checkbox" id="" name="" /><label><span class="hide">check</span></label><a href="#">발표</a></li>
+                        <li><input type="checkbox" id="" name="" /><label><span class="hide">check</span></label><a href="#">부트스트랩개발</a></li>
+                        <li><input type="checkbox" id="" name="" /><label><span class="hide">check</span></label><a href="#"></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card-footer">
+        <button type="button" class="btn btn-default">선택</button>
+    </div>
+</div>
+
+</html>
