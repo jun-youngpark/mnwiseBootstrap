@@ -4,275 +4,361 @@
 
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-
-
     <script>
         $(function () {
             $("#subNav").load("../subNav.html");
             $("#js").load("../js.html");
-            $("#headerTop").load("../headerTop.html");
         });
     </script>
 </head>
 
-
-
-
 <body>
-    <!-- 메뉴 -->
-    <div id="subNav"></div>
-    <div id="js"></div>
-    <div id="headerTop"></div>
-    <!-- 메뉴 End-->
+    <!-- wrapper -->
+    <div class="wrapper">
+        <div id="subNav"></div>
+        <div id="js"></div>
+        <!-- 메뉴 End-->
 
-    <!-- 본문  -->
-    <div class="main-panel">
-        <!-- Page content -->
-        <div class="container-fluid mt-4 mb-2">
-            <div class="card mb-4">
-                <!-- Card header -->
-                <div class="card-header">
-                    <div class="row align-items-center">
-                      <div class="col">
+        <!-- 본문  -->
+        <div class="main-panel">
+            <!-- Page content -->
+            <div class="container-fluid mt-4 mb-2">
+                <div class="card mb-4">
+                    <!-- Card header -->
+                    <div class="card-header">
                         <h3 class="mb-0">PUSH 설정</h3>
-                      </div>
                     </div>
-                  </div>
-                  
-                 
-                <!-- APP설정 -->
-                <div class="row mb-4">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="h3 mb-2" >| APP관리 <span class="badge badge-md badge-pill badge-primary" data-toggle="tooltip" data-placement="right" title="알림을 받을 APP ID는 PUSH 시스템에 미리 등록해야 합니다.
-                                    ">?</span></h5>
-                                 <div class="table-responsive"> <!--테이블 선 보이게 하려면 table-responsive  - class 삭제-->
-                                    <table class="table table-border-pd align-items-center table-flush td-cursor table-bt">
-                                            <thead class="thead-light">
-                                                <tr>
-                                                    <th scope="col">-</th>
-                                                    <th scope="col">사용여부</th>
-                                                    <th scope="col">ios 테스트 모드</th>
-                                                    <th scope="col">APP ID</th>
-                                                    <th scope="col">APP Description</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody class="list">
-                                                <tr>
-                                                    <td> <button href="#"
-                                                            class="btn btn-sm btn-secondary btn-round btn-icon">
-                                                            <span class="btn-inner--icon"><i
-                                                                    class="fas fa-edit"></i></span>
-                                                            <span class="btn-inner--text">수정</span>
-                                                        </button></td>
-                                                    <td class="text-center"><label class="custom-toggle">
-                                                            <input type="checkbox" checked>
-                                                            <span class="custom-toggle-slider rounded-circle"
-                                                                data-label-off="No" data-label-on="Yes"></span>
-                                                        </label></td>
-                                                    <td><label class="custom-toggle">
-                                                            <input type="checkbox" checked>
-                                                            <span class="custom-toggle-slider rounded-circle"
-                                                                data-label-off="No" data-label-on="Yes"></span>
-                                                        </label></td>
-                                                    <td>test</td>
-                                                    <td>push test</td>
-                                                </tr>
-                                                <tr>
-                                                    <td> <button href="#"
-                                                            class="btn btn-sm btn-secondary btn-round btn-icon">
-                                                            <span class="btn-inner--icon"><i
-                                                                    class="fas fa-edit"></i></span>
-                                                            <span class="btn-inner--text">수정</span>
-                                                        </button></td>
-                                                    <td><label class="custom-toggle">
-                                                            <input type="checkbox" checked>
-                                                            <span class="custom-toggle-slider rounded-circle"
-                                                                data-label-off="No" data-label-on="Yes"></span>
-                                                        </label></td>
-                                                    <td><label class="custom-toggle">
-                                                            <input type="checkbox" checked>
-                                                            <span class="custom-toggle-slider rounded-circle"
-                                                                data-label-off="No" data-label-on="Yes"></span>
-                                                        </label></td>
-                                                    <td>test</td>
-                                                    <td>push test</td>
-                                                </tr>
-                                                <tr>
-                                                    <td> <button href="#"
-                                                            class="btn btn-sm btn-neutral btn-round btn-icon">
-                                                            <span class="btn-inner--icon"><i
-                                                                    class="fas fa-user-edit"></i></span>
-                                                            <span class="btn-inner--text">추가</span>
-                                                        </button></td>
-                                                    <td colspan="2" class="text-center">사용</td>
-                                                    <td><input class="form-control form-control-sm" type="text">
-                                                    </td>
-                                                    <td><input class="form-control form-control-sm" type="text">
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+
+
+                    <!-- APP설정 -->
+                    <!-- card body -->
+                    <div class="card-body">
+                        <h1 class="h3 mb-3">| APP관리 <span class="badge badge-md badge-pill badge-primary"
+                                data-toggle="tooltip" data-placement="right" title="알림을 받을 APP ID는 PUSH 시스템에 미리 등록해야 합니다.
+                    ">?</span></h1>
+                        <!-- Light table -->
+                        <div class="table-responsive">
+                            <table class="table table-sm dataTable">
+                                <colgroup>
+                                    <col style="width:12%;" />
+                                    <col style="width:8%;" />
+                                    <col style="width:8%;" />
+                                    <col style="width:15%;" />
+                                    <col style="width:*;" />
+                                </colgroup>
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">-</th>
+                                        <th scope="col">사용여부</th>
+                                        <th scope="col">ios 테스트 모드</th>
+                                        <th scope="col">APP ID</th>
+                                        <th scope="col">APP Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <button type="button"
+                                                class=" btn btn-sm btn-outline-primary btn-round btn-icon mx-0 modify-btn">
+                                                <span class="btn-inner--icon"><i class="fas fa-edit"></i></span>
+                                                <span class="btn-inner--text">수정</span>
+                                            </button>
+                                            <div class="show-btn-box d-none">
+                                                <button type="button"
+                                                    class="btn btn-sm btn-outline-primary btn-round btn-icon save-btn">
+                                                    <span class="btn-inner--icon"><i class="fas fa-save"></i></span>
+                                                    <span class="btn-inner--text">저장</span>
+                                                </button>
+                                                <button type="button"
+                                                    class="btn btn-sm btn-outline-primary btn-round btn-icon cancel-btn">
+                                                    <span class="btn-inner--icon"><i class="fas fa-edit"></i></span>
+                                                    <span class="btn-inner--text">취소</span>
+                                                </button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="custom-toggle-wrap use-toogle">
+                                                <label class="custom-toggle">
+                                                    <input type="checkbox" checked>
+                                                    <span class="custom-toggle-slider rounded-circle"
+                                                        data-label-off="No" data-label-on="Yes"></span>
+                                                </label></div>
+                                        </td>
+                                        <td>
+                                            <div class="custom-toggle-wrap">
+                                                <label class="custom-toggle">
+                                                    <input type="checkbox" checked>
+                                                    <span class="custom-toggle-slider rounded-circle"
+                                                        data-label-off="No" data-label-on="Yes"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>test</td>
+                                        <td class="text-left"><input class="form-control form-control-sm" type="text"
+                                                value="push test" disabled></td>
+                                    </tr>
+                                    <!-- btn 아이콘 유무 비교 위해 해당 tr 아이콘 삭제 -->
+                                    <tr>
+                                        <td>
+                                            <button type="button"
+                                                class=" btn btn-sm btn-outline-primary btn-round mx-0 modify-btn">
+                                               수정
+                                            </button>
+                                            <div class="show-btn-box d-none">
+                                                <button type="button"
+                                                    class="btn btn-sm btn-outline-primary btn-roundsave-btn">
+                                                   저장
+                                                </button>
+                                                <button type="button"
+                                                    class="btn btn-sm btn-outline-primary btn-round ancel-btn">
+                                                   취소
+                                                </button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="custom-toggle-wrap  use-toogle"><label class="custom-toggle">
+                                                    <input type="checkbox" checked>
+                                                    <span class="custom-toggle-slider rounded-circle"
+                                                        data-label-off="No" data-label-on="Yes"></span>
+                                                </label></div>
+                                        </td>
+                                        <td>
+                                            <div class="custom-toggle-wrap"><label class="custom-toggle">
+                                                    <input type="checkbox" checked>
+                                                    <span class="custom-toggle-slider rounded-circle"
+                                                        data-label-off="No" data-label-on="Yes"></span>
+                                                </label></div>
+                                        </td>
+                                        <td>test</td>
+                                        <td class="text-left"><input class="form-control form-control-sm" type="text"
+                                            value="push test" disabled></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <button type="button"
+                                                class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                                                <span class="btn-inner--icon"><i class="fas fa-user-edit"></i></span>
+                                                <span class="btn-inner--text">추가</span></button></td>
+
+                                        <td colspan="2" class="text-center">사용</td>
+                                        <td><input class="form-control form-control-sm" type="text">
+                                        </td>
+                                        <td class="text-left"><input class="form-control form-control-sm" type="text">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //Light table -->
+                    </div>
+                    <!-- //card body -->
+
+                    <!-- 메세지 유형관리 -->
+                    <!-- card body -->
+                    <div class="card-body">
+                        <h1 class="h3 mb-3">| 메세지 유형관리 <span
+                                class="badge badge-md badge-pill badge-primary" data-toggle="tooltip"
+                                data-placement="right" title="알림 메시지 유형은 PUSH 시스템에 미리 등록해야 합니다.
+                    ">?</span></h1>
+                        <!-- Light table -->
+                        <div class="table-responsive">
+                            <table class="table table-sm dataTable">
+                                <colgroup>
+                                    <col style="width:12%;" />
+                                    <col style="width:12%;" />
+                                    <col style="width:15%;" />
+                                    <col style="width:*;" />
+                                </colgroup>
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">-</th>
+                                        <th scope="col">사용여부</th>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">메시지 유형</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <button type="button"
+                                                class=" btn btn-sm btn-outline-primary btn-round btn-icon mx-0 modify-btn">
+                                                <span class="btn-inner--icon"><i class="fas fa-edit"></i></span>
+                                                <span class="btn-inner--text">수정</span>
+                                            </button>
+                                            <div class="show-btn-box d-none">
+                                                <button type="button"
+                                                    class="btn btn-sm btn-outline-primary btn-round btn-icon save-btn">
+                                                    <span class="btn-inner--icon"><i class="fas fa-save"></i></span>
+                                                    <span class="btn-inner--text">저장</span>
+                                                </button>
+                                                <button type="button"
+                                                    class="btn btn-sm btn-outline-primary btn-round btn-icon cancel-btn">
+                                                    <span class="btn-inner--icon"><i class="fas fa-edit"></i></span>
+                                                    <span class="btn-inner--text">취소</span>
+                                                </button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="custom-toggle-wrap use-toogle">
+                                                <label class="custom-toggle">
+                                                    <input type="checkbox" checked>
+                                                    <span class="custom-toggle-slider rounded-circle"
+                                                        data-label-off="No" data-label-on="Yes"></span>
+                                                </label></div>
+                                        </td>
+                                        <td>test</td>
+                                        <td class="text-left"><input class="form-control form-control-sm" type="text"
+                                                value="push test" disabled></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <button type="button"
+                                                class=" btn btn-sm btn-outline-primary btn-round btn-icon mx-0 modify-btn">
+                                                <span class="btn-inner--icon"><i class="fas fa-edit"></i></span>
+                                                <span class="btn-inner--text">수정</span>
+                                            </button>
+                                            <div class="show-btn-box d-none">
+                                                <button type="button"
+                                                    class="btn btn-sm btn-outline-primary btn-round btn-icon save-btn">
+                                                    <span class="btn-inner--icon"><i class="fas fa-save"></i></span>
+                                                    <span class="btn-inner--text">저장</span>
+                                                </button>
+                                                <button type="button"
+                                                    class="btn btn-sm btn-outline-primary btn-round btn-icon cancel-btn">
+                                                    <span class="btn-inner--icon"><i class="fas fa-edit"></i></span>
+                                                    <span class="btn-inner--text">취소</span>
+                                                </button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="custom-toggle-wrap  use-toogle"><label class="custom-toggle">
+                                                    <input type="checkbox" checked>
+                                                    <span class="custom-toggle-slider rounded-circle"
+                                                        data-label-off="No" data-label-on="Yes"></span>
+                                                </label></div>
+                                        </td>
+                                        <td>test</td>
+                                        <td class="text-left"><input class="form-control form-control-sm" type="text"
+                                            value="push test" disabled></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <button type="button"
+                                                class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                                                <span class="btn-inner--icon"><i class="fas fa-user-edit"></i></span>
+                                                <span class="btn-inner--text">추가</span></button></td>
+
+                                        <td class="text-center">사용</td>
+                                        <td><input class="form-control form-control-sm" type="text">
+                                        </td>
+                                        <td class="text-left"><input class="form-control form-control-sm" type="text">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //Light table -->
+                    </div>
+                    <!-- //card body -->
+
+                    <!-- 코드 관리 -->
+                    <div class="card-body row code-set mb-5" style="min-height:300px; max-height:508px;  ">
+                        <h5 class="h3  mb-3 my-2 col-12">| 코드관리</h5>
+                        <div class="col-3 pr-0">
+                            <!-- Card body 트리 -->
+                            <div id="sidetree" class="overflow-auto" style="height:100%; max-height:508px;border:1px solid  #e9ecef; ">
+                                <ul id="tree">
+                                    <li>
+                                        <h5>PUSH 공통 결과코드</h5>
+                                        <ul class="description">
+                                            <li><a href="#" class="on">정상 결과코드</a></li>
+                                            <li><a href="#">시스템 에러 결과코드</a></li>
+                                            <li><a href="#">APNS 에러 결과코드</a></li>
+                                            <li><a href="#">HTTP 에러 결과코드</a></li>
+                                            <li><a href="#">GCM 에러 결과코드</a></li>
+                                            <li><a href="#">기타 에러 결과코드</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <!-- 메세지 유형관리 -->
-                <div class="row mb-4">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="h3 mb-2">| 메세지 유형관리  <span class="badge badge-md badge-pill badge-primary" data-toggle="tooltip" data-placement="right" title="알림 메시지 유형은 PUSH 시스템에 미리 등록해야 합니다.
-                                    ">?</span></h5>
-                                <div class="table-responsive">
-                                    <table class="table table-border-pd align-items-center table-flush td-cursor table-bt">
+                        <!--테이블-->
+
+                        <div class="col-9 pl-0" >
+                            <div class="table-responsive">
+                                <div class="table-responsive overflow-auto" style=" max-height:508px;">
+                                    <table class="table table-sm dataTable">
                                         <thead class="thead-light">
                                             <tr>
-                                                <th scope="col">-</th>
-                                                <th scope="col">사용여부</th>
-                                                <th scope="col">ID</th>
-                                                <th scope="col">메세지 유형</th>
+                                                <th scope="col">코드</th>
+                                                <th scope="col">설명</th>
                                             </tr>
                                         </thead>
-                                        <tbody class="list">
+                                        <tbody>
                                             <tr>
-                                                <td> <button href="#"
-                                                        class="btn btn-sm btn-secondary btn-round btn-icon">
-                                                        <span class="btn-inner--icon"><i
-                                                                class="fas fa-edit"></i></span>
-                                                        <span class="btn-inner--text">수정</span>
-                                                    </button></td>
-                                                <td><label class="custom-toggle">
-                                                        <input type="checkbox" checked>
-                                                        <span class="custom-toggle-slider rounded-circle"
-                                                            data-label-off="No" data-label-on="Yes"></span>
-                                                    </label></td>
-                                                <td>test</td>
-                                                <td>push test</td>
+                                                <td>602</td>
+                                                <td>Connection Failure</td>
                                             </tr>
                                             <tr>
-                                                <td> <button href="#"
-                                                        class="btn btn-sm btn-secondary btn-round btn-icon">
-                                                        <span class="btn-inner--icon"><i
-                                                                class="fas fa-edit"></i></span>
-                                                        <span class="btn-inner--text">수정</span>
-                                                    </button></td>
-                                                <td><label class="custom-toggle">
-                                                        <input type="checkbox" checked>
-                                                        <span class="custom-toggle-slider rounded-circle"
-                                                            data-label-off="No" data-label-on="Yes"></span>
-                                                    </label></td>
-                                                <td>test</td>
-                                                <td>push test</td>
+                                                <td>603</td>
+                                                <td>Connection Error</td>
                                             </tr>
                                             <tr>
-                                                <td> <button href="#"
-                                                        class="btn btn-sm btn-neutral btn-round btn-icon">
-                                                        <span class="btn-inner--icon"><i
-                                                                class="fas fa-user-edit"></i></span>
-                                                        <span class="btn-inner--text">추가</span>
-                                                    </button></td>
-                                                <td>사용</td>
-
-                                                <td><input class="form-control form-control-sm" type="text">
-                                                </td>
-                                                <td><input class="form-control form-control-sm" type="text">
-                                                </td>
-
+                                                <td>604</td>
+                                                <td>응답을 기다리던중 접속이 끊기거나 IOException이 발생</td>
+                                            </tr>
+                                            <tr>
+                                                <td>700</td>
+                                                <td>통신 중 접속이 끊어짐</td>
+                                            </tr>
+                                            <tr>
+                                                <td>701</td>
+                                                <td>IOExcepition</td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--e.container-fluid-->
+            </div> <!-- e.page content -->
+        </div>
+        <!--내용-->
+    </div> <!-- // wrapper -->
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- 코드 관리 -->
-                <div class="row mb-0">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-body row div-bt">
-                                <h5 class="h3 my-2 col-12">| 코드관리</h5>
-                                <div class="col-3 pr-0" style="border-top:1px solid #e9ecef;">
-                                    <!-- Card body 트리 -->
-                                    <div id="sidetree">
-                                        <ul id="tree">
-                                            <li>
-                                                <h5>PUSH 공통 결과코드</h5>
-                                                <ul class="description">
-                                                    <li><a href="#" class="on">정상 결과코드</a></li>
-                                                    <li><a href="#">시스템 에러 결과코드</a></li>
-                                                    <li><a href="#">APNS 에러 결과코드</a></li>
-                                                    <li><a href="#">HTTP 에러 결과코드</a></li>
-                                                    <li><a href="#">GCM 에러 결과코드</a></li>
-                                                    <li><a href="#">기타 에러 결과코드</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--테이블-->
-                                <div class="col-9 pl-0">
-                                    <div class="table-responsive">
-                                        <div class="table-responsive  ">
-                                            <table class="table table-xs align-items-center table-flush">
-                                                <thead class="thead-light">
-                                                    <tr>
-                                                        <th scope="col">코드</th>
-                                                        <th scope="col">설명</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody class="list">
-                                                    <tr>
-                                                        <td>602</td>
-                                                        <td>Connection Failure</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>603</td>
-                                                        <td>Connection Error</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>604</td>
-                                                        <td>응답을 기다리던중 접속이 끊기거나 IOException이 발생</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>700</td>
-                                                        <td>통신 중 접속이 끊어짐</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>701</td>
-                                                        <td>IOExcepition</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>702</td>
-                                                        <td>응답 코드의 길이가 3 이하</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>703</td>
-                                                        <td>명령어 전송 또는 응답 코드를 기다리는 중 IOException</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>704</td>
-                                                        <td>SMTP TIME OUT</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-          
-            </div>
-            <!--e.container-fluid-->
-        </div> <!-- e.page content -->
-    </div>
-    <!--내용-->
+
+
+    <script>
+        $(document).ready(function () {
+
+            /* btn 이벤트*/
+            $('.btn').on('click', function () {
+                if ($(this).hasClass("modify-btn") === true) {
+                    $(this).addClass('d-none');
+                    $(this).next().removeClass('d-none');
+                    $(this).parents("tr").find(":text").attr("disabled", false);
+
+                }
+                if ($(this).hasClass("cancel-btn") === true) {
+                    $(this).parent().prev().removeClass('d-none');
+                    $(this).parent().addClass('d-none');
+                    $(this).parents('tr').find(":text").attr("disabled", true);
+                }
+            });
+
+            /* toggle 이벤트 */
+            $('.use-toogle :checkbox').on('change', function () {
+                if ($(this).is(":checked") === true) {
+                    console.log("Yes")
+                    $(this).parents('tr').find(".modify-btn").removeClass('d-none');
+                } else {
+                    $(this).parents('tr').find(".modify-btn").addClass('d-none');
+                }
+            })
+        })
+    </script>
 
 
 
