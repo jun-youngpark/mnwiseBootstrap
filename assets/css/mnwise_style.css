@@ -31,38 +31,8 @@ body{background:#fff;}
 /* headerTop 없을 경우 대응 */
 .main-panel > .container-fluid {margin-top:0 !important; padding-top:1.5rem !important;}
  
-  .dp-flex{display: flex ;}
-  .form-group-mb{ margin-bottom: .8rem;}
+.dp-flex{display: flex ;}
 
-
- /*  ---- 삭제 예정 ----  
- 테이블 플러그인 사용 시   플러그인에 있는 select box, script단에서 초기화 후 display: none
- div.dataTables_wrapper div.dataTables_length label { display: none;}
-페이지네이션 중앙 정렬
-div.dataTables_wrapper div.dataTables_info {position:absolute;}
-div.dataTables_wrapper div.dataTables_paginate {float:none; text-align:center;}
-div.dataTables_wrapper div.dataTables_paginate ul.pagination {justify-content: center;}
-*/
-
-/*테이블 패딩 줄인 css env_smtpocode.html,env_push_setting.html */
-.table-xs th, .table-xs td {padding: .3rem;}
-.table-xs :last-child{border-bottom:1px}
-.table-xs tbody tr:last-child td {border-bottom:1px solid #e9ecef;  }
-/*테이블 마지막 라인추가*/
-.table-bt{border-bottom:1px solid #e9ecef;  }
-.td-cursor td{cursor: pointer;}
-
-
-/* 테이블 선 추가 적용 : env_push_setting.html*/
-.table-border-pd{border-collapse: collapse;  }
-.table-border-pd th, .table-border-pd td{ border:1px solid #e9ecef;  } 
-.table-border-pd td{ padding: .5rem;}/*  border-right:1px solid #e9ecef; */
-
-/*form-control과 맞추기 위한 css - template_view.html*/
-.div-control-box{font-size: .875rem;  font-weight: 400;  line-height: 1.5;  width: 100%; height: calc(1.5em + 1.25rem + 3px);  padding: .625rem .75rem;
-  transition: all .15s cubic-bezier(.68, -.55, .265, 1.55);   color: #8898aa;   border: 1px solid #dee2e6; border-radius: .25rem;
-  background-color: #fff; background-clip: padding-box;  box-shadow: 0 3px 2px rgba(233, 236, 239, .05);}
-  
 
 /*** input-file**/
 .custom-file-input:lang(ko) ~ .custom-file-label::after{content: '파일 선택';}
@@ -380,3 +350,6 @@ ex, campaign/campaign_2step_mail_form.html 수신확인 체크박스
 .chartWrap {position:relative; min-height:200px;}
 
 .dp-none {	display:none; }
+
+/* div > custom toggle wrap */
+.custom-toggle-wrap{display: flex; justify-content: center;}
