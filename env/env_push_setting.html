@@ -28,8 +28,6 @@
                     <div class="card-header">
                         <h3 class="mb-0">PUSH 설정</h3>
                     </div>
-
-
                     <!-- APP설정 -->
                     <!-- card body -->
                     <div class="card-body">
@@ -102,16 +100,16 @@
                                         <td>
                                             <button type="button"
                                                 class=" btn btn-sm btn-outline-primary btn-round mx-0 modify-btn">
-                                               수정
+                                                수정
                                             </button>
                                             <div class="show-btn-box d-none">
                                                 <button type="button"
                                                     class="btn btn-sm btn-outline-primary btn-roundsave-btn">
-                                                   저장
+                                                    저장
                                                 </button>
                                                 <button type="button"
                                                     class="btn btn-sm btn-outline-primary btn-round ancel-btn">
-                                                   취소
+                                                    취소
                                                 </button>
                                             </div>
                                         </td>
@@ -131,7 +129,7 @@
                                         </td>
                                         <td>test</td>
                                         <td class="text-left"><input class="form-control form-control-sm" type="text"
-                                            value="push test" disabled></td>
+                                                value="push test" disabled></td>
                                     </tr>
                                     <tr>
                                         <td>
@@ -156,9 +154,8 @@
                     <!-- 메세지 유형관리 -->
                     <!-- card body -->
                     <div class="card-body">
-                        <h1 class="h3 mb-3">| 메세지 유형관리 <span
-                                class="badge badge-md badge-pill badge-primary" data-toggle="tooltip"
-                                data-placement="right" title="알림 메시지 유형은 PUSH 시스템에 미리 등록해야 합니다.
+                        <h1 class="h3 mb-3">| 메세지 유형관리 <span class="badge badge-md badge-pill badge-primary"
+                                data-toggle="tooltip" data-placement="right" title="알림 메시지 유형은 PUSH 시스템에 미리 등록해야 합니다.
                     ">?</span></h1>
                         <!-- Light table -->
                         <div class="table-responsive">
@@ -239,7 +236,7 @@
                                         </td>
                                         <td>test</td>
                                         <td class="text-left"><input class="form-control form-control-sm" type="text"
-                                            value="push test" disabled></td>
+                                                value="push test" disabled></td>
                                     </tr>
                                     <tr>
                                         <td>
@@ -262,65 +259,75 @@
                     <!-- //card body -->
 
                     <!-- 코드 관리 -->
-                    <div class="card-body row code-set mb-5" style="min-height:300px; max-height:508px;  ">
+                    <div class="card-body mb-5">
                         <h5 class="h3  mb-3 my-2 col-12">| 코드관리</h5>
-                        <div class="col-3 pr-0">
-                            <!-- Card body 트리 -->
-                            <div id="sidetree" class="overflow-auto" style="height:100%; max-height:508px;border:1px solid  #e9ecef; ">
-                                <ul id="tree">
-                                    <li>
-                                        <h5>PUSH 공통 결과코드</h5>
-                                        <ul class="description">
-                                            <li><a href="#" class="on">정상 결과코드</a></li>
-                                            <li><a href="#">시스템 에러 결과코드</a></li>
-                                            <li><a href="#">APNS 에러 결과코드</a></li>
-                                            <li><a href="#">HTTP 에러 결과코드</a></li>
-                                            <li><a href="#">GCM 에러 결과코드</a></li>
-                                            <li><a href="#">기타 에러 결과코드</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!--테이블-->
-
-                        <div class="col-9 pl-0" >
-                            <div class="table-responsive">
-                                <div class="table-responsive overflow-auto" style=" max-height:508px;">
-                                    <table class="table table-sm dataTable">
-                                        <thead class="thead-light">
-                                            <tr>
-                                                <th scope="col">코드</th>
-                                                <th scope="col">설명</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>602</td>
-                                                <td>Connection Failure</td>
-                                            </tr>
-                                            <tr>
-                                                <td>603</td>
-                                                <td>Connection Error</td>
-                                            </tr>
-                                            <tr>
-                                                <td>604</td>
-                                                <td>응답을 기다리던중 접속이 끊기거나 IOException이 발생</td>
-                                            </tr>
-                                            <tr>
-                                                <td>700</td>
-                                                <td>통신 중 접속이 끊어짐</td>
-                                            </tr>
-                                            <tr>
-                                                <td>701</td>
-                                                <td>IOExcepition</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                        <!-- row -->
+                        <div class="container-fluid my-2">
+                            <div class="row  code-set overflow-hidden">
+                                <div class="col-3 pr-0">
+                                    <div class="code-set-tree">
+                                        <div id="sidetree">
+                                            <ul id="tree" class="overflow-auto">
+                                                <li>
+                                                    <h5>PUSH 공통 결과코드</h5>
+                                                    <ul class="description">
+                                                        <li><a href="#" class="on">정상 결과코드</a></li>
+                                                        <li><a href="#">시스템 에러 결과코드</a></li>
+                                                        <li><a href="#">APNS 에러 결과코드</a></li>
+                                                        <li><a href="#">HTTP 에러 결과코드</a></li>
+                                                        <li><a href="#">GCM 에러 결과코드</a></li>
+                                                        <li><a href="#">기타 에러 결과코드</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
+                                <!--// Card body 트리 -->
+                                <!-- col-9  코드설명 -->
+                                <div class="col-9 pl-0  overflow-auto code-set-table">
+                                    <div class="table-responsive">
+                                        <div class="table-responsive" class="overflow-auto" >
+                                            <table class="table table-sm dataTable">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th scope="col">코드</th>
+                                                        <th scope="col">설명</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>602</td>
+                                                        <td>Connection Failure</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>603</td>
+                                                        <td>Connection Error</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>604</td>
+                                                        <td>응답을 기다리던중 접속이 끊기거나 IOException이 발생</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>700</td>
+                                                        <td>통신 중 접속이 끊어짐</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>701</td>
+                                                        <td>IOExcepition</td>
+                                                    </tr>
+                                                   
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- // col-9  코드설명 -->
                             </div>
+                            <!-- // row -->
                         </div>
                     </div>
+                    <!-- // 코드 관리 -->
                 </div>
                 <!--e.container-fluid-->
             </div> <!-- e.page content -->
