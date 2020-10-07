@@ -9,7 +9,6 @@
     $(function () {
       $("#subNav").load("../subNav.html");
       $("#js").load("../js.html");
-      $("#headerTop").load("../headerTop.html");
     });
   </script>
 </head>
@@ -18,357 +17,390 @@
 
 
 <body>
-  <!-- 메뉴 -->
-  <div id="subNav"></div>
-  <div id="js"></div>
-  <div id="headerTop"></div>
-  <!-- 메뉴 End-->
+  <!-- wapper-->
+  <div class="wrapper">
+    <!-- 메뉴 -->
+    <div id="subNav"></div>
+    <div id="js"></div>
+    <!-- 메뉴 End-->
 
-  <!-- 본문  -->
-  <div class="main-panel">
-    <!-- Page content -->
-    <div class="container-fluid mt-4 mb-2">
-      <div class="card mb-4">
+    <!-- 본문  -->
+    <div class="main-panel">
+      <!-- Page content -->
+      <div class="container-fluid mt-4 mb-2">
         <div class="card">
           <!-- Card header -->
           <div class="card-header">
-            <div class="row align-items-center">
-              <div class="col">
-                <h3 class="mb-0">로그 관리</h3>
-              </div>
-              <div class="col text-right">
-                <a href="#" class="btn btn-sm btn-primary btn-round btn-icon">
-                  <span class="btn-inner--icon"><i class="fas fa-download"></i></span>
-                  <span class="btn-inner--text">다운</span>
-                </a>
-              </div>
-            </div>
+            <h3 class="mb-0">로그 관리</h3>
           </div>
-          <!-- card-body -->
-          <div class="card-body">
-            <!--테이블-->
-            <div class="col-12 pl-0">
-              <div class="row">
-                <div class="col-4">
-                  <div class="form-group row mb-1">
-                    <label for="sqlKind" class="form-control-label col-form-label-sm pl-4">홈 디렉터리</label>
-                    <div class="col-8">
-                      <select class="form-control form-control-sm" id="sqlKind">
+          <!-- grid -->
+          <div class="card-body newgridWrap">
+            <!-- Light table -->
+            <div class="table-responsive">
+              <table class="table table-sm dataTable">
+                <thead class="thead-light">
+                  <colgroup>
+                    <col style="width:10%;" />
+                    <col style="width:15%;" />
+                    <col style="width:10%;" />
+                    <col style="width:*%;" />
+                  </colgroup>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">홈 디렉터리</th>
+                    <td> <select class="form-control form-control-sm" id="sqlKind">
                         <option>선택해주세요</option>
                         <option>log</option>
                         <option>log2</option>
-                      </select>
-                    </div>
-                    </div>
-                  </div>
-                  <div class="col-8">
-                    <h5 class="form-control-label"> 경로 :<span class="pl-2">/app/wiseu_oracle/log/BSE1</span></h5>
-                  </div>
-                </div>
-              <div class="table-responsive">
-                <div class="table-responsive  ">
-                  <table class="table table-bordered td-cursor align-items-center table-flush">
-                    <thead class="thead-light">
-                      <tr>
-                        <th scope="col" width="3%" class="text-center">
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input all-check" id="table-check-all" type="checkbox">
-                            <label class="custom-control-label" for="table-check-all"></label>
-                          </div>
-                        </th>
-                        <th scope="col">파일명</th>
-                        <th scope="col">마지막 수정일자</th>
-                        <th scope="col">파일크기</th>
-                      </tr>
-                    </thead>
-                    <tbody class="list">
-                      <tr>
-                        <td>
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" id="table-check-all_1" type="checkbox">
-                            <label class="custom-control-label" for="table-check-all_1"></label>
-                          </div>
-                        </td>
-                        <td><i class="fas fa-folder"></i> BSE1</td>
-                        <td>2020-08-25 00:00:00</td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" id="table-check-all_2" type="checkbox">
-                            <label class="custom-control-label" for="table-check-all_2"></label>
-                          </div>
-                        </td>
-                        <td><i class="fas fa-folder"></i> ITS1</td>
-                        <td>2020-08-25 00:00:45</td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" id="table-check-all_3" type="checkbox">
-                            <label class="custom-control-label" for="table-check-all_3"></label>
-                          </div>
-                        </td>
-                        <td><i class="fas fa-folder"></i> LTS1</td>
-                        <td>2020-08-25 01:00:02</td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" id="table-check-all_4" type="checkbox">
-                            <label class="custom-control-label" for="table-check-all_4"></label>
-                          </div>
-                        </td>
-                        <td><i class="fas fa-folder"></i> MTS1</td>
-                        <td>2020-08-25 01:00:01</td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" id="table-check-all_5" type="checkbox">
-                            <label class="custom-control-label" for="table-check-all_5"></label>
-                          </div>
-                        </td>
-                        <td><i class="fas fa-folder"></i> TOMCAT</td>
-                        <td>2019-08-12 16:37:46</td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" id="table-check-all_6" type="checkbox">
-                            <label class="custom-control-label" for="table-check-all_6"></label>
-                          </div>
-                        </td>
-                        <td><i class="fas fa-folder"></i> WatchDog</td>
-                        <td>2020-08-25 07:00:45</td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" id="table-check-all_7" type="checkbox">
-                            <label class="custom-control-label" for="table-check-all_7"></label>
-                          </div>
-                        </td>
-                        <td><i class="fas fa-folder"></i> altalk</td>
-                        <td>2020-08-18 01:00:01</td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" id="table-check-all_8" type="checkbox">
-                            <label class="custom-control-label" for="table-check-all_8"></label>
-                          </div>
-                        </td>
-                        <td><i class="fas fa-folder"></i> bse</td>
-                        <td>2020-08-06 18:17:25</td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" id="table-check-all_9" type="checkbox">
-                            <label class="custom-control-label" for="table-check-all_9"></label>
-                          </div>
-                        </td>
-                        <td><i class="fas fa-folder"></i> tomcat</td>
-                        <td>2019-05-31 09:33:58</td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" id="table-check-all_10" type="checkbox">
-                            <label class="custom-control-label" for="table-check-all_10"></label>
-                          </div>
-                        </td>
-                        <td><i class="fas fa-folder"></i> web</td>
-                        <td>2020-08-25 08:44:26</td>
-                        <td></td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" id="table-check-all_11" type="checkbox">
-                            <label class="custom-control-label" for="table-check-all_11"></label>
-                          </div>
-                        </td>
-                        <td onclick="location.href='env_logfilepreview.html'"><i class="far fa-file-alt"></i> BSE1-error.2020-08-06.log</td>
-                        <td>2020-08-06 18:19:10</td>
-                        <td>49KB</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" id="table-check-all_12" type="checkbox">
-                            <label class="custom-control-label" for="table-check-all_12"></label>
-                          </div>
-                        </td>
-                        <td onclick="location.href='env_logfilepreview.html'"><i class="far fa-file-alt"></i> BSE1-error.2020-08-07.log</td>
-                        <td>2020-08-07 23:59:30</td>
-                        <td>172.6MB</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" id="table-check-all_13" type="checkbox">
-                            <label class="custom-control-label" for="table-check-all_13"></label>
-                          </div>
-                        </td>
-                        <td><i class="far fa-file-alt"></i> BSE1-error.2020-08-08.log</td>
-                        <td>2020-08-08 23:59:30</td>
-                        <td>417.0MB</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" id="table-check-all_14" type="checkbox">
-                            <label class="custom-control-label" for="table-check-all_14"></label>
-                          </div>
-                        </td>
-                        <td onclick="location.href='env_logfilepreview.html'"><i class="far fa-file-alt"></i> BSE1-error.2020-08-09.log</td>
-                        <td>2020-08-09 23:59:30</td>
-                        <td>528.0MB</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" id="table-check-all_15" type="checkbox">
-                            <label class="custom-control-label" for="table-check-all_15"></label>
-                          </div>
-                        </td>
-                        <td onclick="location.href='env_logfilepreview.html'"><i class="far fa-file-alt"></i> BSE1-error.log</td>
-                        <td>2020-08-10 17:52:30</td>
-                        <td>381.8MB</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" id="table-check-all_16" type="checkbox">
-                            <label class="custom-control-label" for="table-check-all_16"></label>
-                          </div>
-                        </td>
-                        <td onclick="location.href='env_logfilepreview.html'"><i class="far fa-file-alt"></i> BSE1-mybatis.2020-08-06.log</td>
-                        <td>2020-08-06 23:59:54</td>
-                        <td>292.3MB</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" id="table-check-all_17" type="checkbox">
-                            <label class="custom-control-label" for="table-check-all_17"></label>
-                          </div>
-                        </td>
-                        <td onclick="location.href='env_logfilepreview.html'"><i class="far fa-file-alt"></i> BSE1-error.2020-08-08.log</td>
-                        <td>2020-08-07 23:59:59</td>
-                        <td>1309.2MB</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" id="table-check-all_18" type="checkbox">
-                            <label class="custom-control-label" for="table-check-all_18"></label>
-                          </div>
-                        </td>
-                        <td onclick="location.href='env_logfilepreview.html'"><i class="far fa-file-alt"></i> BSE1-mybatis.2020-08-08.log</td>
-                        <td>2020-08-08 23:59:55</td>
-                        <td>1251.3MB</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" id="table-check-all_19" type="checkbox">
-                            <label class="custom-control-label" for="table-check-all_19"></label>
-                          </div>
-                        </td>
-                        <td onclick="location.href='env_logfilepreview.html'"><i class="far fa-file-alt"></i> BSE1-mybatis.2020-08-09.log</td>
-                        <td>2020-08-09 23:59:57 </td>
-                        <td>885.0MB</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" id="table-check-all_20" type="checkbox">
-                            <label class="custom-control-label" for="table-check-all_20"></label>
-                          </div>
-                        </td>
-                        <td onclick="location.href='env_logfilepreview.html'"><i class="far fa-file-alt"></i> BSE1-mybatis.log</td>
-                        <td>2020-08-10 17:52:40</td>
-                        <td>655.5MB</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" id="table-check-all_21" type="checkbox">
-                            <label class="custom-control-label" for="table-check-all_21"></label>
-                          </div>
-                        </td>
-                        <td onclick="location.href='env_logfilepreview.html'"><i class="far fa-file-alt"></i> BSE1.2020-08-06.log</td>
-                        <td>2020-08-06 23:59:54</td>
-                        <td>292.3MB</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" id="table-check-all_22" type="checkbox">
-                            <label class="custom-control-label" for="table-check-all_22"></label>
-                          </div>
-                        </td>
-                        <td onclick="location.href='env_logfilepreview.html'"><i class="far fa-file-alt"></i> BSE1.2020-08-07.log</td>
-                        <td>2020-08-07 23:59:59</td>
-                        <td>208.1MB</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" id="table-check-all_23" type="checkbox">
-                            <label class="custom-control-label" for="table-check-all_23"></label>
-                          </div>
-                        </td>
-                        <td onclick="location.href='env_logfilepreview.html'"><i class="far fa-file-alt"></i> BSE1.2020-08-08.log</td>
-                        <td>2020-08-08 23:59:55</td>
-                        <td>452.5MB</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" id="table-check-all_24" type="checkbox">
-                            <label class="custom-control-label" for="table-check-all_24"></label>
-                          </div>
-                        </td>
-                        <td onclick="location.href='env_logfilepreview.html'"><i class="far fa-file-alt"></i> BSE1.2020-08-09.log</td>
-                        <td>2020-08-09 23:59:57</td>
-                        <td>563.5MB</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div class="custom-control custom-checkbox">
-                            <input class="custom-control-input" id="table-check-all_25" type="checkbox">
-                            <label class="custom-control-label" for="table-check-all_25"></label>
-                          </div>
-                        </td>
-                        <td onclick="location.href='env_logfilepreview.html'"><i class="far fa-file-alt"></i> BSE1.2020-08-10.log</td>
-                        <td>2020-08-10 17:52:40</td>
-                        <td>408.2MB</td>
-                      </tr>
-                    </tbody>
-                  </table>
-
-                </div>
-              </div>
+                      </select></td>
+                    <th scope="row">경로</th>
+                    <td>/app/wiseu_oracle/log/BSE1</td>
+                  </tr>
+                </tbody>
+              </table>
 
             </div>
-          </div> <!-- e.Card body -->
+            <!-- // Light table -->
+
+
+          </div>
+          <!-- //  grid -->
+          <div class="card-body pt-0 max-text-overflow">
+            <!-- Light table -->
+            <div class="table-responsive">
+              <table class="table table-sm dataTable">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col" class="text-center">
+                      <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input all-check" id="table-check-all" type="checkbox">
+                        <label class="custom-control-label" for="table-check-all"></label>
+                      </div>
+                    </th>
+                    <th scope="col">파일명</th>
+                    <th scope="col">마지막 수정일자</th>
+                    <th scope="col">파일크기</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>
+                      <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" id="table-check-all_1" type="checkbox">
+                        <label class="custom-control-label" for="table-check-all_1"></label>
+                      </div>
+                    </th>
+                    <td class="text-left"><a href="#!" class="font-weight-bold"><i class="fas fa-folder"></i> BSE1</a>
+                    </td>
+                    <td>2020-08-25 00:00:00</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" id="table-check-all_2" type="checkbox">
+                        <label class="custom-control-label" for="table-check-all_2"></label>
+                      </div>
+                    </th>
+                    <td class="text-left"><a href="#!" class="font-weight-bold"><i class="fas fa-folder"></i> ITS1</a>
+                    </td>
+                    <td>2020-08-25 00:00:45</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" id="table-check-all_3" type="checkbox">
+                        <label class="custom-control-label" for="table-check-all_3"></label>
+                      </div>
+                    </th>
+                    <td class="text-left"><a href="#!" class="font-weight-bold"><i class="fas fa-folder"></i> LTS1</a>
+                    </td>
+                    <td>2020-08-25 01:00:02</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" id="table-check-all_4" type="checkbox">
+                        <label class="custom-control-label" for="table-check-all_4"></label>
+                      </div>
+                    </th>
+                    <td class="text-left"><a href="#!" class="font-weight-bold"><i class="fas fa-folder"></i> MTS1</a>
+                    </td>
+                    <td>2020-08-25 01:00:01</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" id="table-check-all_5" type="checkbox">
+                        <label class="custom-control-label" for="table-check-all_5"></label>
+                      </div>
+                    </th>
+                    <td class="text-left"><a href="#!" class="font-weight-bold"><i class="fas fa-folder"></i> TOMCAT</a>
+                    </td>
+                    <td>2019-08-12 16:37:46</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" id="table-check-all_6" type="checkbox">
+                        <label class="custom-control-label" for="table-check-all_6"></label>
+                      </div>
+                    </th>
+                    <td class="text-left"><a href="#!" class="font-weight-bold"><i class="fas fa-folder"></i>
+                        WatchDog</a>
+                    </td>
+                    <td>2020-08-25 07:00:45</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" id="table-check-all_7" type="checkbox">
+                        <label class="custom-control-label" for="table-check-all_7"></label>
+                      </div>
+                    </th>
+                    <td class="text-left"><a href="#!" class="font-weight-bold"><i class="fas fa-folder"></i> altalk</a>
+                    </td>
+                    <td>2020-08-18 01:00:01</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" id="table-check-all_8" type="checkbox">
+                        <label class="custom-control-label" for="table-check-all_8"></label>
+                      </div>
+                    </th>
+                    <td class="text-left"><a href="#!" class="font-weight-bold"><i class="fas fa-folder"></i> bse</a>
+                    </td>
+                    <td>2020-08-06 18:17:25</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" id="table-check-all_9" type="checkbox">
+                        <label class="custom-control-label" for="table-check-all_9"></label>
+                      </div>
+                    </th>
+                    <td class="text-left"><a href="#!" class="font-weight-bold"><i class="fas fa-folder"></i> tomcat</a>
+                    </td>
+                    <td>2019-05-31 09:33:58</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" id="table-check-all_10" type="checkbox">
+                        <label class="custom-control-label" for="table-check-all_10"></label>
+                      </div>
+                    </th>
+                    <td class="text-left"><a href="#!" class="font-weight-bold"><i class="fas fa-folder"></i> web</a>
+                    </td>
+                    <td>2020-08-25 08:44:26</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" id="table-check-all_11" type="checkbox">
+                        <label class="custom-control-label" for="table-check-all_11"></label>
+                      </div>
+                    </th>
+                    <td class="text-left"><a href="#!" class="font-weight-bold"><i class="far fa-file-alt"></i>
+                        BSE1-error.2020-08-06.log</a></td>
+                    <td>2020-08-06 18:19:10</td>
+                    <td>49KB</td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" id="table-check-all_12" type="checkbox">
+                        <label class="custom-control-label" for="table-check-all_12"></label>
+                      </div>
+                    </th>
+                    <td class="text-left"><a href="#!" class="font-weight-bold"><i class="far fa-file-alt"></i>
+                        BSE1-error.2020-08-07.log</a></td>
+                    <td>2020-08-07 23:59:30</td>
+                    <td>172.6MB</td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" id="table-check-all_13" type="checkbox">
+                        <label class="custom-control-label" for="table-check-all_13"></label>
+                      </div>
+                    </th>
+                    <td class="text-left"><a href="#!" class="font-weight-bold"><i class="far fa-file-alt"></i>
+                        BSE1-error.2020-08-08.log</td>
+                    <td>2020-08-08 23:59:30</a></td>
+                    <td>417.0MB</td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" id="table-check-all_14" type="checkbox">
+                        <label class="custom-control-label" for="table-check-all_14"></label>
+                      </div>
+                    </th>
+                    <td class="text-left"><a href="#!" class="font-weight-bold"><i class="far fa-file-alt"></i>
+                        BSE1-error.2020-08-09.log</a></td>
+                    <td>2020-08-09 23:59:30</td>
+                    <td>528.0MB</td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" id="table-check-all_15" type="checkbox">
+                        <label class="custom-control-label" for="table-check-all_15"></label>
+                      </div>
+                    </th>
+                    <td class="text-left"><a href="#!" class="font-weight-bold"><i class="far fa-file-alt"></i>
+                        BSE1-error.log</a></td>
+                    <td>2020-08-10 17:52:30</td>
+                    <td>381.8MB</td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" id="table-check-all_16" type="checkbox">
+                        <label class="custom-control-label" for="table-check-all_16"></label>
+                      </div>
+                    </th>
+                    <td class="text-left"><a href="#!" class="font-weight-bold"><i class="far fa-file-alt"></i>
+                        BSE1-mybatis.2020-08-06.log</a></td>
+                    <td>2020-08-06 23:59:54</td>
+                    <td>292.3MB</td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" id="table-check-all_17" type="checkbox">
+                        <label class="custom-control-label" for="table-check-all_17"></label>
+                      </div>
+                    </th>
+                    <td class="text-left"><a href="#!" class="font-weight-bold"><i class="far fa-file-alt"></i>
+                        BSE1-error.2020-08-08.log</a></td>
+                    <td>2020-08-07 23:59:59</td>
+                    <td>1309.2MB</td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" id="table-check-all_18" type="checkbox">
+                        <label class="custom-control-label" for="table-check-all_18"></label>
+                      </div>
+                    </th>
+                    <td class="text-left"><a href="#!" class="font-weight-bold"><i class="far fa-file-alt"></i>
+                        BSE1-mybatis.2020-08-08.log</a></td>
+                    <td>2020-08-08 23:59:55</td>
+                    <td>1251.3MB</td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" id="table-check-all_19" type="checkbox">
+                        <label class="custom-control-label" for="table-check-all_19"></label>
+                      </div>
+                    </th>
+                    <td class="text-left"><a href="#!" class="font-weight-bold"><i class="far fa-file-alt"></i>
+                        BSE1-mybatis.2020-08-09.log</a></td>
+                    <td>2020-08-09 23:59:57 </td>
+                    <td>885.0MB</td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" id="table-check-all_20" type="checkbox">
+                        <label class="custom-control-label" for="table-check-all_20"></label>
+                      </div>
+                    </th>
+                    <td class="text-left"><a href="#!" class="font-weight-bold"><i class="far fa-file-alt"></i>
+                        BSE1-mybatis.log</a></td>
+                    <td>2020-08-10 17:52:40</td>
+                    <td>655.5MB</td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" id="table-check-all_21" type="checkbox">
+                        <label class="custom-control-label" for="table-check-all_21"></label>
+                      </div>
+                    </th>
+                    <td class="text-left"><a href="#!" class="font-weight-bold"><i class="far fa-file-alt"></i>
+                        BSE1.2020-08-06.log</a></td>
+                    <td>2020-08-06 23:59:54</td>
+                    <td>292.3MB</td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" id="table-check-all_22" type="checkbox">
+                        <label class="custom-control-label" for="table-check-all_22"></label>
+                      </div>
+                    </th>
+                    <td class="text-left"><a href="#!" class="font-weight-bold"><i class="far fa-file-alt"></i>
+                        BSE1.2020-08-07.log</a></td>
+                    <td>2020-08-07 23:59:59</td>
+                    <td>208.1MB</td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" id="table-check-all_23" type="checkbox">
+                        <label class="custom-control-label" for="table-check-all_23"></label>
+                      </div>
+                    </th>
+                    <td class="text-left"><a href="#!" class="font-weight-bold"><i class="far fa-file-alt"></i>
+                        BSE1.2020-08-08.log</a></td>
+                    <td>2020-08-08 23:59:55</td>
+                    <td>452.5MB</td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" id="table-check-all_24" type="checkbox">
+                        <label class="custom-control-label" for="table-check-all_24"></label>
+                      </div>
+                    </th>
+                    <td class="text-left"><a href="#!" class="font-weight-bold"><i class="far fa-file-alt"></i>
+                        BSE1.2020-08-09.log</a></td>
+                    <td>2020-08-09 23:59:57</td>
+                    <td>563.5MB</td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <div class="custom-control custom-checkbox">
+                        <input class="custom-control-input" id="table-check-all_25" type="checkbox">
+                        <label class="custom-control-label" for="table-check-all_25"></label>
+                      </div>
+                    </th>
+                    <td class="text-left"><a href="#!" class="font-weight-bold"><i class="far fa-file-alt"></i>
+                        BSE1.2020-08-10.log</a></td>
+                    <td>2020-08-10 17:52:40</td>
+                    <td>408.2MB</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+
+          </div>
+
+
+
         </div>
       </div>
     </div>
     <!--e.container-fluid-->
   </div>
   <!--e.main-panel-->
+  </div>
+
 </html>
