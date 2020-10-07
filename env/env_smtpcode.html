@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wiseU</title>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <script>
+        $(function () {
+            $("#subNav").load("../subNav.html");
+            $("#js").load("../js.html");
+        });
+    </script>
+</head>
+
+<body>
+    <!-- wapper-->
+    <div class="wrapper">
+        <!-- 메뉴 -->
+        <div id="subNav"></div>
+        <div id="js"></div>
+        <!-- 메뉴 End-->
+
+        <!-- 내용 -->
+        <div class="main-panel">
+            <div class="container-fluid mt-4 mb-2">
+                <!-- card -->
+                <div class="card">
+                    <!-- Card header -->
+                    <div class="card-header">
+                        <!-- title  -->
+                        <h3 class="mb-0">코드 관리</h3>
+                        <!-- //title -->
+                    </div>
+                    <!-- e.Card header -->
+                    <!-- card body -->
+                    <div class="card-body">
+                        <div class="container-fluid my-2">
+                            <!-- row -->
+                            <div class="row code-set overflow-hidden">
+                                <!-- col-3  Card body 트리 -->
+                                <div class="col-3 px-0">
+                                    <div class="code-set-tree">
+                                        <div id="sidetree">
+                                            <ul id="tree" class="overflow-auto">
+                                                <li>
+                                                    <h5>SMTP</h5>
+                                                    <ul class="description">
+                                                        <li><a href="#" class="on">Unknown User</a></li>
+                                                        <li><a href="#">Unknown Host</a></li>
+                                                        <li><a href="#">SMTP Exception</a></li>
+                                                        <li><a href="#">NoRoute To Host</a></li>
+                                                        <li><a href="#">onnection Refused</a></li>
+                                                        <li><a href="#">Exception</a></li>
+                                                        <li><a href="#">Invalid Address</a></li>
+                                                        <li><a href="#">Receive Rejection</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- //col-3  Card body 트리 -->
+
+                                <!-- col-9  코드설명 -->
+                                <div class="col-9 px-0">
+                                    <div class="table-responsive code-set-table">
+                                        <div class="table-responsive" class="overflow-auto">
+                                            <table class="table table-xs dataTable">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th scope="col">에러코드</th>
+                                                        <th scope="col">설명</th>
+                                                        <th scope="col">스팸</th>
+                                                        <th scope="col">삭제</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>602</td>
+                                                        <td>Connection Failure</td>
+                                                        <td>N</td>
+                                                        <td> <button class="btn btn-sm btn-gray200 btn-icon">
+                                                                <span class="btn-inner--icon"><i
+                                                                        class="fas fa-trash"></i></span>
+                                                            </button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>603</td>
+                                                        <td>Connection Error</td>
+                                                        <td>N</td>
+                                                        <td> <button class="btn btn-sm btn-gray200 btn-icon">
+                                                                <span class="btn-inner--icon"><i
+                                                                        class="fas fa-trash"></i></span>
+                                                            </button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>604</td>
+                                                        <td>응답을 기다리던중 접속이 끊기거나 IOException이 발생</td>
+                                                        <td>N</td>
+                                                        <td> <button class="btn btn-sm btn-gray200 btn-icon">
+                                                                <span class="btn-inner--icon"><i
+                                                                        class="fas fa-trash"></i></span>
+                                                            </button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>700</td>
+                                                        <td>통신 중 접속이 끊어짐</td>
+                                                        <td>N</td>
+                                                        <td> <button class="btn btn-sm btn-gray200 btn-icon">
+                                                                <span class="btn-inner--icon"><i
+                                                                        class="fas fa-trash"></i></span>
+                                                            </button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>701</td>
+                                                        <td>IOExcepition</td>
+                                                        <td>N</td>
+                                                        <td> <button class="btn btn-sm btn-gray200 btn-icon">
+                                                                <span class="btn-inner--icon"><i
+                                                                        class="fas fa-trash"></i></span>
+                                                            </button></td>
+                                                    </tr>
+                                                   
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- // col-9  코드설명 -->
+                            </div>
+                            <!-- // row -->
+                        </div>
+                    </div> <!-- // card body -->
+                </div><!-- // card -->
+            </div>
+        </div>
+        <!-- //  내용 -->
+    </div>
+    <!-- // wapper-->
+
+
+
+
+</html>
