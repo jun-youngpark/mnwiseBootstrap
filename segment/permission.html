@@ -10,7 +10,6 @@
     <script>
     $(function () {
         $("#js").load("/js.html");
-        
     });
 
     
@@ -29,24 +28,82 @@
     <div class="card-body">
 
         <!-- Card body 트리 -->
-        <div id="sidetree" class="overflow-auto" style="height:100%; max-height:508px;border:1px solid  #e9ecef; ">
+        <div id="sidetree" class="overflow-auto treeview_org" style="height:100%; max-height:508px;border:1px solid  #e9ecef; ">
             <ul id="tree">
                 <li>
-                    <h5><input type="checkbox" id="" name="" /><label><span class="hide">check</span></label> mnwise</h5>
+                    <h5>
+                        <div class="custom-control custom-checkbox custom-control-inline">
+                            <input type="checkbox" id="all-chk" name="customcheckbox" class="custom-control-input" />
+                            <label class="custom-control-label" for="all-chk"></label>
+                            <span class="tree_root">mnwise</span>
+                        </div>
+                    </h5>
                     <ul class="description">
-                        <li><input type="checkbox" id="" name="" /><label><span class="hide">check</span></label><a href="#" class="on">RND</a></li>
-                        <li><input type="checkbox" id="" name="" /><label><span class="hide">check</span></label><a href="#">TS팀</a></li>
-                        <li><input type="checkbox" id="" name="" /><label><span class="hide">check</span></label><a href="#">서비스팀</a></li>
-                        <li><input type="checkbox" id="" name="" /><label><span class="hide">check</span></label><a href="#">사업팀</a>
+                        <li>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" id="team1" name="customcheckbox" class="custom-control-input" />
+                                <label class="custom-control-label" for="team1"></label>
+                                <a href="#" class="on">RND</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" id="team2" name="customcheckbox" class="custom-control-input" />
+                                <label class="custom-control-label" for="team2"></label>
+                                <a href="#">TS팀</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" id="team3" name="customcheckbox" class="custom-control-input" />
+                                <label class="custom-control-label" for="team3"></label>
+                                <a href="#">서비스팀</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" id="team4" name="customcheckbox" class="custom-control-input" />
+                                <label class="custom-control-label" for="team4"></label>
+                                <a href="#">사업팀</a>
+                            </div>
                             <ul>
-                                <li><input type="checkbox" id="" name="" /><label><span class="hide">check</span></label><a href="#">aaaa</a></li>
-                                <li><input type="checkbox" id="" name="" /><label><span class="hide">check</span></label><a href="#">bbbb</a></li>
+                                <li>
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input type="checkbox" id="team4-1" name="customcheckbox" class="custom-control-input" />
+                                        <label class="custom-control-label" for="team4-1"></label>
+                                        <a href="#">aaaa</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input type="checkbox" id="team4-2" name="customcheckbox" class="custom-control-input" />
+                                        <label class="custom-control-label" for="team4-2"></label>
+                                        <a href="#">bbbb</a>
+                                    </div>
+                                </li>
                             </ul>
                         </li>
-                        <li><input type="checkbox" id="" name="" /><label><span class="hide">check</span></label><a href="#">BI팀</a></li>
-                        <li><input type="checkbox" id="" name="" /><label><span class="hide">check</span></label><a href="#">발표</a></li>
-                        <li><input type="checkbox" id="" name="" /><label><span class="hide">check</span></label><a href="#">부트스트랩개발</a></li>
-                        <li><input type="checkbox" id="" name="" /><label><span class="hide">check</span></label><a href="#"></a></li>
+                        <li>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" id="team5" name="customcheckbox" class="custom-control-input" />
+                                <label class="custom-control-label" for="team5"></label>
+                                <a href="#">BI팀</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" id="team6" name="customcheckbox" class="custom-control-input" />
+                                <label class="custom-control-label" for="team6"></label>
+                                <a href="#">발표</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="custom-control custom-checkbox custom-control-inline">
+                                <input type="checkbox" id="team7" name="customcheckbox" class="custom-control-input" />
+                                <label class="custom-control-label" for="team7"></label>
+                                <a href="#">부트스트랩개발</a>
+                            </div>
+                        </li>
                     </ul>
                 </li>
             </ul>
