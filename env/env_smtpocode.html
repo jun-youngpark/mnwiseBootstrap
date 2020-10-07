@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
-<title>코드정보</title>
+<title>wiseU</title>
 
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
@@ -9,178 +9,135 @@
         $(function () {
             $("#subNav").load("../subNav.html");
             $("#js").load("../js.html");
-            $("#headerTop").load("../headerTop.html");
         });
     </script>
 </head>
 
 <body>
+    <!-- wapper-->
     <div class="wrapper">
         <!-- 메뉴 -->
         <div id="subNav"></div>
         <div id="js"></div>
-        <div id="headerTop"></div>
         <!-- 메뉴 End-->
 
         <!-- 내용 -->
         <div class="main-panel">
-            <div class="container-fluid">
-                <div class="card mt-4">
-                    <div class="card">
-                        <!-- Card header -->
-                        <div class="card-header">
-                            <div class="row align-items-center">
-                                <div class="col">
-                                    <h3 class="mb-0">코드정보</h3>
-                                </div>
-                                <div class="col text-right">
-                                    <a href="#" class="btn btn-sm btn-primary btn-round btn-icon" data-toggle="tooltip"
-                                        data-original-title="Edit product">
-                                        <span class="btn-inner--icon"><i class="fas fa-save"></i></span>
-                                        <span class="btn-inner--text">저장</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+            <div class="container-fluid mt-4 mb-2">
+                <!-- card -->
+                <div class="card">
+                    <!-- Card header -->
+                    <div class="card-header">
+                        <!-- title  -->
+                        <h3 class="mb-0">코드 관리</h3>
+                        <!-- //title -->
+                    </div>
+                    <!-- e.Card header -->
+                    <!-- card body -->
+                    <div class="card-body">
                         <div class="container-fluid my-2">
-                            <div class="row" style="height:400px">
-                                <div class="col-3 pr-0" style="height: 100% ; border:1px solid #e9ecef;">
-                                    <!-- Card body 트리 -->
-                                    <div id="sidetree" >
-                                        <ul id="tree">
-                                            <li>
-                                                <h5>SMTP</h5>
-                                                <ul class="description">
-                                                    <li><a href="#" class="on">Unknown User</a></li>
-                                                    <li><a href="#">Unknown Host</a></li>
-                                                    <li><a href="#">SMTP Exception</a></li>
-                                                    <li><a href="#">NoRoute To Host</a></li>
-                                                    <li><a href="#">Connection Refused</a></li>
-                                                    <li><a href="#">Exception</a></li>
-                                                    <li><a href="#">Invalid Address</a></li>
-                                                    <li><a href="#">Receive Rejection</a></li>
-                                                   
-                                                </ul>
-                                            </li>
-                                        </ul>
+                            <!-- row -->
+                            <div class="row code-set overflow-hidden">
+                                <!-- col-3  Card body 트리 -->
+                                <div class="col-3 px-0">
+                                    <div class="code-set-tree">
+                                        <div id="sidetree">
+                                            <ul id="tree" class="overflow-auto">
+                                                <li>
+                                                    <h5>SMTP</h5>
+                                                    <ul class="description">
+                                                        <li><a href="#" class="on">Unknown User</a></li>
+                                                        <li><a href="#">Unknown Host</a></li>
+                                                        <li><a href="#">SMTP Exception</a></li>
+                                                        <li><a href="#">NoRoute To Host</a></li>
+                                                        <li><a href="#">onnection Refused</a></li>
+                                                        <li><a href="#">Exception</a></li>
+                                                        <li><a href="#">Invalid Address</a></li>
+                                                        <li><a href="#">Receive Rejection</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                                <!--테이블-->
-                                <div class="col-9 pl-0"  style="height: 100% ; border:1px solid #e9ecef; border-left:none;">
-                                    <div class="table-responsive" >
-                                        <div class="table-responsive  ">
-                                            <table class="table table-xs align-items-center table-flush">
+                                <!-- //col-3  Card body 트리 -->
+
+                                <!-- col-9  코드설명 -->
+                                <div class="col-9 px-0">
+                                    <div class="table-responsive code-set-table">
+                                        <div class="table-responsive" class="overflow-auto">
+                                            <table class="table table-xs dataTable">
                                                 <thead class="thead-light">
                                                     <tr>
-                                                        <th scope="col">에러 코드</th>
+                                                        <th scope="col">에러코드</th>
                                                         <th scope="col">설명</th>
                                                         <th scope="col">스팸</th>
-                                                        <th scope="col"></th>
+                                                        <th scope="col">삭제</th>
                                                     </tr>
                                                 </thead>
-                                                <tbody class="list">
+                                                <tbody>
                                                     <tr>
                                                         <td>602</td>
                                                         <td>Connection Failure</td>
                                                         <td>N</td>
-                                                        <td>
-                                                            <button class="btn btn-sm btn-gray200 btn-icon">
-                                                                <span class="btn-inner--icon"><i class="fas fa-trash"></i></span>                                                                        
-                                                            </button>
-                                                        </td>
+                                                        <td> <button class="btn btn-sm btn-gray200 btn-icon">
+                                                                <span class="btn-inner--icon"><i
+                                                                        class="fas fa-trash"></i></span>
+                                                            </button></td>
                                                     </tr>
                                                     <tr>
                                                         <td>603</td>
                                                         <td>Connection Error</td>
                                                         <td>N</td>
-                                                        <td>
-                                                            <button class="btn btn-sm btn-gray200 btn-icon">
-                                                                <span class="btn-inner--icon"><i class="fas fa-trash"></i></span>                                                                        
-                                                            </button>
-                                                        </td>
+                                                        <td> <button class="btn btn-sm btn-gray200 btn-icon">
+                                                                <span class="btn-inner--icon"><i
+                                                                        class="fas fa-trash"></i></span>
+                                                            </button></td>
                                                     </tr>
                                                     <tr>
                                                         <td>604</td>
                                                         <td>응답을 기다리던중 접속이 끊기거나 IOException이 발생</td>
                                                         <td>N</td>
-                                                        <td>
-                                                            <button class="btn btn-sm btn-gray200 btn-icon">
-                                                                <span class="btn-inner--icon"><i class="fas fa-trash"></i></span>                                                                        
-                                                            </button>
-                                                        </td>
+                                                        <td> <button class="btn btn-sm btn-gray200 btn-icon">
+                                                                <span class="btn-inner--icon"><i
+                                                                        class="fas fa-trash"></i></span>
+                                                            </button></td>
                                                     </tr>
                                                     <tr>
                                                         <td>700</td>
                                                         <td>통신 중 접속이 끊어짐</td>
                                                         <td>N</td>
-                                                        <td>
-                                                            <button class="btn btn-sm btn-gray200 btn-icon">
-                                                                <span class="btn-inner--icon"><i class="fas fa-trash"></i></span>                                                                        
-                                                            </button>
-                                                        </td>
+                                                        <td> <button class="btn btn-sm btn-gray200 btn-icon">
+                                                                <span class="btn-inner--icon"><i
+                                                                        class="fas fa-trash"></i></span>
+                                                            </button></td>
                                                     </tr>
                                                     <tr>
                                                         <td>701</td>
                                                         <td>IOExcepition</td>
                                                         <td>N</td>
-                                                        <td>
-                                                            <button class="btn btn-sm btn-gray200 btn-icon">
-                                                                <span class="btn-inner--icon"><i class="fas fa-trash"></i></span>                                                                        
-                                                            </button>
-                                                        </td>
+                                                        <td> <button class="btn btn-sm btn-gray200 btn-icon">
+                                                                <span class="btn-inner--icon"><i
+                                                                        class="fas fa-trash"></i></span>
+                                                            </button></td>
                                                     </tr>
-                                                    <tr>
-                                                        <td>702</td>
-                                                        <td>응답 코드의 길이가 3 이하</td>
-                                                        <td>N</td>
-                                                        <td>
-                                                            <button class="btn btn-sm btn-gray200 btn-icon">
-                                                                <span class="btn-inner--icon"><i class="fas fa-trash"></i></span>                                                                        
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>703</td>
-                                                        <td>명령어 전송 또는 응답 코드를 기다리는 중 IOException</td>
-                                                        <td>N</td>
-                                                        <td>
-                                                            <button class="btn btn-sm btn-gray200 btn-icon">
-                                                                <span class="btn-inner--icon"><i class="fas fa-trash"></i></span>                                                                        
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>704</td>
-                                                        <td>SMTP TIME OUT</td>
-                                                        <td>N</td>
-                                                        <td>
-                                                            <button class="btn btn-sm btn-gray200 btn-icon">
-                                                                <span class="btn-inner--icon"><i class="fas fa-trash"></i></span>                                                                        
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-
+                                                   
                                                 </tbody>
                                             </table>
-                                            <div class="col text-right my-2">
-                                            <button href="#" class="btn btn-sm btn-neutral btn-round btn-icon">
-                                                <span class="btn-inner--icon"><i class="fas fa-user-edit"></i></span>
-                                                <span class="btn-inner--text">추가</span>
-                                              </button> 
-                                            </div>
                                         </div>
                                     </div>
-
                                 </div>
-
+                                <!-- // col-9  코드설명 -->
                             </div>
-
+                            <!-- // row -->
                         </div>
-                    </div> <!-- e.Card  -->
-                </div>
-            </div> <!-- e.page content -->
+                    </div> <!-- // card body -->
+                </div><!-- // card -->
+            </div>
         </div>
+        <!-- //  내용 -->
     </div>
+    <!-- // wapper-->
 
 
 
