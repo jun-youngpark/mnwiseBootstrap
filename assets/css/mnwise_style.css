@@ -156,6 +156,9 @@ button.btn-sm {min-height:30px;}
 
 .card-body .table-responsive:last-child .dataTable:last-child {margin-bottom: 0 !important;}
 
+
+.max-text-overflow .table td>a{max-width:380px; overflow: hidden; white-space: nowrap;  text-overflow: ellipsis;}
+
 /* new test sample  --  위  코드  참조하여 ---  예시) campaign_per_history.html -- 작업 */
 .newgridWrap .table {border-collapse: collapse !important; }
 .newgridWrap  table.dataTable.table-sm>thead>tr>th{padding:8px 12px;}
