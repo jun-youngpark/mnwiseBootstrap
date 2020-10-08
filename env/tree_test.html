@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>tree</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../assets/js/jstree.js"></script>
+<link rel="stylesheet" href="../assets/css/default/style.css" />
+
+<!--test tree 2020 10 08-->
+
+<style>
+    html { margin:0; padding:0; font-size:62.5%; }
+	body { max-width:800px; min-width:300px; margin:0 auto; padding:20px 10px; font-size:14px; font-size:1.6em; }
+	h1 { font-size:1.8em; }
+	.demo { overflow:auto; border:1px solid silver; min-height:100px; }
+	</style>
+
+	
+</head>
+
+
+  
+
+
+
+<body>
+	<h1>HTML demo</h1>
+	<div id="jstree" class="demo">
+		<ul>
+			<li data-jstree='{ "opened" : true }'>
+				mnwise
+				
+				<ul>
+					<li data-jstree='{ "selected" : true }'>RND</li>
+					<li>TS팀</li>
+					<li >서비스팀</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	
+	<script>
+	// html demo
+	
+	$("#jstree").jstree({
+		"checkbox" : {
+      "keep_selected_style" : false
+    },
+    "plugins" : [ "wholerow", "checkbox", "changed" ]
+  });
+
+
+	</script>
+</body>
+</html>
