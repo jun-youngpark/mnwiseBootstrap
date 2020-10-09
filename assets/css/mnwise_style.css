@@ -382,7 +382,7 @@ ex, campaign/campaign_2step_mail_form.html 수신확인 체크박스
 .ui-datepicker {display:none; position:fixed; left:50%; top:50%; width:400px; margin-left:-110px; background:#fff; box-shadow: 0 0 20px rgba(0,0,0,.5); -webkit-transform:translateY(-50%); transform:translateY(-50%); z-index:1000;}
 .ui-datepicker-header {position:relative; height:50px; padding:0; font-weight:bold; color:#fff; text-align:center; line-height:50px; background:#3593fc;}
 .ui-datepicker-header > * {display:inline-block; font-weight:bold;}
-.ui-datepicker-header a {position:absolute; left:0; top:0; width:40px; height:100%; text-align:right;}
+.ui-datepicker-header a {position:absolute; left:0; top:0; width:40px; height:100%; text-align:right; cursor: pointer;}
 .ui-datepicker-header a .ui-icon {display:inline-block; width:0; text-align:left; text-indent: -999em; overflow: hidden; opacity:0;}
 .ui-datepicker-header a:before {content: "\f104"; position:absolute; left:0; top:0; width:100%; font-family:"Font Awesome 5 Free"; text-align:center;}
 .ui-datepicker-header .ui-datepicker-next {left:auto; right:0;}
