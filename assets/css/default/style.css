@@ -1106,6 +1106,7 @@
 
 /* icon 추가 2020.10.10*/
 
+
 /*company*/
 .jstree-default.treeview_top .jstree-themeicon {
   display:inline-block; line-height:20px; background:url("../../../assets/img/company-8.png") no-repeat left center; background-size:20px auto;
@@ -1132,7 +1133,7 @@
 }
 .jstree-default.treeview_top.jstree-checkbox-selection .jstree-clicked > .jstree-checkbox:hover,
 .jstree-default.treeview_top .jstree-checked > .jstree-checkbox:hover {
-  background:url("../../../assets/img/ico_tree_checked.png") no-repeat; background-position: 5px; border:3px solid #red;
+  background:url("../../../assets/img/ico_tree_checked.png") no-repeat; background-position: 5px;
 }
 .jstree-default.treeview_top .jstree-anchor > .jstree-undetermined {
   background:url("../../../assets/img/ico_tree_check.png") no-repeat; background-position: 5px;  
