@@ -378,7 +378,8 @@ ex, campaign/campaign_2step_mail_form.html 수신확인 체크박스
 .input_datebox {display:inline-block; position: relative;}
 .input_datebox::after {content:"\f133"; position: absolute; right:0; top:50%; width: 30px; font-family:"Font Awesome 5 Free"; font-weight: 900; color: #495572; text-align: center; -webkit-transform: translateY(-50%); transform: translateY(-50%);}
 .input_datebox:hover:after {color:#359bff;}
-.input_datebox input {width:150px; padding-right:35px;}
+.input_datebox input {width:150px; padding-right:30px;}
+.table_option .input_datebox .form-control {width:110px;  padding-right:25px;}
 .ui-datepicker {display:none; position:fixed; left:50%; top:50%; width:400px; margin-left:-110px; padding:0; background:#fff; border:none !important; box-shadow: 0 0 20px rgba(0,0,0,.5); -webkit-transform:translateY(-50%); transform:translateY(-50%); z-index:1000;}
 .ui-datepicker-header {position:relative; height:50px; padding:0; font-weight:bold; color:#fff; text-align:center; line-height:50px; background:#3593fc; border:none !important; border-radius:0;}
 .ui-datepicker-header > * {display:inline-block; font-weight:bold;}
