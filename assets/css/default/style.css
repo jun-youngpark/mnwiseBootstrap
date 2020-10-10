@@ -1100,3 +1100,43 @@
     margin-right: 0;
   }
 }
+
+
+
+
+/* icon 추가 2020.10.10*/
+
+/*company*/
+.jstree-default.treeview_top .jstree-themeicon {
+  display:inline-block; line-height:20px; background:url("../../../assets/img/company-8.png") no-repeat left center; background-size:20px auto;
+}
+
+/*group*/
+.jstree-default.treeview_top .treeview_sub .jstree-themeicon {display:inline-block; padding:4px 0 4px 25px; background:url("../../../assets/img/ico_tree_group.png") no-repeat left center; box-sizing: border-box;}
+
+/*arrow*/
+.jstree-default.treeview_top > .jstree-no-dots .jstree-closed > .jstree-ocl{background-position: 10px;}
+.jstree-default.treeview_top > .jstree-no-dots .jstree-open > .jstree-ocl{ background:url("../../../assets/img/ico_arrow_down.png") no-repeat;  -webkit-transform: rotate(-180deg); transform: rotate(-180deg); opacity: .7; background-position: 5px; }
+.jstree-default.treeview_top .jstree-ocl{display:inline-block; line-height:24px;  background:url("../../../assets/img/ico_arrow_down.png") no-repeat; box-sizing: border-box;} 
+
+/*checkbox*/
+.jstree-default.treeview_top .jstree-checkbox 
+  { background:url("../../../assets/img/ico_tree_check_gray.png") no-repeat; background-position: 5px; }
+
+.jstree-default.treeview_top .jstree-checkbox:hover {
+  background:url("../../../assets/img/ico_tree_check.png") no-repeat; background-position: 5px;  
+}
+.jstree-default.treeview_top.jstree-checkbox-selection .jstree-clicked > .jstree-checkbox,
+.jstree-default.treeview_top .jstree-checked > .jstree-checkbox {
+  background:url("../../../assets/img/ico_tree_checked.png") no-repeat; background-position: 5px;  
+}
+.jstree-default.treeview_top.jstree-checkbox-selection .jstree-clicked > .jstree-checkbox:hover,
+.jstree-default.treeview_top .jstree-checked > .jstree-checkbox:hover {
+  background:url("../../../assets/img/ico_tree_checked.png") no-repeat; background-position: 5px; border:3px solid #red;
+}
+.jstree-default.treeview_top .jstree-anchor > .jstree-undetermined {
+  background:url("../../../assets/img/ico_tree_check.png") no-repeat; background-position: 5px;  
+}
+.jstree-default.treeview_top .jstree-anchor > .jstree-undetermined:hover {
+  background:url("../../../assets/img/ico_tree_checked.png") no-repeat; background-position: 5px;  
+}

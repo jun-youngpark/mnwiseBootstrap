@@ -5,51 +5,97 @@
 <script src="../assets/js/jstree.js"></script>
 <link rel="stylesheet" href="../assets/css/default/style.css" />
 
-<!--test tree 2020 10 08-->
-
-<style>
-    html { margin:0; padding:0; font-size:62.5%; }
-	body { max-width:800px; min-width:300px; margin:0 auto; padding:20px 10px; font-size:14px; font-size:1.6em; }
-	h1 { font-size:1.8em; }
-	.demo { overflow:auto; border:1px solid silver; min-height:100px; }
-	</style>
-
-	
 </head>
 
-
-  
-
-
-
 <body>
-	<h1>HTML demo</h1>
-	<div id="jstree" class="demo">
-		<ul>
-			<li data-jstree='{ "opened" : true }'>
-				mnwise
-				
-				<ul>
-					<li data-jstree='{ "selected" : true }'>RND</li>
-					<li>TS팀</li>
-					<li >서비스팀</li>
-				</ul>
-			</li>
-		</ul>
-	</div>
 
-	
 	<script>
-	// html demo
-	
-	$("#jstree").jstree({
-		"checkbox" : {
-      "keep_selected_style" : false
-    },
-    "plugins" : [ "wholerow", "checkbox", "changed" ]
-  });
-
-
+		$(function () {
+			$("#subNav").load("../subNav.html");
+			$("#js").load("../js.html");
+		});
 	</script>
-</body>
+
+
+	<body>
+		<!-- wrapper -->
+		<div class="wrapper">
+			<!-- 메뉴 -->
+			<div id="subNav"></div>
+			<div id="js"></div>
+			<!-- 메뉴 End-->
+
+			<!-- 내용 -->
+
+			<div class="main-panel">
+				<!-- Page content -->
+				<div class="container-fluid mt-4 mb-2">
+					<!-- card -->
+					<div class="card">
+
+
+						<h1>HTML demo</h1>
+
+						<div id="jstree" class="treeview_top">
+							<!-- 방법 1 --- class추가 // css처리 -->
+							<ul>
+								<li>Mnwise - class추가
+									<ul>
+										<li class="treeview_sub">sub_1
+											<ul>
+												<li>sub_1_1</li>
+												<li>sub_1_2</li>
+											</ul>
+										</li>
+										<li class="treeview_sub">sub_2</li>
+										<li class="treeview_sub">sub_3</li>
+										<li class="treeview_sub">sub_4</li>
+									</ul>
+								</li>
+							</ul>
+							<!-- 방법 2 --- data-jstree 추가 // html 처리
+					<ul>
+						<li><span class="tree_root">mnwise - data-jstree 추가</span>
+							<ul>
+								<li data-jstree='{"icon":"../assets/img/ico_arrow_down.png"}'><span>RND</span>
+									<ul>
+										<li class="sub_description">RND1</li>
+										<li class="sub_description">RND2</li>
+										<li class="sub_description">RND3</li>
+									</ul>
+								</li>
+								<li data-jstree='{"icon":"../assets/img/ico_tree_group.png"}'>dddddddd
+									fds
+
+
+								</li>
+								<li><i class="fas fa-users"></i>11111111111111111</li>
+							</ul>
+						</li>
+
+					</ul>
+ -->
+
+
+						</div>
+						<!-- // jstree-->
+					</div><!-- // card-->
+				</div>
+			</div>
+			<!--내용-->
+		</div>
+		<!-- //  wrapper -->
+
+
+		<script>
+
+			$("#jstree").jstree({
+				"checkbox": {
+					"keep_selected_style": false
+				},
+				"plugins": ["wholerow", "checkbox", "contextmenu"]
+			});
+		</script>
+	</body>
+
 </html>
