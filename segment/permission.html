@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+    <link rel="stylesheet" href="../assets/css/default/style.css" />
 
     <script>
     $(function () {
@@ -28,91 +28,38 @@
     <div class="card-body">
 
         <!-- Card body 트리 -->
-        <div id="sidetree" class="overflow-auto treeview_org" style="height:100%; max-height:508px;border:1px solid  #e9ecef; ">
-            <ul id="tree">
-                <li>
-                    <h5>
-                        <div class="custom-control custom-checkbox custom-control-inline">
-                            <input type="checkbox" id="all-chk" name="customcheckbox" class="custom-control-input" />
-                            <label class="custom-control-label" for="all-chk"></label>
-                            <span class="tree_root">mnwise</span>
-                        </div>
-                    </h5>
-                    <ul class="description">
-                        <li>
-                            <div class="custom-control custom-checkbox custom-control-inline">
-                                <input type="checkbox" id="team1" name="customcheckbox" class="custom-control-input" />
-                                <label class="custom-control-label" for="team1"></label>
-                                <a href="#" class="on">RND</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="custom-control custom-checkbox custom-control-inline">
-                                <input type="checkbox" id="team2" name="customcheckbox" class="custom-control-input" />
-                                <label class="custom-control-label" for="team2"></label>
-                                <a href="#">TS팀</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="custom-control custom-checkbox custom-control-inline">
-                                <input type="checkbox" id="team3" name="customcheckbox" class="custom-control-input" />
-                                <label class="custom-control-label" for="team3"></label>
-                                <a href="#">서비스팀</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="custom-control custom-checkbox custom-control-inline">
-                                <input type="checkbox" id="team4" name="customcheckbox" class="custom-control-input" />
-                                <label class="custom-control-label" for="team4"></label>
-                                <a href="#">사업팀</a>
-                            </div>
-                            <ul>
-                                <li>
-                                    <div class="custom-control custom-checkbox custom-control-inline">
-                                        <input type="checkbox" id="team4-1" name="customcheckbox" class="custom-control-input" />
-                                        <label class="custom-control-label" for="team4-1"></label>
-                                        <a href="#">aaaa</a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="custom-control custom-checkbox custom-control-inline">
-                                        <input type="checkbox" id="team4-2" name="customcheckbox" class="custom-control-input" />
-                                        <label class="custom-control-label" for="team4-2"></label>
-                                        <a href="#">bbbb</a>
-                                    </div>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <div class="custom-control custom-checkbox custom-control-inline">
-                                <input type="checkbox" id="team5" name="customcheckbox" class="custom-control-input" />
-                                <label class="custom-control-label" for="team5"></label>
-                                <a href="#">BI팀</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="custom-control custom-checkbox custom-control-inline">
-                                <input type="checkbox" id="team6" name="customcheckbox" class="custom-control-input" />
-                                <label class="custom-control-label" for="team6"></label>
-                                <a href="#">발표</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="custom-control custom-checkbox custom-control-inline">
-                                <input type="checkbox" id="team7" name="customcheckbox" class="custom-control-input" />
-                                <label class="custom-control-label" for="team7"></label>
-                                <a href="#">부트스트랩개발</a>
-                            </div>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+        <ul>
+            <li class="font-"><span class="tree_root"><b>Mnwise - class추가</b></span>
+                <ul>
+                    <li class="treeview_sub">RND</li>
+                    <li class="treeview_sub">TS팀</li>
+                    <li class="treeview_sub">서비스팀
+                        <ul>
+                            <li>sub_1_1</li>
+                            <li>sub_1_2</li>
+                        </ul>
+                    </li>
+                    <li class="treeview_sub">사업팀</li>
+                    <li class="treeview_sub">BI팀</li>
+                    <li class="treeview_sub">발표</li>
+                    <li class="treeview_sub">부트스트랩개발</li>
+                </ul>
+            </li>
+        </ul>
     </div>
 
     <div class="card-footer">
         <button type="button" class="btn btn-default">선택</button>
     </div>
 </div>
+
+<script>
+    $("#jstree").jstree({
+        "checkbox": {
+            "keep_selected_style": false
+        },
+        "plugins": ["wholerow", "checkbox", "contextmenu"]
+    });
+</script>
 
 </html>
