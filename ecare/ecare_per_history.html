@@ -6,12 +6,44 @@
     <meta charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/jquery-ui.min.css">
 
     <script>
     $(function () {
         $("#subNav").load("../subNav.html");
         $("#js").load("../js.html");
         $("#headerTop").load("../headerTop.html");
+
+        //datepicker
+        $("#start_date").datepicker({
+			beforeShow: function(input) {
+			    setTimeout(function(){
+			       $('#ui-datepicker-div').css({'position':'', 'top':'', 'bottom':'', 'left':'', 'z-index':''});
+			    })
+			},
+			dateFormat: 'yy-mm-dd',
+			showMonthAfterYear: true,
+            yearSuffix: "년",
+			dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+            monthNames: [ "1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월" ],
+            monthNamesShort: [ "1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월" ],
+			showOtherMonths: true,
+		});
+        $("#end_date").datepicker({
+			beforeShow: function(input) {
+			    setTimeout(function(){
+			       $('#ui-datepicker-div').css({'position':'', 'top':'', 'bottom':'', 'left':'', 'z-index':''});
+			    })
+			},
+			dateFormat: 'yy-mm-dd',
+			showMonthAfterYear: true,
+            yearSuffix: "년",
+			dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+            monthNames: [ "1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월" ],
+            monthNamesShort: [ "1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월" ],
+			showOtherMonths: true,
+		});
         
     });
 
@@ -71,18 +103,12 @@
                                     <td>
                                         <!-- period -->
                                         <div class="periodWrap d-flex align-items-center">
-                                            <div class="input-group date datepicker datepicker-inline">
-                                                <input type="text" class="form-control form-control-sm" />
-                                                <span class="input-group-addon input-group-append">
-                                                    <button class="btn btn-sm btn-outline-primary" type="button"> <span class="fa fa-calendar"></span></button>
-                                                </span>
+                                            <div class="input_datebox">
+                                                <input type="text" id="start_date" class="form-control form-control-sm" />
                                             </div>
                                             <span class="txt">~</span>
-                                            <div class="input-group date datepicker datepicker-inline">
-                                                <input type="text" class="form-control form-control-sm" />
-                                                <span class="input-group-addon input-group-append">
-                                                    <button class="btn btn-sm btn-outline-primary" type="button"> <span class="fa fa-calendar"></span></button>
-                                                </span>
+                                            <div class="input_datebox">
+                                                <input type="text" id="end_date" class="form-control form-control-sm" />
                                             </div>
                                         </div>
                                         <!-- //period -->

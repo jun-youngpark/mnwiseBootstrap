@@ -11,7 +11,6 @@
         $(function () {
             $("#subNav").load("../subNav.html");
             $("#js").load("../js.html");
-            $("#headerTop").load("../headerTop.html");
         });
     </script>
 </head>
@@ -22,7 +21,6 @@
         <!-- 메뉴 -->
         <div id="subNav"></div>
         <div id="js"></div>
-        <div id="headerTop"></div>
         <!-- //메뉴-->
 
         <!-- Contents area  -->
@@ -71,8 +69,6 @@
 
                             </div>
                             <!-- e.buttons -->
-
-
                             <!-- search -->
                             <div class="col-auto searchWrap">
                                 <div class="form-group searchbox">
@@ -114,7 +110,7 @@
                   
                     <!-- Light table -->
                     <div class="table-responsive">
-                        <table class="table dataTable">
+                        <table class="table table-sm dataTable">
                             <thead class="thead-light">
                                 <tr>
                                     <th scope="col">선택</th>
@@ -130,10 +126,10 @@
                             <tbody>
                                 <tr>
                                     <th scope="row">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" id="checkbox1" name="customcheckbox"
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="radio1" name="customradio"
                                                 class="custom-control-input" />
-                                            <label class="custom-control-label" for="checkbox1"></label>
+                                            <label class="custom-control-label" for="radio1"></label>
                                         </div>
                                     </th>
                                     <td>@엠앤와이즈</td>
@@ -148,10 +144,10 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" id="checkbox1" name="customcheckbox"
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="radio2" name="customradio"
                                                 class="custom-control-input" />
-                                            <label class="custom-control-label" for="checkbox1"></label>
+                                            <label class="custom-control-label" for="radio2"></label>
                                         </div>
                                     </th>
                                     <td>@엠앤와이즈</td>
@@ -167,6 +163,7 @@
                         </table>
                     </div>
                     <!-- e.Light table -->
+                    
 
                     <!-- pagenation -->
                     <div class="pagination pagination-sm mb-0 pb-2 pt-1 justify-content-center">

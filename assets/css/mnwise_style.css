@@ -55,7 +55,7 @@ body{background:#fff;}
 .window-pop .modal-footer {justify-content: center;}*/
 
 /***** common class *****/
-.hide {position: absolute; left:-999em; top:-999em; opacity:0;}
+.hide {position: absolute; left:-999em; top:-999em; width:0; height:0; text-indent:-999em; opacity:0;}
 .none {display:none !important;}
 em {font-style: normal; color:var(--primary);}
 
@@ -148,11 +148,15 @@ button.btn-sm {min-height:30px;}
 .table-view .form-row .btn-outline-secondary {border-color:#dee2e6;}
 .table.table-view td {text-align:left;}
 .table th {font-weight:500;}
-.table th, .table td, .table td>a{max-width:170px; overflow: hidden; white-space: nowrap;  text-overflow: ellipsis;}
+.table th, .table td>a{max-width:170px; overflow: hidden; white-space: nowrap;  text-overflow: ellipsis;}
+.table td {white-space: normal;}
 .table-responsive:first-child > table {margin-top:0 !important;}
 .table .btn-icon {min-width:30px; padding:4px 7px;}
 
 .card .table-sm th, .card .table-sm td, .card .table.table-sm thead > tr > th {padding:.5rem;}
+.table .form-group:last-child{margin-bottom:0;}
+.table .form-group + .btn_area {margin-top:-10px;}
+.table .btn_area:last-child {padding-bottom:10px;}
 
 .card-body .table-responsive:last-child .dataTable:last-child {margin-bottom: 0 !important;}
 
@@ -183,9 +187,12 @@ button.btn-sm {min-height:30px;}
 
 /***** text *****/
 .required {display:inline-block; width:4px; height:4px;  margin-right:5px; text-indent:-999em; font-size:.1em; vertical-align:middle; text-align:left; background:#5e72e4; border-radius:4px;}
+.txt_info01 {margin:5px 0; font-size:.8125rem; color:#359bff;}
 
 .required-tri{ position:relative;}
 .required-tri::after {content: "";  position: absolute; border-left: 9px solid transparent;  border-top: 9px solid #359bff; right:0px; top: 0px;}
+
+.li-circle {display:inline-block; width:3px; height:3px;  margin-right:3px; text-indent:-999em; font-size:.1em; vertical-align:middle; background:#4b4b4b; }
 
 .font-size-basic {font-size:1rem;}
 
@@ -368,3 +375,36 @@ ex, campaign/campaign_2step_mail_form.html 수신확인 체크박스
 .code-set-tree .code-set-table{height:100%; max-height:508px; }
 .code-set .overflow-auto{max-height:508px;}
 .code-set .col-3{border-right:1px solid  #e9ecef;}
+
+
+
+/***** datepicker *****/
+.input_datebox {display:inline-block; position: relative;}
+.input_datebox::after {content:"\f133"; position: absolute; right:0; top:50%; width: 30px; font-family:"Font Awesome 5 Free"; font-weight: 900; color: #495572; text-align: center; -webkit-transform: translateY(-50%); transform: translateY(-50%);}
+.input_datebox:hover:after {color:#359bff;}
+.input_datebox input {width:150px; padding-right:30px;}
+.table_option .input_datebox .form-control {width:110px;  padding-right:25px;}
+.ui-datepicker {display:none; position:fixed; left:50%; top:50%; width:400px; margin-left:-110px; padding:0; background:#fff; border:none !important; box-shadow: 0 0 20px rgba(0,0,0,.5); -webkit-transform:translateY(-50%); transform:translateY(-50%); z-index:1000;}
+.ui-datepicker-header {position:relative; height:50px; padding:0; font-weight:bold; color:#fff; text-align:center; line-height:50px; background:#3593fc; border:none !important; border-radius:0;}
+.ui-datepicker-header > * {display:inline-block; font-weight:bold;}
+.ui-datepicker .ui-datepicker-header a {position:absolute; left:0; top:0; width:40px; height:100%; text-align:left; cursor: pointer;}
+.ui-datepicker .ui-datepicker-header a .ui-icon {display:inline-block; width:0; text-align:left; text-indent: -999em; overflow: hidden; opacity:0;}
+.ui-datepicker .ui-datepicker-header a:hover, .ui-datepicker .ui-datepicker-header .ui-state-hover {background-color:rgba(255,255,255,.1); border:none;}
+.ui-datepicker .ui-datepicker-header a:before {content: "\f104"; position:absolute; left:0; top:0; width:100%; font-family:"Font Awesome 5 Free"; font-weight: bold; font-size:1rem; color:#fff; text-align:center;}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-next {left:auto; right:0;}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-next:before {content: "\f105";}
+.ui-datepicker-close {position:absolute; right:0; top:0; width:55px; height:48px; text-indent:-999em; }
+.ui-datepicker-calendar {width:100%;}
+.ui-datepicker-calendar thead th {width:14.3%; padding:15px 2px 10px; font-size:.8125rem; text-align:center; background:#f3f6fb;}
+.ui-datepicker-calendar thead th:first-child, .ui-datepicker-calendar thead th:last-child {width:14.25%;}
+.ui-datepicker-calendar tbody tr:nth-child(even) {background:#f3f6fb;}
+.ui-datepicker-calendar td {padding:10px 5px; font-size:.8757rem; text-align:center;}
+.ui-datepicker .ui-datepicker-calendar .ui-state-default {display:block; width:30px; height:30px; margin:0 auto; padding:0; text-align:center; line-height:30px; background:none; border-radius:30px; -webkit-box-sizing: border-box; border:0 solid #3593fc; box-sizing: border-box;}
+.ui-datepicker-calendar .ui-state-disabled {opacity:.2;}
+.ui-datepicker-calendar .ui-datepicker-other-month {opacity:.4;}
+.ui-datepicker .ui-datepicker-today a.ui-state-default {color:#fff; background:#3593fc;}
+.ui-datepicker .ui-datepicker-current-day a.ui-state-default {color:#3593fc; font-weight:bold; line-height:28px; background:#d1effe; border:1px solid #3593fc;}
+.ui-datepicker-current {display:none;}
+
+.layer_back {position:fixed; left:0; top:0; width:100%; height:100%; background:#000; opacity:0.6; z-index:500;}
+
