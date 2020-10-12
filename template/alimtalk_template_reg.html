@@ -52,15 +52,14 @@
                                 <table class="table table-sm dataTable">
                                     <colgroup>
                                         <col style="width:8%;" />
-                                        <col style="width:8%;" />
-                                        <col style="width:2%;" />
-                                        <col style="width:*%;" />
                                         <col style="width:10%;" />
-                                        <col style="width:24%;" />
-                                        <col style="width:8%;" />
-                                        <col style="width:21%;" />
                                         <col style="width:4%;" />
-
+                                        <col style="width:20%;" />
+                                        <col style="width:10%;" />
+                                        <col style="width:18%;" />
+                                        <col style="width:8%;" />
+                                        <col style="width:18%;" />
+                                        <col style="width:4%;" />
                                     </colgroup>
                                     <tbody>
                                         <tr>
@@ -68,14 +67,14 @@
                                             <td colspan="3">
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" id="customRadioInline1"
-                                                        name="customRadioInline1" class="custom-control-input"
-                                                        required />
+                                                        name="customRadioInline1" class="custom-control-input" 
+                                                        required checked/>
                                                     <label class="custom-control-label"
                                                         for="customRadioInline1">단건</label>
                                                 </div>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" id="customRadioInline2"
-                                                        name="customRadioInline1" class="custom-control-input"
+                                                        name="customRadioInline1" class="custom-control-input" 
                                                          />
                                                     <label class="custom-control-label"
                                                         for="customRadioInline2">파일</label>
@@ -107,38 +106,38 @@
                                             <th>공유유형</th>
                                             <td colspan="3">
                                                 <div class="custom-control custom-radio custom-control-inline">
-                                                    <input type="radio" id="customRadioInline1"
-                                                        name="customRadioInline1" class="custom-control-input" />
+                                                    <input type="radio" id="customRadioInline3"
+                                                        name="customRadioInline11" class="custom-control-input" />
                                                     <label class="custom-control-label"
-                                                        for="customRadioInline1">사용자</label>
+                                                        for="customRadioInline3">사용자</label>
                                                 </div>
                                                 <div class="custom-control custom-radio custom-control-inline">
-                                                    <input type="radio" id="customRadioInline2"
-                                                        name="customRadioInline1" class="custom-control-input" />
+                                                    <input type="radio" id="customRadioInline4"
+                                                        name="customRadioInline11" class="custom-control-input" />
                                                     <label class="custom-control-label"
-                                                        for="customRadioInline2">부서</label>
+                                                        for="customRadioInline4">부서</label>
                                                 </div>
                                                 <div class="custom-control custom-radio custom-control-inline">
-                                                    <input type="radio" id="customRadioInline2"
-                                                        name="customRadioInline1" class="custom-control-input" />
+                                                    <input type="radio" id="customRadioInline5"
+                                                        name="customRadioInline11" class="custom-control-input" />
                                                     <label class="custom-control-label"
-                                                        for="customRadioInline2">전체</label>
+                                                        for="customRadioInline5">전체</label>
                                                 </div>
                                             </td>
                                             <th>PC 카카오톡 노출 여부</th>
                                             <td colspan="4">
                                                 <div class="custom-control custom-radio custom-control-inline">
-                                                    <input type="radio" id="customRadioInline1"
-                                                        name="customRadioInline1" class="custom-control-input" />
+                                                    <input type="radio" id="customRadioInline6"
+                                                        name="customRadioInline111" class="custom-control-input" />
                                                     <label class="custom-control-label"
-                                                        for="customRadioInline1">노출(모바일,PC 노출)
+                                                        for="customRadioInline6">노출(모바일,PC 노출)
 
                                                     </label>
                                                 </div>
                                                 <div class="custom-control custom-radio custom-control-inline">
-                                                    <input type="radio" id="customRadioInline2"
-                                                        name="customRadioInline1" class="custom-control-input" />
-                                                    <label class="custom-control-label" for="customRadioInline2">미노출(모바일
+                                                    <input type="radio" id="customRadioInline7"
+                                                        name="customRadioInline111" class="custom-control-input" />
+                                                    <label class="custom-control-label" for="customRadioInline7">미노출(모바일
                                                         노출)</label>
                                                 </div>
                                             </td>
@@ -166,6 +165,25 @@
                                                 </ul>
                                             </td>
                                         </tr>
+                                         <!--  등록방식 : 파일 -->
+                                         <tr>
+                                            <th><em class="required">required</em>카테고리</th>
+                                            <td  colspan="3"> <select class="form-control form-control-sm">
+                                                <option>선택</option>
+                                            </select></td>
+                                            <th>파일선택</th>
+                                            <td colspan="2"class="border-right-0"> 
+                                                <div class="custom-file custom-file-sm">
+                                                <input type="file" class="custom-file-input custom-file-input-sm" id="customFileLang"
+                                                    lang="ko">
+                                                <label class="custom-file-label custom-file-label-sm mb-0" for="customFileLang"></label>
+                                            </div></td>
+                                            
+                                            <td > <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                                                <span class="btn-inner--icon "><i class="far fa-file-excel"></i></span><span class="btn-inner--text"> 엑셀 다운로드</span>
+                                            </button></td>
+                                        </tr>
+                                         <!-- //  등록방식 : 파일 -->
                                         <tr>
                                             <th>버튼</th>
                                             <td colspan="3" class="border-right-0">
@@ -245,7 +263,6 @@
                                                     class="btn btn-sm btn-outline-primary">삭제</button>
                                             </td>
                                         </tr>
-                                       
                                     </tbody>
                                 </table>
                             </div>

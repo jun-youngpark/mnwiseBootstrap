@@ -39,6 +39,9 @@ body{background:#fff;}
 .custom-file-input {display:none;}
 .notice-text {padding-inline-start: 10px;}
 .notice-text li{list-style:none;  }
+.custom-file.custom-file-sm{height:32px;}
+.custom-file-label-sm{height: calc(.45em + 1.25rem + 6px);  padding-top: calc(.25rem + 2px); padding-bottom: calc(.25rem + 2px); overflow: hidden; padding-left:.45em; }
+.custom-file-label-sm::after{height: calc(.45em + 1.25rem + 5px); padding-top: calc(.25rem + 2px); padding-bottom: calc(.25rem + 2px); font-size: .75rem; }
 
 /*** friendtalk-img **/
 .friendtalk-view-img{width:240px; height:240px; margin-bottom: 1rem; border:1px solid #e8e8e8;}
@@ -407,4 +410,10 @@ ex, campaign/campaign_2step_mail_form.html 수신확인 체크박스
 .ui-datepicker-current {display:none;}
 
 .layer_back {position:fixed; left:0; top:0; width:100%; height:100%; background:#000; opacity:0.6; z-index:500;}
+
+
+/**/
+
+
+
 
