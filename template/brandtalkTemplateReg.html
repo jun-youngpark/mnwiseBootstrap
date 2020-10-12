@@ -45,432 +45,241 @@
                     <!-- e.Card header -->
                     <!-- form -->
                     <form>
-                        <!-- grid -->
-                        <div class="card-body gridWrap">
-                            <!-- row -->
-                            <div class="row">
-                                  <!-- col -->
-                                  <div class="col-4">
-                                    <div class="row form-group">
-                                        <label class="col-4 col-form-label form-control-label" for=""><em
-                                                class="required">required</em>플러스친구 ID</label>
-                                        <div class="col-8">
-                                            <select class="form-control">
-                                                <option>@엠앤와이즈</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- //col -->
-                                   <!-- col -->
-                                   <div class="col-4">
-                                    <div class="row form-group">
-                                        <label class="col-5 col-form-label form-control-label" for=""><em
-                                            class="required">required</em>수신거부 전화번호</label>
-                                        <div class="col-7">
-                                            <input type="number" class="form-control" placeholder="" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- //col -->
-                                <!-- col -->
-                                <div class="col-4">
-                                    <div class="form-group">
-                                        <dl class="row">
-                                            <dt class="col-4 col-form-label form-control-label"><em
-                                                    class="required">required</em>공유유형</dt>
-                                            <dd class="col-8">
+                        <!-- card body -->
+                        <div class="card-body">
+                            <!-- Light table -->
+                            <div class="table-responsive newgridWrap">
+                                <table class="table table-sm dataTable">
+                                    <colgroup>
+                                  
+                                        <col style="width:8%;" />
+                                        <col style="width:9%;" />
+                                        <col style="width:4%;" />
+                                        <col style="width:20%;" />
+                                        <col style="width:9%;" />
+                                        <col style="width:21%;" />
+                                        <col style="width:8%;" />
+                                        <col style="width:17%;" />
+                                        <col style="width:4%;" />
+
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+
+                                            <th><em class="required">required</em>플러스친구 ID</th>
+                                            <td colspan="3">
+                                                <select class="form-control form-control-sm">
+                                                    <option required>@엠앤와이즈</option>
+                                                </select>
+                                            </td>
+                                            <th><em class="required">required</em>수신거부 전화번호</th>
+                                            <td><input type="text" class="form-control form-control-sm" placeholder=""
+                                                    required /></td>
+                                            <th><em class="required">required</em>공유유형</th>
+                                            <td colspan="2">
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" id="customRadioInline1"
-                                                        name="customRadioInline1" class="custom-control-input" />
+                                                        name="customRadioInline1" class="custom-control-input"
+                                                        required />
                                                     <label class="custom-control-label"
                                                         for="customRadioInline1">전체</label>
                                                 </div>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" id="customRadioInline2"
-                                                        name="customRadioInline1" class="custom-control-input"
-                                                       />
+                                                        name="customRadioInline1" class="custom-control-input" />
                                                     <label class="custom-control-label"
                                                         for="customRadioInline2">부서</label>
                                                 </div>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" id="customRadioInline3"
-                                                        name="customRadioInline1" class="custom-control-input"
-                                                        checked />
+                                                        name="customRadioInline1" class="custom-control-input" />
                                                     <label class="custom-control-label"
                                                         for="customRadioInline3">사용자</label>
                                                 </div>
-                                            </dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                                <!-- //col -->
-                            </div>
-                            <!-- //row -->
-                              <!-- row -->
-                              <div class="row">
-                                   <!-- col -->
-                                 <div class="col-4">
-                                    <div class="row form-group">
-                                        <label class="col-4 col-form-label form-control-label" for=""><em
-                                            class="required">required</em>템플릿명</label>
-                                        <div class="col-8">
-                                            <input type="number" class="form-control" placeholder="" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- //col -->
-                                 <!-- col -->
-                              <div class="col-4">
-                                <div class="form-group">
-                                    <dl class="row">
-                                        <dt class="col-4 col-form-label form-control-label"><em
-                                                class="required">required</em>메세지 유형</dt>
-                                        <dd class="col-8">
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" id="customRadioInline4"
-                                                    name="customRadioInline2" class="custom-control-input" />
-                                                <label class="custom-control-label"
-                                                    for="customRadioInline4">기본형</label>
-                                            </div>
-                                            <div class="custom-control custom-radio custom-control-inline">
-                                                <input type="radio" id="customRadioInline5"
-                                                    name="customRadioInline2" class="custom-control-input"
-                                                    checked />
-                                                <label class="custom-control-label"
-                                                    for="customRadioInline5">와이드형</label>
-                                            </div>
-                                        </dd>
-                                    </dl>
-                                </div>
-                            </div>
-                            <!-- //col -->
-                              <!-- col -->
-                              <div class="col-4">
-                                  <div class="form-group">
-                                      <dl class="row">
-                                          <dt class="col-4 col-form-label form-control-label"><em
-                                                  class="required">required</em>텍스트 유형</dt>
-                                          <dd class="col-8">
-                                              <div class="custom-control custom-radio custom-control-inline">
-                                                  <input type="radio" id="customRadioInline6"
-                                                      name="customRadioInline3" class="custom-control-input" />
-                                                  <label class="custom-control-label"
-                                                      for="customRadioInline6">고정형</label>
-                                              </div>
-                                              <div class="custom-control custom-radio custom-control-inline">
-                                                  <input type="radio" id="customRadioInline7"
-                                                      name="customRadioInline3" class="custom-control-input"
-                                                      checked />
-                                                  <label class="custom-control-label"
-                                                      for="customRadioInline7">가변형</label>
-                                              </div>
-                                          </dd>
-                                      </dl>
-                                  </div>
-                              </div>
-                              <!-- //col -->
-                          </div>
-                          <!-- //row -->
-                          
-                            <!-- row -->
-                            <div class="row">
-                               <!--col-->
-                               <div class="col-6">
-                                <div class="row form-group">
-                                    <label class="col-3 col-form-label form-control-label" for=""><em
-                                            class="required">required</em>브랜드톡 이미지</label>
-                                    <div class="col-9">
-                                        <div class="custom-file ">
-                                            <input type="file" class="custom-file-input" id="customFileLang"
-                                                lang="ko">
-                                            <label class="custom-file-label" for="customFileLang"></label>
-                                        </div>
-                                        <ul class="notice-text mb-02">
-                                            <li><em class="required">required</em>파일형식 및 크기 : jpg, png 파일 / 최대 500KB
-                                                
-                                            </li>
-                                            <li><em class="required">required</em>권장 해상도 : 720px * 720px (가로 500px 미만 또는 가로:세로 비율이 2:1미만 또는 3:4 초과시 업로드 불가)</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--//col-->
-                                <!--col-->
-                                <div class="col-6">
-                                    <div class="row form-group">
-                                        <label class="col-4 col-form-label form-control-label" for=""><em
-                                                class="required">required</em>브랜드톡 이미지링크</label>
-                                        <div class="col-8">
-                                            <input type="text" class="form-control" placeholder="" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--//col-->
-                            </div>
-                            <!-- //row -->
-                            <!-- row -->
-                            <div class="row">
-                                <!--col-->
-                                <div class="col-5">
-                                    <div class="row form-group">
-                                        <label class="col-4 col-form-label form-control-label" for=""><em
-                                                class="required">required</em>템플릿 내용</label>
-                                        <div class="col-8">
-                                            <textarea class="form-control textarea" id="" rows="11"
-                                                style="background: #f7fafc;"></textarea>
-                                            <div class="textarea-font-style"><span class="count-text">0</span> bytes
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--//col-->
-                                <!--col-->
-                                <div class="col-7">                                  
-                                <ul class="notice-text">
-                                    <li class="text-danger"><em class="required">required</em> 변수형은 변수 매핑이 가능한 준실시간에서만 사용가능합니다.</li>
-                                    <li><em class="required">required</em>템플릿 등록 시 고유 템플릿 코드가 발급됩니다.<br>&nbsp;&nbsp;&nbsp;템플릿 코드로 브랜드톡 메시지를 발송할 수 있습니다.</li>
-                                    <li><em class="required">required</em>템플릿 내용은 한/영 구분없이 이미지형은 1000자, 와이드형은 76자까지 입력 가능합니다.</li>
-                                    <li><em class="required">required</em>권장 이미지 크기는 이미지형은 800px * 400 px, 와이드형은 800px * 600 px 입니다.</li>
-                                    <li><em class="required">required</em>이미지 파일은 용량이 2MB 이하인 jpg, png 파일만 등록 가능합니다</li>
-                                    <li><em class="required">required</em>이미지 파일은 가로 500px 미만 또는 가로:세로 비율이 2:1 미만 또는 3:4 초과시 업로드 불가합니다.</li>
-                                    <li><em class="required">required</em>이미지 링크에는 'http://', 'https://'가 포함되어야 합니다.</li>
-                                    <li><em class="required">required</em>무료 수신 거부 수단으로 전화번호 형식의 수신 거부 방법을 필수로 입력해야 합니다.</li>
-                                    <li><em class="required">required</em>버튼 등록시 이미지형은 5개, 와이드형은 2개까지 입력 가능합니다.</li>
-                                    <li><em class="required">required</em>버튼 등록시 채널 추가 버튼은 이미지형인 경우 첫번째, 와이드형인 경우 마지막에 위치해야 합니다.</li>
-                                    <li><em class="required">required</em>버튼 url 등록시 url_mobile, url_pc 링크에는 'http://', 'https://'가 포함되어야 하며 scheme_ios, scheme_android 링크는 스킴 형태에 맞게 등록해야 합니다. 그렇지 않을 경우 템플릿 등록이 불가합니다.
-                                    </li>
-                                </ul>
-                            </div>
-                                <!--//col-->
-                            </div>
-                            <!-- //row -->
-                            <!-- 버튼 추가(웹링크 ~ 메시지 전달) 따른 row-->
-                             <!-- row -->
-                             <div class="row">
-                                   <!-- col -->
-                                <div class="col-5">
-                                    <div class="form-group row">
-                                        <label class="col-4 col-form-label form-control-label" for=""> <em
-                                                class="required">required</em>버튼</label>
-                                        <div class="col-8">
-                                            <div class="row">
-                                                <div class="col-9">
-                                                    <select class="form-control">
-                                                        <option>웹링크</option>
-                                                        <option>앱링크</option>
-                                                        <option>배송조회</option>
-                                                        <option>봇키워드</option>
-                                                        <option>메시지 전달</option>
-                                                    </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><em class="required">required</em>템플릿명</th>
+                                            <td colspan="3"><input type="text" class="form-control form-control-sm"
+                                                    placeholder="" required /></td>
+                                            <th><em class="required">required</em>템플릿명메세지 유형</th>
+                                            <td>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="customRadioInline4"
+                                                        name="customRadioInline11" class="custom-control-input"
+                                                        required />
+                                                    <label class="custom-control-label" for="customRadioInline4">기본
+                                                        이미지</label>
                                                 </div>
-                                                <div class="col-3"> <button class="btn btn-outline-primary"
-                                                        type="button">추가</button></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- //col -->
-                             </div>
-                              <!-- //row -->
-                            <!-- row -->
-                            <div class="row">
-                                <div class="col-2">
-                                    <div class="form-group">
-                                        <dl class="row">
-                                            <dt class="col-6 col-form-label form-control-label"><em
-                                                class="required">required</em>버튼타입</dt>
-                                            <dd class="col-6 pl-0">
-                                                <span>웹 링크</span>
-                                            </dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="row form-group">
-                                        <label class="col-4 col-form-label form-control-label" for=""><em
-                                                class="required">required</em>버튼명</label>
-                                        <div class="col-8">
-                                            <input type="text" class="form-control" placeholder="" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="row form-group">
-                                        <label class="col-4 col-form-label form-control-label" for=""><em
-                                                class="required">required</em> 모바일 웹링크</label>
-                                        <div class="col-8">
-                                            <input type="text" class="form-control" placeholder="" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="row form-group">
-                                        <label class="col-4 col-form-label form-control-label" for="">PC 웹링크</label>
-                                        <div class="col-8">
-                                            <input type="text" class="form-control" placeholder="" />
-                                        </div>
-                                    </div>
-                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="customRadioInline5"
+                                                        name="customRadioInline11" class="custom-control-input" />
+                                                    <label class="custom-control-label" for="customRadioInline5">와이드
+                                                        이미지</label>
+                                                </div>
+                                            </td>
+                                            <th><em class="required">required</em>텍스트 유형</th>
+                                            <td colspan="2">
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="customRadioInline6"
+                                                        name="customRadioInline111" class="custom-control-input"
+                                                        required />
+                                                    <label class="custom-control-label"
+                                                        for="customRadioInline6">고정형</label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="customRadioInline7"
+                                                        name="customRadioInline111" class="custom-control-input" />
+                                                    <label class="custom-control-label"
+                                                        for="customRadioInline7">변수형</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>브랜드톡 이미지</th>
+                                            <td colspan="5">
+                                                <div class="custom-file  col-6">
+                                                    <input type="file" class="custom-file-input ustom-file-input-sm" id="customFileLang"
+                                                        lang="ko">
+                                                    <label class="custom-file-label custom-file-label-sm" for="customFileLang"></label>
+                                                </div>
+                                                <ul class="notice-text text-left  mb-0 mt--2">
+                                                    <li><em class="li-circle">li-circle</em>이미지 파일은 용량이 2MB 이하인 jpg, png
+                                                        파일만 등록 가능합니다</li>
+                                                    <li><em class="li-circle">li-circle</em>이미지 파일은 가로 500px 미만 또는 가로:세로
+                                                        비율이 2:1 미만 또는 3:4 초과시 업로드 불가합니다.</li>
+                                                </ul>
+                                            </td>
+                                            <th>브랜드톡 이미지 링크</th>
+                                            <td colspan="2"><input type="text" class="form-control form-control-sm"
+                                                    placeholder="" required />
 
-                                <div class="col-1">
-                                    <dl class="row">
-                                        <dd>
-                                            <button class="btn btn-outline-primary" type="button">삭제</button>
-                                        </dd>
-                                    </dl>
-                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><em class="required">required</em>템플릿 내용</th>
+                                            <td colspan="3" class="border-right-0"> <textarea
+                                                    class="form-control textarea-count" id="" rows="9"
+                                                    style="background: #f7fafc;" required></textarea>
+                                                <div class="textarea-font-style"><span class="count-text">0</span>/ <span class="max-len">1000</span>자
+                                                </div>
+                                            </td>
+                                            <td colspan="5">
+                                                <ul class="notice-text mb-0">
+                                                    <li class="text-danger"><em class="li-circle">li-circle</em>변수형은 변수
+                                                        매핑이 가능한 준실시간에서만 사용가능합니다.
+                                                    </li>
+                                                    <li><em class="li-circle">li-circle</em>템플릿 등록 시 고유 템플릿 코드가 발급됩니다.
+                                                        템플릿 코드로 브랜드톡 메시지를 발송할 수 있습니다.
+                                                    </li>
+                                                    <li><em class="li-circle">li-circle</em>템플릿 내용은 한/영 구분없이 이미지형은
+                                                        1000자, 와이드형은 76자까지 입력 가능합니다.</li>
+                                                    <li><em class="li-circle">li-circle</em>권장 이미지 크기는 이미지형은 800px * 400
+                                                        px, 와이드형은 800px * 600 px 입니다.</li>
+                                                    <li><em class="li-circle">li-circle</em>이미지 파일은 용량이 2MB 이하인 jpg, png
+                                                        파일만 등록 가능합니다</li>
+                                                    <li><em class="li-circle">li-circle</em>이미지 파일은 가로 500px 미만 또는 가로:세로
+                                                        비율이 2:1 미만 또는 3:4 초과시 업로드 불가합니다.</li>
+                                                    <li><em class="li-circle">li-circle</em>이미지 링크에는 'http://',
+                                                        'https://'가 포함되어야 합니다.</li>
+                                                    <li><em class="li-circle">li-circle</em>무료 수신 거부 수단으로 전화번호 형식의 수신 거부
+                                                        방법을 필수로 입력해야 합니다.</li>
+                                                    <li><em class="li-circle">li-circle</em>버튼 등록시 이미지형은 5개, 와이드형은 2개까지
+                                                        입력 가능합니다.</li>
+                                                    <li><em class="li-circle">li-circle</em>버튼 등록시 채널 추가 버튼은 이미지형인 경우
+                                                        첫번째, 와이드형인 경우 마지막에 위치해야 합니다.</li>
+                                                    <li><em class="li-circle">li-circle</em>버튼 url 등록시 url_mobile,
+                                                        url_pc 링크에는 'http://', 'https://'가 포함되어야 하며 scheme_ios,
+                                                        scheme_android 링크는 스킴 형태에 맞게 등록해야 합니다. 그렇지 않을 경우 템플릿 등록이 불가합니다.
+                                                    </li>
 
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>버튼</th>
+                                            <td colspan="3" class="border-right-0">
+                                                <select class="form-control form-control-sm d-inline-block w-auto">
+                                                    <option value="">웹 링크</option>
+                                                    <option value="">앱 링크</option>
+                                                    <option value="">배송조회</option>
+                                                    <option value="">봇키워드</option>
+                                                    <option value="">메시지 전달</option>
+                                                </select>
+                                                <button type="button"
+                                                    class="btn btn-sm btn-outline-primary ml-2">추가</button>
+
+                                            </td>
+                                            <td colspan="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <th><em class="required">required</em>버튼 타입</th>
+                                            <td>웹 링크</td>
+                                            <th><em class="required">required</em>버튼명</th>
+                                            <td><input type="text" class="form-control form-control-sm" placeholder=""
+                                                    required /></td>
+                                            <th><em class="required">required</em>모바일 웹링크</th>
+                                            <td><input type="text" class="form-control form-control-sm" placeholder=""
+                                                    required /></td>
+                                            <th>PC 웹링크</th>
+                                            <td class="border-right-0"><input type="text"
+                                                    class="form-control form-control-sm" placeholder="" /></td>
+                                            <td><button type="button" class="btn btn-sm btn-outline-primary">삭제</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><em class="required">required</em>버튼 타입</th>
+                                            <td>앱 링크</td>
+                                            <th><em class="required">required</em>버튼명</th>
+                                            <td><input type="text" class="form-control form-control-sm" placeholder=""
+                                                    required /></td>
+                                            <th><em class="required">required</em>모바일 웹링크</th>
+                                            <td><input type="text" class="form-control form-control-sm" placeholder=""
+                                                    required /></td>
+                                            <th>PC 웹링크</th>
+                                            <td class="border-right-0"><input type="text"
+                                                    class="form-control form-control-sm" placeholder="" /></td>
+                                            <td><button type="button" class="btn btn-sm btn-outline-primary">삭제</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><em class="required">required</em>버튼 타입</th>
+                                            <td>배송조회</td>
+                                            <th><em class="required">required</em>버튼명</th>
+                                            <td class="border-right-0"><input type="text"
+                                                    class="form-control form-control-sm" placeholder="" required /></td>
+                                            <td colspan="5"><button type="button"
+                                                    class="btn btn-sm btn-outline-primary">삭제</button>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <th><em class="required">required</em>버튼 타입</th>
+                                            <td>봇키워드</td>
+                                            <th><em class="required">required</em>버튼명</th>
+                                            <td class="border-right-0"><input type="text"
+                                                    class="form-control form-control-sm" placeholder="" required /></td>
+                                            <td colspan="5"><button type="button"
+                                                    class="btn btn-sm btn-outline-primary">삭제</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><em class="required">required</em>버튼 타입</th>
+                                            <td>메시지 전달</td>
+                                            <th><em class="required">required</em>버튼명</th>
+                                            <td class="border-right-0"><input type="text"
+                                                    class="form-control form-control-sm" placeholder="" required /></td>
+                                            <td colspan="5"><button type="button"
+                                                    class="btn btn-sm btn-outline-primary">삭제</button>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
                             </div>
-                            <!-- //row -->
-                            <!-- row -->
-                            <div class="row">
-                                <div class="col-2">
-                                    <div class="form-group">
-                                        <dl class="row">
-                                            <dt class="col-6 col-form-label form-control-label"><em
-                                                    class="required">required</em>버튼타입</dt>
-                                            <dd class="col-6  pl-0">
-                                                <span>앱링크</span>
-                                            </dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="row form-group">
-                                        <label class="col-4 col-form-label form-control-label" for=""><em
-                                                class="required">required</em>버튼명</label>
-                                        <div class="col-8">
-                                            <input type="text" class="form-control" placeholder="" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="row form-group">
-                                        <label class="col-4 col-form-label form-control-label" for=""><em
-                                                class="required">required</em> iOS 앱링크</label>
-                                        <div class="col-8">
-                                            <input type="text" class="form-control" placeholder="" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="row form-group">
-                                        <label class="col-4 col-form-label form-control-label" for=""><em
-                                                class="required">required</em>안드로이드 앱링크
-                                        </label>
-                                        <div class="col-8">
-                                            <input type="text" class="form-control" placeholder="" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-1">
-                                    <dl class="row">
-                                        <dd>
-                                            <button class="btn btn-outline-primary" type="button">삭제</button>
-                                        </dd>
-                                    </dl>
-                                </div>
-                            </div>
-                            <!-- //row -->
-                            <!-- row -->
-                            <div class="row">
-                                <div class="col-2">
-                                    <div class="form-group">
-                                        <dl class="row">
-                                            <dt class="col-6 col-form-label form-control-label"><em
-                                                    class="required">required</em>버튼타입</dt>
-                                            <dd class="col-6  pl-0">
-                                                <span>봇키워드</span>
-                                            </dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="row form-group">
-                                        <label class="col-4 col-form-label form-control-label" for=""><em
-                                                class="required">required</em>버튼명</label>
-                                        <div class="col-8">
-                                            <input type="text" class="form-control" placeholder="" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6"></div>
-                                <div class="col-1">
-                                    <dl class="row">
-                                        <dd>
-                                            <button class="btn btn-outline-primary" type="button">삭제</button>
-                                        </dd>
-                                    </dl>
-                                </div>
-                            </div>
-                            <!-- //row -->
-                            <!-- row -->
-                            <div class="row">
-                                <div class="col-2">
-                                    <div class="form-group">
-                                        <dl class="row">
-                                            <dt class="col-6 col-form-label form-control-label"><em
-                                                    class="required">required</em>버튼타입</dt>
-                                            <dd class="col-6  pl-0">
-                                                <span>배송조회</span>
-                                            </dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="row form-group">
-                                        <label class="col-4 col-form-label form-control-label" for=""><em
-                                                class="required">required</em>버튼명</label>
-                                        <div class="col-8">
-                                            <input type="text" class="form-control" placeholder="" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6"></div>
-                                <div class="col-1">
-                                    <dl class="row">
-                                        <dd>
-                                            <button class="btn btn-outline-primary" type="button">삭제</button>
-                                        </dd>
-                                    </dl>
-                                </div>
-                            </div>
-                            <!-- //row -->
-                            <!-- row -->
-                            <div class="row">
-                                <div class="col-2">
-                                    <div class="form-group">
-                                        <dl class="row">
-                                            <dt class="col-6 col-form-label form-control-label"><em
-                                                    class="required">required</em>버튼타입</dt>
-                                            <dd class="col-6  pl-0">
-                                                <span>메시지전달</span>
-                                            </dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="row form-group">
-                                        <label class="col-4 col-form-label form-control-label" for=""><em
-                                                class="required">required</em>버튼명</label>
-                                        <div class="col-8">
-                                            <input type="text" class="form-control" placeholder="" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6"></div>
-                                <div class="col-1">
-                                    <dl class="row">
-                                        <dd>
-                                            <button class="btn btn-outline-primary" type="button">삭제</button>
-                                        </dd>
-                                    </dl>
-                                </div>
-                            </div>
-                            <!-- //row -->
+                            <!-- //Light table -->
                         </div>
-                        <!-- //grid -->
+                        <!-- //card body -->
                         <!-- button area -->
                         <div class="card-footer pb-4 btn_area">
                             <button type="submit" class="btn btn btn-outline-primary btn-icon">
@@ -479,6 +288,7 @@
                             </button>
                         </div>
                         <!-- e.button area -->
+
                     </form>
                     <!-- e.form -->
                 </div>
@@ -488,5 +298,29 @@
         <!-- e.Contents area -->
     </div>
     <!-- e.wrapper -->
+    <script>
+        $(document).ready(function () {
+            $(".textarea-count").bind({ "keyup": function () {
+                    var dom = $(this),
+                        maxLength= $('.max-len').text(),
+                        maxStr =parseInt(maxLength);
+                        textDom = $('.count-text'),
+                        str = dom.val(),
+                        count = 0,
+                        charStr = ''
+                        console.log(maxLength+1)
+                        console.log(maxStr+1)
+                    if (str.length <= maxStr) {
+                        textDom.text(str.length);
+                        return;
+                    }else{
+                        alert( maxStr+"자 초과 하였습니다")
+                    }
+                    textDom.text(count)
+                }
+            })
+        })
+        
+    </script>
 
 </html>
