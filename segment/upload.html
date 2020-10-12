@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script>
+    $(function () {
+        $("#subNav").load("../subNav.html");
+        $("#js").load("../js.html");
+    });
+    </script>
+</head>
+
+<body>
+<!-- wrapper -->
+<div class="wrapper">
+    <!-- 메뉴 -->
+    <div id="subNav"></div>
+    <div id="js"></div>
+    <!-- //메뉴-->
+
+    <!-- Contents area -->
+    <div class="main-panel">
+        <!-- Page content -->
+        <div class="container-fluid mt-4 mb-2">
+
+            <!-- card -->
+            <div class="card">
+                <!-- Card header -->
+                <div class="card-header">
+                    <!-- title  -->
+                    <div class="col-8">
+                        <h3 class="mb-0">대상자 파일 올리기</h3>
+                    </div>
+                    <!-- //title -->
+                </div>
+                <!-- e.Card header -->
+
+                <!-- form -->
+                <form>
+                    <!-- card body -->
+                    <div class="card-body">
+                        <!-- Light table -->
+                        <div class="table-responsive newgridWrap">
+                            <table class="table table-sm dataTable">
+                                <colgroup>
+                                    <col style="width:20%;" />
+                                    <col />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row"><em class="required">required</em>파일 선택</th>
+                                        <td>
+                                            <div class="custom-file custom-file-sm w-50">
+                                                <input type="file" class="custom-file-input" id="customFileLang" lang="en">
+                                                <label class="custom-file-label custom-file-label-sm" for="customFileLang"></label>
+                                            </div>
+                                            <span class="txt_info01 ml-2">파일 최대 사이즈는 100MB</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">첫번째 라인 필드 정보 포함</th>
+                                        <td>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="fieldinfo" name="fieldinfo" class="custom-control-input" />
+                                                <label class="custom-control-label" for="fieldinfo">(헤더정보: 아이디, 이름, 이메일, 고객 휴대폰, 기타)</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><em class="required">required</em>유효성 체크</th>
+                                        <td>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="mail-chk" name="validate-chk" class="custom-control-input" />
+                                                <label class="custom-control-label" for="mail-chk">수신자 메일</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="mail-chk" name="validate-chk" class="custom-control-input" />
+                                                <label class="custom-control-label" for="mail-chk">수신자 번호</label>
+                                            </div>
+                                            <span class="txt_info01 ml-2">※ 수신자 번호의 공백, -, () 문자는 자동으로 제거합니다.</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><em class="required">required</em>구분자</th>
+                                        <td>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="delimiter01" name="delimiter" class="custom-control-input" />
+                                                <label class="custom-control-label" for="delimiter01">콤마</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="delimiter02" name="delimiter" class="custom-control-input" />
+                                                <label class="custom-control-label" for="delimiter02">탭</label>
+                                            </div>
+                                            <div class="custom-control custom-radio custom-control-inline">
+                                                <input type="radio" id="delimiter03" name="delimiter" class="custom-control-input" />
+                                                <label class="custom-control-label" for="delimiter03">사용자 지정</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- //Light table -->
+                    </div>
+                    <!-- //card body -->
+                    
+                    <!-- button area -->
+                    <div class="card-footer pb-4 btn_area">
+                        <div class="row">
+                            <div class="col col-6">
+                            </div>
+                            <div class="col col-6">
+                                <button type="button" class="btn btn-outline-info btn-icon">
+                                    <span class="btn-inner--text mr-2">다음단계</span><span class="btn-inner--icon"><i class="fas fa-chevron-right"></i></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- e.button area -->
+                </form>
+                <!-- e.form -->
+            </div>
+            <!-- e.card -->
+
+        </div> <!-- e.page content -->
+    </div>
+    <!-- e.Contents area -->
+</div>
+<!-- e.wrapper -->
+
+</html>

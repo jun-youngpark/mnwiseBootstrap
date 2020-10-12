@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script>
+    $(function () {
+        $("#js").load("/js.html");
+    });
+
+    
+
+    </script>
+</head>
+
+<body>
+<div id="js"></div>
+
+<div class="card pop-card">
+    <div class="card-header">
+        <h5 class="mb-0">SQL 수정</h5>
+    </div>
+
+    <div class="card-body">
+        <!-- 업데이트 쿼리 수정 -->
+        <div class="h-100 none">
+            <textarea class="form-control h-100" id="" rows="5" cols="100"></textarea>
+        </div>
+        <!-- //업데이트 쿼리 수정 -->
+
+        <!-- 대상자 쿼리 수정-->
+        <div class="">
+            <h2 class="h5">SQL HEADER</h2>
+            <div class="form-group">
+                <textarea class="form-control h-100" id="" rows="3" cols="100" readonly="readonly">Select 'id' as id , 'park' as name, </textarea>
+            </div>
+            <h2 class="h5">SQL BODY</h2>
+            <div class="form-group">
+                <textarea class="form-control h-100" id="" rows="5" cols="100"></textarea>
+            </div>
+            <h2 class="h5">SQL TAIL</h2>
+            <div class="form-group">
+                <textarea class="form-control h-100" id="" rows="5" cols="100"></textarea>
+            </div>
+        </div>
+        <!-- //대상자 쿼리 수정-->
+    </div>
+
+    <div class="card-footer">
+        <button type="button" class="btn btn-outline-primary">수정</button>
+        <button type="button" class="btn btn-outline-default">닫기</button>
+    </div>
+</div>
+
+</html>

@@ -5,6 +5,7 @@
 <head>
     <meta charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="../assets/js/jstree.js"></script>
     <link rel="stylesheet" href="../assets/css/default/style.css" />
 
     <script>
@@ -27,29 +28,33 @@
 
     <div class="card-body">
 
-        <!-- Card body 트리 -->
-        <ul>
-            <li class="font-"><span class="tree_root"><b>Mnwise - class추가</b></span>
-                <ul>
-                    <li class="treeview_sub">RND</li>
-                    <li class="treeview_sub">TS팀</li>
-                    <li class="treeview_sub">서비스팀
-                        <ul>
-                            <li>sub_1_1</li>
-                            <li>sub_1_2</li>
-                        </ul>
-                    </li>
-                    <li class="treeview_sub">사업팀</li>
-                    <li class="treeview_sub">BI팀</li>
-                    <li class="treeview_sub">발표</li>
-                    <li class="treeview_sub">부트스트랩개발</li>
-                </ul>
-            </li>
-        </ul>
+        <!-- 트리 -->
+        <div id="jstree" class="treeview_top">
+            <ul>
+                <li class="font-"><span class="tree_root"><b>Mnwise - class추가</b></span>
+                    <ul>
+                        <li class="treeview_sub">RND</li>
+                        <li class="treeview_sub">TS팀</li>
+                        <li class="treeview_sub">서비스팀
+                            <ul>
+                                <li>sub_1_1</li>
+                                <li>sub_1_2</li>
+                            </ul>
+                        </li>
+                        <li class="treeview_sub">사업팀</li>
+                        <li class="treeview_sub">BI팀</li>
+                        <li class="treeview_sub">발표</li>
+                        <li class="treeview_sub">부트스트랩개발</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- //트리 -->
     </div>
 
     <div class="card-footer">
-        <button type="button" class="btn btn-default">선택</button>
+        <button type="button" class="btn btn-outline-primary">선택</button>
+        <button type="button" class="btn btn-outline-default">닫기</button>
     </div>
 </div>
 
