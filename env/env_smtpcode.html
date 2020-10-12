@@ -4,8 +4,6 @@
 
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="../assets/js/jstree.js"></script>
-    <link rel="stylesheet" href="../assets/css/default/style.css" />
 
     <script>
         $(function () {
@@ -43,22 +41,23 @@
                                 <!-- col-3  Card body 트리 -->
                                 <div class="col-3 px-0">
                                     <div class="code-set-tree">
-                                        <div id="jstree" class="treeview_top treeview_basic">
-                                            <!-- 방법 1 --- class추가 // css처리 -->
-                                            <ul>
-                                                <li>PUSH 공통 결과코드
-                                                    <ul>
-                                                        <li class="treeview_sub_file">정상 결과코드</li>
-                                                        <li class="treeview_sub_file"> 시스템 에러 결과코드</li>
-                                                        <li class="treeview_sub_file">APNS 에러 결과코드</li>
-                                                        <li class="treeview_sub_file">HTTP 에러 결과코드</li>
-                                                        <li class="treeview_sub_file">GCM 에러 결과코드</li>
-                                                        <li class="treeview_sub_file">기타 에러 결과코드</li>
+                                        <div id="sidetree">
+                                            <ul id="tree" class="overflow-auto">
+                                                <li>
+                                                    <h5>SMTP</h5>
+                                                    <ul class="description">
+                                                        <li><a href="#" class="on">Unknown User</a></li>
+                                                        <li><a href="#">Unknown Host</a></li>
+                                                        <li><a href="#">SMTP Exception</a></li>
+                                                        <li><a href="#">NoRoute To Host</a></li>
+                                                        <li><a href="#">onnection Refused</a></li>
+                                                        <li><a href="#">Exception</a></li>
+                                                        <li><a href="#">Invalid Address</a></li>
+                                                        <li><a href="#">Receive Rejection</a></li>
                                                     </ul>
                                                 </li>
                                             </ul>
                                         </div>
-                                        <!-- // jstree-->
                                     </div>
                                 </div>
                                 <!-- //col-3  Card body 트리 -->
@@ -139,14 +138,6 @@
         <!-- //  내용 -->
     </div>
     <!-- // wapper-->
-    <script>
-        		$("#jstree").jstree({
-				"checkbox": {
-					"keep_selected_style": false
-				},
-				"plugins": ["wholerow", "contextmenu"]
-			});
-    </script>
 
 
 
