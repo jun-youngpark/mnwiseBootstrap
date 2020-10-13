@@ -3,22 +3,22 @@
 <title>wise U</title>
 
 <head>
-    <meta charset="utf-8" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+  <meta charset="utf-8" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="tree_fontello/css/fontello.css">
 
-    <script>
+  <script>
     $(function () {
-        $("#subNav").load("../subNav.html");
-        $("#js").load("../js.html");
-        $("#headerTop").load("../headerTop.html");
+      $("#subNav").load("../subNav.html");
+      $("#js").load("../js.html");
+      $("#headerTop").load("../headerTop.html");
     });
-    </script>
+  </script>
 </head>
 
 <body>
-<!-- wrapper -->
-<div class="wrapper">
+  <!-- wrapper -->
+  <div class="wrapper">
     <!-- 메뉴 -->
     <div id="subNav"></div>
     <div id="js"></div>
@@ -27,159 +27,201 @@
 
     <!-- Contents area -->
     <div class="main-panel">
-        <!-- Page content -->
-        <div class="container-fluid mt-4 mb-2">
+      <!-- Page content -->
+      <div class="container-fluid mt-4 mb-2">
 
-            <!-- card -->
-            <div class="card">
-                <!-- Card header -->
-                <div class="card-header">
-                    <div class="row">
-                        <!-- title  -->
-                        <div class="col-8">
-                            <h3 class="mb-0">모바일 템플릿 등록 </h3>
-                        </div>
-                        <!-- //title -->
-                    </div>
-                </div>
-                <!-- e.Card header -->
-                <!-- form -->
-                <form>
-                <!-- grid -->
-                <div class="card-body gridWrap">
-                    <!-- row -->
-                    <div class="row">
-                        <!-- col -->
-                        <div class="col-8">  
-                            <div class="form-group">
-                                <dl class="row">
-                                    <dt class="col-2 col-form-label form-control-label"><em class="required">required</em>템플릿 유형</dt>
-                                    <dd class="col-10">
-                                        <div class="custom-control custom-radio custom-control-inline">
-                                            <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" />
-                                            <label class="custom-control-label" for="customRadioInline1">단문 메시지(80 byte) </label>
-                                        </div>
-                                        <div class="custom-control custom-radio custom-control-inline">
-                                            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" checked/>
-                                            <label class="custom-control-label" for="customRadioInline2">장문 메시지(2000 byte)</label>
-                                        </div>
-                                        <div class="custom-control custom-radio custom-control-inline">
-                                            <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input" />
-                                            <label class="custom-control-label" for="customRadioInline3">MMS 이미지</label>
-                                        </div>
-                                        <div class="custom-control custom-radio custom-control-inline">
-                                            <input type="radio" id="customRadioInline4" name="customRadioInline1" class="custom-control-input" />
-                                            <label class="custom-control-label" for="customRadioInline4">친구톡 이미지</label>
-                                        </div>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </div>
-                        <!-- //col -->
-                         <!-- col -->
-                         <div class="col-4">
-                            <div class="row form-group">
-                                <label class="col-4 col-form-label form-control-label" for="">태그</label>
-                                <div class="col-8">
-                                    <input type="text" class="form-control" required placeholder="" />
-                                </div>
-                            </div>
-                        </div>
-                        <!-- //col -->
-                     
-                    </div>
-                    <!-- //row -->
-                     <!-- row -->
-                     <div class="row">
-                        <!-- col -->
-                        <div class="col-6">
-                            <div class="row form-group">
-                                <label class="col-4 col-form-label form-control-label" for=""><em class="required">required</em>템플릿 명</label></label>
-                                <div class="col-8">
-                                    <input type="text" class="form-control" placeholder="" />
-                                </div>
-                            </div>
-                        </div>
-                        <!-- //col -->
-                        <!-- col -->
-                        <div class="col-6">
-                            <div class="row form-group">
-                                <label class="col-4 col-form-label form-control-label" for="">템플릿 설명</label>
-                                <div class="col-8">
-                                    <input type="text" class="form-control" placeholder="" />
-                                </div>
-                            </div>
-                        </div>
-                        <!-- //col -->
-                    </div>
-                    <!-- //row -->
-                    <!-- row -->
-                    <div class="row">
-                        <!--col-->
-                        <div class="col-6">
-                            <div class="row form-group">
-                                <label class="col-4 col-form-label form-control-label" for=""><em class="required">required</em>템플릿 내용</label>
-                                <div class="col-8">
-                                    <textarea class="form-control textarea" id="" rows="6" style="background: #f7fafc;"></textarea>
-                                    <div class="textarea-font-style"><span class="count-text">0</span> bytes</div>
-                                 <!--  휴대폰 모양 추가해서 만들어본 textarea
-                                     <div class="mobile-wrap" style="width:100%; height:auto; border:1px solid #dee2e6; border-radius: 7% 7% 2% 2%; padding:5px 30px;">
-                                       <div class="line" style="text-align:center">
-                                        <span  style="display: inline-block; width:25%; height:5px; border-radius:5px ; background:#dee2e6;margin-right:5px "></span>
-                                        <span style="display: inline-block; width:5px; height:5px; border-radius:50%; background: #dee2e6;;"></span></div>
-                                    </div>
-                                  --> 
-                                </div>
-                            </div>
-                        </div>
-                        <!--//col-->
-                        <!-- col -->
-                        <div class="col-6">
-                            <div class="form-group">
-                                <dl class="row">
-                                    <dt class="col-4 col-form-label form-control-label"><em class="required">required</em>공유 유형</dt>
-                                    <dd class="col-8">
-                                        <div class="custom-control custom-radio custom-control-inline">
-                                            <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" />
-                                            <label class="custom-control-label" for="customRadioInline1">사용자</label>
-                                        </div>
-                                        <div class="custom-control custom-radio custom-control-inline">
-                                            <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" />
-                                            <label class="custom-control-label" for="customRadioInline2">부서</label>
-                                        </div>
-                                        <div class="custom-control custom-radio custom-control-inline">
-                                            <input type="radio" id="customRadioInline3" name="customRadioInline1" class="custom-control-input" />
-                                            <label class="custom-control-label" for="customRadioInline3">전체</label>
-                                        </div>
-                                    </dd>
-                                </dl>
-                            </div>
-                        </div>
-                        <!-- //col -->
-                    </div>
-                    <!-- //row -->
-                   
-                </div>
-                <!-- //grid -->
-                
-                <!-- button area -->
-                <div class="card-footer pb-4 btn_area">
-                    <button type="submit" class="btn btn btn-outline-primary btn-icon">
-                        <span class="btn-inner--icon"><i class="fas fa-save"></i></span><span class="btn-inner--text">저장</span>
-                    </button>
-                  
-                </div>
-                <!-- e.button area -->
-                </form>
-                <!-- e.form -->
-            
+        <!-- card -->
+        <div class="card">
+          <!-- Card header -->
+          <div class="card-header">
+            <div class="row">
+              <!-- title  -->
+              <div class="col-8">
+                <h3 class="mb-0">모바일 템플릿 등록 </h3>
+              </div>
+              <!-- //title -->
             </div>
-            <!-- e.card -->
+          </div>
+          <!-- e.Card header -->
+          <!-- form -->
+          <form>
+            <!-- grid -->
+            <!-- card-body -->
+            <div class="card-body newgridWrap">
+              <!-- Light table -->
+              <div class="table-responsive">
+                <table class="table table-sm dataTable">
+                  <thead class="thead-light">
+                    <colgroup>
+                      <col style="width:10%;" />
+                      <col style="width:23%;" />
+                      <col style="width:10%;" />
+                      <col style="width:23%;" />
+                      <col style="width:10%;" />
+                      <col style="width:24%;" />
 
-        </div> <!-- e.page content -->
+                    </colgroup>
+                  <tbody>
+                    <tr>
+                      <th scope="row"><em class="required">required</em>템플릿 유형</th>
+                      <td colspan="6">
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input type="radio" id="customRadioInline1" name="customRadioInline1"
+                            class="custom-control-input" required checked />
+                          <label class="custom-control-label" for="customRadioInline1">단문 메시지(80 byte)</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input type="radio" id="customRadioInline2" name="customRadioInline1"
+                            class="custom-control-input" />
+                          <label class="custom-control-label" for="customRadioInline2">장문 메시지(2000 byte)</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input type="radio" id="customRadioInline3" name="customRadioInline1"
+                            class="custom-control-input" required checked />
+                          <label class="custom-control-label" for="customRadioInline3">MMS 이미지</label>
+                        </div>
+                        <div class="custom-control custom-radio custom-control-inline">
+                          <input type="radio" id="customRadioInline4" name="customRadioInline1"
+                            class="custom-control-input" />
+                          <label class="custom-control-label" for="customRadioInline4">친구톡 이미지</label>
+                        </div>
+                      </td>
+
+                    </tr>
+                    <tr>
+                      <th scope="row">태그</th>
+                      <td><input type="text" class="form-control form-control-sm" placeholder="" /></td>
+                      <th scope="row"><em class="required">required</em>템플릿명</th>
+                      <td><input type="text" class="form-control form-control-sm" placeholder="" required /></td>
+                      <th scope="row">템플릿 설명</th>
+                      <td><input type="text" class="form-control form-control-sm" placeholder="" /></td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><em class="required">required</em>템플릿 내용</th>
+                      <td class="border-right-0"> <textarea class="form-control textarea-sms" id="" rows="9"
+                          style="background: #f7fafc;" required></textarea>
+                        <div class="textarea-font-style"><span class="count-text">0</span>byte
+                        </div>
+                      </td>
+                      <td colspan="4"></td>
+                    </tr>
+                   
+
+
+                    <!--  MMS 이미지 -->
+                    <tr>
+                      <th scope="row"><em class="required">required</em>파일선택</th>
+                      <td  colspan="5" class="border-right-0 ">
+                        <div class="custom-file col-3">
+                          <input type="file" class="custom-file-input" id="customFileLang" lang="ko">
+                          <label class="custom-file-label custom-file-label-sm" for="customFileLang"></label>
+                        </div>
+                        <ul class="notice-text text-left  mb-0 mt--2">
+                          <li><em class="li-circle">li-circle</em>지원하는 파일 확장자: jpg, 파일 최대 사이즈: 40KB
+                          </li>
+                          <li><em class="li-circle">li-circle</em>권장 해상도: 220 x 184
+                          </li>
+
+                        </ul>
+                      </td>
+                    </tr>
+                    <!--  // MMS 이미지 -->
+
+                    <!-- 친구톡 이미지 -->
+                    <tr>
+                      <th scope="row"><em class="required">required</em>친구톡 이미지 선택</th>
+                      <td colspan="5" class="border-right-0 ">
+                        <div class="custom-file col-3">
+                          <input type="file" class="custom-file-input" id="customFileLang" lang="ko">
+                          <label class="custom-file-label custom-file-label-sm mb-0" for="customFileLang"></label>
+                        </div>  <button type="button"
+                        class="btn btn-sm btn-outline-primary ml-2 mb-2">파일 올리기</button>
+                        <ul class="notice-text text-left  mb-0 mt--2">
+                          <li><em class="li-circle">li-circle</em>파일형식 및 크기 : jpg, png 파일 / 최대 500KB
+                          </li>
+                          <li><em class="li-circle">li-circle</em>권장 해상도 : 720px * 720px (가로 500px 미만 또는 가로:세로 비율이 2:1미만 또는 3:4 초과시 업로드 불가)
+                          </li>
+
+                        </ul>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><em class="required">required</em>친구톡 이미지 URL</th>
+                      <td colspan="3"><input type="text" class="form-control form-control-sm" placeholder="" required /></td>
+                      <th scope="row"><em class="required">required</em>친구톡 이미지 LINK</th>
+                      <td><input type="text" class="form-control form-control-sm" placeholder="" required /></td>
+                    </tr>
+                    <tr>
+                      <th scope="row"><em class="required">required</em>친구톡 발송 실패시<br>발송할 MMS 이미지</th>
+                       
+                      <td colspan="5" class="border-right-0 ">
+                        <div class="custom-file col-3">
+                          <input type="file" class="custom-file-input" id="customFileLang" lang="ko">
+                          <label class="custom-file-label custom-file-label-sm mb-0" for="customFileLang"></label>
+                        </div>  
+                        <ul class="notice-text text-left  mb-0 mt--2">
+                          <li><em class="li-circle">li-circle</em>지원하는 파일 확장자: jpg, 파일 최대 사이즈: 40KB
+                          </li>
+                          <li><em class="li-circle">li-circle</em>권장 해상도: 220 x 184
+                          </li>
+
+                        </ul>
+                      </td>
+                    </tr>
+                      <!-- //친구톡 이미지 -->
+
+                      <!-- 메시지, mms이미지 친구톡 이미지 공통 영역 -->
+                      <tr>
+                        <th scope="row"><em class="required">required</em>공유유형</th>
+                        <td colspan="3">
+                          <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline2" name="customRadioInline1"
+                              class="custom-control-input" />
+                            <label class="custom-control-label" for="customRadioInline2">사용자 </label>
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline3" name="customRadioInline1"
+                              class="custom-control-input" required checked />
+                            <label class="custom-control-label" for="customRadioInline3">부서 </label>
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                            <input type="radio" id="customRadioInline4" name="customRadioInline1"
+                              class="custom-control-input" />
+                            <label class="custom-control-label" for="customRadioInline4">전체</label>
+                          </div>
+                        </td>
+                      </tr>
+                      <!-- 공통 영역 -->
+
+
+
+                  </tbody>
+                </table>
+              </div>
+              <!-- // Light table -->
+            </div>
+
+            <!-- //grid -->
+
+            <!-- button area -->
+            <div class="card-footer pb-4 btn_area">
+              <button type="submit" class="btn btn btn-outline-primary btn-icon">
+                <span class="btn-inner--icon"><i class="fas fa-save"></i></span><span class="btn-inner--text">등록</span>
+              </button>
+
+            </div>
+            <!-- e.button area -->
+          </form>
+          <!-- e.form -->
+
+        </div>
+        <!-- e.card -->
+
+      </div> <!-- e.page content -->
     </div>
     <!-- e.Contents area -->
-</div>
-<!-- e.wrapper -->
+  </div>
+  <!-- e.wrapper -->
+
 
 </html>
