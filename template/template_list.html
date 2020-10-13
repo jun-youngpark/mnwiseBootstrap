@@ -6,144 +6,191 @@
     <meta charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/jquery-ui.min.css">
 
     <script>
-    $(function () {
-        $("#subNav").load("../subNav.html");
-        $("#js").load("../js.html");
-        $("#headerTop").load("../headerTop.html");
-    });
+        $(function () {
+            $("#subNav").load("../subNav.html");
+            $("#js").load("../js.html");
+            $("#headerTop").load("../headerTop.html");
+            
+        //datepicker
+        $("#start_date").datepicker({
+			beforeShow: function(input) {
+			    setTimeout(function(){
+			       $('#ui-datepicker-div').css({'position':'', 'top':'', 'bottom':'', 'left':'', 'z-index':''});
+			    })
+			},
+			dateFormat: 'yy-mm-dd',
+			showMonthAfterYear: true,
+            yearSuffix: "년",
+			dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+            monthNames: [ "1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월" ],
+            monthNamesShort: [ "1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월" ],
+			showOtherMonths: true,
+		});
+        $("#end_date").datepicker({
+			beforeShow: function(input) {
+			    setTimeout(function(){
+			       $('#ui-datepicker-div').css({'position':'', 'top':'', 'bottom':'', 'left':'', 'z-index':''});
+			    })
+			},
+			dateFormat: 'yy-mm-dd',
+			showMonthAfterYear: true,
+            yearSuffix: "년",
+			dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+            monthNames: [ "1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월" ],
+            monthNamesShort: [ "1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월" ],
+			showOtherMonths: true,
+		});
+        });
     </script>
 </head>
 
 <body>
-<!-- wrapper -->
-<div class="wrapper">
-    <!-- 메뉴 -->
-    <div id="subNav"></div>
-    <div id="js"></div>
-    <div id="headerTop"></div>
-    <!-- //메뉴-->
+    <!-- wrapper -->
+    <div class="wrapper">
+        <!-- 메뉴 -->
+        <div id="subNav"></div>
+        <div id="js"></div>
+        <div id="headerTop"></div>
+        <!-- //메뉴-->
 
-    <!-- Contents area  -->
-    <div class="main-panel">
-        <!-- Page content -->
-        <div class="container-fluid mt-4 mb-2">
+        <!-- Contents area  -->
+        <div class="main-panel">
+            <!-- Page content -->
+            <div class="container-fluid mt-4 mb-2">
 
-            <!-- card -->
-            <div class="card">
-                <!-- Card header -->
-                <div class="card-header">
-                    <!-- title  -->
-                    <h3 class="mb-0">템플릿 리스트</h3>
-                    <!-- //title -->
-                </div>
-                <!-- e.Card header -->
-                
-                <!-- card body -->
-                <div class="card-body pb-1">
+                <!-- card -->
+                <div class="card">
+                    <!-- Card header -->
+                    <div class="card-header">
+                        <!-- title  -->
+                        <h3 class="mb-0">템플릿 리스트</h3>
+                        <!-- //title -->
+                    </div>
+                    <!-- e.Card header -->
 
-                    <!-- search area & buttons -->
-                    <div class="row align-items-center py-2 table_option">
-                        <!-- buttons -->
-                        <div class="col-auto btn_area">                          
-                            <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
-                                <span class="btn-inner--icon"><i class="fas fa-trash"></i></span><span class="btn-inner--text">삭제</span>
-                            </button>
-                        </div>
-                        <!-- e.buttons -->
+                    <!-- card body -->
+                    <div class="card-body pb-1">
 
-                        <!-- search -->
-                        <div class="col-auto searchWrap">
-                            <div class="form-group searchbox">
-                                <span class="form-control-label txt">작성일</span>
-                                <input class="form-control form-control-sm" type="date" value="" id="example-date-input">
-                                <span class="form-control-label">~</span>
-                                <input class="form-control form-control-sm ml-0" type="date" value="" id="example-date-input">
+                        <!-- search area & buttons -->
+                        <div class="row align-items-center py-2 table_option">
+                            <!-- buttons -->
+                            <div class="col-auto btn_area">
+                                <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                                    <span class="btn-inner--icon"><i class="fas fa-trash"></i></span><span
+                                        class="btn-inner--text">삭제</span>
+                                </button>
+                            </div>
+                            <!-- e.buttons -->
+
+                            <!-- search -->
+                            <div class="col-auto searchWrap">
+                                <div class="form-group searchbox">
+                                    <span class="form-control-label txt">작성일</span>
+                                    <div class="input_datebox">
+                                        <input type="text" id="start_date" class="form-control form-control-sm" />
+                                    </div>
+                                    <span class="txt">~</span>
+                                    <div class="input_datebox">
+                                        <input type="text" id="end_date" class="form-control form-control-sm" />
+                                    </div>
+                                   
+                                </div>
                                 <div class="search_input">
-                                    <span class="form-control-label txt">검색어</span>
-                                    <input type="search" class="form-control form-control-sm" placeholder="" aria-controls="datatable-basic" />
+                                    <span class="form-control-label txt">템플릿명</span>
+                                    <input type="search" class="form-control form-control-sm" placeholder=""
+                                        aria-controls="datatable-basic" />
                                     <button class="btn btn-sm btn-outline-info btn-icon btn_search">
-                                        <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span class="btn-inner--text">검색</span>
+                                        <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span
+                                            class="btn-inner--text">검색</span>
                                     </button>
                                 </div>
                             </div>
+                            <!-- //search -->
                         </div>
-                        <!-- //search -->
+                        <!-- e.search area & buttons -->
                     </div>
-                    <!-- e.search area & buttons -->
-                </div>
-                <!-- e.card body -->
-                <!-- Light table -->
-                <div class="table-responsive">
-                    <table class="table dataTable">
-                        <thead class="thead-light">
-                        <tr>
-                            <th scope="col">선택</th>
-                            <th scope="col">No</th>
-                            <th scope="col">태그</th>
-                            <th scope="col">템플릿명</th>
-                            <th scope="col">작성자</th>
-                            <th scope="col">작성일</th>
-                            <th scope="col">유형</th>
-                            <th scope="col">공유유형</th>
-                        </tr>
-                        </thead>
-                        <tbody>                          	 					
-                        <tr>
-                            <th scope="row">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" id="checkbox1" name="customcheckbox" class="custom-control-input" />
-                                    <label class="custom-control-label" for="checkbox1"></label>
-                                </div>
-                            </th>
-                            <td>348</td>
-                            <td>13</td>
-                            <td class="text-left">
-                              <a href="#!" class="font-weight-bold">템플릿 등록 test</a></td>
-                            <td>테스터</td>
-                            <td>2020-07-31</td>
-                            <td>IMAGE</td>
-                            <td>사용자</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">
-                              <div class="custom-control custom-checkbox">
-                                  <input type="checkbox" id="checkbox1" name="customcheckbox" class="custom-control-input" />
-                                  <label class="custom-control-label" for="checkbox1"></label>
-                              </div>
-                          </th>
-                          <td>348</td>
-                          <td>13</td>
-                          <td class="text-left">
-                            <a href="#!" class="font-weight-bold">템플릿 등록 test</a></td>
-                          <td>테스터</td>
-                          <td>2020-07-31</td>
-                          <td>IMAGE</td>
-                          <td>사용자</td>
-                      </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <!-- e.Light table -->
+                    <!-- e.card body -->
+                    <!-- Light table -->
+                    <div class="table-responsive">
+                        <table class="table table-sm dataTable">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th scope="col">선택</th>
+                                    <th scope="col">No</th>
+                                    <th scope="col">태그</th>
+                                    <th scope="col">템플릿명</th>
+                                    <th scope="col">작성자</th>
+                                    <th scope="col">작성일</th>
+                                    <th scope="col">유형</th>
+                                    <th scope="col">공유유형</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="radio1" name="customradio"
+                                                class="custom-control-input" />
+                                            <label class="custom-control-label" for="radio1"></label>
+                                        </div>
+                                    </th>
+                                    <td>348</td>
+                                    <td>13</td>
+                                    <td class="text-left">
+                                        <a href="#!" class="font-weight-bold">템플릿 등록 test</a></td>
+                                    <td>테스터</td>
+                                    <td>2020-07-31</td>
+                                    <td>IMAGE</td>
+                                    <td>사용자</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" id="radio1" name="customradio"
+                                                class="custom-control-input" />
+                                            <label class="custom-control-label" for="radio1"></label>
+                                        </div>
+                                    </th>
+                                    <td>348</td>
+                                    <td>13</td>
+                                    <td class="text-left">
+                                        <a href="#!" class="font-weight-bold">템플릿 등록 test</a></td>
+                                    <td>테스터</td>
+                                    <td>2020-07-31</td>
+                                    <td>IMAGE</td>
+                                    <td>사용자</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- e.Light table -->
 
-                <!-- pagenation -->
-                <div class="pagination pagination-sm mb-0 pb-2 pt-1 justify-content-center">
-                    <ul class="pagination">
-                        <li class="paginate_button page-item previous disabled" id="datatable-basic_previous"><a href="#" aria-controls="datatable-basic" data-dt-idx="0" tabindex="0" class="page-link"><i class="fas fa-angle-left"></i></a></li>
-                        <li class="paginate_button page-item active"><a href="#" aria-controls="datatable-basic" data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
-                        <li class="paginate_button page-item next disabled" id="datatable-basic_next"><a href="#" aria-controls="datatable-basic" data-dt-idx="2" tabindex="0" class="page-link"><i class="fas fa-angle-right"></i></a></li>
-                    </ul>
-                </div>
-                <!-- e.pagenation -->
-            
-            </div>
-            <!-- e.card -->
+                    <!-- pagenation -->
+                    <div class="pagination pagination-sm mb-0 pb-2 pt-1 justify-content-center">
+                        <ul class="pagination">
+                            <li class="paginate_button page-item previous disabled" id="datatable-basic_previous"><a
+                                    href="#" aria-controls="datatable-basic" data-dt-idx="0" tabindex="0"
+                                    class="page-link"><i class="fas fa-angle-left"></i></a></li>
+                            <li class="paginate_button page-item active"><a href="#" aria-controls="datatable-basic"
+                                    data-dt-idx="1" tabindex="0" class="page-link">1</a></li>
+                            <li class="paginate_button page-item next disabled" id="datatable-basic_next"><a href="#"
+                                    aria-controls="datatable-basic" data-dt-idx="2" tabindex="0" class="page-link"><i
+                                        class="fas fa-angle-right"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- e.pagenation -->
 
-        </div> <!-- e.page content -->
+                </div>
+                <!-- e.card -->
+
+            </div> <!-- e.page content -->
+        </div>
+        <!--e.Contents area-->
     </div>
-    <!--e.Contents area-->
-</div>
-<!-- e.wrapper -->
+    <!-- e.wrapper -->
 
 </html>

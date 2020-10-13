@@ -92,7 +92,7 @@ a{color:#525f7f;}
 .btn_help {width:30px; min-width:30px !important; height:30px; padding:0 !important;}
 .btn_help .far {font-size:1.25rem;}
 
-button.btn-sm {min-height:30px;}
+button.btn-sm {min-height:31px; }
 
 /***** search *****/
 .searchWrap > * {padding-left:15px;}

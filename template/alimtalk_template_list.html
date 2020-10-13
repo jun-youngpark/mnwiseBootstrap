@@ -8,10 +8,11 @@
     <link rel="stylesheet" href="tree_fontello/css/fontello.css">
 
     <script>
-        $(function () {
-            $("#subNav").load("../subNav.html");
-            $("#js").load("../js.html");
-        });
+    $(function () {
+        $("#subNav").load("../subNav.html");
+        $("#js").load("../js.html");
+        
+    });
     </script>
 </head>
 
@@ -73,34 +74,31 @@
                             <div class="col-auto searchWrap">
                                 <div class="form-group searchbox">
                                     <select class="form-control form-control-sm">
-                                        <option>수행 상태</option>
-                                        <option>작성중</option>
-                                        <option>중지</option>
-                                        <option>실행</option>
-                                        <option>일시정지</option>
-                                        <option>점검중</option>
+                                        <option>사용여부</option>
+                                        <option>사용</option>
+                                        <option>미사용</option>
                                     </select>
                                     <select class="form-control form-control-sm">
-                                        <option>서비스 타입</option>
-                                        <option>실시간</option>
-                                        <option>준실시간</option>
-                                        <option>스케쥴(분)</option>
-                                        <option>스케쥴</option>
+                                        <option>플러스친구 ID</option>
                                     </select>
-                                    <span class="form-control-label txt">검색어</span>
                                     <select class="form-control form-control-sm">
-                                        <option>서비스 명</option>
-                                        <option>이케어 번호</option>
+                                        <option>검수상태</option>
+                                        <option>등록</option>
+                                        <option>반려</option>
+                                        <option>심사요청</option>
                                     </select>
-                                    <input type="search" class="form-control form-control-sm" placeholder=""
-                                        aria-controls="datatable-basic" />
+                                    <select class="form-control form-control-sm">
+                                        <option>템플릿 상태</option>
+                                        <option>등록</option>
+                                        <option>반려</option>
+                                        <option>심사요청</option>
+                                    </select>
+                                   
                                     <button class="btn btn-sm btn-outline-info btn-icon btn_search">
                                         <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span
                                             class="btn-inner--text">검색</span>
                                     </button>
                                 </div>
-
-                               
                             </div>
                             <!-- //search -->
                         </div>
