@@ -23,16 +23,7 @@ function chekFnc() {
         };
     });
 }
-
-/*트리 뷰 함수*/
-function treeViewFnc() {
-    $("#tree").treeview({
-        collapsed: true,
-        animated: "medium",
-        control: "#sidetreecontrol",
-        persist: "location"
-    });
-}
+ 
 
 /**/
 function calendarFnc() {
