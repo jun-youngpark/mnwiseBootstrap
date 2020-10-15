@@ -70,7 +70,7 @@ body{background:#fff;}
 
 
 /***** common class *****/
-.hide {position: absolute; left:-999em; top:-999em; width:0; height:0; text-indent:-999em; opacity:0;}
+.hide {position: absolute !important; left:-999em !important; top:-999em !important; width:0; height:0 !important; text-indent:-999em; opacity:0;}
 .none {display:none !important;}
 em {font-style: normal; color:var(--primary);}
 
