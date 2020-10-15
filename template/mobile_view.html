@@ -11,7 +11,6 @@
         $(function () {
             $("#subNav").load("../subNav.html");
             $("#js").load("../js.html");
-            $("#headerTop").load("../headerTop.html");
         });
     </script>
 </head>
@@ -22,7 +21,6 @@
         <!-- 메뉴 -->
         <div id="subNav"></div>
         <div id="js"></div>
-        <div id="headerTop"></div>
         <!-- //메뉴-->
 
         <!-- Contents area -->
@@ -37,7 +35,7 @@
                         <div class="row">
                             <!-- title  -->
                             <div class="col-8">
-                                <h3 class="mb-0">모바일 템플릿 수정</h3>
+                                <h3 class="mb-0">모바일 템플릿 수정 </h3>
                             </div>
                             <!-- //title -->
                         </div>
@@ -45,145 +43,210 @@
                     <!-- e.Card header -->
                     <!-- form -->
                     <form>
-                        <!-- grid -->
-                        <div class="card-body gridWrap">
-                            <!-- row -->
-                            <div class="row">
+                        <!-- card-body -->
+                        <div class="card-body newgridWrap">
+                            <!-- Light table -->
+                            <div class="table-responsive">
+                                <table class="table table-sm dataTable">
+                                    <thead class="thead-light">
+                                        <colgroup>
+                                            <col style="width:10%;" />
+                                            <col style="width:23%;" />
+                                            <col style="width:10%;" />
+                                            <col style="width:23%;" />
+                                            <col style="width:10%;" />
+                                            <col style="width:24%;" />
 
-                                <!-- col -->
-                                <div class="col-4">
-                                    <div class="row form-group">
-                                        <label class="col-4 col-form-label form-control-label" for="">태그</label>
-                                        <div class="col-8">
-                                            <input type="text" class="form-control" required placeholder="" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- col -->
-                                <div class="col-4">
-                                    <div class="row form-group">
-                                        <label class="col-4 col-form-label form-control-label" for=""><em
-                                                class="required">required</em>템플릿 명</label></label>
-                                        <div class="col-8">
-                                            <input type="text" class="form-control" placeholder="" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- //col -->
-                                <!-- col -->
-                                <div class="col-4">
-                                    <div class="row form-group">
-                                        <label class="col-4 col-form-label form-control-label" for="">템플릿 설명</label>
-                                        <div class="col-8">
-                                            <input type="text" class="form-control" placeholder="" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- //col -->
-                                <!-- //col -->
+                                        </colgroup>
+                                    <tbody>
+                                        <!-- 공통 영역 -->
+                                        <tr>
+                                            <th scope="row">태그</th>
+                                            <td><input type="text" class="form-control form-control-sm"
+                                                    placeholder="" /></td>
+                                            <th scope="row"><em class="required">required</em>템플릿명</th>
+                                            <td><input type="text" class="form-control form-control-sm" placeholder=""
+                                                    required /></td>
+                                            <th scope="row">템플릿 설명</th>
+                                            <td><input type="text" class="form-control form-control-sm"
+                                                    placeholder="" /></td>
+                                        </tr>
 
-                            </div>
-                            <!-- //row -->
-                            <!-- row -->
-                            <div class="row">
-                                <!-- col -->
-                                <div class="col-4">
-                                    <div class="form-group">
-                                        <dl class="row">
-                                            <dt class="col-4 col-form-label form-control-label"><em
-                                                    class="required">required</em>공유 유형</dt>
-                                            <dd class="col-8">
-                                                <div class="custom-control custom-radio custom-control-inline">
-                                                    <input type="radio" id="customRadioInline1"
-                                                        name="customRadioInline1" class="custom-control-input" />
-                                                    <label class="custom-control-label"
-                                                        for="customRadioInline1">사용자</label>
-                                                </div>
+
+                                        <tr>
+                                            <th scope="row"><em class="required">required</em>공유유형</th>
+                                            <td>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" id="customRadioInline2"
                                                         name="customRadioInline1" class="custom-control-input" />
-                                                    <label class="custom-control-label"
-                                                        for="customRadioInline2">부서</label>
+                                                    <label class="custom-control-label" for="customRadioInline2">사용자
+                                                    </label>
                                                 </div>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" id="customRadioInline3"
+                                                        name="customRadioInline1" class="custom-control-input" required
+                                                        checked />
+                                                    <label class="custom-control-label" for="customRadioInline3">부서
+                                                    </label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="customRadioInline4"
                                                         name="customRadioInline1" class="custom-control-input" />
                                                     <label class="custom-control-label"
-                                                        for="customRadioInline3">전체</label>
+                                                        for="customRadioInline4">전체</label>
                                                 </div>
-                                            </dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                                <!-- //col -->
-                                <!--col-->
-                                <div class="col-4">
-                                    <div class="form-group">
-                                        <dl class="row">
-                                            <dt class="col-4 col-form-label form-control-label"><em
-                                                    class="required">required</em>작성자</dt>
-                                            <dd class="col-8 ">
-                                                <span>테스터</span>
-                                            </dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                                <!-- //col -->
-                                <!-- col -->
-                                <div class="col-4">
-                                    <div class="form-group">
-                                        <dl class="row">
-                                            <dt class="col-4 col-form-label form-control-label"><em
-                                                    class="required">required</em>작성일자</dt>
-                                            <dd class="col-8 ">
-                                                <span>2020-07-31 04:44:04</span>
-                                            </dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                                <!-- //col -->
+                                            </td>
+                                            <th scope="row">작성자</th>
+                                            <td>테스터</td>
+                                            <th scope="row">작성일자</th>
+                                            <td>2020-07-31 04:46:27</td>
+                                        </tr>
+                                        <!--  // 공통 영역  -->
+
+                                        <!--단문/장문 메시지-->
+                                        <tr>
+                                            <th scope="row"><em class="required">required</em>템플릿 내용</th>
+                                            <td class="border-right-0"> <textarea class="form-control textarea-sms"
+                                                    id="" rows="9" style="background: #f7fafc;" required></textarea>
+                                                <div class="textarea-font-style"><span class="count-text">0</span>byte
+                                                </div>
+                                            </td>
+                                            <td colspan="4"></td>
+                                        </tr>
+                                        <!--// 단문/장문 메시지-->
+
+                                         <!--  MMS 이미지 -->
+                                         <tr>
+                                            <th scope="row" rowspan="2"><em class="required">required</em>MMS 이미지
+                                            </th>
+                                            <td colspan="5" height="220" class="border-right-0 ">
+
+                                                <div class="brandtalk-modify-sms-img brandtalk-img">
+
+                                                    <div class="imgwrap">
+                                                        <div class="image-area"><img
+                                                                src="../assets/img/brand/wiseU_new.png"
+                                                                alt="" /></div>
+                                                    </div>
+                                                </div>
+                                            </td>                                           
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border-right-0 ">
+                                                <div class="custom-file col-3">
+                                                    <input type="file" class="custom-file-input" id="customFileLang"
+                                                        lang="ko">
+                                                    <label class="custom-file-label custom-file-label-sm mb-0"
+                                                        for="customFileLang"></label>
+                                                </div>
+                                                <ul class="notice-text text-left  mb-0 mt--2">
+                                                    <li><em class="li-circle">li-circle</em>지원하는 파일 확장자: jpg, 파일 최대 사이즈:
+                                                        40KB
+                                                    </li>
+                                                    <li><em class="li-circle">li-circle</em>권장 해상도: 220 x 184
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <!--  // MMS 이미지 -->
+
+                                        <!-- 친구톡 이미지 -->
+                                        <tr>
+                                            <th scope="row"><em class="required">required</em>친구톡 이미지 URL</th>
+                                            <td colspan="3"><input type="text" class="form-control form-control-sm"
+                                                    placeholder="" /></td>
+                                            <th scope="row"><em class="required">required</em>친구톡 이미지 LINK</th>
+                                            <td><input type="text" class="form-control form-control-sm" placeholder=""
+                                                    required /></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" rowspan="2"><em class="required">required</em>친구톡 이미지</th>
+                                            <td colspan="5" height="220" class="border-right-0 ">
+
+                                                <div class="brandtalk-modify-img brandtalk-img">
+
+                                                    <div class="imgwrap">
+                                                        <div class="image-area"><img
+                                                                src="../assets/img/brand/wiseU_new.png"
+                                                                alt="" /></div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                           
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5">
+                                                <div class="custom-file col-3">
+                                                    <input type="file" class="custom-file-input" id="customFileLang"
+                                                        lang="ko">
+                                                    <label class="custom-file-label custom-file-label-sm mb-0"
+                                                        for="customFileLang"></label>
+                                                </div> <button type="button"
+                                                    class="btn btn-sm btn-outline-primary ml-2 mb-2">파일 올리기</button>
+                                                <ul class="notice-text text-left  mb-0 mt--2">
+                                                    <li><em class="li-circle">li-circle</em>파일형식 및 크기 : jpg, png 파일 / 최대
+                                                        500KB
+                                                    </li>
+                                                    <li><em class="li-circle">li-circle</em>권장 해상도 : 720px * 720px (가로
+                                                        500px 미만 또는 가로:세로 비율이 2:1미만 또는 3:4 초과시 업로드 불가)
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" rowspan="2"><em class="required">required</em>친구톡 발송 실패시<br>발송할 MMS 이미지
+                                            </th>
+                                            <td colspan="5" height="220" class="border-right-0 ">
+
+                                                <div class="brandtalk-modify-sms-img brandtalk-img">
+
+                                                    <div class="imgwrap">
+                                                        <div class="image-area"><img
+                                                                src="../assets/img/brand/wiseU_new.png"
+                                                                alt="" /></div>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                           
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="border-right-0 ">
+                                                <div class="custom-file col-3">
+                                                    <input type="file" class="custom-file-input" id="customFileLang"
+                                                        lang="ko">
+                                                    <label class="custom-file-label custom-file-label-sm mb-0"
+                                                        for="customFileLang"></label>
+                                                </div>
+                                                <ul class="notice-text text-left  mb-0 mt--2">
+                                                    <li><em class="li-circle">li-circle</em>지원하는 파일 확장자: jpg, 파일 최대 사이즈:
+                                                        40KB
+                                                    </li>
+                                                    <li><em class="li-circle">li-circle</em>권장 해상도: 220 x 184
+                                                    </li>
+
+                                                </ul>
+                                            </td>
+                                        </tr>
+                                       
+                                         <!-- //친구톡 이미지 -->
+
+
+                                    </tbody>
+                                </table>
                             </div>
-                            <!-- //row -->
-                            <!-- row -->
-                            <div class="row">
-                                <!--col-->
-                                <div class="col-6">
-                                    <div class="row form-group">
-                                        <label class="col-3 col-form-label form-control-label" for=""><em
-                                                class="required">required</em>MMS 이미지</label>
-                                        <div class="col-9">
-                                            <div class="mms-view-img"><img src="../assets/img/brand/wiseU_new.png"
-                                                    alt=""></div>
-                                            <div class="custom-file">
-                                                <input type="file" class="custom-file-input" id="customFileLang"
-                                                    lang="ko">
-                                                <label class="custom-file-label" for="customFileLang"></label>
-                                            </div>
-                                            <ul class="notice-text mb-0">
-                                                <li><em class="required">required</em>지원하는 파일 확장자: jpg, 파일 최대 사이즈: 40KB
-                                                </li>
-                                                <li><em class="required">required</em>권장 해상도: 220 x 184</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--//col-->
-                            </div>
-                            <!-- //row -->
+                            <!-- // Light table -->
                         </div>
-                        <!-- //grid -->
+                        <!-- // card-body -->
                         <!-- button area -->
                         <div class="card-footer pb-4 btn_area">
                             <button type="submit" class="btn btn btn-outline-primary btn-icon">
                                 <span class="btn-inner--icon"><i class="fas fa-save"></i></span><span
-                                    class="btn-inner--text">저장</span>
-                            </button>
-                            <button type="button" class="btn btn btn-outline-info btn-icon">
-                                <span class="btn-inner--text mr-2">삭제</span><span class="btn-inner--icon"><i
-                                        class="fas fa-trash"></i></span>
+                                    class="btn-inner--text">등록</span>
                             </button>
                         </div>
                         <!-- e.button area -->
+
                     </form>
                     <!-- e.form -->
 
@@ -195,5 +258,6 @@
         <!-- e.Contents area -->
     </div>
     <!-- e.wrapper -->
+
 
 </html>

@@ -11,7 +11,6 @@
     $(function () {
       $("#subNav").load("../subNav.html");
       $("#js").load("../js.html");
-      $("#headerTop").load("../headerTop.html");
     });
   </script>
 </head>
@@ -45,7 +44,6 @@
           <!-- e.Card header -->
           <!-- form -->
           <form>
-            <!-- grid -->
             <!-- card-body -->
             <div class="card-body newgridWrap">
               <!-- Light table -->
@@ -59,7 +57,6 @@
                       <col style="width:23%;" />
                       <col style="width:10%;" />
                       <col style="width:24%;" />
-
                     </colgroup>
                   <tbody>
                     <tr>
@@ -96,6 +93,8 @@
                       <th scope="row">템플릿 설명</th>
                       <td><input type="text" class="form-control form-control-sm" placeholder="" /></td>
                     </tr>
+
+                    <!-- 문자 -->
                     <tr>
                       <th scope="row"><em class="required">required</em>템플릿 내용</th>
                       <td class="border-right-0"> <textarea class="form-control textarea-sms" id="" rows="9"
@@ -105,8 +104,8 @@
                       </td>
                       <td colspan="4"></td>
                     </tr>
+                    <!-- 문자 -->
                    
-
 
                     <!--  MMS 이미지 -->
                     <tr>
@@ -191,26 +190,22 @@
                           </div>
                         </td>
                       </tr>
-                      <!-- 공통 영역 -->
-
-
+                      <!--  // 메시지, mms이미지 친구톡 이미지 공통 영역  -->
 
                   </tbody>
                 </table>
               </div>
               <!-- // Light table -->
             </div>
-
-            <!-- //grid -->
-
+            <!-- // card-body -->
             <!-- button area -->
             <div class="card-footer pb-4 btn_area">
               <button type="submit" class="btn btn btn-outline-primary btn-icon">
                 <span class="btn-inner--icon"><i class="fas fa-save"></i></span><span class="btn-inner--text">등록</span>
               </button>
-
             </div>
             <!-- e.button area -->
+
           </form>
           <!-- e.form -->
 
