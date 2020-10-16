@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script>
+        $(function () {
+            $("#js").load("/js.html");
+        });
+    </script>
+</head>
+
+<body>
+    <div id="js"></div>
+
+    <div class="card pop-card">
+        <div class="card-header">
+            <h5 class="mb-0">파일 첨부 하기</h5>
+        </div>
+
+        <div class="card-body">
+            <!-- Light table -->
+            <div class="table-responsive newgridWrap">
+                <table class="table table-sm dataTable">
+                    <colgroup>
+                        <col style="width:20%;" />
+                        <col style="width:70%;" />
+
+                    </colgroup>
+                    <tbody>
+                        <!-- 파일 , html 첨부하기-->
+
+                        <th scope="row"><em class="required">required</em>파일선택</th>
+                        <td>
+                            <div class="custom-file custom-file-sm">
+                                <input type="file" class="custom-file-input custom-file-input-sm" id="customFileLang"
+                                    lang="ko">
+                                <label class="custom-file-label custom-file-label-sm mb-0" for="customFileLang"></label>
+                            </div>
+                        </td>
+                        </tr>
+                        <!-- //파일 첨부하기-->
+                   
+
+                        <!-- ZIP 첨부하기-->
+                        <tr>
+                            <td colspan="2"><i class="ni ni-check-bold text-primary"></i>
+                                <span class="text-danger"> [주의]</span> ZIP 폴더 하위 경로에는 image(s) 폴더에 이미지 파일이 있어야 합니다.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><em class="required">required</em>파일선택</th>
+                            <td>
+                                <div class="custom-file custom-file-sm">
+                                    <input type="file" class="custom-file-input custom-file-input-sm"
+                                        id="customFileLang" lang="ko">
+                                    <label class="custom-file-label custom-file-label-sm mb-0"
+                                        for="customFileLang"></label>
+                                </div>
+                            </td>
+                        </tr>
+                        <!-- //ZIP 첨부하기-->
+
+                    </tbody>
+                </table>
+            </div>
+            <!-- //Light table -->
+
+            <div class="card-footer">
+                <button type="button" class="btn btn-outline-primary">전송</button>
+                <button type="button" class="btn btn-outline-primary">취소</button>
+            </div>
+        </div>
+
+        <!-- // 파일 첨부하기-->
+        <div class="card-body">
+
+        </div>
+        <div class="card-body">
+
+        </div>
+
+
+        -->
+
+    </div>
+
+</html>
