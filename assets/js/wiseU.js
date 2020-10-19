@@ -1,13 +1,10 @@
 $(document).ready(function () {
     chekFnc();
-    treeViewFnc();
     tableReset();
     calendarFnc();
     inputFileFnc();
     countTextFnc();
     countTextQuillFnc();
-
-
 
 });
 
@@ -55,6 +52,7 @@ function tableReset() {
 /*input file 라벨에 파일이름 추가 */
 function inputFileFnc() {
     $('input[type=file]').on('change', function () {
+      
         if (window.Filereder) { // modern browser
             var filename = $(this)[0].files[0].name;
         } else { // oldIE
