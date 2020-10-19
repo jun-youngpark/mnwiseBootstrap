@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script>
+        $(function () {
+            $("#js").load("/js.html");
+        });
+    </script>
+</head>
+
+<body>
+    <div id="js"></div>
+
+    <div class="card pop-card">
+        <div class="card-header">
+            <h5 class="mb-0">링크추적리스트</h5>
+            <ul class="notice-text mb-0  h5 text-info">
+                <li><em class="li-circle">li-circle</em>중복되는 링크URL은 목록에 하나만 표시됩니다. 링크추적을 설정하면 중복된 모든 URL에 설정됩니다.
+                </li>
+                <li><em class="li-circle">li-circle</em>수신거부 링크와 mailto: 링크는 링크추적 항목에서 제외됩니다
+                </li>
+            </ul>
+        </div>
+        <form>
+            <div class="card-body">
+                <!-- Light table -->
+                <div class="table-responsive">
+                    <table class="table table-sm dataTable">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="checkbox" name="customcheckbox"
+                                            class="custom-control-input" />
+                                        <label class="custom-control-label" for="checkbox"></label>
+                                        <span class="mt-2" style="line-height: 24px;">No</span> </div>
+                                </th>
+                                <th scope="col"> 링크제목</th>
+                                <th scope="col">유형</th>
+                                <th scope="col">링크URL</th>
+                                <th>링크설명</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="checkbox" name="customcheckbox"
+                                            class="custom-control-input" />
+                                        <label class="custom-control-label" for="checkbox"></label>
+                                    </div>
+                                </th>
+                                <td><input type="text" class="form-control form-control-sm" placeholder="" /></td>
+                                <td><input type="text" class="form-control form-control-sm" placeholder="" /></td>
+                                <td><input type="text" class="form-control form-control-sm" placeholder="" /></td>
+                                <td><input type="text" class="form-control form-control-sm" placeholder="" /></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- //Light table -->
+            </div>
+            <div class="card-footer">
+                <button type="button" class="btn btn-outline-primary">저장</button>
+                <button type="button" class="btn btn-outline-primary" onclick="window.close()">닫기</button>
+            </div>
+        </form>
+    </div>
+
+</html>
