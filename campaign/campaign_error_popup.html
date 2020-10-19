@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <script>
+        $(function () {
+            $("#js").load("/js.html");
+        });
+    </script>
+</head>
+
+<body>
+    <div id="js"></div>
+
+    <div class="card pop-card">
+        <div class="card-header">
+            <h5 class="mb-0">에러 로그</h5>
+        </div>
+
+        <div class="card-body">
+            <form>
+                <!-- Light table -->
+                <div class="table-responsive newgridWrap">
+                    <table class="table table-sm dataTable">
+                        <colgroup>
+                            <col style="width:20%;" />
+                            <col style="width:80%;" />
+                            
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">켐페인 번호</th>
+                                <td>1348</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">켐페인 명</th>
+                                <td>[COPY]LMS 테스트</td>
+                            </tr>
+                            <tr>
+                                <th colspan="2" class="text-center">메시지</th>
+                            </tr>
+                            <tr>
+                                <td colspan="2">메시지 내용입니다</td>
+                            </tr>
+                          
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+        <div class="card-footer">
+            <button type="button" class="btn btn-outline-primary" onclick="window.close()">닫기</button>
+        </div>
+        </form>
+    </div>
+
+
+
+</html>
