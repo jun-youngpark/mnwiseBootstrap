@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script>
+        $(function () {
+            $("#js").load("/js.html");
+        });
+    </script>
+</head>
+
+<body>
+    <div id="js"></div>
+
+    <div class="card pop-card">
+        <div class="card-header">
+            <h5 class="mb-0">하이퍼 링크</h5>
+        </div>
+        <form>
+            <div class="card-body">
+                <!-- Light table -->
+                <div class="table-responsive newgridWrap">
+                    <table class="table table-sm dataTable">
+                        <colgroup>
+                            <col style="width:20%;" />
+                            <col style="width:80%;" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><em class="required">required</em>URL 불러오기</th>
+                                <td><input type="text" class="form-control form-control-sm" value="http://" /></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- //Light table -->
+
+            <div class="card-footer">
+                <button type="button" class="btn btn-outline-primary">등록</button>
+                <button type="button" class="btn btn-outline-primary" onclick="window.close()">취소</button>
+            </div>
+        </form>
+    </div>
+
+</html>
