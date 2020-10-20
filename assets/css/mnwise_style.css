@@ -119,6 +119,7 @@ button.btn-sm {min-height:31px; }
 .table_option .form-group {margin-bottom:0;}
 .table_option .searchWrap {text-align:right;}
 .table_option .searchWrap > * {display:inline-block; white-space: nowrap;}
+.table_option select {min-width:80px;}
 .table_option .btn:not(:last-child) {margin-right:5px;}
 .table_option .form-control {display:inline-block; width:auto;}
 .table_option .periodWrap {display:inline-flex;}
@@ -175,6 +176,8 @@ button.btn-sm {min-height:31px; }
 
 .card-body .table-responsive:last-child .dataTable:last-child {margin-bottom: 0 !important;}
 
+/*.table .thead-light th {font-weight:bold; color:#757575; background:#f0f0f3;}*/
+.table .table-active > * {font-weight:bold; color:#359bff;}
 
 .max-text-overflow .table td>a{max-width:380px; overflow: hidden; white-space: nowrap;  text-overflow: ellipsis;}
 

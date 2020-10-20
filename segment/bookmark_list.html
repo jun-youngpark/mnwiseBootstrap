@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script>
+    $(function () {
+        $("#js").load("/js.html");
+    });
+
+    
+
+    </script>
+</head>
+
+<body>
+<div id="js"></div>
+
+<div class="card pop-card">
+    <div class="card-header">
+        <h5 class="mb-0">대상자 선택</h5>
+    </div>
+
+    <div class="card-body">
+
+        <!-- search area & buttons -->
+        <div class="row align-items-center py-2 table_option">
+            <!-- search -->
+            <div class="col text-right searchWrap">
+
+                <select class="form-control form-control-sm ">
+                    <option value="">파일</option>
+                    <option value="">하위</option>
+                    <option value="">전체</option>
+                </select>
+                <div class="form-group searchbox">
+                    <div class="search_input">
+                        <span class="form-control-label txt">대상자 명</span>
+                        <input type="search" class="form-control form-control-sm" placeholder="" aria-controls="datatable-basic" />
+                        <button class="btn btn-sm btn-outline-info btn-icon btn_search">
+                            <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span class="btn-inner--text">검색</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- //search -->
+        </div>
+        <!-- e.search area & buttons -->
+
+        <!-- Light table -->
+        <div class="table-responsive">
+            <table class="table table-hover table-sm dataTable">
+                <colgroup>
+                    <col style="width:7%;" />
+                    <col style="width:7%;" />
+                    <col />
+                    <col style="width:17%;" />
+                    <col style="width:15%;" />
+                    <col style="width:10%;" />
+                    <col style="width:12%;" />
+                </colgroup>
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">선택</th>
+                        <th scope="col">No</th>
+                        <th scope="col" colspan="2">대상자 명</th>
+                        <th scope="col">작성자</th>
+                        <th scope="col">대상자 수</th>
+                        <th scope="col">작성일</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-active">
+                        <th scope="row">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="bookmark1" name="bookmark" class="custom-control-input" checked="checked" />
+                                <label class="custom-control-label" for="bookmark1"><span class="hide">대상자 선택</span></label>
+                            </div>
+                        </th>
+                        <td>282</td>
+                        <td class="text-left">대상자_31724</td>
+                        <td>
+                            <button type="button" class="btn btn-sm btn-outline-primary btn-icon">
+                                <span class="btn-inner--icon"><i class="fas fa-list-ul"></i></span><span class="btn-inner--text">대상자 보기</span>
+                            </button>
+                        </td>
+                        <td>samsung</td>
+                        <td>31,724</td>
+                        <td>20-10-12</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="bookmark2" name="bookmark" class="custom-control-input">
+                                <label class="custom-control-label" for="bookmark2"><span class="hide">대상자 선택</span></label>
+                            </div>
+                        </th>
+                        <td>300</td>
+                        <td class="text-left">삼성_대상자_23380</td>
+                        <td>
+                            <button type="button" class="btn btn-sm btn-outline-primary btn-icon">
+                                <span class="btn-inner--icon"><i class="fas fa-list-ul"></i></span><span class="btn-inner--text">대상자 보기</span>
+                            </button>
+                        </td>
+                        <td>시스템관리자</td>
+                        <td>30</td>
+                        <td>20-10-12</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="bookmark3" name="bookmark" class="custom-control-input">
+                                <label class="custom-control-label" for="bookmark3"><span class="hide">대상자 선택</span></label>
+                            </div>
+                        </th>
+                        <td>282</td>
+                        <td class="text-left">대상자_31724</td>
+                        <td>
+                            <button type="button" class="btn btn-sm btn-outline-primary btn-icon">
+                                <span class="btn-inner--icon"><i class="fas fa-list-ul"></i></span><span class="btn-inner--text">대상자 보기</span>
+                            </button>
+                        </td>
+                        <td>samsung</td>
+                        <td>31,724</td>
+                        <td>20-10-12</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- //Light table -->
+
+        <!-- pagenation -->
+        <div class="pagination pagination-sm mb-0 pt-1 justify-content-center">
+            <ul class="pagination">
+                <li class="paginate_button page-item previous" id="datatable-basic_previous"><a href="#" aria-controls="datatable-basic" class="page-link"><i class="fas fa-angle-left"></i></a></li>
+                <li class="paginate_button page-item active"><a href="#" aria-controls="datatable-basic"  class="page-link">1</a></li>
+                <li class="paginate_button page-item next" id="datatable-basic_next"><a href="#" aria-controls="datatable-basic"  class="page-link"><i class="fas fa-angle-right"></i></a></li>
+            </ul>
+        </div>
+        <!-- e.pagenation -->
+    </div>
+
+    <div class="card-footer">
+        <button type="button" class="btn btn-outline-primary">확정</button>
+        <button type="button" class="btn btn-outline-default">닫기</button>
+    </div>
+</div>
+
+</html>
