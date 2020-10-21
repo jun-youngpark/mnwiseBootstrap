@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wiseU</title>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="../assets/js/jstree.js"></script>
+    <link rel="stylesheet" href="../assets/css/default/style.css" />
+
+    <script>
+        $(function () {
+            $("#subNav").load("../subNav.html");
+            $("#js").load("../js.html");
+            $("#jstree").jstree({
+
+                "plugins": ["wholerow", "contextmenu"]
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- wapper-->
+    <div class="wrapper">
+        <!-- 메뉴 -->
+        <div id="subNav"></div>
+        <div id="js"></div>
+        <!-- 메뉴 End-->
+
+        <!-- 내용 -->
+        <div class="main-panel">
+            <div class="container-fluid mt-4 mb-2">
+                <!-- card -->
+                <div class="card">
+                    <!-- Card header -->
+                    <div class="card-header">
+                        <!-- title  -->
+                        <h3 class="mb-0">사용자 관리</h3>
+                        <!-- //title -->
+                    </div>
+                    <!-- e.Card header -->
+                    <!-- card body -->
+                    <div class="card-body">
+                        <div class="container-fluid my-2">
+                            <!-- row -->
+                            <div class="row code-set overflow-hidden">
+                                <!-- col-3  Card body 트리 -->
+                                <div class="col-3 px-0">
+                                    <div id="jstree" class="treeview_top overflow-auto">
+                                        <!-- ◀ 스크롤 제거시 class=" overflow-auto 제거" -->
+
+                                        <ul>
+                                            <li>mnwise
+                                                <ul>
+                                                    <li class="treeview_sub">Developer Team
+                                                        <ul>
+                                                            <li>R&D Part</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="treeview_sub">Marketing Team</li>
+                                                    <li class="treeview_sub">Service Team</li>
+                                                    <li class="treeview_sub">TS</li>
+                                                    <li class="treeview_sub">Solution Team</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- // jstree-->
+
+                                </div>
+                                <!-- //col-3  Card body 트리 -->
+
+                                <!-- col-9  부서정보 -->
+                                <div class="col-9 px-0">
+                                    <div class="overflow-auto code-set-table">
+                                        <!-- ◀ 스크롤 제거시 class=" overflow-auto 제거" -->
+                                        <div class="table-responsive">
+                                            <table class="table table-sm dataTable">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th scope="col" colspan="2" class="border-top-0 text-left">부서정보
+                                                        </th>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="th-bg">부서명</th>
+                                                        <td class="text-left">mnwise2</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- // col-9  부서정보 -->
+                            </div> <!-- // row -->
+                        </div>
+                    </div>
+                     <!-- // card body -->
+
+                      <!-- card body -->
+                    <div class="card-body">
+                        <div class="authority-list-wrap overflow-hidden">
+                            <div class="overflow-bg mb-0 ">
+                                <!-- 사용자 리스트 -->
+                                <div class="row align-items-center py-2 table_option">
+                                    <span class="ml-4"> 사용자리스트</span>
+                                    <!-- search -->
+                                    <div class="col text-right searchWrap">
+                                        <div class="form-group searchbox">
+                                            <div class="search_input">
+                                                <span class="form-control-label txt">사용자 ID</span>
+                                                <input type="search" class="form-control form-control-sm" placeholder=""
+                                                    aria-controls="datatable-basic" />
+                                                <button class="btn btn-sm btn-outline-info btn-icon btn_search">
+                                                    <span class="btn-inner--icon"><i
+                                                            class="fas fa-search"></i></span><span
+                                                        class="btn-inner--text">검색</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-sm btn-outline-primary btn-round mr-2"
+                                    onclick="window.open('account_user_popup.html', '_blank', 'width=800,height=500')">
+                                        <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
+                                        <span class="btn-inner--text">추가</span>
+                                    </button>
+                                    <button type="button" class="btn btn-sm btn-outline-primary btn-round mr-4">
+                                        <span class="btn-inner--icon"><i class="fas fa-trash"></i></span>
+                                        <span class="btn-inner--text">삭제</span>
+                                    </button>
+                                    <!-- //search -->
+                                </div>
+                                <!-- 사용자 리스트 -->
+                            </div>
+
+                            <div class="code-set-table  overflow-auto">
+                                <!-- ◀ 스크롤 제거시 class=" overflow-auto 제거" -->
+                                <div class="table-responsive">
+                                    <table class="table table-sm dataTable">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th scope="col">선택</th>
+                                                <th scope="col">No</th>
+                                                <th scope="col">사용자ID</th>
+                                                <th scope="col">성명</th>
+                                                <th scope="col"> 부서명 </th>
+                                                <th scope="col">직급</th>
+                                                <th scope="col">이메일</th>
+                                                <th scope="col">권한</th>
+                                                <th scope="col">전화번호</th>
+                                                <th scope="col">상태</th>
+                                                <th scope="col">잠금해제</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" id="checkbox" name="customcheckbox"
+                                                            class="custom-control-input" />
+                                                        <label class="custom-control-label" for="checkbox"></label>
+                                                    </div>
+                                                </th>
+                                                <td>1</td>
+                                                <td>narajy1</td>
+                                                <td>na</td>
+                                                <td> 부서등록2</td>
+                                                <td>사원</td>
+                                                <td>narajy@gmail.com</td>
+                                                <td>USER</td>
+                                                <td></td>
+                                                <td>Active(0)</td>
+                                                <td>-</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                      <!-- // card body -->
+                </div><!-- // card -->
+
+            </div>
+        </div><!-- //  내용 -->
+    </div> <!-- // wapper-->
+
+
+
+
+
+
+
+</html>

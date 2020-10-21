@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+    <script>
+        $(function () {
+            $("#js").load("/js.html");
+        });
+    </script>
+</head>
+
+<body>
+    <div id="js"></div>
+
+    <div class="card pop-card">
+        <div class="card-header">
+            <h5 class="mb-0">사용자 정보</h5>
+        </div>
+        <form>
+            <div class="card-body">
+                <!-- Light table -->
+                <div class="table-responsive newgridWrap">
+                    <table class="table table-sm dataTable">
+                        <colgroup>
+                            <col style="width:20%;" />
+                            <col style="width:30%;" />
+                            <col style="width:20%;" />
+                            <col style="width:30%;" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">부서명</th>
+                                <td>부서등록2</td>
+                                <th scope="row"><em class="required">required</em>사용자ID</th>
+                                <td>
+                                    <div class="form-row">
+                                        <div class="col-8"><input type="text" class="form-control form-control-sm" />
+                                        </div>
+                                        <div class="col-4"><button type="button"
+                                                class="btn btn-sm btn-outline-primary"><span>ID체크</span></button></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><em class="required">required</em>비밀번호</th>
+                                <td class="border-right-0"><input type="password" class="form-control form-control-sm"
+                                        required /></td>
+                                <td colspan="2" class="text-color-pw">(영문 대문자, 소문자, 숫자,특수문자 조합 8자리 ~ 15자리 미만)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><em class="required">required</em>성명</th>
+                                <td><input type="text" class="form-control form-control-sm" required /></td>
+                                <th scope="row"><em class="required">required</em>이메일</th>
+                                <td><input type="text" class="form-control form-control-sm" required /></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">직급</th>
+                                <td><input type="text" class="form-control form-control-sm" required /></td>
+                                <th scope="row">전화번호</th>
+                                <td><input type="text" class="form-control form-control-sm" required /></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">권한</th>
+                                <td><input type="text" class="form-control form-control-sm" required /></td>
+                                <th scope="row">권한보기</th>
+                                <td>
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input type="checkbox" id="authority-show" name="authority-show"
+                                            class="custom-control-input" />
+                                        <label class="custom-control-label" for="authority-show"><span class="hide">권한
+                                                선택</span></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">플러스친구 ID</th>
+                                <td class="border-right-0">
+                                    <div class="custom-control custom-checkbox custom-control-inline">
+                                        <input type="checkbox" id="plus_f" name="plus_f" class="custom-control-input" />
+                                        <label class="custom-control-label" for="plus_f">@엠앤와이즈</label>
+                                    </div>
+
+                                </td>
+                                <td colspan="2"></td>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- //Light table -->
+            <!-- 권한보기 card body-->
+            <div class="card-body authority-wrap dp-none ">
+                <div class="authority-list-wrap overflow-hidden">
+                    <p class="overflow-bg mb-0 py-2 text-center">권한리스트</p>
+                    <div class="code-set-table  overflow-auto">
+                        <!-- ◀ 스크롤 제거시 class=" overflow-auto 제거" -->
+                        <div class="table-responsive">
+                            <table class="table table-sm dataTable">
+                                <tbody>
+                                    <tr>
+                                        <th class="th-bg text-bold " width="25%;"><b>메뉴</b></th>
+                                        <th class="th-bg"><b>권한</b></td>
+                                    </tr>
+                                    <!-- 캠페인 checkId,name, label 읽기 = c_r_n // 쓰기 = c_w_n-->
+                                    <tr>
+                                        <td class="th-bg text-left">캠페인</td>
+                                        <td class="th-bg text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="c_r" name="c_r"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="c_r"><b>읽기</b></label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="c_w" name="c_w"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="c_w"><b>쓰기</b></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">캠페인 리스트</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="c_r_1" name="c_r_1"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="c_r_1">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="c_w_1" name="c_w_1"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="c_w_1">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">캠페인 등록</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="c_r_2" name="c_r_2"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="c_r_2">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="c-s" name="c-s"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="c-s">실행/발송</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="c_w_2" name="c_w_2"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="c_w_2">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">캠페인 고객이력</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="c_r_3" name="c_r_3"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="c_r_3">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="c_w_3" name="c_w_3"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="c_w_3">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!-- // 캠페인 -->
+                                    <!-- 이케어 checkId,name, label 읽기 = e_r_n // 쓰기 = e_w_n-->
+                                    <tr>
+                                        <td class=" th-bg text-left">이케어</td>
+                                        <td class=" th-bg  text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="e_r" name="e_r"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="e_r"><b>읽기</b></label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="e_w" name="e_w"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="e_w"><b>쓰기</b></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">이케어 리스트</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="e_r_1" name="e_r_1"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="e_r_1">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="e_w_1" name="e_w_1"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="e_w_1">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">이케어 등록</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="e_r_2" name="e_r_2"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="e_r_2">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="e_s" name="e_s"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="e_s">실행/발송</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="e_w_2" name="e_w_2"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="e_w_2">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">이케어 고객이력</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="e_r_3" name="e_r_3"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="e_r_3">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="e_w_3" name="e_w_3"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="e_w_3">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">컨텐츠 고객이력</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="e_r_4" name="e_r_4"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="e_r_4">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="e_w_4" name="e_w_4"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="e_w_4">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!-- // 이케어 -->
+                                    <!-- 리포트 -->
+                                    <tr>
+                                        <td class=" th-bg text-left">리포트</td>
+                                        <td class="th-bg text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="rc_r" name="rc_r"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="rc_r"><b>읽기</b></label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="rc_w" name="rc_w"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="rc_w"><b>쓰기</b></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!-- 리포트 > 캠페인 읽기rc_r_n // 쓰기 = rc_w_n -->
+                                    <tr>
+                                        <td colspan="2" class="text-left pl-5">캠페인</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">캠페인 리스트</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="rc_r_1" name="rc_r_1"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="rc_r_1">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="rc_w_1" name="rc_w_1"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="rc_w_1">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">비교분석</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="rc_r_2" name="rc_r_2"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="rc_r_2">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="rc_w_2" name="rc_w_2"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="rc_w_2">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">월별 발송 통계</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="rc_r_3" name="rc_r_3"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="rc_r_3">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="rc_w_3" name="rc_w_3"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="rc_w_3">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!-- 리포트 > 이케어   읽기 = re_r_n // 쓰기 = re_w_n-->
+                                    <tr>
+                                        <td colspan="2" class="text-left pl-5">이케어</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">이케어 리스트</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="re_r_1" name="re_r__1"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="re_r__1">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="re_w_1" name="re_w_1"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="re_w_1">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">월별 발송 통계</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="re_r_2" name="re_r_2"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="re_r_2">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="re_w_2" name="re_w_2"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="re_w_2">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!-- // 리포트 -->
+                                    <!-- 템플릿 checkId,name, label 읽기 = t_r_n // 쓰기 = t_w_n-->
+                                    <tr>
+                                        <td class=" th-bg text-left">템플릿</td>
+                                        <td class="th-bg text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="t_r" name="t_r"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="t_r"><b>읽기</b></label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="t_w" name="t_w"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="t_w"><b>쓰기</b></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">템플릿 리스트</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="t_r_1" name="t_r_1"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="t_r_1">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="t_w_1" name="t_w_1"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="t_w_1">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">템플릿 등록</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="t_r_2" name="t_r_2"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="t_r_2">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="t_w_2" name="t_w_2"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="t_w_2">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">모바일 템플릿 리스트</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="t_r_3" name="t_r_3"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="t_r_3">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="t_w_3" name="t_w_3"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="t_w_3">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">모바일 템플릿 등록</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="t_r_4" name="t_r_4"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="t_r_4">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="t_w_4" name="t_w_4"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="t_w_4">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">알림톡 템플릿 리스트</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="t_r_5" name="t_r_5"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="t_r_5">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="t_w_5" name="t_w_5"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="t_w_5">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">알림톡 템플릿 등록</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="t_r_6" name="t_r_6"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="t_r_6">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="t_w_6" name="t_w_6"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="t_w_6">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">브랜드톡템플릿 리스트</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="t_r_7" name="t_r_7"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="t_r_7">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="t_w_7" name="t_w_7"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="t_w_7">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">브랜드톡 템플릿 등록</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="t_r_8" name="t_r_8"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="t_r_8">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="t_w_8" name="t_w_8"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="t_w_8">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!-- // 템플릿 -->
+                                    <!-- 대상자  checkId,name, label 읽기 = se_r_n // 쓰기 = se_w_n--->
+                                    <tr>
+                                        <td class=" th-bg text-left">대상자</td>
+                                        <td class="th-bg text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="se_r" name="se_r"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="se_r"><b>읽기</b></label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="se_w" name="se_w"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="se_w"><b>쓰기</b></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">대상자 조회</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="se_r_1" name="se_r_1"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="se_r_1">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="se_w_1" name="se_w_1"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="se_w_1">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">대상자 등록</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="se_r_2" name="se_r_2"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="se_r_2">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="se_w_2" name="se_w_2"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="se_w_2">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">하위 대상자 등록</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="se_r_3" name="se_r_3"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="se_r_3">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="se_w_3" name="se_w_3"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="se_w_3">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">대상자 파일 올리기</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="se_r_4" name="se_r_4"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="se_r_4">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="se_w_4" name="se_w_4"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="se_w_4">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!-- // 대상자 -->
+                                    <!-- 사용자 checkId,name, label 읽기 = ac_r_n // 쓰기 = ac_w_n--->
+                                    <tr>
+                                        <td class=" th-bg text-left">사용자</td>
+                                        <td class="th-bg text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="ac_r" name="ac_r"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="ac_r"><b>읽기</b></label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="ac_w" name="ac_w"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="ac_w"><b>쓰기</b></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">부서 관리</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="ac_r_1" name="ac_r_1"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="ac_r_1">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="ac_w_1" name="ac_w_1"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="ac_w_1">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">사용자 관리</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="ac_r_2" name="ac_r_2"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="ac_r_2">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="ac_w_2" name="ac_w_2"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="ac_w_2">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">부서 권한 관리</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="ac_r_3" name="ac_r_3"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="ac_r_3">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="ac_w_3" name="ac_w_3"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="ac_w_3">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <!-- // 사용자 -->
+                                    <!-- 환경설정  checkId,name, label 읽기 = ev_r_n // 쓰기 = ev_w_n--->
+                                    <tr>
+                                        <td class=" th-bg text-left">환경설정</td>
+                                        <td class="th-bg text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="ev_r" name="ev_r"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="ev_r"><b>읽기</b></label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="ev_w" name="ev_w"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="ev_w"><b>쓰기</b></label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">서버 환경정보</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="ev_r_1" name="ev_r_1"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="ev_r_1">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="ev_w_1" name="ev_w_1"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="ev_w_1">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">DB 관리</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="ev_r_1" name="ev_r_1"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="ev_r_1">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="ev_w_1" name="ev_w_1"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="ev_w_1">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">공휴일 관리</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="ev_r_2" name="ev_r_2"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="ev_r_2">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="ev_w_2" name="ev_w_2"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="ev_w_2">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">도메인 관리</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="ev_r_3" name="ev_r_3"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="ev_r_3">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="ev_w_3" name="ev_w_3"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="ev_w_3">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">금칙어 관리</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="ev_r_4" name="ev_r_4"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="ev_r_4">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="ev_w_4" name="ev_w_4"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="ev_w_4">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">기본 핸들러 설정</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="ev_r_5" name="ev_r_5"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="ev_r_5">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="ev_w_5" name="ev_w_5"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="ev_w_5">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">코드 관리</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="ev_r_6" name="ev_r_6"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="ev_r_6">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="ev_w_6" name="ev_w_6"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="ev_w_6">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">메시지 발신자 정보</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="ev_r_7" name="ev_r_7"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="ev_r_7">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="ev_w_8" name="ev_w_8"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="ev_w_8">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">개인정보 관리</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="ev_r_9" name="ev_r_9"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="ev_r_9">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="ev_w_9" name="ev_w_9"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="ev_w_9">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">로그 관리</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="ev_r_10" name="ev_r_10"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="ev_r_10">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="ev_w_10" name="ev_w_10"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="ev_w_10">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left pl-5">PUSH 설정</td>
+                                        <td class="text-left">
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="ev_r_11" name="ev_r_11"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="ev_r_11">읽기</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox custom-control-inline">
+                                                <input type="checkbox" id="ev_w_11" name="ev_w_11"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="ev_w_11">쓰기</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <!-- // 환경설정 -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //권한보기 card body-->
+
+            <div class="card-footer">
+                <button type="button" class="btn btn-outline-primary">저장</button>
+                <button type="button" class="btn btn-outline-primary" onclick="window.close()">취소</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            /* 권한보기 이벤트 */
+            $('#authority-show').on('change', function () {
+                if ($(this).is(":checked") === true) {
+
+                    $(".authority-wrap").removeClass('dp-none');
+                } else {
+                    $(".authority-wrap").addClass('dp-none');
+                }
+            })
+        })
+    </script>
+
+</html>
