@@ -266,72 +266,65 @@
                         <!-- //Light table -->
                     </div>
                     <!-- //card body -->
-
                     <!-- 코드 관리 -->
                     <div class="card-body mb-5">
                         <h5 class="h3  mb-3 my-2 col-12">| 코드관리</h5>
-                        <!-- row -->
                         <div class="container-fluid my-2">
+                            <!-- row -->
                             <div class="row  code-set overflow-hidden">
+                                <!--// col-3 트리 -->
                                 <div class="col-3 pr-0">
                                     <div class="code-set-tree">
-                                        <div class="code-set-tree">
-                                            <div id="jstree" class="treeview_top treeview_basic overflow-auto">
-                                                <!-- 방법 1 --- class추가 // css처리 -->
-                                                <ul>
-                                                    <li>PUSH 공통 결과코드
-                                                        <ul>
-                                                            <li class="treeview_sub_file">정상 결과코드</li>
-                                                            <li class="treeview_sub_file"> 시스템 에러 결과코드</li>
-                                                            <li class="treeview_sub_file">APNS 에러 결과코드</li>
-                                                            <li class="treeview_sub_file">HTTP 에러 결과코드</li>
-                                                            <li class="treeview_sub_file">GCM 에러 결과코드</li>
-                                                            <li class="treeview_sub_file">기타 에러 결과코드</li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <!-- // jstree-->
+                                        <div id="jstree" class="treeview_top treeview_basic overflow-auto">
+                                            <ul>
+                                                <li>PUSH 공통 결과코드
+                                                    <ul>
+                                                        <li class="treeview_sub_file">정상 결과코드</li>
+                                                        <li class="treeview_sub_file"> 시스템 에러 결과코드</li>
+                                                        <li class="treeview_sub_file">APNS 에러 결과코드</li>
+                                                        <li class="treeview_sub_file">HTTP 에러 결과코드</li>
+                                                        <li class="treeview_sub_file">GCM 에러 결과코드</li>
+                                                        <li class="treeview_sub_file">기타 에러 결과코드</li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
-                                <!--// Card body 트리 -->
+                                <!--// col-3 트리 -->
                                 <!-- col-9  코드설명 -->
                                 <div class="col-9 pl-0  overflow-auto code-set-table">
-                                    <div class="table-responsive">
-                                        <div class="table-responsive" class="overflow-auto">
-                                            <table class="table table-sm dataTable">
-                                                <thead class="thead-light">
-                                                    <tr>
-                                                        <th scope="col">코드</th>
-                                                        <th scope="col">설명</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>602</td>
-                                                        <td>Connection Failure</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>603</td>
-                                                        <td>Connection Error</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>604</td>
-                                                        <td>응답을 기다리던중 접속이 끊기거나 IOException이 발생</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>700</td>
-                                                        <td>통신 중 접속이 끊어짐</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>701</td>
-                                                        <td>IOExcepition</td>
-                                                    </tr>
-
-                                                </tbody>
-                                            </table>
-                                        </div>
+                                    <div class="table-responsive" class="overflow-auto">
+                                        <table class="table table-sm dataTable">
+                                            <thead class="thead-light">
+                                                <tr>
+                                                    <th scope="col">코드</th>
+                                                    <th scope="col">설명</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>602</td>
+                                                    <td>Connection Failure</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>603</td>
+                                                    <td>Connection Error</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>604</td>
+                                                    <td>응답을 기다리던중 접속이 끊기거나 IOException이 발생</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>700</td>
+                                                    <td>통신 중 접속이 끊어짐</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>701</td>
+                                                    <td>IOExcepition</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                                 <!-- // col-9  코드설명 -->
