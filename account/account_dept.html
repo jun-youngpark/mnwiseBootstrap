@@ -35,13 +35,13 @@
                         <!-- //title -->
                     </div>
                     <!-- e.Card header -->
-                    <!-- 부서 관리 -->
-                    <div class="card-body mb-5">
-                        <!-- row -->
-                        <div class="row  code-set overflow-hidden">
-                            <div class="col-3 pr-0">
-                                <div class="code-set-tree">
-
+                    <!-- card body -->
+                    <div class="card-body">
+                        <div class="container-fluid my-2" >
+                            <!-- row -->
+                            <div class="row code-set overflow-hidden">
+                                <!-- col-3  Card body 트리 -->
+                                <div class="col-3 px-0">
                                     <div id="jstree" class="treeview_top overflow-auto">
                                         <ul>
                                             <li>mnwise
@@ -63,61 +63,66 @@
                                     <!-- // jstree-->
 
                                 </div>
-                            </div>
-                            <!--// Card body 트리 -->
-                            <!-- col-9  부서 정보 / 설명  -->
-                            <div class="col-9 px-0  overflow-auto code-set-table">
+                                <!-- //col-3  Card body 트리 -->
 
-                                <div class="table-responsive" class="overflow-auto">
-                                    <table class="table table-sm dataTable">
-                                        <thead class="thead-light">
-                                            <tr>
-                                                <th width="20%;" scope="col" class="border-top-0 border-right-0">부서정보</th>
-                                                <th scope="col" class="border-top-0 text-right mr-1"> 
-                                                    <button type="button" 
-                                                    class="btn btn-sm btn-outline-primary btn-round" onclick="window.open('account_dept_permission.html', '_blank', 'width=600,height=500')">
-                                                    <span class="btn-inner--icon"><i class="fas fa-save"></i></span>
-                                                    <span class="btn-inner--text">등록</span>
-                                                </button>
-                                                <button type="button"
-                                                    class="btn btn-sm btn-outline-primary btn-round" onclick="window.open('account_dept_permission.html', '_blank', 'width=600,height=500')">
-                                                    <span class="btn-inner--icon"><i class="fas fa-edit"></i></span>
-                                                    <span class="btn-inner--text">수정</span>
-                                                </button>
-                                                <button type="button"
-                                                class="btn btn-sm btn-outline-primary btn-round">
-                                                <span class="btn-inner--icon"><i class="fas fa-trash"></i></span>
-                                                <span class="btn-inner--text">삭제</span>
-                                            </button></th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-
-                                            <tr>
-                                                <th class="th-bg">상위부서</th>
-                                                <td class="text-left"></td>
-                                            </tr>
-                                            <tr>
-                                                <th  class="th-bg">부서명</th>
-                                                <td class="text-left">mnwise2</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                                <!-- col-9  코드설명 -->
+                                <div class="col-9 px-0">
+                                    <div class="code-set-table">
+                                        <div class="table-responsive" class="overflow-auto">
+                                            <!-- ◀ 스크롤 사용시 class=" overflow-auto 추가" -->
+                                            <table class="table table-sm dataTable">
+                                                <thead class="thead-light">
+                                                    <tr>
+                                                        <th width="20%;" scope="col" class="border-right-0 border-top-0">부서정보</th>
+                                                        <th scope="col" class="text-right mr-1 border-top-0">
+                                                            <button type="button"
+                                                                class="btn btn-sm btn-outline-primary btn-round"
+                                                                onclick="window.open('account_dept_popup.html', '_blank', 'width=600,height=500')">
+                                                                <span class="btn-inner--icon"><i
+                                                                        class="fas fa-save"></i></span>
+                                                                <span class="btn-inner--text">등록</span>
+                                                            </button>
+                                                            <button type="button"
+                                                                class="btn btn-sm btn-outline-primary btn-round"
+                                                                onclick="window.open('account_dept_popup.html', '_blank', 'width=600,height=500')">
+                                                                <span class="btn-inner--icon"><i
+                                                                        class="fas fa-edit"></i></span>
+                                                                <span class="btn-inner--text">수정</span>
+                                                            </button>
+                                                            <button type="button"
+                                                                class="btn btn-sm btn-outline-primary btn-round">
+                                                                <span class="btn-inner--icon"><i
+                                                                        class="fas fa-trash"></i></span>
+                                                                <span class="btn-inner--text">삭제</span>
+                                                            </button></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th class="th-bg">상위부서</th>
+                                                        <td class="text-left"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th class="th-bg">부서명</th>
+                                                        <td class="text-left">mnwise2</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
                                 </div>
-
                             </div>
-                            <!-- // col-9  부서 정보 / 설명  -->
+                            <!-- // col-9  코드설명 -->
                         </div>
                         <!-- // row -->
-                    </div>
-                    <!-- // 부서 관리 -->
-
+                    </div> <!-- // card body -->
                 </div><!-- // card -->
+
             </div>
-        </div>
-        <!-- //  내용 -->
-    </div>
-    <!-- // wapper-->
+        </div><!-- //  내용 -->
+    </div> <!-- // wapper-->
+
+
     <script>
         $("#jstree").jstree({
 
