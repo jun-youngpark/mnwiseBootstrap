@@ -389,9 +389,9 @@ ex, campaign/campaign_2step_mail_form.html 수신확인 체크박스
 .custom-toggle-wrap{display: flex; justify-content: center;}
 
 /* 코드관리 code-set */
-.code-set{min-height:400px; max-height:508px; border-top:1px solid  #e9ecef;  border-bottom:1px solid  #e9ecef;}
-.code-set-tree .code-set-table{height:100%; max-height:508px; }
-.code-set .overflow-auto{max-height:508px;}
+.code-set{min-height:400px; max-height:503px; border-top:1px solid  #e9ecef;  border-bottom:1px solid  #e9ecef;}
+.code-set-tree .code-set-table{height:100%; max-height:503px;}
+.code-set .overflow-auto{max-height:503px;}
 .code-set .col-3{border-right:1px solid  #e9ecef;}
 
 /* progress */
