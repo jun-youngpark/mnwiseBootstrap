@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script>
+        $(function () {
+            $("#js").load("/js.html");
+        });
+    </script>
+</head>
+
+<body>
+    <div id="js"></div>
+
+    <div class="card pop-card">
+        <div class="card-header">
+            <h5 class="mb-0">부서정보</h5>
+        </div>
+
+        <div class="card-body">
+            <form>
+                <!-- Light table -->
+                <div class="table-responsive newgridWrap">
+                    <table class="table table-sm dataTable">
+                        <colgroup>
+                            <col style="width:20%;" />
+                            <col style="width:80%;" />
+                            
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">상위부서</th>
+                                <td>mnwise2</td>
+                             
+                            </tr>
+                            <tr>
+                                <th scope="row">부서명</th>
+                                <td><input class="form-control form-control-sm" type="text"
+                                    ></td>
+                             
+                            </tr>
+                          
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+        <div class="card-footer">
+            <button type="button" class="btn btn-outline-primary" >저장</button>
+        </div>
+        </form>
+    </div>
+
+
+
+</html>

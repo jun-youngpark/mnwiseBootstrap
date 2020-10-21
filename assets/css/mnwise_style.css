@@ -194,7 +194,7 @@ button.btn-sm {min-height:31px; }
 
 /*table-xs env_smtpocode.html,env_push_setting.html */
 .table-xs th, .table-xs td {padding: .2rem;}
-
+.th-bg{background:#f6f9fc}
 
 
 @media screen and (max-width:1350px) {
@@ -388,9 +388,8 @@ ex, campaign/campaign_2step_mail_form.html 수신확인 체크박스
 /* div > custom toggle wrap */
 .custom-toggle-wrap{display: flex; justify-content: center;}
 
-/* 코드관리code-set */
-.code-set{min-height:310px; max-height:508px; border-top:1px solid  #e9ecef;  border-bottom:1px solid  #e9ecef;}
-
+/* 코드관리 code-set */
+.code-set{min-height:400px; max-height:508px; border-top:1px solid  #e9ecef;  border-bottom:1px solid  #e9ecef;}
 .code-set-tree .code-set-table{height:100%; max-height:508px; }
 .code-set .overflow-auto{max-height:508px;}
 .code-set .col-3{border-right:1px solid  #e9ecef;}

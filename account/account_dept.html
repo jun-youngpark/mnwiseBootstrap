@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wiseU</title>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="../assets/js/jstree.js"></script>
+    <link rel="stylesheet" href="../assets/css/default/style.css" />
+
+    <script>
+        $(function () {
+            $("#subNav").load("../subNav.html");
+            $("#js").load("../js.html");
+        });
+    </script>
+</head>
+
+<body>
+    <!-- wapper-->
+    <div class="wrapper">
+        <!-- 메뉴 -->
+        <div id="subNav"></div>
+        <div id="js"></div>
+        <!-- 메뉴 End-->
+
+        <!-- 내용 -->
+        <div class="main-panel">
+            <div class="container-fluid mt-4 mb-2">
+                <!-- card -->
+                <div class="card">
+                    <!-- Card header -->
+                    <div class="card-header">
+                        <!-- title  -->
+                        <h3 class="mb-0">부서 관리</h3>
+                        <!-- //title -->
+                    </div>
+                    <!-- e.Card header -->
+                    <!-- 부서 관리 -->
+                    <div class="card-body mb-5">
+                        <!-- row -->
+                        <div class="row  code-set overflow-hidden">
+                            <div class="col-3 pr-0">
+                                <div class="code-set-tree">
+
+                                    <div id="jstree" class="treeview_top overflow-auto">
+                                        <ul>
+                                            <li>mnwise
+                                                <ul>
+                                                    <li class="treeview_sub">Developer Team
+                                                        <ul>
+                                                            <li>R&D Part</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="treeview_sub">Marketing Team</li>
+                                                    <li class="treeview_sub">Service Team</li>
+                                                    <li class="treeview_sub">TS</li>
+                                                    <li class="treeview_sub">Solution Team</li>
+                                                    <li class="treeview_sub">-------------end-----------</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- // jstree-->
+
+                                </div>
+                            </div>
+                            <!--// Card body 트리 -->
+                            <!-- col-9  부서 정보 / 설명  -->
+                            <div class="col-9 px-0  overflow-auto code-set-table">
+
+                                <div class="table-responsive" class="overflow-auto">
+                                    <table class="table table-sm dataTable">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th width="20%;" scope="col" class="border-top-0 border-right-0">부서정보</th>
+                                                <th scope="col" class="border-top-0 text-right mr-1"> 
+                                                    <button type="button" 
+                                                    class="btn btn-sm btn-outline-primary btn-round" onclick="window.open('account_dept_permission.html', '_blank', 'width=600,height=500')">
+                                                    <span class="btn-inner--icon"><i class="fas fa-save"></i></span>
+                                                    <span class="btn-inner--text">등록</span>
+                                                </button>
+                                                <button type="button"
+                                                    class="btn btn-sm btn-outline-primary btn-round" onclick="window.open('account_dept_permission.html', '_blank', 'width=600,height=500')">
+                                                    <span class="btn-inner--icon"><i class="fas fa-edit"></i></span>
+                                                    <span class="btn-inner--text">수정</span>
+                                                </button>
+                                                <button type="button"
+                                                class="btn btn-sm btn-outline-primary btn-round">
+                                                <span class="btn-inner--icon"><i class="fas fa-trash"></i></span>
+                                                <span class="btn-inner--text">삭제</span>
+                                            </button></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+
+                                            <tr>
+                                                <th class="th-bg">상위부서</th>
+                                                <td class="text-left"></td>
+                                            </tr>
+                                            <tr>
+                                                <th  class="th-bg">부서명</th>
+                                                <td class="text-left">mnwise2</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                            <!-- // col-9  부서 정보 / 설명  -->
+                        </div>
+                        <!-- // row -->
+                    </div>
+                    <!-- // 부서 관리 -->
+
+                </div><!-- // card -->
+            </div>
+        </div>
+        <!-- //  내용 -->
+    </div>
+    <!-- // wapper-->
+    <script>
+        $("#jstree").jstree({
+
+            "plugins": ["wholerow", "contextmenu"]
+        });
+    </script>
+
+
+
+
+</html>
