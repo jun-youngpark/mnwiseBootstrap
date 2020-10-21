@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script>
+    $(function () {
+        $("#js").load("/js.html");
+    });
+
+    
+
+    </script>
+</head>
+
+<body>
+<div id="js"></div>
+
+<div class="card pop-card">
+    <div class="card-header">
+        <h5 class="mb-0">대상자 등록</h5>
+    </div>
+
+    <div class="card-body">
+
+        <!-- tab -->
+        <ul class="nav nav-tabs tab01">
+            <li class="nav-item">
+                <a class="nav-link" id="file-tab" data-toggle="tab" href="#file" role="tab" aria-controls="file" aria-selected="true">파일 올리기</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="query-tab" data-toggle="tab" href="#query" role="tab" aria-controls="query" aria-selected="false">쿼리 등록</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" id="target-tab" data-toggle="tab" href="#target" role="tab" aria-controls="target" aria-selected="false">반응 대상자</a>
+            </li>
+        </ul>
+        <!-- //tab -->
+
+        <!-- tab contents -->
+        <div class="tab-content">
+            <!-- tab :: 파일 올리기 -->
+            <div class="tab-pane " id="file" role="tabpanel" aria-labelledby="file-tab">
+            </div>
+            <!-- //tab :: 파일 올리기 -->
+
+            <!-- tab :: 쿼리 등록 -->
+            <div class="tab-pane " id="query" role="tabpanel" aria-labelledby="query-tab">
+            </div>
+            <!-- //tab :: 쿼리 등록 -->
+
+            <!-- tab :: 반응 대상자 -->
+            <div class="tab-pane active" id="target" role="tabpanel" aria-labelledby="target-tab">
+                <!-- Light table -->
+                <div class="table-responsive">
+                    <table class="table table-hover table-sm dataTable">
+                        <colgroup>
+                            <col style="width:20%;" />
+                            <col />
+                            <col style="width:20%;" />
+                        </colgroup>
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">캠페인 번호</th>
+                                <th scope="col">캠페인 제목</th>
+                                <th scope="col">날짜</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">532</th>
+                                <td class="text-left"><a href="#">승인 요청 테스트</a></td>
+                                <td>2020-10-10</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">532</th>
+                                <td class="text-left"><a href="#">승인 요청 테스트</a></td>
+                                <td>2020-10-10</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">532</th>
+                                <td class="text-left"><a href="#">승인 요청 테스트</a></td>
+                                <td>2020-10-10</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- //Light table -->
+
+                <!-- pagenation -->
+                <div class="pagination pagination-sm mb-0 pt-1 justify-content-center">
+                    <ul class="pagination">
+                        <li class="paginate_button page-item previous" id="datatable-basic_previous"><a href="#" aria-controls="datatable-basic" class="page-link"><i class="fas fa-angle-left"></i></a></li>
+                        <li class="paginate_button page-item active"><a href="#" aria-controls="datatable-basic"  class="page-link">1</a></li>
+                        <li class="paginate_button page-item next" id="datatable-basic_next"><a href="#" aria-controls="datatable-basic"  class="page-link"><i class="fas fa-angle-right"></i></a></li>
+                    </ul>
+                </div>
+                <!-- e.pagenation -->
+
+                <!-- Light table -->
+                <div class="table-responsive">
+                    <table class="table table-hover table-sm dataTable">
+                        <colgroup>
+                            <col style="width:20%;" />
+                            <col />
+                            <col style="width:20%;" />
+                        </colgroup>
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">선택</th>
+                                <th scope="col">URL / 이미지</th>
+                                <th scope="col">반응 건수</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" id="checkbox1" name="bookmark" class="custom-control-input" />
+                                        <label class="custom-control-label" for="checkbox1"><span class="hide">선택</span></label>
+                                    </div>
+                                </th>
+                                <td class="text-left"><a href="#">http://naver.com</a></td>
+                                <td>100</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- //Light table -->
+            </div>
+            <!-- //tab :: 반응 대상자 -->
+        </div>
+        <!-- //tab content -->
+    </div>
+
+    <div class="card-footer">
+        <button type="button" class="btn btn-outline-primary btn-icon">
+            <span class="btn-inner--icon"><i class="fas fa-save"></i></span><span class="btn-inner--text">저장</span>
+        </button>
+        <button type="button" class="btn btn-outline-primary">확정</button>
+        <button type="button" class="btn btn-outline-default">닫기</button>
+    </div>
+</div>
+
+</html>
