@@ -194,7 +194,6 @@ button.btn-sm {min-height:31px; }
 
 /*table-xs env_smtpocode.html,env_push_setting.html */
 .table-xs th, .table-xs td {padding: .2rem;}
-.th-bg{background:#f6f9fc}
 
 
 @media screen and (max-width:1350px) {
@@ -388,11 +387,19 @@ ex, campaign/campaign_2step_mail_form.html 수신확인 체크박스
 /* div > custom toggle wrap */
 .custom-toggle-wrap{display: flex; justify-content: center;}
 
-/* 코드관리 code-set */
+/* 코드관리 code-set  // 사용자관리 */
 .code-set{min-height:400px; max-height:503px; border-top:1px solid  #e9ecef;  border-bottom:1px solid  #e9ecef;}
 .code-set-tree .code-set-table{height:100%; max-height:503px;}
 .code-set .overflow-auto{max-height:503px;}
 .code-set .col-3{border-right:1px solid  #e9ecef;}
+
+.authority-list-wrap{min-height:300px; max-height:600px; border-top:1px solid  #e9ecef;  border-bottom:1px solid  #e9ecef;}
+.authority-list-wrap .code-set-table{height:100%; max-height:600px;}
+.authority-list-wrap .overflow-auto{max-height:600px;}
+
+.th-bg{background:#fafcfd}
+.overflow-bg{background: #f6f9fc; font-weight: bold; color:#8898aa; font-size: .8125rem}
+
 
 /* progress */
 .progress-label span {padding:5px 20px; font-size:.8125rem; color:#0060e2; background:#e7e7ed;}

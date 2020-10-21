@@ -42,7 +42,7 @@
                             <div class="row code-set overflow-hidden">
                                 <!-- col-3  Card body 트리 -->
                                 <div class="col-3 px-0">
-                                    <div id="jstree" class="treeview_top overflow-auto">
+                                    <div id="jstree" class="treeview_top overflow-auto">  <!-- ◀ 스크롤 제거시 class=" overflow-auto 제거" -->
                                         <ul>
                                             <li>mnwise
                                                 <ul>
@@ -55,7 +55,6 @@
                                                     <li class="treeview_sub">Service Team</li>
                                                     <li class="treeview_sub">TS</li>
                                                     <li class="treeview_sub">Solution Team</li>
-                                                    <li class="treeview_sub">-------------end-----------</li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -65,11 +64,11 @@
                                 </div>
                                 <!-- //col-3  Card body 트리 -->
 
-                                <!-- col-9  코드설명 -->
+                                <!-- col-9  부서정보 -->
                                 <div class="col-9 px-0">
-                                    <div class="code-set-table">
-                                        <div class="table-responsive" class="overflow-auto">
-                                            <!-- ◀ 스크롤 사용시 class=" overflow-auto 추가" -->
+                                    <div class="code-set-table overflow-auto"> <!-- ◀ 스크롤 제거시 class=" overflow-auto 제거" -->
+                                        <div class="table-responsive"> 
+                                           
                                             <table class="table table-sm dataTable">
                                                 <thead class="thead-light">
                                                     <tr>
@@ -110,14 +109,11 @@
                                             </table>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <!-- // col-9  코드설명 -->
+                                </div>  <!-- // col-9  부서정보 -->
+                            </div><!-- // row -->
                         </div>
-                        <!-- // row -->
                     </div> <!-- // card body -->
                 </div><!-- // card -->
-
             </div>
         </div><!-- //  내용 -->
     </div> <!-- // wapper-->
