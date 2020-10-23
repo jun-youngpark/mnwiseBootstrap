@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&family=Nanum+Gothic:wght@400;700&display=swap');
 
 
-body {font-family:'Roboto', 'Nanum Gothic', 'Noto Sans KR', sans-serif;}
+body {font-family:'Roboto', 'Nanum Gothic', 'Noto Sans KR', sans-serif; background:#fff;}
 
 
 /* wrap = sidebar(250px) + mainpanel(100% / padding-left 250px) */
@@ -13,7 +13,7 @@ body {font-family:'Roboto', 'Nanum Gothic', 'Noto Sans KR', sans-serif;}
 현재는 main-panel에 float:left; 를 삭제 하였으므로 float해제 불필요함 */ 
 .wrapper { min-width:1260px;  max-width:none !important;  position: relative; top: 0;  min-height: 100vh; padding-left:220px; }
 .sidebar {position: fixed;  top: 0; bottom: 0;  left: 0;  z-index: 2; width: 220px;  background: #172b4d; border:none; }
-.sidebar .sidebar-wrapper{position: relative;  height: calc(100vh - 75px); overflow-y: auto ; overflow-x: hidden; width: 220px; z-index: 4;  padding-bottom: 30px;}
+.sidebar .sidebar-wrapper{position: relative;  height: calc(100vh - 75px); overflow-y: auto ; overflow-x: hidden; width: 220px; z-index: 4;  padding-bottom: 10px;}
  
 .navbar-vertical .navbar-nav {margin:0;}
 
@@ -21,7 +21,18 @@ body {font-family:'Roboto', 'Nanum Gothic', 'Noto Sans KR', sans-serif;}
 .sidebar .nav-link {padding: .675rem 1.5rem; font-weight:500; color:#fff;}
 .sidebar .navbar-brand {padding: 1.5rem;}
 .navbar-vertical .navbar-brand-img, .navbar-vertical .navbar-brand>img { max-width: 100%; max-height: 3rem;}
-body{background:#fff;}
+
+/* 메뉴 Tag  --- 우선 캠페인 내 태그 추가 
+캠페인> 캠페인리스트
+이케어> 이케어리스트
+템플릿 > 템플릿, 모바일템플릿
+대상자 > 대상자 조회
+*/
+.tag-text{letter-spacing: 2px; font-size:18px;}
+.tagbox-text{color:#5e72e4;}
+.tagbox > div {background: #dedddd; border-radius: 5px; font-size:.85rem;}  /* border: 2px solid #f5f5f5;  */
+
+.logout-box, .logilogoutn-box a{color:#495572; font-size:.85rem;}
 
 /*mainpanel - 자식의 값에 float가 있을 경우 부모가 감싸지 못한다 -> 부모에 overflow값 or :after{clear:both} */
 /*.main-panel {position: relative; float: right; width: calc(100% - 250px);}*/
@@ -29,8 +40,7 @@ body{background:#fff;}
 .main-panel > .container-fluid {padding-left:15px;}
 
 /* headerTop 없을 경우 대응 */
-.main-panel > .container-fluid {margin-top:0 !important; padding-top:1.5rem !important;}
- 
+.main-panel > .container-fluid {margin-top:0 !important; padding-top:1rem !important;} 
 .dp-flex{display: flex ;}
 
 
@@ -65,7 +75,6 @@ body{background:#fff;}
  /*친구톡 실패 시 mms*/
 .brandtalk-modify-sms-img .imgwrap{ width:220px; height:180px; background:#f6f9fc; border:1px solid #ccc; box-sizing: border-box;}
 .brandtalk-modify-sms-img .imgwrap .image-area {display:-webkit-box; display:flex; -webkit-box-align: center; align-items:center; width:100%; height:100%;} 
-
 .brandtalk-img .imgwrap img {max-width:100%; max-height:100% ;}
 
 
@@ -332,7 +341,6 @@ ex, campaign/campaign_2step_mail_form.html 수신확인 체크박스
 .msgsample_list .text-area {width:100%; height:100%; padding:1em; font-size:.875rem; overflow:auto; white-space: pre-wrap;}
 .msgsample_list.image_type li {width:200px; height:200px;}
 .msgsample_list .image-area {display:-webkit-box; display:flex; -webkit-box-align: center; align-items:center; width:100%; height:100%;}
-
 .msgsample_list img {max-width:100%;}
 
 /* editor */
@@ -402,14 +410,12 @@ ex, campaign/campaign_2step_mail_form.html 수신확인 체크박스
 
 /*table 첫행 고정*/
 .fixed_top th{ position: sticky; top: 0px; padding:8px 0; background: #fafcfd;  border-bottom:1px solid #e9ecef; z-index: 2;  }
-
 .th-bg{background:#fafcfd}
 .overflow-bg{background: #f6f9fc; font-weight: bold; color:#8898aa; font-size: .8125rem}
 .overflow-bg-title{ border-top:1px solid #e9ecef; }
 .text-color-pw{color:#3593fc;}
 
 
-  
 
 /* progress */
 .progress-label span {padding:5px 20px; font-size:.8125rem; color:#0060e2; background:#e7e7ed;}
