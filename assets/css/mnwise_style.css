@@ -153,6 +153,8 @@ button.btn-sm {min-height:31px; }
 .nav-tabs.tab02 .nav-link.active:before, .nav-tabs.tab01 .nav-item.show .nav-link:before {background:#0764ff;}
 .nav-tabs.tab02 .nav-link:hover {color:#5e72e4;}
 
+.pop-info-text{font-size:.75rem; font-family: initial; padding-bottom:1px;}
+
 
 /***** table *****/
 .card .table {border-collapse: collapse !important;}
