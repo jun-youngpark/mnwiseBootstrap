@@ -88,6 +88,10 @@
                                                         <th class="th-bg">부서명</th>
                                                         <td class="text-left">mnwise2</td>
                                                     </tr>
+                                                    <tr>
+                                                        <th class="th-bg">부서명</th>
+                                                        <td class="text-left">mnwise2</td>
+                                                    </tr>
                                                 </tbody>
                                             </table>
                                         </div>
@@ -97,97 +101,114 @@
                             </div> <!-- // row -->
                         </div>
                     </div>
-                     <!-- // card body -->
+                    <!-- // card body -->
 
-                      <!-- card body -->
+                    <!-- card body -->
                     <div class="card-body">
-                        <div class="authority-list-wrap overflow-hidden">
-                            <div class="overflow-bg mb-0 ">
-                                <!-- 사용자 리스트 -->
-                                <div class="row align-items-center py-2 table_option">
-                                    <span class="ml-4"> 사용자리스트</span>
-                                    <!-- search -->
-                                    <div class="col text-right searchWrap">
-                                        <div class="form-group searchbox">
-                                            <div class="search_input">
-                                                <span class="form-control-label txt">사용자 ID</span>
-                                                <input type="search" class="form-control form-control-sm" placeholder=""
-                                                    aria-controls="datatable-basic" />
-                                                <button class="btn btn-sm btn-outline-info btn-icon btn_search">
-                                                    <span class="btn-inner--icon"><i
-                                                            class="fas fa-search"></i></span><span
-                                                        class="btn-inner--text">검색</span>
-                                                </button>
-                                            </div>
+                        <!-- overflow-bg -->
+                        <div class="overflow-bg mb-0 ">
+                            <!-- 사용자 리스트 -->
+                            <div class="row align-items-center py-2 table_option">
+                                <span class="ml-4"> 사용자리스트</span>
+                                <!-- search -->
+                                <div class="col text-right searchWrap">
+                                    <div class="form-group searchbox">
+                                        <div class="search_input">
+                                            <span class="form-control-label txt">사용자 ID</span>
+                                            <input type="search" class="form-control form-control-sm" placeholder=""
+                                                aria-controls="datatable-basic" />
+                                            <button class="btn btn-sm btn-outline-info btn-icon btn_search">
+                                                <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span
+                                                    class="btn-inner--text">검색</span>
+                                            </button>
                                         </div>
                                     </div>
-                                    <button type="button" class="btn btn-sm btn-outline-primary btn-round mr-2"
+                                </div>
+                                <button type="button" class="btn btn-sm btn-outline-primary btn-round mr-2"
                                     onclick="window.open('account_user_popup.html', '_blank', 'width=800,height=500')">
-                                        <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
-                                        <span class="btn-inner--text">추가</span>
-                                    </button>
-                                    <button type="button" class="btn btn-sm btn-outline-primary btn-round mr-4">
-                                        <span class="btn-inner--icon"><i class="fas fa-trash"></i></span>
-                                        <span class="btn-inner--text">삭제</span>
-                                    </button>
-                                    <!-- //search -->
-                                </div>
-                                <!-- 사용자 리스트 -->
+                                    <span class="btn-inner--icon"><i class="fas fa-plus"></i></span>
+                                    <span class="btn-inner--text">추가</span>
+                                </button>
+                                <button type="button" class="btn btn-sm btn-outline-primary btn-round mr-4">
+                                    <span class="btn-inner--icon"><i class="fas fa-trash"></i></span>
+                                    <span class="btn-inner--text">삭제</span>
+                                </button>
+                                <!-- //search -->
                             </div>
+                            <!-- 사용자 리스트 -->
+                        </div>
+                        <!-- overflow-bg -->
+                        <div class="authority-list-wrap">
+                            <div class="table-responsive overflow-auto">
+                                <table class="table table-xs dataTable">
+                                    <tbody>
+                                        <tr class="fixed_top">
+                                            <th class="th-bg border-bottom-0  border-top-0" width="5%"><b>선택</b></th>
+                                            <th class="th-bg border-bottom-0  border-top-0" width="5%"><b>No</b></th>
+                                            <th class="th-bg border-bottom-0  border-top-0" width="10%"><b>사용자ID</b>
+                                            </th>
+                                            <th class="th-bg border-bottom-0  border-top-0" width="10%"><b>성명</b></th>
+                                            <th class="th-bg border-bottom-0  border-top-0" width="10%"><b>부서명</b></th>
+                                            <th class="th-bg border-bottom-0  border-top-0" width="10%"><b>직급</b></th>
+                                            <th class="th-bg border-bottom-0  border-top-0" width="15%"><b>이메일</b></th>
+                                            <th class="th-bg border-bottom-0  border-top-0" width="10%"><b>권한</b></td>
+                                            <th class="th-bg border-bottom-0  border-top-0" width="10%"><b>전화번호</b></th>
+                                            <th class="th-bg border-bottom-0  border-top-0" width="10%"><b>상태</b></th>
+                                            <th class="th-bg border-bottom-0  border-top-0" width="5%"><b>잠금해제</b></th>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row" width="5%">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" id="checkbox" name="customcheckbox"
+                                                        class="custom-control-input" />
+                                                    <label class="custom-control-label" for="checkbox"></label>
+                                                </div>
+                                            </th>
+                                            <td width="5%">1</td>
+                                            <td width="10%">narajy1</td>
+                                            <td width="10%">na</td>
+                                            <td width="10%">부서등록2</td>
+                                            <td width="10%">사원</td>
+                                            <td width="15%">narajy@gmail.com</td>
+                                            <td width="10%">USER</td>
+                                            <td width="10%">02-111-1111</td>
+                                            <td width="10%">Active(0)</td>
+                                            <td width="5%">-</td>
+                                        </tr>
 
-                            <div class="code-set-table  overflow-auto">
-                                <!-- ◀ 스크롤 제거시 class=" overflow-auto 제거" -->
-                                <div class="table-responsive">
-                                    <table class="table table-sm dataTable">
-                                        <thead class="thead-light">
-                                            <tr>
-                                                <th scope="col">선택</th>
-                                                <th scope="col">No</th>
-                                                <th scope="col">사용자ID</th>
-                                                <th scope="col">성명</th>
-                                                <th scope="col"> 부서명 </th>
-                                                <th scope="col">직급</th>
-                                                <th scope="col">이메일</th>
-                                                <th scope="col">권한</th>
-                                                <th scope="col">전화번호</th>
-                                                <th scope="col">상태</th>
-                                                <th scope="col">잠금해제</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox" id="checkbox" name="customcheckbox"
-                                                            class="custom-control-input" />
-                                                        <label class="custom-control-label" for="checkbox"></label>
-                                                    </div>
-                                                </th>
-                                                <td>1</td>
-                                                <td>narajy1</td>
-                                                <td>na</td>
-                                                <td> 부서등록2</td>
-                                                <td>사원</td>
-                                                <td>narajy@gmail.com</td>
-                                                <td>USER</td>
-                                                <td></td>
-                                                <td>Active(0)</td>
-                                                <td>-</td>
-                                            </tr>
+                                        <!------------------------------------------------>
+                                        <tr>
+                                            <th scope="row" width="5%">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" id="checkbox" name="customcheckbox"
+                                                        class="custom-control-input" />
+                                                    <label class="custom-control-label" for="checkbox"></label>
+                                                </div>
+                                            </th>
+                                            <td width="5%">1111111111</td>
+                                            <td width="10%">end</td>
+                                            <td width="10%">end</td>
+                                            <td width="10%">end</td>
+                                            <td width="10%">end</td>
+                                            <td width="15%">end</td>
+                                            <td width="10%">USER</td>
+                                            <td width="10%">02-111-1111</td>
+                                            <td width="10%">Active(0)</td>
+                                            <td width="5%">-</td>
+                                        </tr>
 
-                                        </tbody>
-                                    </table>
-                                </div>
+
+                                    </tbody>
+
+                                </table>
                             </div>
                         </div>
-                    </div>
-                      <!-- // card body -->
-                </div><!-- // card -->
-
+                    </div> <!-- // card body -->
+                </div>
+               <!-- // card -->
             </div>
         </div><!-- //  내용 -->
-    </div> <!-- // wapper-->
-
+    </div>
 
 
 

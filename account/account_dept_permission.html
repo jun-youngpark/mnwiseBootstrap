@@ -71,8 +71,8 @@
                                 <!-- //col-3  Card body 트리 -->
 
                                 <!-- col-9  부서정보 -->
-                                <div class="col-9 px-0">
-                                    <div class="overflow-auto code-set-table">
+                                <div class="col-9 px-0" >
+                                    <div class="overflow-auto code-set-table" >
                                         <!-- ◀ 스크롤 제거시 class=" overflow-auto 제거" -->
                                         <div class="table-responsive">
                                             <table class="table table-sm dataTable">
@@ -102,20 +102,19 @@
                         </div>
                     </div> <!-- // card body -->
                     <div class="card-body">
-                        <div class="authority-list-wrap overflow-hidden">
-                            <p class="overflow-bg mb-0 py-2 text-center">권한리스트</p>
-                            <div class="code-set-table  overflow-auto">
-                                <!-- ◀ 스크롤 제거시 class=" overflow-auto 제거" -->
-                                <div class="table-responsive">
-                                    <table class="table table-sm dataTable">
+                        <p class="overflow-bg overflow-bg-title mb-0 py-2 text-center">권한리스트</p>
+                        <!-- overflow-bg -->
+                        <div class="authority-list-wrap">
+                            <div class="table-responsive overflow-auto">
+                                <table class="table table-xs dataTable">
                                         <tbody>
-                                            <tr>
-                                                <th class="th-bg text-bold " width="25%;"><b>메뉴</b></th>
-                                                <th class="th-bg"><b>권한</b></td>
+                                            <tr class="fixed_top">
+                                                <th class="th-bg border-bottom-0  border-top-0" width="25%;"><b>메뉴</b></th>
+                                                <th class="th-bg border-bottom-0  border-top-0"><b>권한</b></td>
                                             </tr>
                                             <!-- 캠페인 checkId,name, label 읽기 = c_r_n // 쓰기 = c_w_n-->
                                             <tr>
-                                                <td class="th-bg text-left">캠페인</td>
+                                                <td  width="25%" class="th-bg text-left">캠페인</td>
                                                 <td class="th-bg text-left">
                                                     <div class="custom-control custom-checkbox custom-control-inline">
                                                         <input type="checkbox" id="c_r" name="c_r"
@@ -828,6 +827,14 @@
                         </div>
                     </div>
                 </div><!-- // card -->
+                  <!-- button area -->
+                  <div class="card-footer pb-4 btn_area">
+                    <button type="submit" class="btn btn btn-outline-primary btn-icon">
+                        <span class="btn-inner--icon"><i class="fas fa-save"></i></span><span
+                            class="btn-inner--text">저장</span>
+                    </button>
+                </div>
+                <!-- e.button area -->
 
             </div>
         </div><!-- //  내용 -->
