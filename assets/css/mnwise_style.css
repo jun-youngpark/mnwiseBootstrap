@@ -12,7 +12,7 @@ body {font-family:'Roboto', 'Nanum Gothic', 'Noto Sans KR', sans-serif; backgrou
 - float 해제 방법 : 부모 element에 "overflow:hidden;"추가 또는 :after 요소를 활용하여 "clear:both;" 추가하여 float를 해제할 수 있습니다. 
 현재는 main-panel에 float:left; 를 삭제 하였으므로 float해제 불필요함 */ 
 .wrapper { min-width:1260px;  max-width:none !important;  position: relative; top: 0;  min-height: 100vh; padding-left:220px; }
-.sidebar {position: fixed;  top: 0; bottom: 0;  left: 0;  z-index: 2; width: 220px;  background: #172b4d; border:none; }
+.sidebar {position: fixed;  top: 0; bottom: 0;  left: 0;  z-index: 50; width: 220px;  background: #172b4d; border:none; }
 .sidebar .sidebar-wrapper{position: relative;  height: calc(100vh - 75px); overflow-y: auto ; overflow-x: hidden; width: 220px; z-index: 4;  padding-bottom: 10px;}
  
 .navbar-vertical .navbar-nav {margin:0;}
@@ -33,6 +33,11 @@ body {font-family:'Roboto', 'Nanum Gothic', 'Noto Sans KR', sans-serif; backgrou
 .tagbox > div {background: #dedddd; border-radius: 5px; font-size:.85rem;}  /* border: 2px solid #f5f5f5;  */
 
 .logout-box, .logilogoutn-box a{color:#495572; font-size:.85rem;}
+.logout-box {padding:20px;}
+.logout > * {position:relative; display:inline-block; margin-left:22px; vertical-align: middle;}
+.logout > *:before {content:""; position:absolute; left:-12px; top:50%; width:2px; height:12px; margin-top:-6px; background:#eee;}
+.logout > *:first-child:before {display:none;}
+.logout-box .btn_logout {padding:5px;}
 
 /*mainpanel - 자식의 값에 float가 있을 경우 부모가 감싸지 못한다 -> 부모에 overflow값 or :after{clear:both} */
 /*.main-panel {position: relative; float: right; width: calc(100% - 250px);}*/
@@ -301,7 +306,7 @@ ex, campaign/campaign_2step_mail_form.html 수신확인 체크박스
 .txt_channel.c {border:1px solid #fb6aa6; color:#fb6aa6;}
 
 /* step */
-.stepWrap {position:relative; display:inline-block; margin:0; padding:0; list-style: none; font-size:.8125rem; color:#fff;}
+.stepWrap {position:relative; display:inline-block; height:25px; margin:auto 0; padding:0; list-style: none; font-size:.8125rem; color:#fff;}
 .stepWrap:before {content:""; position:absolute; left:8px; top:50%; right:8px; height:1px; background:#eee;}
 .stepWrap > * {position:relative; display:inline-block; margin:0 5px;}
 .stepWrap .box {padding:2px;  width:25px; height:25px; text-align:center; line-height:21px; background:#dfdfdf; border-radius:20px;}
