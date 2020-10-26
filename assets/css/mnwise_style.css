@@ -39,14 +39,20 @@ body {font-family:'Roboto', 'Nanum Gothic', 'Noto Sans KR', sans-serif; backgrou
 .main-panel {position: relative;}
 .main-panel > .container-fluid {padding-left:15px;}
 
-/* headerTop 없을 경우 대응 */
-.main-panel > .container-fluid {margin-top:0 !important; padding-top:.5rem !important;} 
+/* headerTop 없을 경우 대응 1.5rem -> .1rem  2020.10.26*/
+.main-panel > .container-fluid {margin-top:0 !important; padding-top:.1rem !important;} 
+/* card header padding 수정  2020.10.26*/
+.card-header{padding-bottom:.5rem; padding-top:0; }
+.card-header h3, .card-header h5{font-size:1.3rem;}
+.btn-xs, .btn-group-xs > .btn { padding: 1px 5px;  font-size: 12px;  line-height: 1.5; border-radius: 3px;}
+
+/**card body **/
+.card-body{padding:.5rem;}
+
+
+
 
 .dp-flex{display: flex ;}
-
-/* card header padding 수정 */
-.card-header{padding-bottom:.5rem; padding-top:.5rem; }
-.card-header h3, .card-header h5{font-size:1.3rem;}
 
 
 
