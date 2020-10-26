@@ -40,8 +40,14 @@ body {font-family:'Roboto', 'Nanum Gothic', 'Noto Sans KR', sans-serif; backgrou
 .main-panel > .container-fluid {padding-left:15px;}
 
 /* headerTop 없을 경우 대응 */
-.main-panel > .container-fluid {margin-top:0 !important; padding-top:1rem !important;} 
+.main-panel > .container-fluid {margin-top:0 !important; padding-top:.5rem !important;} 
+
 .dp-flex{display: flex ;}
+
+/* card header padding 수정 */
+.card-header{padding-bottom:.5rem; padding-top:.5rem; }
+.card-header h3, .card-header h5{font-size:1.3rem;}
+
 
 
 /*** input-file**/
@@ -234,6 +240,7 @@ button.btn-sm {min-height:31px; }
 .card h4.h3 em {font-size:.9375rem; color:#000;}
 .card h4.h3 em:before {content:"|"; margin:0 .5em; font-weight:bold; font-size:.875rem; color:#8898aa;}
 
+
 /***** forms *****/
 .form-group dl {font-size:.875rem;}
 .form-group dt {font-weight:600; color:#525f7f;}
@@ -416,8 +423,6 @@ ex, campaign/campaign_2step_mail_form.html 수신확인 체크박스
 .overflow-bg{background: #f6f9fc; font-weight: bold; color:#8898aa; font-size: .8125rem}
 .overflow-bg-title{ border-top:1px solid #e9ecef; }
 .text-color-pw{color:#3593fc;}
-
-
 
 /* progress */
 .progress-label span {padding:5px 20px; font-size:.8125rem; color:#0060e2; background:#e7e7ed;}
