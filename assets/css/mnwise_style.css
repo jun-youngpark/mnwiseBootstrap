@@ -456,6 +456,24 @@ ex, campaign/campaign_2step_mail_form.html 수신확인 체크박스
 .field_addWrap .btn_area {padding:10px;}
 .field_addWrap .btn_area .btn {width:150px;}
 
+/* wiseU Watch */
+.content_box {margin-bottom:15px; padding:0 20px; font-size:.875rem; color:#000; border:1px solid #d8d8d9; border-radius:10px; box-shadow:1px 2px #f5f5f5;}
+.content_box .group {border-top:1px dashed #ccc;}
+.content_box .group:first-child {border-top:none;}
+.content_box .cont_head {padding:15px 0; overflow:hidden;}
+.content_box .cont_head > dl {float:left; margin:0 15px 0 0; white-space:nowrap;}
+.content_box .cont_head > dl > * {display:inline-block; padding-right:5px; line-height:30px;}
+.content_box .cont_head dt {position:relative; padding-left:15px; font-weight:bold; font-size:.8125rem; color:#757575;}
+.content_box .cont_head dt:before {content:""; position:absolute; left:0; top:50%; width:10px; height:10px; margin-top:-5px; border:3px solid #ccc; border-radius:10px;}
+.content_box .cont_head dt:after {content:":"; margin-left:5px;}
+.content_box .cont_head dd {margin:0;}
+.content_box .cont_head button {min-width:50px; height:28px; min-height:28px; font-weight:500; font-size:.8125rem;}
+.content_box .cont_head .status {display:inline-block; margin-right:10px; font-size:1rem; color:#0764ff;}
+.content_box .cont_head .status.stop {color:#bdbdbd;}
+.content_box .cont_head .r_btn {float:right;}
+.content_box .cont_body {padding-bottom:20px;}
+
+
 /***** datepicker *****/
 .input_datebox {display:inline-block; position: relative;}
 .input_datebox::after {content:"\f133"; position: absolute; right:0; top:50%; width: 30px; font-family:"Font Awesome 5 Free"; font-weight: 900; color: #495572; text-align: center; -webkit-transform: translateY(-50%); transform: translateY(-50%);}
