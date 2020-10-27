@@ -86,7 +86,8 @@
                                             <td colspan="3">
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" id="customRadioInline1"
-                                                        name="customRadioInline1" class="custom-control-input" required/>
+                                                        name="customRadioInline1" class="custom-control-input"
+                                                        required />
                                                     <label class="custom-control-label" for="customRadioInline1">사용자
 
                                                     </label>
@@ -125,16 +126,17 @@
                                             <td>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" id="customRadioInline6"
-                                                        name="customRadioInline111" class="custom-control-input" required/>
-                                                    <label class="custom-control-label"
-                                                        for="customRadioInline6">사용
+                                                        name="customRadioInline111" class="custom-control-input"
+                                                        required />
+                                                    <label class="custom-control-label" for="customRadioInline6">사용
 
                                                     </label>
                                                 </div>
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" id="customRadioInline7"
                                                         name="customRadioInline111" class="custom-control-input" />
-                                                    <label class="custom-control-label" for="customRadioInline7">미사용</label>
+                                                    <label class="custom-control-label"
+                                                        for="customRadioInline7">미사용</label>
                                                 </div>
                                             </td>
                                         </tr>
@@ -145,7 +147,7 @@
                                             <td>승인</td>
                                             <th><em class="required">required</em>템플릿 상태</th>
                                             <td>정상</td>
-                                           
+
                                         </tr>
                                         <tr>
                                             <th><em class="required">required</em>메시지 내용</th>
@@ -179,11 +181,11 @@
                                             <th><em class="required">required</em>버튼 타입</th>
                                             <td>웹 링크</td>
                                             <th><em class="required">required</em>버튼명</th>
-                                            <td><input type="text" class="form-control form-control-sm"
-                                                    placeholder="" required/></td>
+                                            <td><input type="text" class="form-control form-control-sm" placeholder=""
+                                                    required /></td>
                                             <th><em class="required">required</em>모바일 웹링크</th>
-                                            <td><input type="text" class="form-control form-control-sm"
-                                                    placeholder="" required/></td>
+                                            <td><input type="text" class="form-control form-control-sm" placeholder=""
+                                                    required /></td>
                                             <th>PC 웹링크</th>
                                             <td class="border-right-0"><input type="text"
                                                     class="form-control form-control-sm" placeholder="" /></td>
@@ -194,11 +196,11 @@
                                             <th><em class="required">required</em>버튼 타입</th>
                                             <td>앱 링크</td>
                                             <th><em class="required">required</em>버튼명</th>
-                                            <td><input type="text" class="form-control form-control-sm"
-                                                    placeholder="" required/></td>
+                                            <td><input type="text" class="form-control form-control-sm" placeholder=""
+                                                    required /></td>
                                             <th><em class="required">required</em>모바일 웹링크</th>
-                                            <td><input type="text" class="form-control form-control-sm"
-                                                    placeholder="" required/></td>
+                                            <td><input type="text" class="form-control form-control-sm" placeholder=""
+                                                    required /></td>
                                             <th>PC 웹링크</th>
                                             <td class="border-right-0"><input type="text"
                                                     class="form-control form-control-sm" placeholder="" /></td>
@@ -210,7 +212,7 @@
                                             <td>배송조회</td>
                                             <th><em class="required">required</em>버튼명</th>
                                             <td class="border-right-0"><input type="text"
-                                                    class="form-control form-control-sm" placeholder="" required/></td>
+                                                    class="form-control form-control-sm" placeholder="" required /></td>
                                             <td colspan="5"><button type="button"
                                                     class="btn btn-sm btn-outline-primary">삭제</button>
                                             </td>
@@ -221,7 +223,7 @@
                                             <td>봇키워드</td>
                                             <th><em class="required">required</em>버튼명</th>
                                             <td class="border-right-0"><input type="text"
-                                                    class="form-control form-control-sm" placeholder="" required/></td>
+                                                    class="form-control form-control-sm" placeholder="" required /></td>
                                             <td colspan="5"><button type="button"
                                                     class="btn btn-sm btn-outline-primary">삭제</button>
                                             </td>
@@ -231,7 +233,7 @@
                                             <td>메시지 전달</td>
                                             <th><em class="required">required</em>버튼명</th>
                                             <td class="border-right-0"><input type="text"
-                                                    class="form-control form-control-sm" placeholder="" required/></td>
+                                                    class="form-control form-control-sm" placeholder="" required /></td>
                                             <td colspan="5"><button type="button"
                                                     class="btn btn-sm btn-outline-primary">삭제</button>
                                             </td>
@@ -284,12 +286,26 @@
                                             </td>
                                         </tr>
                                         <tr>
+
                                             <td colspan="2" class="border-top-0 text-left">
-                                                <div class="custom-file col-6">
-                                                    <input type="file" class="custom-file-input" id="customFileLang"
-                                                        lang="ko">
-                                                    <label class="custom-file-label custom-file-label-sm" for="customFileLang"></label>
+                                                <div class="mb-2">
+                                                    <button type="button"
+                                                        class="btn btn-sm btn-outline-primary">파일추가</button>
                                                 </div>
+
+
+                                                <div class="position-relative">
+                                                    <div class="custom-file col-5">
+                                                        <input type="file" class="custom-file-input" id="customFileLang"
+                                                            lang="ko">
+                                                        <label class="custom-file-label custom-file-label-sm mb-0"
+                                                            for="customFileLang"></label>
+
+                                                    </div>
+                                                    <button type="button"
+                                                        class="btn btn-sm btn-outline-primary ml-2 position-absolute top-0"  >삭제</button>
+                                                </div>
+
                                                 <ul class="notice-text text-left  mb-0 mt--2">
                                                     <li><em class="li-circle">li-circle</em>파일은 최대 5개까지 첨부 가능합니다. (파일당
                                                         최대 사이즈: 50MB) 버튼을 눌러 추가하세요.
@@ -302,7 +318,7 @@
                                             </td>
                                         </tr>
                                     </tbody>
-                                 </table>
+                                </table>
                             </div>
                             <!-- //card body -->
 
@@ -315,7 +331,8 @@
                                                 class="btn-inner--text">저장</span>
                                         </button>
                                         <button type="button" class="btn btn-outline-primary btn-icon">
-                                            <span class="btn-inner--icon"><i class="fas fa-trash"></i></span><span class="btn-inner--text">삭제</span>
+                                            <span class="btn-inner--icon"><i class="fas fa-trash"></i></span><span
+                                                class="btn-inner--text">삭제</span>
                                         </button>
                                     </div>
                                     <div class="col col-6">
