@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script>
+        $(function () {
+            $("#js").load("../js.html");
+        });
+    </script>
+</head>
+
+<body>
+    <div id="js"></div>
+
+    <div class="card pop-card">
+        <div class="card-header">
+            <h5 class="mb-0">wiseU Watch</h5>
+        </div>
+
+        <div class="card-body">
+            <!--col-->
+            <div class="col">
+                <!-- tab -->
+                <ul class="nav nav-tabs tab01">
+                    <li class="nav-item">
+                        <a class="nav-link" id="process-tab" data-toggle="tab" href="#process" role="tab"
+                            aria-controls="process" aria-selected="true">프로세스</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link  active" id="campaign-tab" data-toggle="tab" href="#campaign" role="tab"
+                            aria-controls="campaign" aria-selected="false">캠페인</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="ecare-tab" data-toggle="tab" href="#ecare" role="tab"
+                            aria-controls="ecare" aria-selected="false">이케어</a>
+                    </li>
+                </ul>
+                <!-- //tab -->
+
+                <!-- tab content -->
+                <div class="tab-content">
+                    <!-- 프로세스 tab -->
+                    <div class="tab-pane" id="process" role="tabpanel" aria-labelledby="process-tab">
+
+                    </div>
+                    <!-- //프로세스 tab -->
+
+
+                    <!-- 캠페인 tab -->
+                    <div class="tab-pane  active" id="campaign" role="tabpanel" aria-labelledby="campaign-tab">
+                        <!-- radio box-->
+                        <div class="radioWrap  py-2">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="delimiter01" name="delimiter" class="custom-control-input" />
+                                <label class="custom-control-label" for="delimiter01">최근10개</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="delimiter02" name="delimiter" class="custom-control-input" />
+                                <label class="custom-control-label" for="delimiter02">최근20개</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="delimiter03" name="delimiter" class="custom-control-input" />
+                                <label class="custom-control-label" for="delimiter03">최근50개</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="delimiter04" name="delimiter" class="custom-control-input" />
+                                <label class="custom-control-label" for="delimiter01">최근100개</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="delimiter05" name="delimiter" class="custom-control-input" />
+                                <label class="custom-control-label" for="delimiter02">최근 15일전까지</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="delimiter06" name="delimiter" class="custom-control-input" />
+                                <label class="custom-control-label" for="delimiter03">최근 30일전까지</label>
+                            </div>
+
+                            <span class="h5">* 새로고침 자동실행 <button
+                                    class="btn btn-xs btn-outline-primary btn-round btn-icon ml-1">
+                                    멈춤
+                                </button> </span>
+
+                        </div>
+                        <!-- radio box-->
+                        <!--  row -->
+                        <div class="row align-items-center py-1 table_option">
+                            <!-- buttons -->
+                            <div class="col-auto btn_area">
+                                <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                                    <span class="btn-inner--icon"><i class="fas fa-sync-alt"></i></span><span
+                                        class="btn-inner--text">재가동</span>
+                                </button>
+                                <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                                    <span class="btn-inner--icon"><i class="fas fa-stop-circle"></i></span><span
+                                        class="btn-inner--text">일시중지</span>
+                                </button>
+                                <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                                    <span class="btn-inner--icon"><i class="fas fa-ban"></i></span><span
+                                        class="btn-inner--text">정지</span>
+                                </button>
+                                <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                                    <span class="btn-inner--icon"><i class="fas fa-trash"></i></span><span
+                                        class="btn-inner--text">삭제</span>
+                                </button>
+                            </div>
+                            <!-- e.buttons -->
+                        </div>
+                        <!--//row -->
+                        <!-- Light table -->
+                        <div class="table-responsive">
+                            <table class="table table-sm dataTable">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">선택</th>
+                                        <th scope="col">발송날짜</th>
+                                        <th scope="col">캠페인 번호</th>
+                                        <th scope="col">캠페인명</th>
+                                        <th scope="col">채널</th>
+                                        <th scope="col">작성자</th>
+                                        <th scope="col">발송모드</th>
+                                        <th scope="col">발송상태</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="radio" name="customrradio"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="radio1"></label>
+                                            </div>
+                                        </th>
+                                        <td>2020-10-14 17:07</td>
+                                        <td> 1395</td>
+                                        <td class="text-left">켐페인 예약발송</td>
+                                        <td>EMAIL</td>
+                                        <td>admin</td>
+                                        <td>실발송</td>
+                                        <td>발송에러</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="radio" name="customrradio"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="radio1"></label>
+                                            </div>
+                                        </th>
+                                        <td>2020-10-14 17:07</td>
+                                        <td> 1395</td>
+                                        <td class="text-left">켐페인 예약발송</td>
+                                        <td>EMAIL</td>
+                                        <td>admin</td>
+                                        <td>실발송</td>
+                                        <td>발송에러</td>
+                                    </tr>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- e.Light table -->
+
+
+
+                        <!-- Light table -->
+                        <h1 class="h3 text-primary my-2">수행정보</h1>
+                        <div class="table-responsive">
+                            <table class="table table-sm dataTable">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">서비스명</th>
+                                        <th scope="col">작성자</th>
+                                        <th scope="col">발송모드</th>
+                                        <th scope="col"></th>
+                                        <th scope="col" rowspan="2">LTS1</th>
+                                        <th scope="col">날짜</th>
+                                        <th scope="col">서비스 상태</th>
+                                        <th scope="col">대상자수</th>
+                                        <th scope="col">채널</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                     
+                                    </tr>
+                                   
+                                   
+                                </tbody>
+                              
+                            </table>
+                        </div>
+                        <!-- e.Light table -->
+                    </div>
+                    <!-- //캠페인 tab -->
+
+                    <!-- ecare tab -->
+                    <div class="tab-pane " id="campaign" role="tabpanel" aria-labelledby="ecare-tab">
+                        <!-- radio box-->
+                        <div class="radioWrap  py-2">
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="delimiter01" name="delimiter" class="custom-control-input" />
+                                <label class="custom-control-label" for="delimiter01">최근10개</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="delimiter02" name="delimiter" class="custom-control-input" />
+                                <label class="custom-control-label" for="delimiter02">최근20개</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="delimiter03" name="delimiter" class="custom-control-input" />
+                                <label class="custom-control-label" for="delimiter03">최근50개</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="delimiter04" name="delimiter" class="custom-control-input" />
+                                <label class="custom-control-label" for="delimiter01">최근100개</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="delimiter05" name="delimiter" class="custom-control-input" />
+                                <label class="custom-control-label" for="delimiter02">최근 15일전까지</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline">
+                                <input type="radio" id="delimiter06" name="delimiter" class="custom-control-input" />
+                                <label class="custom-control-label" for="delimiter03">최근 30일전까지</label>
+                            </div>
+
+                            <span class="h5">* 새로고침 자동실행 <button
+                                    class="btn btn-xs btn-outline-primary btn-round btn-icon ml-1">
+                                    멈춤
+                                </button> </span>
+
+                        </div>
+                        <!-- radio box-->
+                        <!--  row -->
+                        <div class="row align-items-center py-1 table_option">
+                            <!-- buttons -->
+                            <div class="col-auto btn_area">
+                                <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                                    <span class="btn-inner--icon"><i class="fas fa-sync-alt"></i></span><span
+                                        class="btn-inner--text">재가동</span>
+                                </button>
+                                <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                                    <span class="btn-inner--icon"><i class="fas fa-stop-circle"></i></span><span
+                                        class="btn-inner--text">일시중지</span>
+                                </button>
+                                <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                                    <span class="btn-inner--icon"><i class="fas fa-ban"></i></span><span
+                                        class="btn-inner--text">정지</span>
+                                </button>
+                                <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                                    <span class="btn-inner--icon"><i class="fas fa-trash"></i></span><span
+                                        class="btn-inner--text">삭제</span>
+                                </button>
+                            </div>
+                            <!-- e.buttons -->
+                        </div>
+                        <!--//row -->
+                        <!-- Light table -->
+                        <div class="table-responsive">
+                            <table class="table table-sm dataTable">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">선택</th>
+                                        <th scope="col">발송날짜</th>
+                                        <th scope="col">이케어 번호</th>
+                                        <th scope="col">이케어명</th>
+                                        <th scope="col">채널</th>
+                                        <th scope="col">작성자</th>
+                                        <th scope="col">서비스종류</th>
+                                        <th scope="col">발송상태</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="radio" name="customrradio"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="radio1"></label>
+                                            </div>
+                                        </th>
+                                        <td>2020-10-14 17:07</td>
+                                        <td> 1395</td>
+                                        <td class="text-left">켐페인 예약발송</td>
+                                        <td>EMAIL</td>
+                                        <td>admin</td>
+                                        <td>실발송</td>
+                                        <td>발송에러</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="custom-control custom-radio">
+                                                <input type="radio" id="radio" name="customrradio"
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="radio1"></label>
+                                            </div>
+                                        </th>
+                                        <td>2020-10-14 17:07</td>
+                                        <td> 1395</td>
+                                        <td class="text-left">켐페인 예약발송</td>
+                                        <td>EMAIL</td>
+                                        <td>admin</td>
+                                        <td>실발송</td>
+                                        <td>발송에러</td>
+                                    </tr>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- e.Light table -->
+                    </div>
+                    <!-- //캠페인 tab -->
+                </div>
+                <!-- //tab content -->
+            </div>
+            <!-- // col -->
+
+        </div>
+
+    </div>
+
+
+
+</html>
