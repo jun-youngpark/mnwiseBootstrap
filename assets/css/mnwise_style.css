@@ -22,18 +22,18 @@ body {font-family:'Roboto', 'Nanum Gothic', 'Noto Sans KR', sans-serif; backgrou
 .sidebar .navbar-brand {padding: 1.5rem;}
 .navbar-vertical .navbar-brand-img, .navbar-vertical .navbar-brand>img { max-width: 100%; max-height: 3rem;}
 
-/* 메뉴 Tag  --- 우선 캠페인 내 태그 추가 
+/* 메뉴 Tag  ============= 각 페이지에 셀렉트 박스 추가 예정
 캠페인> 캠페인리스트
 이케어> 이케어리스트
 템플릿 > 템플릿, 모바일템플릿
 대상자 > 대상자 조회
-*/
+
 .tag-text{letter-spacing: 2px; font-size:18px;}
 .tagbox-text{color:#5e72e4;}
 .tagbox > div {background: #dedddd; border-radius: 5px; font-size:.85rem;}  /* border: 2px solid #f5f5f5;  */
 
 .logout-box, .logilogoutn-box a{color:#495572; font-size:.85rem;}
-.logout-box {padding:20px;}
+.logout-box {padding:0 20px;}
 .logout > * {position:relative; display:inline-block; margin-left:22px; vertical-align: middle;}
 .logout > *:before {content:""; position:absolute; left:-12px; top:50%; width:2px; height:12px; margin-top:-6px; background:#eee;}
 .logout > *:first-child:before {display:none;}
@@ -175,7 +175,8 @@ button.btn-sm {min-height:31px; }
 
 /***** table *****/
 .card .table {border-collapse: collapse !important;}
-.card .table td, .card .table th {padding-left:12px; padding-right:12px; text-align:center; vertical-align: middle; border:0 solid #e9ecef; border-width:1px 1px 0 0;}
+.card .table th {color:#495572; font-weight: bold;}
+.card .table td, .card .table th {padding-left:12px; padding-right:12px; text-align:center; vertical-align: middle; border:0 solid #e9ecef; border-width:1px 1px 0 0; }
 .card .table tr > *:first-child {border-left:none;}
 .card .table tr > *:last-child {border-right:none;}
 .table thead th {font-size:.8125rem;}
@@ -314,6 +315,12 @@ ex, campaign/campaign_2step_mail_form.html 수신확인 체크박스
 .stepWrap .current .box {width:auto; min-width:80px; padding:2px 10px; font-weight:bold; font-size:.875rem; background:#5e72e4}
 .stepWrap .current .box .txt {position:static; margin-right:.5em; opacity:1;}
 
+/* step test*/
+.stepWrap-test {position:relative; display:inline-block; height:25px; margin:auto 0; padding:0; list-style: none; font-size:.8125rem; }
+.stepWrap-test > * {position:relative; display:inline-block;}
+.stepWrap-test .box {padding:2px; min-width:60px; height:25px; text-align:center; line-height:21px;  }
+.stepWrap-test .current .box {width:auto; min-width:50px; padding:2px 5px; font-weight:bold; font-size:.9375rem; color:#5e72e4;}
+.stepWrap .current .box .txt {position:static; margin-right:.2em; opacity:1;}
 
 /* list depth */
 .list_depth {position:relative; padding-left:40px;}
