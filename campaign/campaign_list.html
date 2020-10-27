@@ -27,15 +27,7 @@
 
         <!-- Contents area  -->
         <div class="main-panel">
-            <div class="logout-box px-3 pt-2 text-right ">
-                <div class="logout"> mnwise2 / <a href="index.html" class="pr-2"> 로그아웃</a> 
-                    <button
-                        class="btn btn-sm btn-outline-primary btn-icon"  onclick="window.open('wiseWacth.html', '_blank', 'width=800,height=500')">
-                        <span class="btn-inner--icon"><i class="fas fa-external-link-alt"></i></span><span
-                            class="btn-inner--text ">wiseWacth</span>
-                    </button>
-                </div>
-            </div>
+         
             <!-- Page content -->
             <div class="container-fluid mt-4 mb-2">
                 <!-- card -->
@@ -49,9 +41,9 @@
                     <!-- e.Card header -->
 
                     <!-- card body -->
-                    <div class="card-body pb-1">
+                    <div class="card-body px-0 pb-0">
                         <!-- search area & buttons -->
-                        <div class="row align-items-center py-2 table_option">
+                        <div class="row align-items-center py-1 table_option">
                             <!-- buttons -->
                             <div class="col-auto btn_area">
                                 <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
@@ -66,17 +58,18 @@
                                     <span class="btn-inner--icon"><i class="fas fa-trash"></i></span><span
                                         class="btn-inner--text">삭제</span>
                                 </button>
+                                <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
+                                    <span class="btn-inner--icon"><i class="fas fa-eye"></i></span><span
+                                        class="btn-inner--text">승인요청만
+                                        보기</span>
+                                </button>
                             </div>
                             <!-- e.buttons -->
 
                             <!-- search -->
                             <div class="col-auto searchWrap">
                                 <div class="form-group searchbox">
-                                    <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
-                                        <span class="btn-inner--icon"><i class="fas fa-eye"></i></span><span
-                                            class="btn-inner--text">승인요청만
-                                            보기</span>
-                                    </button>
+                                   
                                     <select class="form-control form-control-sm">
                                         <option>수행상태</option>
                                         <option>작성중</option>
@@ -297,26 +290,28 @@
 
     <!--  처음 로드시, tot = w01값이 동일 // resize시 정상적으로 width 값 가져옴 -->
     <script>
-        $(window).load(function () {
-            // table top button & search ui
-            function searchui() {
-                var tot = $(".table_option").width();
-                var w01 = $(".table_option .btn_area").innerWidth() + $(".table_option .searchWrap")
-                .innerWidth();
-                console.log("전체  너비 = " + tot)
-                console.log("버튼 + searchWrap 너비 = " + w01)
+        $(document).ready(function () {
+            setTimeout(function(){
+                searchui();
+            },500);
 
-                if (tot < w01) {
-                    $(".table_option").addClass("st02");
-                } else {
-                    $(".table_option").removeClass("st02");
-                }
-            };
-            searchui();
             $(window).resize(function () {
                 searchui();
             });
         });
+
+        // table top button & search ui
+        function searchui() {
+            var tot = $(".table_option").width();
+            var w01 = $(".table_option .btn_area").innerWidth() + $(".table_option .searchWrap")
+            .innerWidth();
+
+            if (tot < w01) {
+                $(".table_option").addClass("st02");
+            } else {
+                $(".table_option").removeClass("st02");
+            }
+        };
     </script>
 
 </html>
