@@ -76,10 +76,10 @@
                 <!-- e.Card header -->
                 
                 <!-- card body -->
-                <div class="card-body pb-1">
+                <div class="card-body px-0 pb-0">
 
                     <!-- search area & buttons -->
-                    <div class="row align-items-center py-2 table_option">
+                    <div class="row align-items-center py-1 table_option">
                         <!-- buttons -->
                         <div class="col-auto btn_area">
                             <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
@@ -225,25 +225,28 @@
 <!-- e.wrapper -->
 
 <script>
-    $(window).load(function() {
-        // table top button & search ui
-        function searchui() {
-            var tot = $(".table_option").width();
-            var w01 = $(".table_option .btn_area").innerWidth() + $(".table_option .searchWrap").innerWidth();
-
-            if(tot  < w01 ) {
-                $(".table_option").addClass("st02");
-            } else {
-                $(".table_option").removeClass("st02");
-            }
-        };
-
-        searchui();
-
-        $(window).resize(function() {
+     $(document).ready(function () {
+        setTimeout(function(){
+            searchui();
+        },500);
+       
+        $(window).resize(function () {
             searchui();
         });
-    }); 
+    });
+
+    // table top button & search ui
+    function searchui() {
+        var tot = $(".table_option").width();
+        var w01 = $(".table_option .btn_area").innerWidth() + $(".table_option .searchWrap")
+        .innerWidth();
+
+        if (tot < w01) {
+            $(".table_option").addClass("st02");
+        } else {
+            $(".table_option").removeClass("st02");
+        }
+    };
 </script>
 
 </html>
