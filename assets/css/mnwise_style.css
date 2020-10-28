@@ -213,6 +213,7 @@ button.btn-sm {min-height:31px; }
 
 .max-text-overflow .table td>a{max-width:380px; overflow: hidden; white-space: nowrap;  text-overflow: ellipsis;}
 
+
 /* new test sample  --  위  코드  참조하여 ---  예시) campaign_per_history.html -- 작업 */
 .newgridWrap .table {border-collapse: collapse !important; }
 .newgridWrap  table.dataTable.table-sm>thead>tr>th{padding:8px 12px;}
@@ -226,7 +227,7 @@ button.btn-sm {min-height:31px; }
 
 /*table-xs env_smtpocode.html,env_push_setting.html */
 .table-xs th, .table-xs td {padding: .2rem;}
-
+.table-xs  thead th{padding: .3rem; font-size:.8125rem;}
 
 @media screen and (max-width:1350px) {
     .newgridWrap .table th, .newgridWrap .table td {padding:8px ;}
@@ -472,6 +473,7 @@ ex, campaign/campaign_2step_mail_form.html 수신확인 체크박스
 .content_box .cont_head .status.stop {color:#bdbdbd;}
 .content_box .cont_head .r_btn {float:right;}
 .content_box .cont_body {padding-bottom:20px;}
+
 
 
 /***** datepicker *****/
