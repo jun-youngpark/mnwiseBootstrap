@@ -452,7 +452,7 @@
                                         class="btn-inner--text">재가동</span>
                                 </button>
                                 <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
-                                    <span class="btn-inner--icon"><i class="fas fa-stop-circle"></i></span><span
+                                    <span class="btn-inner--icon"><i class="fas fa-minus"></i></span><span
                                         class="btn-inner--text">일시중지</span>
                                 </button>
                                 <button class="btn btn-sm btn-outline-primary btn-round btn-icon">
@@ -597,8 +597,8 @@
                                         <th scope="col">총건수</th>
                                         <th scope="col">생성건수</th>
                                         <th scope="col">재시도</th>
-                                        <th scope="col">발송건수</th>
-                                        <th scope="col">성공건수</th>
+                                        <th scope="col" class="text-blue">발송건수</th>
+                                        <th scope="col" class="text-green">성공건수</th>
                                         <th scope="col">UnknownUser</th>
                                         <th scope="col">UnknownHost</th>
                                         <th scope="col">SmtpExcept</th>
@@ -613,8 +613,8 @@
                                         <td>3</td>
                                         <td>3</td>
                                         <td>1</td>
-                                        <td>3</td>
-                                        <td>3</td>
+                                        <td class="text-blue">3</td>
+                                        <td class="text-green">3</td>
                                         <td>0</td>
                                         <td>0</td>
                                         <td>0</td>
@@ -750,6 +750,115 @@
                             </table>
                         </div>
                         <!-- e.Light table -->
+
+                        
+                        <!-- 수행정보 -->
+                        <h1 class="h3 text-primary my-2">수행정보</h1>
+                        <!--row-->
+                        <div class="row">
+                            <!-- col-6 -->
+                            <div class="col-6">
+                                <div class="table-responsive">
+                                    <table class="table table-sm dataTable">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th scope="col">서비스명</th>
+                                                <th scope="col">작성자</th>
+                                                <th scope="col">발송모드</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>스케줄분 알림톡</td>
+                                                <td>admin</td>
+                                                <td>실발송</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- // col-6 -->
+                            <!-- col-6 -->
+                            <div class="col-6">
+                                <div class="table-responsive ">
+                                    <table class="table table-sm dataTable ">
+                                            <tr class="thead-light">
+                                                <th scope="col" rowspan="2">LTS1</th>
+                                                <th scope="col">날짜</th>
+                                                <th scope="col">서비스 상태</th>
+                                                <th scope="col">대상자수</th>
+                                                <th scope="col">채널</th>
+                                            </tr>
+                                            <tr>
+                                                <td>2020-08-08 13:51</td>
+                                                <td>발송종료</td>
+                                                <td>3</td>
+                                                <td>알림톡</td>
+                                            </tr>
+                                    </table>
+                                </div>
+                            </div>
+                             <!-- // col-6 -->
+                        </div>
+                        <!--row-->
+
+                        <!-- Light table -->
+                        <div class="table-responsive">
+                            <table class="table table-sm dataTable ">
+                                    <tr class="thead-light">
+                                        <th scope="col" rowspan="2" width="22%">MTS 서비스 상태</th>
+                                        <th scope="col">MTS1</th>
+                                    </tr>
+                                    <tr>
+                                        <td>발송종료</td>
+                                    </tr>
+                            </table>
+                        </div>
+                        <!-- // Light table -->
+
+                         <!-- Light table -->
+                         <div class="table-responsive">
+                            <table class="table table-sm dataTable ">
+                                    <tr class="thead-light">
+                                        <th scope="col" rowspan="2">MTS1</th>
+                                        <th scope="col">날짜</th>
+                                        <th scope="col">발송 합계</th>
+                                        <th scope="col">총건수</th>
+                                        <th scope="col">생성건수</th>
+                                        <th scope="col">재시도</th>
+                                        <th scope="col" class="text-blue">발송건수</th>
+                                        <th scope="col" class="text-green">성공건수</th>
+                                        <th scope="col">UnknownUser</th>
+                                        <th scope="col">UnknownHost</th>
+                                        <th scope="col">SmtpExcept</th>
+                                        <th scope="col">Noroute</th>
+                                        <th scope="col">Refused</th>
+                                        <th scope="col">EtcExcept</th>
+                                        <th scope="col">InvalidAddress</th>
+                                    </tr>
+                                    <tr>
+                                        <td>2020-08-08 13:51</td>
+                                        <td>발송종료</td>
+                                        <td>3</td>
+                                        <td>3</td>
+                                        <td>1</td>
+                                        <td class="text-blue">3</td>
+                                        <td class="text-green">3</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+                                    <tr  class="thead-light">
+                                        <th scope="col">에러내용</th>
+                                        <td colspan="14"></td>
+                                    </tr>
+                            </table>
+                        </div>
+                        <!-- // Light table -->
                     </div>
                     <!-- //캠페인 tab -->
                 </div>
@@ -761,6 +870,7 @@
 
     </div>
 
-
+ 
+    
 
 </html>
