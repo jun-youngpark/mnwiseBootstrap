@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script>
+        $(function () {
+            $("#js").load("/js.html");
+        });
+    </script>
+</head>
+
+<body>
+    <div id="js"></div>
+
+    <div class="card pop-card">
+        <div class="card-header">
+            <h5 class="mb-0">LTS1 Config</h5>
+        </div>
+        <form>
+            <div class="card-body">
+                <textarea class="form-control" id="template" rows="30">
+                    ##################################################################################################
+# LTS 발송서버 config 파일
+# 작성자 : 장홍준
+# 작성일 : 2009-10-20
+##################################################################################################
+
+#------------------------------------------------------------------------------------------------#
+# 기본설정
+#------------------------------------------------------------------------------------------------#
+
+# 서버 소켓을 열 때 바인드할 주소(LTS 리스너 바이드 IP)
+bind.address=127.0.0.1
+
+                </textarea>
+            </div>
+
+            <div class="card-footer">
+                <button type="button" class="btn btn-outline-primary">저장</button>
+                <button type="button" class="btn btn-outline-primary" onclick="window.close()">취소</button>
+            </div>
+        </form>
+    </div>
+
+</html>

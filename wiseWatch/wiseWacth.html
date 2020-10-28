@@ -28,11 +28,11 @@
                 <!-- tab -->
                 <ul class="nav nav-tabs tab01">
                     <li class="nav-item">
-                        <a class="nav-link" id="process-tab" data-toggle="tab" href="#process" role="tab"
+                        <a class="nav-link active" id="process-tab" data-toggle="tab" href="#process" role="tab"
                             aria-controls="process" aria-selected="true">프로세스</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link  active" id="campaign-tab" data-toggle="tab" href="#campaign" role="tab"
+                        <a class="nav-link" id="campaign-tab" data-toggle="tab" href="#campaign" role="tab"
                             aria-controls="campaign" aria-selected="false">캠페인</a>
                     </li>
                     <li class="nav-item">
@@ -45,7 +45,7 @@
                 <!-- tab content -->
                 <div class="tab-content">
                     <!-- 프로세스 tab -->
-                    <div class="tab-pane" id="process" role="tabpanel" aria-labelledby="process-tab">
+                    <div class="tab-pane active" id="process" role="tabpanel" aria-labelledby="process-tab">
                         <h2 class="hide">프로세스</h2>
                         <h3 class="h3 text-primary my-2">LTS</h3>
 
@@ -75,7 +75,7 @@
 
                                     <div class="r_btn">
                                         <button type="button"
-                                            class="btn btn-sm btn-outline-default"><span>환경설정</span></button>
+                                            class="btn btn-sm btn-outline-default"  onclick="window.open('watch_config_server.html', '_blank', 'width=500,height=400')"><span>환경설정</span></button>
                                     </div>
                                 </div>
                                 <!-- //head -->
@@ -139,7 +139,7 @@
 
                                     <div class="r_btn">
                                         <button type="button"
-                                            class="btn btn-sm btn-outline-default"><span>환경설정</span></button>
+                                            class="btn btn-sm btn-outline-default" onclick="window.open('watch_config_server.html', '_blank', 'width=500,height=400')"><span>환경설정</span></button>
                                     </div>
                                 </div>
                                 <!-- //head -->
@@ -212,7 +212,7 @@
 
                                     <div class="r_btn">
                                         <button type="button"
-                                            class="btn btn-sm btn-outline-default"><span>환경설정</span></button>
+                                            class="btn btn-sm btn-outline-default" onclick="window.open('watch_config_server.html', '_blank', 'width=500,height=400')"><span>환경설정</span></button>
                                     </div>
                                 </div>
                                 <!-- //head -->
@@ -285,7 +285,7 @@
 
                                     <div class="r_btn">
                                         <button type="button"
-                                            class="btn btn-sm btn-outline-default"><span>환경설정</span></button>
+                                            class="btn btn-sm btn-outline-default" onclick="window.open('watch_config_server.html', '_blank', 'width=500,height=400')"><span>환경설정</span></button>
                                     </div>
                                 </div>
                                 <!-- //head -->
@@ -358,7 +358,7 @@
 
                                     <div class="r_btn">
                                         <button type="button"
-                                            class="btn btn-sm btn-outline-default"><span>환경설정</span></button>
+                                            class="btn btn-sm btn-outline-default" onclick="window.open('watch_config_server.html', '_blank', 'width=500,height=400')"><span>환경설정</span></button>
                                     </div>
                                 </div>
                                 <!-- //head -->
@@ -408,7 +408,7 @@
 
 
                     <!-- 캠페인 tab -->
-                    <div class="tab-pane  active" id="campaign" role="tabpanel" aria-labelledby="campaign-tab">
+                    <div class="tab-pane" id="campaign" role="tabpanel" aria-labelledby="campaign-tab">
                         <!-- radio box-->
                         <div class="radioWrap  py-2">
                             <div class="custom-control custom-radio custom-control-inline mr-1">
@@ -437,7 +437,7 @@
                             </div>
                             <div class="custom-control custom-radio custom-control-inline mr-1 pl-0">
                             <span class="h5">* 새로고침 자동실행 <button
-                                    class="btn btn-xs btn-outline-primary btn-round btn-icon">
+                                    class="btn btn-xs btn-outline-primary btn-round btn-icon ml-1">
                                     멈춤
                                 </button> </span>
                                 </div>
@@ -636,7 +636,7 @@
 
                     <!-- ecare tab -->
                     <div class="tab-pane " id="ecare" role="tabpanel" aria-labelledby="ecare-tab">
-                        <!-- radio box-->
+                        <!-- radio box
                         <div class="radioWrap  py-2">
                             <div class="custom-control custom-radio custom-control-inline  mr-1">
                                 <input type="radio" id="eLately01" name="eLately" class="custom-control-input" />
@@ -670,7 +670,7 @@
                                 </div>
 
                         </div>
-                        <!-- radio box-->
+                       -->
                         <!--  row -->
                         <div class="row align-items-center py-1 table_option">
                             <!-- buttons -->
@@ -693,6 +693,29 @@
                                 </button>
                             </div>
                             <!-- e.buttons -->
+                            <!-- search -->
+                        <div class="col-auto searchWrap">
+                            <div class="r_btn ">
+                                <span  class="h5">* 새로고침 자동실행</span>
+                                <button type="button"
+                                    class="btn btn-xs btn-outline-danger btn-round btn-icon "><span>멈춤</span></button>
+                            </div>
+                            <div class="form-group searchbox">
+                                <select class="form-control form-control-sm">
+                                    <option>최근 10개</option>
+                                    <option>최근 20개</option>
+                                    <option>최근 50개</option>
+                                    <option>최근 100개</option>
+                                    <option>최근 15일 전</option>
+                                    <option>최근 30일 전</option>
+                                </select>
+                                
+                              
+                            </div>
+                           
+                        </div>
+                        <!-- //search -->
+
                         </div>
                         <!--//row -->
                         <!-- Light table -->
