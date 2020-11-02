@@ -25,7 +25,7 @@
         <div class="card-body">
             <form>
                 <!-- Light table -->
-                <div class="table-responsive newgridWrap">
+                <div class="table-responsive newgridWrap" style="position:fixed; top:0;">
                     <table class="table table-sm dataTable">
                         <colgroup>
                             <col style="width:15%;" />
@@ -42,16 +42,66 @@
                                 <td> <input type="text" class="form-control form-control-sm" placeholder="" required />
                                 </td>
                             </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <!--  Light table -->
+                <div class="table-responsive newgridWrap ">
+                    <table class="table table-sm dataTable">
+                        <colgroup>
+                            <col style="width:15%;" />
+                            <col style="width:34%;" />
+                            <col style="width:17%;" />
+                            <col style="width:34%;" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th scope="row">To</th>
+                                <td colspan="3">test@mnwise.com</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">From</th>
+                                <td colspan="3">admin@mnwise.com </td>
+                            </tr>
+
                             <tr>
                                 <th scope="row">제목</th>
                                 <td colspan="3">test </td>
                             </tr>
                             <tr>
-                                <td colspan="4">[엠앤와이즈]테스트템플릿입니다.</td>
+                                <td colspan="2"><a href="#" download><i class="fas fa-download"></i> test.html</a></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <!--img-->
+                                    <div class="img"><img src="https://img01.carrym.com/mnwise/2020_news11/11월.png"
+                                            alt=""></div>
+                                    [엠앤와이즈]테스트템플릿입니다.
+                                </td>
+                            </tr>
+                            <!--PUSH-->
+                            <tr>
+                                <th scope="row">운영체제</th>
+                                <td colspan="3">Android </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">수신확인</th>
+                                <td colspan="3"> </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">알림 메시지</th>
+                                <td colspan="3">통합테스트입니다. 김길동 </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">앱 내 메시지</th>
+                                <td colspan="3">통합테스트입니다 </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
+                <!-- Light table -->
         </div>
         <div class="card-footer">
             <button type="button" class="btn btn-outline-primary">발송</button>
