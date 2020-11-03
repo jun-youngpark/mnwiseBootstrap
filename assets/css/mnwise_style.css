@@ -59,6 +59,12 @@ body {font-family:'Roboto', 'Nanum Gothic', 'Noto Sans KR', sans-serif; backgrou
 
 .dp-flex{display: flex ;}
 
+/*** testSend_popup ***/
+.row-btn-border-bottom{  border-bottom: 1px solid#e9ecef;}
+.form-control-xs{ height: calc(1.25rem + 5px);}
+.custom-file.custom-file-xs{height:25px;}
+.custom-file-label-xs{height: calc(1.25rem + 6px);  padding-top: .25rem; padding-bottom: calc(.25rem + 2px); overflow: hidden; padding-left:.45em; }
+.custom-file-label-xs::after{height: calc(1.25rem + 5px); padding-top: .25rem; padding-bottom: calc(.25rem + 2px); font-size: .75rem; }
 
 
 /*** input-file**/
@@ -445,7 +451,6 @@ ex, campaign/campaign_2step_mail_form.html 수신확인 체크박스
 /*table 첫행 고정*/
 
 .fixed_top th, .fixed_top td{ position: -webkit-sticky; position: sticky; top:-1px; padding:8px 0; background: #fafcfd;  z-index: 2; }
-
 .fixed_top th:after, .fixed_top th:before{ content: ''; position: absolute; left: 0; width: 100%;}
 .fixed_top td:after, .fixed_top td:before{ content: ''; position: absolute; left: 0; width: 100%;}
 .fixed_top th:before{ top: 0; border-top: 1px solid #e9ecef; }

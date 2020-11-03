@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script src="../assets/js/jstree.js"></script>
+        <link rel="stylesheet" href="../assets/css/default/style.css" />
+
+        <script>
+            $(function () {
+                $("#subNav").load("../subNav.html");
+                $("#js").load("../js.html");
+                $("#headerTop").load("../headerTop.html");
+
+                $("#jstree").jstree({
+
+                    "plugins": ["wholerow", "contextmenu"]
+                });
+            });
+        </script>
+    </head>
+
+<body>
+    <div id="js"></div>
+
+    <div class="card pop-card">
+        <div class="card-header">
+            <h5 class="mb-0">테스트 발송</h5>
+        </div>
+
+        <!-- card body -->
+        <div class="card-body">
+            <div class="container-fluid my-2">
+                <!-- row -->
+                <div class="row code-set overflow-hidden">
+                    <!-- col-3  Card body 트리 -->
+                    <div class="col-3 px-0">
+                        <!-- buttons -->
+                        <div class="row  m-0   py-2 pr-2 overflow-bg overflow-bg-title row-btn-border-bottom">
+                            <span class="ml-2"> 사용자리스트</span>
+                            <div class="col text-right pr-0">
+                                <button class="btn btn-xs btn-outline-primary btn-icon ">
+                                    <span class="btn-inner--icon"><i class="fas fa-plus"></i></span><span
+                                        class="btn-inner--text">등록</span>
+                                </button>
+                                <button class="btn btn-xs btn-outline-primary btn-icon ">
+                                    <span class="btn-inner--icon"><i class="fas fa-eye"></i></span><span
+                                        class="btn-inner--text">수정</span>
+                                </button>
+                                <button class="btn btn-xs btn-outline-primary btn-icon list-view">
+                                    <span class="btn-inner--icon"><i class="fas fa-list"></i></span><span
+                                        class="btn-inner--text">삭제</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- //buttons -->
+                        <div id="jstree" class="treeview_top overflow-auto">
+                            <!-- ◀ 스크롤 제거시 class=" overflow-auto 제거" -->
+
+                            <ul>
+                                <li>mnwise
+                                    <ul>
+                                        <li class="treeview_sub">Developer Team
+                                            <ul>
+                                                <li>R&D Part</li>
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- // jstree-->
+
+                    </div>
+                    <!-- //col-3  Card body 트리 -->
+
+                    <!-- col-9  부서정보 -->
+                    <div class="col-9 px-0">
+                        <!-- buttons -->
+                        <div class="row m-0 justify-content-end py-2 overflow-bg overflow-bg-title pr-2">
+                            <button class="btn btn-xs btn-outline-primary btn-icon" id="add_address">
+                                <span class="btn-inner--icon"><i class="fas fa-plus"></i></span><span
+                                    class="btn-inner--text">주소록 추가</span>
+                            </button>
+                            <button class="btn btn-xs btn-outline-primary btn-icon " id="upload_file">
+                                <span class="btn-inner--icon"><i class="fas fa-file-upload"></i></span><span
+                                    class="btn-inner--text">파일올리기</span>
+                            </button>
+                            <button class="btn btn-xs btn-outline-primary btn-icon list-view delet">
+                                <span class="btn-inner--icon"><i class="fas fa-trash"></i></span><span
+                                    class="btn-inner--text">삭제</span>
+                            </button>
+                        </div>
+                        <!-- //buttons -->
+
+                        <!--table-->
+                        <div class="table-responsive overflow-auto mt--1">
+                            <table class="table table-xs dataTable">
+                                <thead class="thead-light">
+                                    <tr class="fixed_top">
+                                        <th>
+                                            <div class="custom-control custom-checkbox ">
+                                                <input type="checkbox " id="c_r1" name="c_r "
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="c_r1"></label>
+                                            </div>
+                                        </th>
+                                        <th><b>No</b></td>
+                                        <th><b>이름</b></td>
+                                        <th><b>이메일</b></td>
+                                        <th><b>전화</b></td>
+                                        <th><b>팩스</b></td>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="custom-control custom-checkbox ">
+                                                <input type="checkbox " id="c_r1" name="c_r "
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="c_r1"></label>
+                                            </div>
+                                        </th>
+                                        <td>1</td>
+                                        <td>홍길동</td>
+                                        <td>ghlee08@mnwise.com </td>
+                                        <td>02-111-1111</td>
+                                        <td>02-1222-2222</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <div class="custom-control custom-checkbox ">
+                                                <input type="checkbox " id="c_r2" name="c_r "
+                                                    class="custom-control-input" />
+                                                <label class="custom-control-label" for="c_r2"></label>
+                                            </div>
+                                        </th>
+                                        <td>1</td>
+                                        <td>admin</td>
+                                        <td>ghlee08@mnwise.com</td>
+                                        <td>02-111-1111</td>
+                                        <td>02-1222-2222</td>
+                                    </tr>
+
+
+                                    <!-- // 환경설정 -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--table-->
+
+                    </div>
+                    <!-- // col-9  부서정보 -->
+                </div> <!-- // row -->
+                <!-- row  buttons-->
+                <div class="row  justify-content-end py-2 pr-2 overflow-bg-title ">
+                    <button class="btn btn-xs btn-outline-primary btn-icon ">
+                        <span class="btn-inner--icon"><i class="fas fa-plus"></i></span><span
+                            class="btn-inner--text">발송</span>
+                    </button>
+                    <button class="btn btn-xs btn-outline-primary btn-icon ">
+                        <span class="btn-inner--icon"><i class="fas fa-eye"></i></span><span class="btn-inner--text">테스트
+                            발송 결과보기</span>
+                    </button>
+                    <button class="btn btn-xs btn-outline-primary btn-icon list-view">
+                        <span class="btn-inner--icon"><i class="fas fa-list"></i></span><span
+                            class="btn-inner--text">열기</span>
+                    </button>
+                </div>
+                <!-- // row  buttons -->
+            </div>
+            <!-- Light table -->
+
+
+            <!--그룹 등록 수정-->
+            <div class="mb-2">
+                <!-- buttons -->
+                <div class="row  m-0 py-2 pr-2 overflow-bg overflow-bg-title row-btn">
+                    <span class="ml-2"> 그룹</span>
+                    <div class="col text-right pr-0">
+                        <button class="btn btn-xs btn-outline-primary btn-icon ">
+                            <span class="btn-inner--icon"><i class="fas fa-save"></i></span><span
+                                class="btn-inner--text">저장</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- //buttons -->
+                <div class="table-responsive newgridWrap mt--2">
+                    <table class="table table-xs dataTable">
+                        <colgroup>
+                            <col style="width:10%;" />
+                            <col style="width:30%;" />
+                            <col style="width:10%;" />
+                            <col style="width:50%;" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>상위그룹</th>
+                                <td>MNWISE</td>
+
+                                <th><em class="required">required</em>그룹명</th>
+                                <td><input type="text" class="form-control form-control-xs" placeholder="" required />
+                                </td>
+                             
+                            </tr>
+                           
+                        </tbody>
+                    </table>
+                </div>
+                <!-- //Light table -->
+            </div>
+            <!-- //그룹 등록 수정-->
+
+
+            <!-- 주소록 추가, 파일올리기, 테스트 발송결과 보기 -->
+            <!-- 1. 주소록 -->
+            <div class="mb-2">
+                <!-- buttons -->
+                <div class="row  m-0 py-2 pr-2 overflow-bg overflow-bg-title row-btn">
+                    <span class="ml-2"> 주소록</span>
+                    <div class="col text-right pr-0">
+                        <button class="btn btn-xs btn-outline-primary btn-icon ">
+                            <span class="btn-inner--icon"><i class="fas fa-save"></i></span><span
+                                class="btn-inner--text">저장</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- //buttons -->
+                <div class="table-responsive newgridWrap mt--2">
+                    <table class="table table-xs dataTable">
+                        <colgroup>
+                            <col style="width:10%;" />
+                            <col style="width:20%;" />
+                            <col style="width:10%;" />
+                            <col style="width:20%;" />
+                            <col style="width:10%;" />
+                            <col style="width:30%;" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>부서</th>
+                                <td>TESTER</td>
+
+                                <th><em class="required">required</em>이름</th>
+                                <td><input type="text" class="form-control form-control-xs" placeholder="" required />
+                                </td>
+                                <th><em class="required">required</em>이메일</th>
+                                <td><input type="text" class="form-control form-control-xs" placeholder="" required />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>전화</th>
+                                <td><input type="text" class="form-control form-control-xs" placeholder="" required />
+                                </td>
+
+                                <th><em class="required">required</em>팩스</th>
+                                <td><input type="text" class="form-control form-control-xs" placeholder="" required />
+                                </td>
+                                <td colspan="2"></td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- //Light table -->
+            </div>
+            <!-- // 1. 주소록 -->
+
+            <!-- 2. 파일올리기 -->
+            <div class="mb-2 ">
+                <!-- buttons -->
+                <div class="row  m-0 py-2 pr-2 overflow-bg overflow-bg-title row-btn">
+                    <span class="ml-2"> 파일업로드</span>
+                    <div class="col text-right pr-0">
+                        <button class="btn btn-xs btn-outline-primary btn-icon ">
+                            <span class="btn-inner--icon"><i class="fas fa-save"></i></span><span
+                                class="btn-inner--text">저장</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- //buttons -->
+                <!--Light table-->
+                <div class="table-responsive newgridWrap mt--2">
+                    <table class="table table-xs dataTable">
+                        <colgroup>
+                            <col style="width:10%;" />
+                            <col style="width:20%;" />
+                            <col style="width:10%;" />
+                            <col style="width:60%;" />
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <td colspan="4">(※ 주소록 파일 형식은 '이름','이메일','전화번호','팩스' 순으로 작성하고 없는항목은 공백으로 처리해야 하며 첫줄에 헤더가
+                                    들어가서는 안됩니다.)</td>
+                            </tr>
+                            <tr>
+                                <th>부서</th>
+                                <td>TESTER</td>
+
+                                <th><em class="required">required</em>파일 선택</th>
+                                <td>
+                                    <div class="custom-file custom-file-xs">
+                                        <input type="file" class="custom-file-input custom-file-input-xs"
+                                            id="customFileLang" lang="ko">
+                                        <label class="custom-file-label custom-file-label-xs mb-0"
+                                            for="customFileLang"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- //Light table -->
+            </div>
+            <!-- // 2. 파일올리기 -->
+
+            <!--3. 테스트 발송결과-->
+
+            <!--table-->
+            <div class="table-responsive overflow-auto mt--1">
+                <table class="table table-xs dataTable">
+                    <thead class="thead-light">
+                        <tr class="fixed_top">
+                            <th><b>No</b></td>
+                            <th><b>수신자 이메일</b></td>
+                            <th><b>수신자 이름</b></td>
+                            <th><b>발송일</b></td>
+                            <th><b>발송결과</b></td>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>hlee08@mnwise.com </td>
+                            <td>홍길동</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!--table-->
+
+            <!--// 3. 테스트 발송결과-->
+            <!-- pagenation -->
+            <div class="pagination pagination-sm mb-0 pb-2 pt-1 justify-content-center">
+                <ul class="pagination">
+                    <li class="paginate_button page-item previous" id="datatable-basic_previous"><a href="#"
+                            aria-controls="datatable-basic" class="page-link"><i class="fas fa-angle-left"></i></a></li>
+                    <li class="paginate_button page-item active"><a href="#" aria-controls="datatable-basic"
+                            class="page-link">1</a></li>
+                    <li class="paginate_button page-item next" id="datatable-basic_next"><a href="#"
+                            aria-controls="datatable-basic" class="page-link"><i class="fas fa-angle-right"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- e.pagenation -->
+
+
+        </div>
+        <!-- // card body -->
+
+
+        <div class="card-footer">
+            <button type="button" class="btn btn-outline-primary" onclick="window.close()">닫기</button>
+        </div>
+        </form>
+    </div>
+
+
+
+    <!--
+    <script>
+
+$(document).ready(function () {
+    btnFnc()
+    });
+
+    // table top button & search ui
+    function btnFnc() {
+      
+        $('.btn').on('click', function () {
+            var target = $(this).attr("class");
+            alert(target)   
+
+            if()
+            })
+    };
+
+       
+    </script>
+
+ -->
+
+</html>
