@@ -433,11 +433,28 @@ ex, campaign/campaign_2step_mail_form.html 수신확인 체크박스
 .code-set .overflow-auto{max-height:503px;}
 .code-set .col-3{border-right:1px solid  #e9ecef;}
 
-.authority-list-wrap{min-height:300px;border-top:1px solid  #e9ecef;  border-bottom:1px solid  #e9ecef;}
+.authority-list-wrap{min-height:300px;}
 .authority-list-wrap .overflow-auto{max-height:530px;}
 
+.previous-template-wrap{min-height:500px;}
+.previous-template-wrap .overflow-auto{max-height:830px;}
+
+      
+
+
 /*table 첫행 고정*/
-.fixed_top th{ position: sticky; top: 0px; padding:8px 0; background: #fafcfd;  border-bottom:1px solid #e9ecef; z-index: 2;  }
+
+.fixed_top th, .fixed_top td{ position: -webkit-sticky; position: sticky; top:-1px; padding:8px 0; background: #fafcfd;  z-index: 2; }
+
+.fixed_top th:after, .fixed_top th:before{ content: ''; position: absolute; left: 0; width: 100%;}
+.fixed_top td:after, .fixed_top td:before{ content: ''; position: absolute; left: 0; width: 100%;}
+.fixed_top th:before{ top: 0; border-top: 1px solid #e9ecef; }
+.fixed_top th:after{ bottom: 0;  border-bottom: 1px solid#e9ecef;}
+.fixed_top td:before{ top: 0; border-top: 1px solid #e9ecef; }
+.fixed_top td:after{ bottom: 0;  border-bottom: 1px solid#e9ecef;}
+       
+
+
 .th-bg{background:#fafcfd}
 .overflow-bg{background: #f6f9fc; font-weight: bold; color:#8898aa; font-size: .8125rem}
 .overflow-bg-title{ border-top:1px solid #e9ecef; }
