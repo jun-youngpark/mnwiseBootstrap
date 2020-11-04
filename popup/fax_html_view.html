@@ -31,7 +31,7 @@
                         <option>이름</option>
                         <option>이메일</option>
                     </select>
-                    <input type="search" class="form-control form-control-sm" placeholder=""
+                    <input type="search" class="form-control form-control-sm" placeholder=""fselect
                         aria-controls="datatable-basic" />
                     <button class="btn btn-sm btn-outline-info btn-icon btn_search">
                         <span class="btn-inner--icon"><i class="fas fa-search"></i></span><span
@@ -282,7 +282,7 @@
             /* 권한보기 이벤트 */
             $('.list-view').on('click', function () {
                 var target = $('.authority-list-wrap').hasClass('dp-none');
-                var cn = $('.btn-inner--text')
+                var cn = $('.list-view .btn-inner--text')
                 if(target === true){
                     $(".authority-list-wrap").removeClass('dp-none');
                     $(cn).text("리스트 숨기기");
