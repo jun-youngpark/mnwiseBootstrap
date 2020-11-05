@@ -67,6 +67,8 @@ body {font-family:'Roboto', 'Nanum Gothic', 'Noto Sans KR', sans-serif; backgrou
 .custom-file-label-xs::after{height: calc(1.25rem + 5px); padding-top: .25rem; padding-bottom: calc(.25rem + 2px); font-size: .75rem; }
 
 
+.fax-mail-view{border:1px solid #efefef; padding:1rem; min-height:300px; }
+
 /*** input-file**/
 .custom-file-input:lang(ko) ~ .custom-file-label::after{content: '파일 선택';}
 .custom-file-input {display:none;}
