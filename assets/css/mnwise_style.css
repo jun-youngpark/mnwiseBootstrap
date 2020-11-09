@@ -14,6 +14,12 @@ body {font-family:'Roboto', 'Nanum Gothic', 'Noto Sans KR', sans-serif; backgrou
 .wrapper { min-width:1260px;  max-width:none !important;  position: relative; top: 0;  min-height: 100vh; padding-left:220px; }
 .sidebar {position: fixed;  top: 0; bottom: 0;  left: 0;  z-index: 50; width: 220px;  background: #172b4d; border:none; }
 .sidebar .sidebar-wrapper{position: relative;  height: calc(100vh - 75px); overflow-y: auto ; overflow-x: hidden; width: 220px; z-index: 4;  padding-bottom: 10px;}
+
+/*스크롤 변경건*/
+.sidebar .sidebar-wrapper::-webkit-scrollbar { width: 10px; }
+  .sidebar .sidebar-wrapper::-webkit-scrollbar-thumb { background-color:  #8898aa;  border-radius: 10px;}
+  .sidebar .sidebar-wrapper::-webkit-scrollbar-track {background-color: #adb5bd;  border-radius: 10px; }
+
  
 .navbar-vertical .navbar-nav {margin:0;}
 
