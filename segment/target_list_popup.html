@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script>
+    $(function () {
+        $("#js").load("/js.html");
+    });
+
+    
+
+    </script>
+</head>
+
+<body>
+<div id="js"></div>
+
+<div class="card pop-card">
+    <div class="card-header">
+        <h5 class="mb-0">대상자 추가</h5>
+    </div>
+
+    <div class="card-body">
+        <!-- Light table -->
+        <div class="table-responsive newgridWrap">
+            <table class="table table-sm dataTable">
+                <colgroup>
+                    <col style="width:30%;" />
+                    <col />
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">아이디</th>
+                        <td><input type="text" class="form-control form-control-sm" /></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">이름</th>
+                        <td><input type="text" class="form-control form-control-sm" /></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">이메일</th>
+                        <td><input type="text" class="form-control form-control-sm" /></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">고객 휴대폰</th>
+                        <td><input type="text" class="form-control form-control-sm" /></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- //Light table -->
+    </div>
+
+    <div class="card-footer">
+        <button type="button" class="btn btn-outline-primary">저장</button>
+        <button type="button" class="btn btn-outline-default">취소</button>
+    </div>
+</div>
+
+</html>
