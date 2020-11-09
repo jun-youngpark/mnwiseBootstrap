@@ -11,7 +11,7 @@
         $(function () {
             $("#subNav").load("../subNav.html");
             $("#js").load("../js.html");
-            
+            $("#headerTop").load("../headerTop.html");
         });
     </script>
 </head>
@@ -21,36 +21,27 @@
     <div class="wrapper">
         <!-- 메뉴 -->
         <div id="subNav"></div>
+        <div id="headerTop"></div>
         <div id="js"></div>
         <!-- //메뉴-->
 
         <!-- Contents area -->
         <div class="main-panel">
-            <div class="logout-box px-3 pt-2 text-right ">
-                <div class="logout"> mnwise2 / <a href="index.html" class="pr-2"> 로그아웃</a> 
-                    <button
-                        class="btn btn-sm btn-outline-primary btn-icon"  onclick="window.open('wiseWacth.html', '_blank', 'width=800,height=500')">
-                        <span class="btn-inner--icon"><i class="fas fa-external-link-alt"></i></span><span
-                            class="btn-inner--text ">wiseWacth</span>
-                    </button>
-                </div>
-            </div>
             <!-- Page content -->
             <div class="container-fluid mb-2">
                 <!-- card -->
                 <div class="card">
                     <!-- Card header -->
                     <div class="card-header">
-                        <div class="row">
-                            <!-- title  -->
-                            <div class="col-8">
-                                <h3 class="mb-0">캠페인 등록 (기본정보)</h3>
-                            </div>
-                            <!-- //title -->
-
-                            <!-- step -->
-                            <div class="col-4 row pr-0 justify-content-end">
-                                <ul class="stepWrap">
+                        <h3 class=" mb-0">캠페인 등록 (기본정보)</h3>
+                    </div>
+                    <!-- e.Card header -->
+                    <!-- form -->
+                    <form>
+                        <!-- grid -->
+                        <div class="card-body newgridWrap">
+                            <div class="col-12 row pr-0 justify-content-end">
+                                <ul class="stepWrap ">
                                     <li class="current">
                                         <div class="box"><span class="txt">STEP</span><strong>1</strong></div>
                                     </li>
@@ -62,14 +53,6 @@
                                     </li>
                                 </ul>
                             </div>
-                            <!-- e.step -->
-                        </div>
-                    </div>
-                    <!-- e.Card header -->
-                    <!-- form -->
-                    <form>
-                        <!-- grid -->
-                        <div class="card-body newgridWrap">
                             <!-- Light table -->
                             <div class="table-responsive">
                                 <table class="table table-sm dataTable">
@@ -179,36 +162,87 @@
                                 </table>
                             </div>
                             <!-- // Light table -->
-                            <!-- button area -->
-                            <div class="card-footer pb-4 btn_area">
-                                <div class="row">
-                                    <div class="col col-6">
-                                        <button type="submit" class="btn btn btn-outline-primary btn-icon">
-                                            <span class="btn-inner--icon"><i class="fas fa-save"></i></span><span
-                                                class="btn-inner--text">저장</span>
-                                        </button>
-                                    </div>
-                                    <div class="col col-6">
-                                        <button type="button" class="btn btn btn-outline-info btn-icon">
-                                            <span class="btn-inner--text mr-2">다음단계</span><span
-                                                class="btn-inner--icon"><i class="fas fa-chevron-right"></i></span>
-                                        </button>
-                                    </div>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="h3 text-primary mt-3 mb-2">옴니채널 메시지 워크플로우</h1> <!-- 기존 mb-3 -->
+                            <!-- Light table -->
+                            <div class="table-responsive col-6 p-0">
+                                <table class="table table-sm dataTable">
+                                    <thead class="thead-light">
+                                        <tr>
+                                            <th scope="col">번호</th>
+                                            <th scope="col">서비스 명</th>
+                                            <th scope="col">채널</th>
+                                            <th scope="col">수행상태</th>
+                                            <th scope="col">대상자수</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>348</td>
+                                            <td class="text-left">
+                                                <a href="#!" class="font-weight-bold">PUSH test</a>
+                                            </td>
+                                            <td><em class="txt_channel p">P</em></td>
+                                            <td>중지</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                           
+                                            <td>348</td>
+                                            <td class="text-left">
+                                                <a href="#!" class="font-weight-bold list_depth depth2"><em
+                                                    class="depth_type f">Fail</em>PUSH test</a>
+                                            </td>
+                                            <td><em class="txt_channel">E</em></td>
+                                            <td>작성중</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>348</td>
+                                            <td class="text-left">
+                                                <a href="#!" class="font-weight-bold list_depth depth2"><em
+                                                    class="depth_type s">Success</em>PUSH test</a>
+                                            </td>
+                                            <td><em class="txt_channel">E</em></td>
+                                            <td>작성중</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- e.Light table -->
+                        </div>
+                        <!-- button area -->
+                        <div class="card-footer pb-4 btn_area">
+                            <div class="row">
+                                <div class="col col-6">
+                                    <button type="submit" class="btn btn btn-outline-primary btn-icon">
+                                        <span class="btn-inner--icon"><i class="fas fa-save"></i></span><span
+                                            class="btn-inner--text">저장</span>
+                                    </button>
+                                </div>
+                                <div class="col col-6">
+                                    <button type="button" class="btn btn btn-outline-info btn-icon">
+                                        <span class="btn-inner--text mr-2">다음단계</span><span class="btn-inner--icon"><i
+                                                class="fas fa-chevron-right"></i></span>
+                                    </button>
                                 </div>
                             </div>
-                            <!-- e.button area -->
-                            <div class="card-footer pb-4 btn_area">
-                                <div class="row">
-                                    <div class="col col-12">
-                                        <a href="campaign_2step_mail_form.html">메일 에디터 2step 바로가기</a><br>
-                                        <a href="campaign_2step_brandtalk_form.html">브랜드톡 에디터 2step 바로가기</a><br>
-                                        <a href="campaign_2step_sms_form.html">sms 에디터 2step 바로가기</a><br>
-                                        <a href="campaign_2step_mms_form.html">mms 2step 바로가기</a><br>
-                                        <a href="campaign_2step_push_form.html">push 2step 바로가기</a><br>
-                                        <a href="campaign_2step_fax_form.html">fax 2step 바로가기</a><br>
-                                        <a href="campaign_3step_form.html">3단계 바로가기</a><br>
-                                    </div>
+                        </div>
+                        <!-- e.button area -->
+                        <div class="card-footer pb-4 btn_area">
+                            <div class="row">
+                                <div class="col col-12">
+                                    <a href="campaign_2step_mail_form.html">메일 에디터 2step 바로가기</a><br>
+                                    <a href="campaign_2step_brandtalk_form.html">브랜드톡 에디터 2step 바로가기</a><br>
+                                    <a href="campaign_2step_sms_form.html">sms 에디터 2step 바로가기</a><br>
+                                    <a href="campaign_2step_mms_form.html">mms 2step 바로가기</a><br>
+                                    <a href="campaign_2step_push_form.html">push 2step 바로가기</a><br>
+                                    <a href="campaign_2step_fax_form.html">fax 2step 바로가기</a><br>
+                                    <a href="campaign_3step_form.html">3단계 바로가기</a><br>
                                 </div>
+                            </div>
                     </form>
                     <!-- //form -->
 

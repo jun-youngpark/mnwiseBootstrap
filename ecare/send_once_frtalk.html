@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script>
+        $(function () {
+            $("#subNav").load("../subNav.html");
+            $("#js").load("../js.html");
+            $("#headerTop").load("../headerTop.html");
+        });
+    </script>
+</head>
+
+<body>
+    <!-- wrapper -->
+    <div class="wrapper">
+        <!-- 메뉴 -->
+        <div id="subNav"></div>
+        <div id="js"></div>
+        <div id="headerTop"></div>
+        <!-- //메뉴-->
+
+        <!-- Contents area -->
+        <div class="main-panel">
+            <!-- Page content -->
+            <div class="container-fluid mt-4 mb-2">
+
+                <!-- card -->
+                <div class="card">
+                    <!-- Card header -->
+                    <div class="card-header">
+                        <h3 class="mb-0">단건발송 - 친구톡(메시지작성)</h3>
+                    </div>
+                    <!-- e.Card header -->
+
+                    <!-- form -->
+                    <form>
+
+                        <!-- card body -->
+                        <div class="card-body">
+                              <!-- tabs -->
+                              <ul class="nav nav-tabs tab02 mb-4" id="tabs-text">
+                                <li class="nav-item">
+                                    <a class="nav-link mb-sm-3 mb-md-0 " href="send_once_sms.html">sms</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link mb-sm-3 mb-md-0" href="send_once_lms.html">lms</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link mb-sm-3 mb-md-0" href="send_once_altalk.html">알림톡</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link mb-sm-3 mb-md-0 active" href="send_once_frtalk.html">친구톡</a>
+                                </li>
+                            </ul>
+                            <!-- //tabs -->
+                            <!-- Light table -->
+                            <div class="table-responsive newgridWrap">
+                                <table class="table table-sm dataTable">
+                                    <colgroup>
+                                        <col style="width:15%;" />
+                                        <col style="width:35%;" />
+                                        <col style="width:15%;" />
+                                        <col style="width:35%;" />
+
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row"><em class="required">required</em>플러스친구ID</th>
+                                            <td><select class="col form-control form-control-sm">
+                                                    <option value="">엠앤와이즈</option>
+                                                    <option value=""></option>
+                                                </select></td>
+                                            <th scope="row"><em class="required">required</em>광고문구표기여부</th>
+                                            <td>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="mark1" name="mark"
+                                                        class="custom-control-input" />
+                                                    <label class="custom-control-label" for="mark1">표기함</label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="mark2" name="mark"
+                                                        class="custom-control-input" />
+                                                    <label class="custom-control-label" for="mark2">표기 안함</label>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><em class="required">required</em>고객 핸드폰 번호</th>
+                                            <td><input type="number"
+                                                    class="form-control form-control-sm d-inline-block w-auto"
+                                                    placeholder="" /> (숫자만 입력)</td>
+                                            <th scope="row"><em class="required">required</em>실패건 문자발송여부</th>
+                                            <td>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="send1" name="send"
+                                                        class="custom-control-input" />
+                                                    <label class="custom-control-label" for="send1">발송함 </label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="send2" name="send"
+                                                        class="custom-control-input" />
+                                                    <label class="custom-control-label" for="send2">발송 안함</label>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"><em class="required">required</em>발신자 번호</th>
+                                            <td><input type="number"
+                                                    class="form-control form-control-sm  d-inline-block w-auto"
+                                                    placeholder="" /> (숫자만 입력)</td>
+                                                    <th scope="row">LMS/MMS 제목	</th>
+                                                    <td><input type="text"
+                                                            class="form-control form-control-sm"
+                                                            placeholder="" /> </td>
+                                                    
+                                        </tr>
+                                        <tr>
+                                       
+                                            <th scope="row"><em class="required">required</em>발송일시</th>
+                                            <td colspan="3">
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="send1" name="send"
+                                                        class="custom-control-input" />
+                                                    <label class="custom-control-label" for="send1">즉시발송 [ <span
+                                                            class="display-block mb-1" id="clock"></span> ] </label>
+                                                </div>
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                    <input type="radio" id="sendTime2" name="sendTime"
+                                                        class="custom-control-input" />
+                                                    <label class="custom-control-label mt-1 mr-2" for="sendTime2">예약발송</label>
+
+                                                   <span>
+                                                    <div class="input-group date datepicker-inline d-inline-block w-auto ">
+                                                        <input class="form-control form-control-sm" type="date" value=""
+                                                        id="example-date-input">
+                                                    </div>
+                                                 
+                                                    <div class="input-group date datepicker-inline   d-inline-block w-auto ml-2">
+                                                        <input class="form-control form-control-sm " type="time"
+                                                        value="10:30:00" id="example-time-input">
+                                                    </div>
+                                                   </span>
+                                                       
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- //Light table -->
+                        </div>
+                        <!-- //card body -->
+
+                        <!-- message -->
+                        <div class="card-body message_contents">
+                            <div class="row">
+                                <!-- mobile preview -->
+                                <div class="col col-phone">
+                                    <div class="phone_preview">
+                                        <div class="preview_box">
+                                            <div class="tit form-group">
+                                                <select class="col form-control form-control-sm">
+                                                    <option value="">개인화 정보</option>
+                                                    <option value=""></option>
+                                                </select>
+                                            </div>
+                                            <div class="text"><textarea rows="10" cols="20"
+                                                    class="form-control"></textarea></div>
+                                        </div>
+                                        <span class="letter_count"><em>0</em> bytes</span>
+                                    </div>
+                                </div>
+                                <!-- //mobile preview -->
+
+                                <!-- message list -->
+                                <div class="col">
+                                    <!-- tab -->
+                                    <ul class="nav nav-tabs tab01">
+
+                                        <li class="nav-item">
+                                            <a class="nav-link active" id="image-tab" data-toggle="tab" href="#image"
+                                                role="tab" aria-controls="image" aria-selected="true">이미지</a>
+                                        </li>
+                                    </ul>
+                                    <!-- //tab -->
+                                    <!-- tab content -->
+                                    <div class="tab-content">
+
+                                        <!-- 이미지 tab -->
+                                        <div class="tab-pane active" id="image" role="tabpanel"
+                                            aria-labelledby="image-tab">
+                                            <div class="msgsample_list image_type">
+                                                <ul>
+                                                    <li>
+                                                        <div class="image-area"><img
+                                                                src="http://wiseu-demo.carrym.com:8080/template/mobile/20200525/212/dog.jpg"
+                                                                alt="" /></div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="image-area"><img
+                                                                src="http://wiseu-demo.carrym.com:8080/template/mobile/20200525/212/dog.jpg"
+                                                                alt="" /></div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="image-area"><img
+                                                                src="http://wiseu-demo.carrym.com:8080/template/mobile/20200525/212/dog.jpg"
+                                                                alt="" /></div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- // 이미지 tab -->
+
+                                            <!-- pagenation -->
+                                            <div class="pagination pagination-sm mb-0 pb-2 pt-1 justify-content-center">
+                                                <ul class="pagination">
+                                                    <li class="paginate_button page-item previous disabled"
+                                                        id="datatable-basic_previous"><a href="#"
+                                                            aria-controls="datatable-basic" data-dt-idx="0" tabindex="0"
+                                                            class="page-link"><i class="fas fa-angle-left"></i></a></li>
+                                                    <li class="paginate_button page-item active"><a href="#"
+                                                            aria-controls="datatable-basic" data-dt-idx="1" tabindex="0"
+                                                            class="page-link">1</a></li>
+                                                    <li class="paginate_button page-item next disabled"
+                                                        id="datatable-basic_next"><a href="#"
+                                                            aria-controls="datatable-basic" data-dt-idx="2" tabindex="0"
+                                                            class="page-link"><i class="fas fa-angle-right"></i></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!-- e.pagenation -->
+                                        </div>
+                                        <!-- //이미지 tab -->
+
+                                    </div>
+                                    <!-- //tab content -->
+                                </div>
+                                <!-- //message list -->
+                            </div>
+                        </div>
+                        <!-- //message -->
+
+                        <!-- button area -->
+                        <div class="card-footer pb-4 btn_area">
+                            <button type="button" class="btn btn btn-outline-default">발송</button>
+                        </div>
+                        <!-- e.button area -->
+                    </form>
+                    <!-- e.form -->
+
+                </div>
+                <!-- e.card -->
+
+            </div> <!-- e.page content -->
+        </div>
+        <!-- e.Contents area -->
+    </div>
+    <!-- e.wrapper -->
+
+    <script>
+        $(document).ready(function () {
+            init();
+        });
+
+        function clock() {
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth();
+            var clockDate = date.getDate();
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var seconds = date.getSeconds();
+
+            var clockTarget = `${year}-${month+1}- ` +
+                `${clockDate< 10 ? `0${clockDate}` : clockDate} ${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes }`  : minutes }:${seconds < 10 ? `0${seconds }`  : seconds }`;
+
+            $('#clock').text(clockTarget)
+        }
+
+        function init() {
+            clock();
+            setInterval(clock, 1000);
+        }
+    </script>
+
+</html>

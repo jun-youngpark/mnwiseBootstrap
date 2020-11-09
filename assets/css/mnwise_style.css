@@ -67,6 +67,8 @@ body {font-family:'Roboto', 'Nanum Gothic', 'Noto Sans KR', sans-serif; backgrou
 .custom-file-label-xs::after{height: calc(1.25rem + 5px); padding-top: .25rem; padding-bottom: calc(.25rem + 2px); font-size: .75rem; }
 
 
+.fax-mail-view{border:1px solid #efefef; padding:1rem; min-height:300px; }
+
 /*** input-file**/
 .custom-file-input:lang(ko) ~ .custom-file-label::after{content: '파일 선택';}
 .custom-file-input {display:none;}
@@ -75,6 +77,16 @@ body {font-family:'Roboto', 'Nanum Gothic', 'Noto Sans KR', sans-serif; backgrou
 .custom-file.custom-file-sm{height:32px;}
 .custom-file-label-sm{height: calc(.45em + 1.25rem + 6px);  padding-top: calc(.25rem + 2px); padding-bottom: calc(.25rem + 2px); overflow: hidden; padding-left:.45em; }
 .custom-file-label-sm::after{height: calc(.45em + 1.25rem + 5px); padding-top: calc(.25rem + 2px); padding-bottom: calc(.25rem + 2px); font-size: .75rem; }
+
+/* 인풋 number 버튼삭제 */
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
 
 
 /*** mms-view-img **/
