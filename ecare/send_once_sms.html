@@ -5,14 +5,47 @@
 <head>
     <meta charset="utf-8" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">    <script src="../assets/js/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/jquery-ui.min.css">
 
     <script>
-        $(function () {
-            $("#subNav").load("../subNav.html");
-            $("#js").load("../js.html");
-            $("#headerTop").load("../headerTop.html");
-        });
+    $(function () {
+        $("#subNav").load("../subNav.html");
+        $("#js").load("../js.html");
+        $("#headerTop").load("../headerTop.html");
+
+        //datepicker
+        $("#start_date").datepicker({
+			beforeShow: function(input) {
+			    setTimeout(function(){
+			       $('#ui-datepicker-div').css({'position':'', 'top':'', 'bottom':'', 'left':'', 'z-index':''});
+			    })
+			},
+			dateFormat: 'yy-mm-dd',
+			showMonthAfterYear: true,
+            yearSuffix: "년",
+			dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+            monthNames: [ "1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월" ],
+            monthNamesShort: [ "1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월" ],
+			showOtherMonths: true,
+		});
+        $("#end_date").datepicker({
+			beforeShow: function(input) {
+			    setTimeout(function(){
+			       $('#ui-datepicker-div').css({'position':'', 'top':'', 'bottom':'', 'left':'', 'z-index':''});
+			    })
+			},
+			dateFormat: 'yy-mm-dd',
+			showMonthAfterYear: true,
+            yearSuffix: "년",
+			dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+            monthNames: [ "1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월" ],
+            monthNamesShort: [ "1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월" ],
+			showOtherMonths: true,
+		});
+        
+    });
+
     </script>
 </head>
 
@@ -81,33 +114,32 @@
                                         </tr>
                                         <tr>
                                             <th scope="row"><em class="required">required</em>발송일시</th>
-                                            <td colspan="3">
+                                            <td colspan="3">                                      
                                                 <div class="custom-control custom-radio custom-control-inline">
-                                                    <input type="radio" id="send1" name="send"
+                                                    <input type="radio" id="sendTime1" name="sendTime"
                                                         class="custom-control-input" />
-                                                    <label class="custom-control-label" for="send1">즉시발송 [ <span
-                                                            id="clock"></span> ] </label>
+                                                    <label class="custom-control-label" for="sendTime1">즉시발송 
+                                                        <span class=
+                                                            "go-send" id="clock"></span></label>
                                                 </div>
-                                                <div class="custom-control custom-radio custom-control-inline">
+
+                                                <div class="custom-control custom-radio custom-control-inline" >
                                                     <input type="radio" id="sendTime2" name="sendTime"
                                                         class="custom-control-input" />
-                                                    <label class="custom-control-label mt-1 mr-2"
+                                                    <label class="custom-control-label"
                                                         for="sendTime2">예약발송</label>
-
-                                                    <span>
-                                                        <div
-                                                            class="input-group date datepicker-inline d-inline-block w-auto ">
-                                                            <input class="form-control form-control-sm" type="date"
-                                                                value="" id="example-date-input">
+                                                    <span class="rv-send dp-none">
+                                                        <!-- dp-none-->
+                                                        <div class="input_datebox  d-inline-block w-auto ml-2">
+                                                            <input type="text" id="start_date"
+                                                                class="form-control form-control-sm" />
                                                         </div>
-
                                                         <div
                                                             class="input-group date datepicker-inline   d-inline-block w-auto ml-2">
                                                             <input class="form-control form-control-sm " type="time"
                                                                 value="10:30:00" id="example-time-input">
                                                         </div>
                                                     </span>
-
                                                 </div>
                                             </td>
                                         </tr>
@@ -281,25 +313,43 @@
             init();
         });
 
+        function ReservationSendFnc() {
+            $("input[name=sendTime]").on('click', function () {
+                if ($(this).attr("id") === "sendTime2") {
+                    $(".rv-send").removeClass("dp-none");
+                    $(".go-send").addClass("dp-none");
+                    $(this).next().addClass("mt-1");
+
+                } else {
+                    $(".rv-send").addClass("dp-none");
+                    $(".go-send").removeClass("dp-none");
+                    $("#sendTime2").next().removeClass("mt-1");
+
+                }
+            });
+        }
+
         function clock() {
             var date = new Date();
             var year = date.getFullYear();
-            var month = date.getMonth();
+            var month = date.getMonth() + 1;
             var clockDate = date.getDate();
             var hours = date.getHours();
             var minutes = date.getMinutes();
             var seconds = date.getSeconds();
 
-            var clockTarget = `${year}-${month+1}- ` +
-                `${clockDate< 10 ? `0${clockDate}` : clockDate} ${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes }`  : minutes }:${seconds < 10 ? `0${seconds }`  : seconds }`;
-
-            $('#clock').text(clockTarget)
+            var currentDate = year+"-"+((month + 1) < 10 ? '0' + (month + 1) : (month + 1)) +"-"+ ((clockDate) < 10 ? '0' + (clockDate) : (clockDate));
+            var currentTime = ((hours) < 10 ? '0' + (hours) : (hours)) + ":" + ((minutes) < 10 ? '0' + (minutes) : (minutes)) + ":" 
+            + ((seconds) < 10 ? '0' + (seconds) : (seconds));
+            var clockTarget = " [ " + currentDate + " " + currentTime + " ] ";
+            $('.go-send').text(clockTarget);
         }
+
 
         function init() {
             clock();
             setInterval(clock, 1000);
+            ReservationSendFnc();
         }
     </script>
-
 </html>

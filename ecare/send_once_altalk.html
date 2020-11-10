@@ -6,12 +6,61 @@
     <meta charset="utf-8" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/jquery-ui.min.css">
 
     <script>
         $(function () {
             $("#subNav").load("../subNav.html");
             $("#js").load("../js.html");
             $("#headerTop").load("../headerTop.html");
+
+            //datepicker
+            $("#start_date").datepicker({
+                beforeShow: function (input) {
+                    setTimeout(function () {
+                        $('#ui-datepicker-div').css({
+                            'position': '',
+                            'top': '',
+                            'bottom': '',
+                            'left': '',
+                            'z-index': ''
+                        });
+                    })
+                },
+                dateFormat: 'yy-mm-dd',
+                showMonthAfterYear: true,
+                yearSuffix: "년",
+                dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+                monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+                monthNamesShort: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월",
+                    "12월"
+                ],
+                showOtherMonths: true,
+            });
+            $("#end_date").datepicker({
+                beforeShow: function (input) {
+                    setTimeout(function () {
+                        $('#ui-datepicker-div').css({
+                            'position': '',
+                            'top': '',
+                            'bottom': '',
+                            'left': '',
+                            'z-index': ''
+                        });
+                    })
+                },
+                dateFormat: 'yy-mm-dd',
+                showMonthAfterYear: true,
+                yearSuffix: "년",
+                dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+                monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+                monthNamesShort: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월",
+                    "12월"
+                ],
+                showOtherMonths: true,
+            });
+
         });
     </script>
 </head>
@@ -43,8 +92,8 @@
 
                         <!-- card body -->
                         <div class="card-body">
-                              <!-- tabs -->
-                              <ul class="nav nav-tabs tab02 mb-4" id="tabs-text">
+                            <!-- tabs -->
+                            <ul class="nav nav-tabs tab02 mb-4" id="tabs-text">
                                 <li class="nav-item">
                                     <a class="nav-link mb-sm-3 mb-md-0 " href="send_once_sms.html">sms</a>
                                 </li>
@@ -78,8 +127,7 @@
                                                 </select></td>
                                             <th scope="row"><em class="required">required</em>알림톡 템플릿코드</th>
                                             <td>
-                                               <input type="text"
-                                                    class="form-control form-control-sm"
+                                                <input type="text" class="form-control form-control-sm"
                                                     placeholder="" />
                                             </td>
                                         </tr>
@@ -108,40 +156,39 @@
                                             <td><input type="number"
                                                     class="form-control form-control-sm  d-inline-block w-auto"
                                                     placeholder="" /> (숫자만 입력)</td>
-                                                    <th scope="row">LMS/MMS 제목	</th>
-                                                    <td><input type="text"
-                                                            class="form-control form-control-sm"
-                                                            placeholder="" /> </td>
-                                                    
+                                            <th scope="row">LMS/MMS 제목 </th>
+                                            <td><input type="text" class="form-control form-control-sm"
+                                                    placeholder="" /> </td>
+
                                         </tr>
                                         <tr>
-                                       
                                             <th scope="row"><em class="required">required</em>발송일시</th>
-                                            <td colspan="3">
+                                            <td colspan="3">                                      
                                                 <div class="custom-control custom-radio custom-control-inline">
                                                     <input type="radio" id="sendTime1" name="sendTime"
                                                         class="custom-control-input" />
-                                                    <label class="custom-control-label" for="sendTime1">즉시발송  <span
-                                                            class="display-block mb-1" id="clock"></span></label>
+                                                    <label class="custom-control-label" for="sendTime1">즉시발송 
+                                                        <span class=
+                                                            "go-send" id="clock"></span></label>
                                                 </div>
-                                             
-                                                <div class="custom-control custom-radio custom-control-inline">
+
+                                                <div class="custom-control custom-radio custom-control-inline" >
                                                     <input type="radio" id="sendTime2" name="sendTime"
                                                         class="custom-control-input" />
-                                                    <label class="custom-control-label mt-1 mr-2" for="sendTime2">예약발송</label>
-
-                                                   <span>
-                                                    <div class="input-group date datepicker-inline d-inline-block w-auto ">
-                                                        <input class="form-control form-control-sm" type="date" value=""
-                                                        id="example-date-input">
-                                                    </div>
-                                                 
-                                                    <div class="input-group date datepicker-inline   d-inline-block w-auto ml-2">
-                                                        <input class="form-control form-control-sm " type="time"
-                                                        value="10:30:00" id="example-time-input">
-                                                    </div>
-                                                   </span>
-                                                       
+                                                    <label class="custom-control-label"
+                                                        for="sendTime2">예약발송</label>
+                                                    <span class="rv-send dp-none">
+                                                        <!-- dp-none-->
+                                                        <div class="input_datebox  d-inline-block w-auto ml-2">
+                                                            <input type="text" id="start_date"
+                                                                class="form-control form-control-sm" />
+                                                        </div>
+                                                        <div
+                                                            class="input-group date datepicker-inline   d-inline-block w-auto ml-2">
+                                                            <input class="form-control form-control-sm " type="time"
+                                                                value="10:30:00" id="example-time-input">
+                                                        </div>
+                                                    </span>
                                                 </div>
                                             </td>
                                         </tr>
@@ -153,8 +200,8 @@
                         </div>
                         <!-- //card body -->
 
-                         <!-- message -->
-                         <div class="card-body message_contents">
+                        <!-- message -->
+                        <div class="card-body message_contents">
                             <div class="row">
                                 <!-- mobile preview -->
                                 <div class="col col-phone">
@@ -315,24 +362,43 @@
             init();
         });
 
+        function ReservationSendFnc() {
+            $("input[name=sendTime]").on('click', function () {
+                if ($(this).attr("id") === "sendTime2") {
+                    $(".rv-send").removeClass("dp-none");
+                    $(".go-send").addClass("dp-none");
+                    $(this).next().css({"margin-top": ".25rem"});
+
+                } else {
+                    $(".rv-send").addClass("dp-none");
+                    $(".go-send").removeClass("dp-none");
+                    $("#sendTime2").next().css({"margin-top": "0"});
+
+                }
+            });
+        }
+
         function clock() {
             var date = new Date();
             var year = date.getFullYear();
-            var month = date.getMonth();
+            var month = date.getMonth() + 1;
             var clockDate = date.getDate();
             var hours = date.getHours();
             var minutes = date.getMinutes();
             var seconds = date.getSeconds();
 
-            var clockTarget = `[ ${year}-${month+1}- ` +
-                `${clockDate< 10 ? `0${clockDate}` : clockDate} ${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes }`  : minutes }:${seconds < 10 ? `0${seconds }`  : seconds } ]`;
-
-            $('#clock').text(clockTarget)
+            var currentDate = year+"-"+((month + 1) < 10 ? '0' + (month + 1) : (month + 1)) +"-"+ ((clockDate) < 10 ? '0' + (clockDate) : (clockDate));
+            var currentTime = ((hours) < 10 ? '0' + (hours) : (hours)) + ":" + ((minutes) < 10 ? '0' + (minutes) : (minutes)) + ":" 
+            + ((seconds) < 10 ? '0' + (seconds) : (seconds));
+            var clockTarget = " [ " + currentDate + " " + currentTime + " ] ";
+            $('.go-send').text(clockTarget);
         }
+
 
         function init() {
             clock();
             setInterval(clock, 1000);
+            ReservationSendFnc();
         }
     </script>
 
