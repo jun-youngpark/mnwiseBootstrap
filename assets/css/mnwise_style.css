@@ -19,7 +19,7 @@ body {font-family:'Roboto', 'Nanum Gothic', 'Noto Sans KR', sans-serif; backgrou
 .sidebar .sidebar-wrapper::-webkit-scrollbar { width: 10px; }
   .sidebar .sidebar-wrapper::-webkit-scrollbar-thumb { background-color:  #8898aa;  border-radius: 10px;}
   .sidebar .sidebar-wrapper::-webkit-scrollbar-track {background-color: #adb5bd;  border-radius: 10px; }
-
+.main-color{background: #359bff;;}
  
 .navbar-vertical .navbar-nav {margin:0;}
 
