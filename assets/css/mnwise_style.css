@@ -38,6 +38,9 @@ body {font-family:'Roboto', 'Nanum Gothic', 'Noto Sans KR', sans-serif; backgrou
 .tagbox-text{color:#5e72e4;}
 .tagbox > div {background: #dedddd; border-radius: 5px; font-size:.85rem;}  /* border: 2px solid #f5f5f5;  */
 
+/* login */
+.login-box{border-radius: 1%; box-shadow: 0px 1px 3px rgba(0,0,0,.25); background: #fff;}
+.login-box-footer{color:#495572; font-size:.85rem;}
 .logout-box, .logilogoutn-box a{color:#495572; font-size:.85rem;}
 .logout-box {padding:0 20px;}
 .logout > * {position:relative; display:inline-block; margin-left:22px; vertical-align: middle;}
