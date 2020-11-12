@@ -544,8 +544,9 @@ ex, campaign/campaign_2step_mail_form.html 수신확인 체크박스
 .ui-datepicker-close {position:absolute; right:0; top:0; width:55px; height:48px; text-indent:-999em; }
 .ui-datepicker-calendar {width:100%;}
 .ui-datepicker-calendar thead th {width:14.3%; padding:15px 2px 10px; font-size:.8125rem; text-align:center; background:#f3f6fb;}
-.ui-datepicker-calendar thead th:first-child, .ui-datepicker-calendar thead th:last-child {width:14.25%;}
+.ui-datepicker-calendar thead th:first-child, .ui-datepicker-calendar thead th:last-child {width:14.25%; }
 .ui-datepicker-calendar tbody tr:nth-child(even) {background:#f3f6fb;}
+
 .ui-datepicker-calendar td {padding:10px 5px; font-size:.8757rem; text-align:center;}
 .ui-datepicker .ui-datepicker-calendar .ui-state-default {display:block; width:30px; height:30px; margin:0 auto; padding:0; text-align:center; line-height:30px; background:none; border-radius:30px; -webkit-box-sizing: border-box; border:0 solid #3593fc; box-sizing: border-box;}
 .ui-datepicker-calendar .ui-state-disabled {opacity:.2;}
@@ -553,6 +554,24 @@ ex, campaign/campaign_2step_mail_form.html 수신확인 체크박스
 .ui-datepicker .ui-datepicker-today a.ui-state-default {color:#fff; background:#3593fc;}
 .ui-datepicker .ui-datepicker-current-day a.ui-state-default {color:#3593fc; font-weight:bold; line-height:28px; background:#d1effe; border:1px solid #3593fc;}
 .ui-datepicker-current {display:none;}
+
+
+
+/***** 공휴일 관리 env_blockdate *****/
+#datepicker_year{width:100%;}
+#datepicker_year .ui-datepicker {  display:block; position: inherit;  margin-left:0px;  -webkit-transform: translateY(0%); transform: translateY(0%); box-shadow:none; border:1px solid #e9ecef !important;}
+#datepicker_year .ui-datepicker-header { height:35px; line-height:35px; background:#f6f9fd; font-size:.725rem;  color:#495572;}
+#datepicker_year .ui-datepicker-calendar thead th { font-size:.725rem; text-align:center; background:#fff; border-top::1px solid #495572; border-bottom:1px solid 3333;}
+#datepicker_year .ui-datepicker-calendar td {padding: 0; font-size:.725rem; text-align:center; }
+#datepicker_year .ui-datepicker-inline.ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all.ui-datepicker-multi-4.ui-datepicker-multi{width:58em!important;}
+#datepicker_year .ui-datepicker-calendar tbody tr:nth-child(even) {background:#fff;}
+#datepicker_year .ui-datepicker .ui-datepicker-current-day a.ui-state-default { all: unset;}
+#datepicker_year  .ui-datepicker .ui-datepicker-header a:before {content: "\f0a8";   color:#495572;}
+#datepicker_year .ui-datepicker .ui-datepicker-header .ui-datepicker-next:before {content: "\f0a9";}
+
+
+
+
 
 .layer_back {position:fixed; left:0; top:0; width:100%; height:100%; background:#000; opacity:0.6; z-index:500;}
 .copyrights{font-size: .865rem;}
