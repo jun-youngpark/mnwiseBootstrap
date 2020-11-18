@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<title>wise U</title>
+
+<head>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="tree_fontello/css/fontello.css">
+
+    <script>
+        $(function () {
+            $("#subNav").load("../subNav.html");
+            $("#js").load("../js.html");
+            $("#headerTop").load("../headerTop.html");
+        });
+    </script>
+</head>
+
+<body>
+    <!-- wrapper -->
+    <div class="wrapper">
+        <!-- 메뉴 -->
+        <div id="subNav"></div>
+        <div id="js"></div>
+        <div id="headerTop"></div>
+        <!-- //메뉴-->
+
+        <!-- Contents area -->
+        <div class="main-panel">
+            <!-- Page content -->
+            <div class="container-fluid mt-4 mb-2">
+
+                <!-- card -->
+                <div class="card">
+                    <!-- Card header -->
+                    <div class="card-body">
+
+                        <!--전문 테스트 버턴-->
+                        <div class="test_btn_area mb-2">
+                            <div class="row mt-3 mb-1">
+                                <div class="col-auto">
+                                    <button type="button" class="btn btn btn-outline-primary btn-sm ">샘플 추출</button>
+                                    <button type="button" class="btn btn btn-outline-primary btn-sm">미리보기</button>
+                                    <button type="button"
+                                        class="btn btn-outline-primary btn-sm btn-icon-only rounded-circle">
+                                        <span class="btn-inner--icon"><i class="fas fa-question"></i></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- textarea -->
+                            <div class="edit_area">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+                            </div>
+                            <!-- //textarea -->
+                        </div>
+                        <!--//전문 테스트 버턴-->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+</body>
+
+</html>
